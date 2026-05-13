@@ -8,10 +8,11 @@ wind turbine, as defined in the Kynema benchmark repository. The benchmark model
 5MW turbine using an actuator-line representation within a slightly convective, unstable
 atmospheric boundary layer (ABL).
 
-Fully coupled fluid–structure interaction (FSI) simulations performed with Kynema-FMB–AMR-Wind are
-compared against the OpenFAST–AMR-Wind reference solution. The purpose of this benchmark is to
-assess consistency in predicted turbine-level performance and spanwise aerodynamic quantities
-between the two simulation frameworks.
+Fully coupled fluid–structure interaction (FSI) simulations performed with
+Kynema-FMB and Kynema-SGF are compared against the OpenFAST–Kynema-SGF
+reference solution. The purpose of this benchmark is to assess consistency in
+predicted turbine-level performance and spanwise aerodynamic quantities between
+the two simulation frameworks.
 
 .. note::
    Complete details of the benchmark definition, simulation setup, inflow, and
@@ -32,15 +33,15 @@ The figures below compare multiple simulation configurations, identified in the 
    * - Legend label
      - Description
    * - **OpenFAST**
-     - Unchanged Kynema benchmark case (OpenFAST–AMR-Wind).
+     - Unchanged Kynema benchmark case (OpenFAST–Kyenma-SGF).
    * - **OF no twr**
      - Benchmark case with tower aerodynamic points disabled.
    * - **Kynema-FMB**
-     - Kynema-FMB–AMR-Wind using the same time step as OpenFAST.
+     - Kynema-FMB/SGF using the same time step as OpenFAST.
    * - **Kyn. 10dt**
-     - Kynema-FMB–AMR-Wind using 10× the OpenFAST time step (2 Kynema-FMB steps per AMR-Wind step).
+     - Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema FMB steps per SGF step).
    * - **Kyn. 20dt**
-     - Kynema-FMB–AMR-Wind using 20× the OpenFAST time step (1 Kynema-FMB step per AMR-Wind step).
+     - Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema FMB step per SGF step).
 
 The "OF, no damp,twr" case is included to isolate differences arising from damping treatment and
 tower aerodynamics. The larger time-step cases (Kyn. 10dt, Kyn. 20dt) demonstrate Kynema-FMB's ability
