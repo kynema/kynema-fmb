@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::state {
+namespace kynema::state {
 
 /**
  * @brief A Kernel to predict the next state values before nonlinear iteration begins for
@@ -37,4 +37,4 @@ struct CalculateNextState {
     }
 };
 
-}  // namespace kynema_fmb::state
+}  // namespace kynema::state

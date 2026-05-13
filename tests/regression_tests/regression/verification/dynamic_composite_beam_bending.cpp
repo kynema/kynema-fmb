@@ -4,7 +4,7 @@
 #include "interfaces/blade/blade_interface_builder.hpp"
 #include "interfaces/components/beam_builder.hpp"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(VerificationTest, Dynamic_ClampedCompositeBeamBending) {
     //----------------------------------
@@ -170,4 +170,4 @@ TEST(VerificationTest, Dynamic_ClampedCompositeBeamBending) {
     }
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

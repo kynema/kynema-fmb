@@ -9,7 +9,7 @@
 #include "utilities/netcdf/netcdf_file.hpp"
 #include "utilities/netcdf/node_state_writer.hpp"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 class NodeStateWriterTest : public ::testing::Test {
 protected:
@@ -586,4 +586,4 @@ TEST_F(NodeStateWriterTest, StateWritingPerformance_BufferedVsUnbuffered) {
     std::filesystem::remove(buffered_file);
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

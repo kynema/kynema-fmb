@@ -11,7 +11,7 @@
 #include "math/gl_quadrature.hpp"
 #include "math/gll_quadrature.hpp"
 
-namespace kynema_fmb::beams {
+namespace kynema::beams {
 
 /**
  * @brief Creates a trapezoidal quadrature rule based on a given grid.
@@ -54,7 +54,8 @@ inline std::vector<std::array<double, 2>> CreateGaussLegendreLobattoQuadrature(
 
     auto quadrature = std::vector<std::array<double, 2>>{};
     std::ranges::transform(
-        grid, std::back_inserter(quadrature), [gm = grid_min, grid_range](auto grid_location) {
+        grid, std::back_inserter(quadrature),
+        [gm = grid_min, grid_range](auto grid_location) {
             return std::array{(2. * (grid_location - gm) / grid_range) - 1., 0.};
         }
     );
@@ -95,7 +96,8 @@ inline std::vector<std::array<double, 2>> CreateGaussLegendreQuadrature(
 
     auto quadrature = std::vector<std::array<double, 2>>{};
     std::ranges::transform(
-        grid, std::back_inserter(quadrature), [gm = grid_min, grid_range](auto grid_location) {
+        grid, std::back_inserter(quadrature),
+        [gm = grid_min, grid_range](auto grid_location) {
             return std::array{(2. * (grid_location - gm) / grid_range) - 1., 0.};
         }
     );
@@ -112,4 +114,4 @@ inline std::vector<std::array<double, 2>> CreateGaussLegendreQuadrature(
     return quadrature;
 }
 
-}  // namespace kynema_fmb::beams
+}  // namespace kynema::beams

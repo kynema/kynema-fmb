@@ -3,7 +3,7 @@
 #include "model/model.hpp"
 #include "turbine.hpp"
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 [[nodiscard]] const TurbineInput& TurbineBuilder::Input() {
     // Add the blade inputs from the blade builders
     this->input.blades.clear();
@@ -144,4 +144,4 @@ TurbineBuilder& TurbineBuilder::SetStartTime(double time) {
     return *this;
 }
 
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components

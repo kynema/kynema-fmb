@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::solver {
+namespace kynema::solver {
 
 /**
  * @brief A Kernel for computing the system constraints' contribution to the
@@ -59,4 +59,4 @@ struct ComputeConstraintsColInds {
     }
 };
 
-}  // namespace kynema_fmb::solver
+}  // namespace kynema::solver

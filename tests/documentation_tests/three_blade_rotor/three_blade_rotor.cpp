@@ -32,8 +32,8 @@ int main() {
             std::array{0., 0., 0., -0.3510e3, -0.3700e3, 141.470e3},
         };
         const auto sections = std::vector{
-            kynema_fmb::BeamSection(0., mass_matrix, stiffness_matrix),
-            kynema_fmb::BeamSection(1., mass_matrix, stiffness_matrix),
+            kynema::BeamSection(0., mass_matrix, stiffness_matrix),
+            kynema::BeamSection(1., mass_matrix, stiffness_matrix),
         };
 
         // We now define the node locations where our solution will be defined.  In this case, we
@@ -57,7 +57,7 @@ int main() {
         // A Model is Kynema's low level interface for specifying elements, nodes, constraints,
         // and their connectivities.  Once everything has be specified, we will use to model to
         // create Kynema's fundamental data structures and advance the problem in time.
-        auto model = kynema_fmb::Model();
+        auto model = kynema::Model();
 
         // The aptly named SetGravity method is used to set the gravity vector for the problem.
         model.SetGravity(0., 0., -9.81);
@@ -76,7 +76,8 @@ int main() {
         for (auto blade_number = 0; blade_number < num_blades; ++blade_number) {
             auto beam_node_ids = std::vector<size_t>(node_s.size());
             std::transform(
-                std::cbegin(node_s), std::cend(node_s), std::begin(beam_node_ids), [&](auto s) {
+                std::cbegin(node_s), std::cend(node_s), std::begin(beam_node_ids),
+                [&](auto s) {
                     return model.AddNode()
                         .SetElemLocation(s)
                         .SetPosition(10. * s, 0., 0., 1., 0., 0., 0.)
@@ -127,7 +128,7 @@ int main() {
         //
         // Solver contains the linear system (sparse matrix, RHS) and linear system solver
         auto [state, elements, constraints] = model.CreateSystem();
-        auto solver = kynema_fmb::CreateSolver<>(state, elements, constraints);
+        auto solver = kynema::CreateSolver<>(state, elements, constraints);
 
         // The final stage is to create a StepParameters object, which contains information like
         // the number of non-linear iterations, time step size, and numerical damping factor used
@@ -137,8 +138,8 @@ int main() {
         const double step_size(0.01);
         const double rho_inf(0.9);
         const double t_end(0.1);
-        const auto num_steps = static_cast<size_t>(std::floor(t_end / step_size + 1.0));
-        auto parameters = kynema_fmb::StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
+        const auto num_steps = static_cast<size_t>(std::floor((t_end / step_size) + 1.0));
+        auto parameters = kynema::StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
         // Kynema allows the user to control the actual time stepping process.  This includes
         // setting forces, post-processing data, or coupling to other codes.
@@ -153,7 +154,7 @@ int main() {
             const auto u_hub = std::array{0., 0., 0., q_hub.w(), q_hub.x(), q_hub.y(), q_hub.z()};
             constraints.UpdateDisplacement(hub_bc_id, u_hub);
             [[maybe_unused]] const auto converged =
-                kynema_fmb::Step(parameters, solver, elements, state, constraints);
+                kynema::Step(parameters, solver, elements, state, constraints);
             assert(converged);
         }
     }

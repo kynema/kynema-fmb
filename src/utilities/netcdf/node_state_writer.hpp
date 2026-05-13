@@ -7,12 +7,12 @@
 
 #include "netcdf_file.hpp"
 
-namespace kynema_fmb::util {
+namespace kynema::util {
 
 /**
- * @brief Class for writing Kynema-FMB nodal state data to NetCDF-based output files
+ * @brief Class for writing Kynema nodal state data to NetCDF-based output files
  *
- * This class handles the writing of nodal state data for Kynema-FMB simulations to NetCDF format.
+ * This class handles the writing of nodal state data for Kynema simulations to NetCDF format.
  * It manages the output of:
  *   - Position (x, y, z, w, i, j, k)
  *   - Displacement (x, y, z, w, i, j, k)
@@ -140,4 +140,4 @@ private:
     void FlushAllBuffers();
 };
 
-}  // namespace kynema_fmb::util
+}  // namespace kynema::util

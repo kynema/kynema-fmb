@@ -15,7 +15,8 @@ void TestCalculateStiffnessMatrixTests_OneElement() {
     auto a = Kokkos::View<double[3][3]>("a");
 
     Kokkos::parallel_for(
-        "CalculateStiffnessMatrix", 1, KOKKOS_LAMBDA(size_t) {
+        "CalculateStiffnessMatrix", 1,
+        KOKKOS_LAMBDA(size_t) {
             constexpr auto c1 = 2.;
             constexpr auto c2 = 1.;
             constexpr auto l = 1.;
@@ -23,7 +24,7 @@ void TestCalculateStiffnessMatrixTests_OneElement() {
             constexpr auto r_data = Kokkos::Array<double, 3>{1., 2., 3.};
             const auto r = Kokkos::View<double[3]>::const_type(r_data.data());
 
-            kynema_fmb::springs::CalculateStiffnessMatrix<Kokkos::DefaultExecutionSpace>::invoke(
+            kynema::springs::CalculateStiffnessMatrix<Kokkos::DefaultExecutionSpace>::invoke(
                 c1, c2, r, l, a
             );
         }
@@ -42,14 +43,14 @@ void TestCalculateStiffnessMatrixTests_OneElement() {
     const auto a_result = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), a);
     Kokkos::deep_copy(a_result, a);
 
-    kynema_fmb::beams::tests::CompareWithExpected(a_result, a_exact);
+    kynema::beams::tests::CompareWithExpected(a_result, a_exact);
 }
 
 }  // namespace
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(CalculateStiffnessMatrixTests, OneElement) {
     TestCalculateStiffnessMatrixTests_OneElement();
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

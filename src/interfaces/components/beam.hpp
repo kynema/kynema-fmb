@@ -5,12 +5,12 @@
 
 #include "interfaces/node_data.hpp"
 
-namespace kynema_fmb {
+namespace kynema {
 class Model;
 struct BeamSection;
-}  // namespace kynema_fmb
+}  // namespace kynema
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 
 struct BeamInput;
 
@@ -172,4 +172,4 @@ private:
     static std::vector<BeamSection> BuildBeamSections_WholeBeamGL(const BeamInput& input);
 };
 
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components

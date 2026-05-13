@@ -5,7 +5,7 @@
 #include "constraints/constraints.hpp"
 #include "state/state.hpp"
 
-namespace kynema_fmb::dof {
+namespace kynema::dof {
 
 /**
  * @brief A Kernel that creates the node freedom tables for each the target and base nodes
@@ -79,4 +79,4 @@ inline void create_constraint_freedom_table(
     );
 }
 
-}  // namespace kynema_fmb::dof
+}  // namespace kynema::dof

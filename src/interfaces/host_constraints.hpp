@@ -2,7 +2,7 @@
 
 #include "constraints/constraints.hpp"
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 /**
  * @brief Host-side mirror of the constraint input, output, and loads for a given time increment
@@ -51,4 +51,4 @@ struct HostConstraints {
     }
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

@@ -6,7 +6,7 @@
 #include "dss_algorithm.hpp"
 #include "dss_handle_umfpack.hpp"
 
-namespace kynema_fmb::dss {
+namespace kynema::dss {
 template <typename CrsMatrixType>
 struct SymbolicFunction<Handle<Algorithm::UMFPACK>, CrsMatrixType> {
     static void symbolic(Handle<Algorithm::UMFPACK>& dss_handle, CrsMatrixType& A) {
@@ -25,4 +25,4 @@ struct SymbolicFunction<Handle<Algorithm::UMFPACK>, CrsMatrixType> {
         );
     }
 };
-}  // namespace kynema_fmb::dss
+}  // namespace kynema::dss

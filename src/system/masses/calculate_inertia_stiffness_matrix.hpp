@@ -7,7 +7,7 @@
 
 #include "math/vector_operations.hpp"
 
-namespace kynema_fmb::masses {
+namespace kynema::masses {
 
 template <typename DeviceType>
 struct CalculateInertiaStiffnessMatrix {
@@ -59,4 +59,4 @@ struct CalculateInertiaStiffnessMatrix {
         GemmNN::invoke(1., omega_tilde, M1, 1., Kuu_22);
     }
 };
-}  // namespace kynema_fmb::masses
+}  // namespace kynema::masses

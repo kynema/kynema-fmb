@@ -6,7 +6,7 @@
 
 #include "elements/beams/generate_sectional_properties.hpp"
 
-namespace kynema_fmb::beams::tests {
+namespace kynema::beams::tests {
 
 class GenerateSectionalMatricesTest : public ::testing::Test {
 protected:
@@ -173,4 +173,4 @@ TEST_F(GenerateSectionalMatricesTest, MassMatrix_CGOffsetCoupling) {
     ExpectMatrixEqual(result, expected);
 }
 
-}  // namespace kynema_fmb::beams::tests
+}  // namespace kynema::beams::tests

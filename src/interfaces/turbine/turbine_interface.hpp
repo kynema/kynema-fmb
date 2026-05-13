@@ -12,13 +12,13 @@
 #include "model/model.hpp"
 #include "step/step_parameters.hpp"
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 struct SolutionInput;
 struct TurbineInput;
 struct OutputsConfig;
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 /**
  * @brief Interface for blade simulation that manages state, solver, and components
@@ -230,4 +230,4 @@ private:
     void BuildTimeSeriesSchema();
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

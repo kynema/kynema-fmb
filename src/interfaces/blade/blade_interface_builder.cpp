@@ -2,7 +2,7 @@
 
 #include "blade_interface.hpp"
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 components::SolutionBuilder& BladeInterfaceBuilder::Solution() {
     return this->solution_builder;
@@ -22,4 +22,4 @@ BladeInterface BladeInterfaceBuilder::Build() const {
     );
 }
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

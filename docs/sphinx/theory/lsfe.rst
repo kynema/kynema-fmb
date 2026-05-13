@@ -259,8 +259,7 @@ following:
    \underline{\underline{\mathcal{P}}}^\mathrm{D2}(\xi^Q_k) \right]
    \phi'_j(\xi^Q_k) \\
    & + \phi_i(\xi^Q_k) \left[
-   \underline{\underline{\mathcal{K}}}^\mathrm{I}(\xi^Q_k)
-   +\underline{\underline{\mathcal{K}}}^\mathrm{E2}(\xi^Q_k)
+   \underline{\underline{\mathcal{K}}}^\mathrm{E2}(\xi^Q_k)
    +\underline{\underline{\mathcal{K}}}^\mathrm{D2}(\xi^Q_k) 
    \right]\phi_j(\xi^Q_k) J(\xi^Q_k)
    \Big\} w^Q_k 

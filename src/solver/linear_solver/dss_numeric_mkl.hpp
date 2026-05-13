@@ -6,7 +6,7 @@
 #include "dss_algorithm.hpp"
 #include "dss_handle_mkl.hpp"
 
-namespace kynema_fmb::dss {
+namespace kynema::dss {
 
 template <typename CrsMatrixType>
 struct NumericFunction<Handle<Algorithm::MKL>, CrsMatrixType> {
@@ -20,4 +20,4 @@ struct NumericFunction<Handle<Algorithm::MKL>, CrsMatrixType> {
     }
 };
 
-}  // namespace kynema_fmb::dss
+}  // namespace kynema::dss
