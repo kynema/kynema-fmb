@@ -2,7 +2,7 @@
 
 #include <array>
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::util {
 
 static constexpr int kSwapArraySize = 128;
 
@@ -146,4 +146,8 @@ struct ControllerIO {
     }
 };
 
+<<<<<<< HEAD:src/interfaces/components/controller_io.hpp
 }  // namespace kynema::interfaces::components
+=======
+}  // namespace kynema_fmb::util
+>>>>>>> upstream/main:src/utilities/controllers/controller_io.hpp

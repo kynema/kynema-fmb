@@ -5,7 +5,7 @@
 
 #include "beam_input.hpp"
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::interfaces::components {
 
 /**
  * @brief Complete input specification for a turbine
@@ -186,4 +186,4 @@ struct TurbineInput {
     double start_time{0.};
 };
 
-}  // namespace kynema::interfaces::components
+}  // namespace kynema_fmb::interfaces::components
