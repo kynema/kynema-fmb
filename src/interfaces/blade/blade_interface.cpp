@@ -6,7 +6,7 @@
 #include "state/copy_state_data.hpp"
 #include "step/step.hpp"
 
-namespace kynema::interfaces {
+namespace kynema_fmb::interfaces {
 
 BladeInterface::BladeInterface(
     const components::SolutionInput& solution_input, const components::BeamInput& blade_input,
@@ -58,14 +58,17 @@ bool BladeInterface::Step() {
     // Transfer node loads -> state
     for (const auto& node : this->blade.nodes) {
         for (auto component : std::views::iota(0U, 6U)) {
+            this->host_state.v(node.id, component) = node.velocity[component];
             this->host_state.f(node.id, component) = node.loads[component];
         }
     }
     Kokkos::deep_copy(this->state.f, this->host_state.f);
+    Kokkos::deep_copy(this->state.v, this->host_state.v);
 
     // Solve for state at end of step
-    auto converged =
-        kynema::Step(this->parameters, this->solver, this->elements, this->state, this->constraints);
+    auto converged = kynema_fmb::Step(
+        this->parameters, this->solver, this->elements, this->state, this->constraints
+    );
     if (!converged) {
         return false;
     }
@@ -104,4 +107,4 @@ void BladeInterface::SetRootDisplacement(const std::array<double, 7>& u) const {
     }
     this->constraints.UpdateDisplacement(this->blade.prescribed_root_constraint_id, u);
 }
-}  // namespace kynema::interfaces
+}  // namespace kynema_fmb::interfaces

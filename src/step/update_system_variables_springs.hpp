@@ -7,7 +7,7 @@
 #include "state/state.hpp"
 #include "system/springs/calculate_quadrature_point_values.hpp"
 
-namespace kynema::step {
+namespace kynema_fmb::step {
 
 template <typename DeviceType>
 inline void UpdateSystemVariablesSprings(
@@ -19,7 +19,7 @@ inline void UpdateSystemVariablesSprings(
     auto range_policy = RangePolicy(0, springs.num_elems);
 
     Kokkos::parallel_for(
-        "Calculate System Variables Springs", range_policy,
+        "springs::CalculateQuadraturePointValues", range_policy,
         springs::CalculateQuadraturePointValues<DeviceType>{
             state.q, springs.node_state_indices, springs.x0, springs.l_ref, springs.k,
             springs.residual_vector_terms, springs.stiffness_matrix_terms
@@ -27,4 +27,4 @@ inline void UpdateSystemVariablesSprings(
     );
 }
 
-}  // namespace kynema::step
+}  // namespace kynema_fmb::step
