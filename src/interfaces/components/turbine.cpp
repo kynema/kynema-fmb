@@ -10,7 +10,7 @@
 #include "math/quaternion_operations.hpp"
 #include "model/model.hpp"
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 Turbine::Turbine(const TurbineInput& input, Model& model)
     : blades(CreateBlades(input.blades, model)),
       tower(input.tower, model),
@@ -89,7 +89,8 @@ void Turbine::SetLoads(HostState<DeviceType>& host_state) const {
 std::vector<Beam> Turbine::CreateBlades(std::span<const BeamInput> blade_inputs, Model& model) {
     std::vector<Beam> blades;
     std::ranges::transform(
-        blade_inputs, std::back_inserter(blades), [&model](const BeamInput& input) {
+        blade_inputs, std::back_inserter(blades),
+        [&model](const BeamInput& input) {
             return Beam(input, model);
         }
     );
@@ -297,7 +298,8 @@ void Turbine::CreateIntermediateNodes(const TurbineInput& input, Model& model) {
     // Add tower nodes to tower_node_ids vector
     this->tower_node_ids.reserve(this->tower.nodes.size());
     std::ranges::transform(
-        this->tower.nodes, std::back_inserter(this->tower_node_ids), [](const auto& node) {
+        this->tower.nodes, std::back_inserter(this->tower_node_ids),
+        [](const auto& node) {
             return node.id;
         }
     );
@@ -636,4 +638,4 @@ void Turbine::SetInitialRotorVelocity(const TurbineInput& input, Model& model) {
         );
     }
 }
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components

@@ -3,12 +3,12 @@
 
 #include "interfaces/components/controller.hpp"
 
-#include "Kynema_FMB_config.h"
+#include "Kynema_config.h"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(ROSCO_Controller, initialize) {
-    const auto shared_lib_path = std::string{static_cast<const char*>(KYNEMA_FMB_ROSCO_LIBRARY)};
+    const auto shared_lib_path = std::string{static_cast<const char*>(Kynema_ROSCO_LIBRARY)};
     const auto controller_function_name = std::string{"DISCON"};
 
     auto controller = interfaces::components::Controller(interfaces::components::ControllerInput{
@@ -26,4 +26,4 @@ TEST(ROSCO_Controller, initialize) {
     controller.CallController();
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

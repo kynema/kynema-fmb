@@ -9,7 +9,7 @@
 #include "utilities/netcdf/node_state_writer.hpp"
 #include "utilities/netcdf/time_series_writer.hpp"
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 template <typename DeviceType>
 struct HostState;
@@ -125,4 +125,4 @@ private:
     [[nodiscard]] bool IsStateComponentEnabled(const std::string& prefix) const;
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

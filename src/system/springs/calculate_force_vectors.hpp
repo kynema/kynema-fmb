@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::springs {
+namespace kynema::springs {
 
 template <typename DeviceType>
 struct CalculateForceVectors {
@@ -19,4 +19,4 @@ struct CalculateForceVectors {
         }
     }
 };
-}  // namespace kynema_fmb::springs
+}  // namespace kynema::springs

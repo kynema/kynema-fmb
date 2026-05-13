@@ -15,7 +15,7 @@ inline void check_netCDF_error(int status, const std::string& message = "") {
 
 }  // namespace
 
-namespace kynema_fmb::util {
+namespace kynema::util {
 
 NetCdfFile::NetCdfFile(const std::string& file_path, bool create) : file_path_(file_path) {
     if (create) {
@@ -104,9 +104,8 @@ int NetCdfFile::AddVariable<int>(const std::string& name, std::span<const int> d
 }
 
 template <>
-int NetCdfFile::AddVariable<std::string>(
-    const std::string& name, std::span<const int> dim_ids
-) const {
+int NetCdfFile::AddVariable<std::string>(const std::string& name, std::span<const int> dim_ids)
+    const {
     int var_id{-1};
     check_netCDF_error(
         nc_def_var(
@@ -118,9 +117,8 @@ int NetCdfFile::AddVariable<std::string>(
     return var_id;
 }
 
-void NetCdfFile::AddAttribute(
-    const std::string& var_name, const std::string& attr_name, float value
-) const {
+void NetCdfFile::AddAttribute(const std::string& var_name, const std::string& attr_name, float value)
+    const {
     check_netCDF_error(
         nc_put_att(
             netcdf_id_, this->GetVariableId(var_name), attr_name.c_str(), NC_FLOAT, 1, &value
@@ -140,9 +138,8 @@ void NetCdfFile::AddAttribute(
     );
 }
 
-void NetCdfFile::AddAttribute(
-    const std::string& var_name, const std::string& attr_name, int value
-) const {
+void NetCdfFile::AddAttribute(const std::string& var_name, const std::string& attr_name, int value)
+    const {
     check_netCDF_error(
         nc_put_att(netcdf_id_, this->GetVariableId(var_name), attr_name.c_str(), NC_INT, 1, &value),
         "Failed to write attribute " + attr_name
@@ -239,9 +236,8 @@ void NetCdfFile::WriteVariableAt(
     );
 }
 
-void NetCdfFile::SetChunking(
-    const std::string& var_name, std::span<const size_t> chunk_sizes
-) const {
+void NetCdfFile::SetChunking(const std::string& var_name, std::span<const size_t> chunk_sizes)
+    const {
     const int var_id = GetVariableId(var_name);
     check_netCDF_error(
         nc_def_var_chunking(netcdf_id_, var_id, NC_CHUNKED, chunk_sizes.data()),
@@ -392,4 +388,4 @@ void NetCdfFile::ReadVariableWithStride(
     );
 }
 
-}  // namespace kynema_fmb::util
+}  // namespace kynema::util

@@ -1,5 +1,4 @@
 #include <array>
-#include <iostream>
 #include <numbers>
 #include <ranges>
 
@@ -13,15 +12,15 @@
 #include "interfaces/turbine/turbine_interface.hpp"
 #include "interfaces/turbine/turbine_interface_builder.hpp"
 
-#include "Kynema_FMB_config.h"
+#include "Kynema_config.h"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(TurbineInterfaceTest, IEA15_ROSCOControllerWithAero) {
     // Conversions
     constexpr auto rpm_to_radps{0.104719755};  // RPM to rad/s
 
-    constexpr auto duration{0.5};                          // Simulation duration in seconds
+    constexpr auto duration{1.0};                          // Simulation duration in seconds
     constexpr auto time_step{0.005};                       // Time step for the simulation
     constexpr auto n_blades{3U};                           // Number of blades in turbine
     constexpr auto n_blade_nodes{11U};                     // Number of nodes per blade
@@ -409,7 +408,8 @@ TEST(TurbineInterfaceTest, IEA15_ROSCOControllerWithAero) {
 
         // Update aerodynamic loads based on inflow
         interface.UpdateAerodynamicLoads(
-            fluid_density, [t, &inflow](const std::array<double, 3>& pos) {
+            fluid_density,
+            [t, &inflow](const std::array<double, 3>& pos) {
                 return inflow.Velocity(t, pos);
             }
         );
@@ -517,4 +517,4 @@ TEST(TurbineInterfaceTest, ROSCOControllerReadCheckpoint) {
     controller.SetSimulationTime(10. * time_step);
     controller.CallController();
 }
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

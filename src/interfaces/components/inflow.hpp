@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 
 /**
  * @brief Parameters defining uniform flow characteristics
@@ -36,9 +36,8 @@ struct UniformFlow {
      * @param position 3D position [x, y, z]
      * @return 3D velocity vector [vx, vy, vz]
      */
-    [[nodiscard]] std::array<double, 3> Velocity(
-        double t, const std::array<double, 3>& position
-    ) const;
+    [[nodiscard]] std::array<double, 3> Velocity(double t, const std::array<double, 3>& position)
+        const;
 };
 
 /**
@@ -83,9 +82,8 @@ struct Inflow {
      * @param position 3D position [x, y, z]
      * @return 3D velocity vector [vx, vy, vz]
      */
-    [[nodiscard]] std::array<double, 3> Velocity(
-        double t, const std::array<double, 3>& position
-    ) const;
+    [[nodiscard]] std::array<double, 3> Velocity(double t, const std::array<double, 3>& position)
+        const;
 };
 
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components

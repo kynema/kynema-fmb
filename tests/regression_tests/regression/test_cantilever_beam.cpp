@@ -29,7 +29,7 @@ void WriteMatrixToFile(const std::vector<std::vector<T>>& data, const std::strin
 
 }  // namespace
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(DynamicBeamTest, CantileverBeamSineLoad) {
     // Mass matrix for uniform composite beam section
@@ -140,4 +140,4 @@ TEST(DynamicBeamTest, CantileverBeamSineLoad) {
     }
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

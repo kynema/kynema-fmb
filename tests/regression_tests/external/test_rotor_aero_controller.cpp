@@ -18,7 +18,7 @@
 #include "step/step.hpp"
 #include "utilities/aerodynamics/aerodyn_inflow.hpp"
 
-#include "Kynema_FMB_config.h"
+#include "Kynema_config.h"
 
 namespace {
 
@@ -66,8 +66,7 @@ template <
     typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7,
     typename T8>
 void SetRotorMotion(
-    kynema_fmb::util::TurbineData& turbine,
-    const std::vector<std::vector<size_t>>& beam_elem_node_ids,
+    kynema::util::TurbineData& turbine, const std::vector<std::vector<size_t>>& beam_elem_node_ids,
     const std::vector<size_t>& root_node_ids, const size_t& hub_node_id, const size_t& n_qps,
     const T1& host_state_x, const T2& host_state_v, const T3& host_state_vd, const T4& host_qp_x,
     const T5& host_qp_u_dot, const T6& host_qp_omega, const T7& host_qp_u_ddot,
@@ -119,8 +118,8 @@ void SetRotorMotion(
 
 template <typename DeviceType, typename T1, typename T2>
 void SetAeroLoads(
-    kynema_fmb::Beams<DeviceType>& beams, const size_t n_blades, const size_t n_nodes,
-    const size_t n_qps, const kynema_fmb::util::TurbineData& turbine, const T1& host_node_FX,
+    kynema::Beams<DeviceType>& beams, const size_t n_blades, const size_t n_nodes,
+    const size_t n_qps, const kynema::util::TurbineData& turbine, const T1& host_node_FX,
     const T2& host_qp_Fe
 ) {
     if (use_node_loads) {
@@ -148,7 +147,7 @@ void SetAeroLoads(
 
 }  // namespace
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(Milestone, IEA15RotorAeroController) {
     // Conversions
@@ -165,13 +164,13 @@ TEST(Milestone, IEA15RotorAeroController) {
     constexpr auto gravity = std::array{0., 0., -9.81};      // Gravity (m/s/s)
 
     // Controller parameters
-    const std::string controller_shared_lib_path{static_cast<const char*>(KYNEMA_FMB_ROSCO_LIBRARY)};
+    const std::string controller_shared_lib_path{static_cast<const char*>(Kynema_ROSCO_LIBRARY)};
     const std::string controller_function_name{"DISCON"};
     const std::string controller_input_file_path{"./IEA-15-240-RWT/DISCON.IN"};
     const std::string controller_simulation_name{"./IEA-15-240-RWT"};
 
     // Aerodynamics and Inflow library
-    const std::string adi_shared_lib_path{static_cast<const char*>(KYNEMA_FMB_ADI_LIBRARY)};
+    const std::string adi_shared_lib_path{static_cast<const char*>(Kynema_ADI_LIBRARY)};
     const std::string aerodyn_input_path{"./IEA-15-240-RWT/AeroDyn15.dat"};
     const std::string inflowwind_input_path{"./IEA-15-240-RWT/InflowFile.dat"};
 
@@ -247,7 +246,8 @@ TEST(Milestone, IEA15RotorAeroController) {
     );
     std::vector<Node> tip_node_ids;
     std::ranges::transform(
-        std::views::iota(0U, n_blades), std::back_inserter(beam_elem_ids), [&](const size_t i) {
+        std::views::iota(0U, n_blades), std::back_inserter(beam_elem_ids),
+        [&](const size_t i) {
             // Define root rotation about x-axis
             const auto q_root = q_roots[i] * base_rot;
 
@@ -602,4 +602,4 @@ TEST(Milestone, IEA15RotorAeroController) {
     }
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

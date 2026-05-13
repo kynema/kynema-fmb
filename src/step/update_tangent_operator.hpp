@@ -7,7 +7,7 @@
 #include "step_parameters.hpp"
 #include "system/calculate_tangent_operator.hpp"
 
-namespace kynema_fmb::step {
+namespace kynema::step {
 
 template <typename DeviceType>
 inline void UpdateTangentOperator(StepParameters& parameters, State<DeviceType>& state) {
@@ -25,4 +25,4 @@ inline void UpdateTangentOperator(StepParameters& parameters, State<DeviceType>&
     );
 }
 
-}  // namespace kynema_fmb::step
+}  // namespace kynema::step

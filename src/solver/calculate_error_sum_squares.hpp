@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::solver {
+namespace kynema::solver {
 
 /**
  * @brief Reduction Kernel which calculates the sum of the square of the errors for each
@@ -79,4 +79,4 @@ struct CalculateConstraintsErrorSumSquares {
     }
 };
 
-}  // namespace kynema_fmb::solver
+}  // namespace kynema::solver

@@ -8,7 +8,7 @@
 #include "interfaces/outputs.hpp"
 #include "model/model.hpp"
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 /**
  * @brief Interface for blade simulation that manages state, solver, and components
@@ -67,4 +67,4 @@ private:
     std::unique_ptr<Outputs> outputs;     ///< handle to Output for writing to NetCDF
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

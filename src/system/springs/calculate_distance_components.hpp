@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::springs {
+namespace kynema::springs {
 
 template <typename DeviceType>
 struct CalculateDistanceComponents {
@@ -20,4 +20,4 @@ struct CalculateDistanceComponents {
         }
     }
 };
-}  // namespace kynema_fmb::springs
+}  // namespace kynema::springs

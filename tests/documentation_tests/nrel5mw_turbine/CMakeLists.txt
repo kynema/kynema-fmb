@@ -20,5 +20,5 @@ if(PROJECT_IS_TOP_LEVEL)
 endif()
 
 add_executable(nrel5mw_turbine)
-target_link_libraries(nrel5mw_turbine PRIVATE KynemaFMB::kynema_fmb_library)
+target_link_libraries(nrel5mw_turbine PRIVATE Kynema::kynema_library)
 target_sources(nrel5mw_turbine PRIVATE nrel5mw_turbine.cpp)

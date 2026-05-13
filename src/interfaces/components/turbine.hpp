@@ -9,11 +9,11 @@
 #include "interfaces/host_state.hpp"
 #include "interfaces/node_data.hpp"
 
-namespace kynema_fmb {
+namespace kynema {
 class Model;
 }
 
-namespace kynema_fmb::interfaces::components {
+namespace kynema::interfaces::components {
 /**
  * @brief Represents a turbine with nodes, elements, and constraints
  *
@@ -417,4 +417,4 @@ private:
     void SetInitialRotorVelocity(const TurbineInput& input, Model& model);
 };
 
-}  // namespace kynema_fmb::interfaces::components
+}  // namespace kynema::interfaces::components

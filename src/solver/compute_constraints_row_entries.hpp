@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::solver {
+namespace kynema::solver {
 
 /**
  * @brief Kernel to compute the constraints' contribution to the row pointers of the CRS matrix
@@ -34,4 +34,4 @@ struct ComputeConstraintsRowEntries {
     }
 };
 
-}  // namespace kynema_fmb::solver
+}  // namespace kynema::solver

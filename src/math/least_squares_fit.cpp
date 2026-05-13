@@ -6,7 +6,7 @@
 
 #include <Eigen/Dense>
 
-namespace kynema_fmb::math {
+namespace kynema::math {
 std::vector<std::array<double, 3>> PerformLeastSquaresFitting(
     std::span<const std::vector<double>> shape_functions,
     std::span<const std::array<double, 3>> points_to_fit
@@ -59,4 +59,4 @@ std::vector<std::array<double, 3>> PerformLeastSquaresFitting(
 
     return result;
 }
-}  // namespace kynema_fmb::math
+}  // namespace kynema::math

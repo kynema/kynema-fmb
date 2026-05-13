@@ -16,7 +16,7 @@
 #include "calculate_rotation_control_constraint.hpp"
 #include "constraint_type.hpp"
 
-namespace kynema_fmb::constraints {
+namespace kynema::constraints {
 
 /**
  * @brief Top level kernel which calculates the residual and gradient contributions
@@ -563,4 +563,4 @@ struct CalculateConstraintResidualGradient {
     };
 };
 
-}  // namespace kynema_fmb::constraints
+}  // namespace kynema::constraints
