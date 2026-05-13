@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <string>
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::util {
 
 Controller::Controller(const ControllerInput& input)
     : io{},
@@ -90,4 +90,4 @@ void Controller::CallController() {
     this->SetStatusOperating();
 }
 
-}  // namespace kynema::interfaces::components
+}  // namespace kynema_fmb::util

@@ -9,7 +9,7 @@
 
 #include "interfaces/components/controller_io.hpp"
 
-namespace kynema::util {
+namespace kynema_fmb::util {
 
 extern "C" {
 
@@ -453,4 +453,4 @@ void DISCON(
 
 }  // extern "C"
 
-}  // namespace kynema::util
+}  // namespace kynema_fmb::util

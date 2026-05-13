@@ -13,10 +13,10 @@
 #include "interpolate_to_quadrature_point_for_stiffness.hpp"
 #include "system/masses/rotate_section_matrix.hpp"
 
-namespace kynema::beams {
+namespace kynema_fmb::beams {
 
 template <typename DeviceType>
-struct CalculateStiffnessQuadraturePointValues {
+struct CalculateQuadraturePointStiffnessValues {
     template <typename ValueType>
     using View = Kokkos::View<ValueType, DeviceType>;
     template <typename ValueType>
@@ -36,12 +36,12 @@ struct CalculateStiffnessQuadraturePointValues {
     ConstView<double** [6][6]> qp_Cstar;
     ConstView<double* [7]> node_u;
 
-    Kokkos::View<double* [6], DeviceType> qp_Fc;
-    Kokkos::View<double* [6], DeviceType> qp_Fd;
-    Kokkos::View<double* [6][6], DeviceType> qp_Cuu;
-    Kokkos::View<double* [6][6], DeviceType> qp_Ouu;
-    Kokkos::View<double* [6][6], DeviceType> qp_Puu;
-    Kokkos::View<double* [6][6], DeviceType> qp_Quu;
+    View<double* [6]> qp_Fc;
+    View<double* [6]> qp_Fd;
+    View<double* [6][6]> qp_Cuu;
+    View<double* [6][6]> qp_Ouu;
+    View<double* [6][6]> qp_Puu;
+    View<double* [6][6]> qp_Quu;
 
     KOKKOS_FUNCTION
     void operator()(size_t qp) const {
@@ -128,4 +128,4 @@ struct CalculateStiffnessQuadraturePointValues {
     }
 };
 
-}  // namespace kynema::beams
+}  // namespace kynema_fmb::beams

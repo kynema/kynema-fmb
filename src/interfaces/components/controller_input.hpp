@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <string>
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::interfaces::components {
 
 enum class PitchActuatorType : std::uint8_t {
     POSITION = 0,
@@ -45,4 +45,4 @@ struct ControllerInput {
     std::string output_file_path;  ///< Simulation name for controller
 };
 
-}  // namespace kynema::interfaces::components
+}  // namespace kynema_fmb::interfaces::components
