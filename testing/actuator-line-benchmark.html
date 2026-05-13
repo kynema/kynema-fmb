@@ -106,18 +106,19 @@
   <div class="section" id="actuator-line-benchmark-nrel-5mw-turbine">
 <span id="sec-actuator-line-benchmark"></span><h1>Actuator-line benchmark: NREL 5MW Turbine<a class="headerlink" href="#actuator-line-benchmark-nrel-5mw-turbine" title="Permalink to this heading"></a></h1>
 <p>This page documents results from an actuator-line CFD benchmark based on the NREL 5MW reference
-wind turbine, as defined in the ExaWind benchmark repository. The benchmark models a single NREL
+wind turbine, as defined in the Kynema benchmark repository. The benchmark models a single NREL
 5MW turbine using an actuator-line representation within a slightly convective, unstable
 atmospheric boundary layer (ABL).</p>
-<p>Fully coupled fluid–structure interaction (FSI) simulations performed with Kynema-FMB–AMR-Wind are
-compared against the OpenFAST–AMR-Wind reference solution. The purpose of this benchmark is to
-assess consistency in predicted turbine-level performance and spanwise aerodynamic quantities
-between the two simulation frameworks.</p>
+<p>Fully coupled fluid–structure interaction (FSI) simulations performed with
+Kynema-FMB and Kynema-SGF are compared against the OpenFAST–Kynema-SGF
+reference solution. The purpose of this benchmark is to assess consistency in
+predicted turbine-level performance and spanwise aerodynamic quantities between
+the two simulation frameworks.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Complete details of the benchmark definition, simulation setup, inflow, and
-post-processing steps are provided in the ExaWind Benchmarks documentation:
-<a class="reference external" href="https://exawind.github.io/exawind-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html">ExaWind Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)</a>.</p>
+post-processing steps are provided in the Kynema Benchmarks documentation:
+<a class="reference external" href="https://kynema.github.io/kynema-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html">Kynema Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)</a>.</p>
 </div>
 <div class="section" id="simulation-cases">
 <h2>Simulation cases<a class="headerlink" href="#simulation-cases" title="Permalink to this heading"></a></h2>
@@ -134,19 +135,19 @@ post-processing steps are provided in the ExaWind Benchmarks documentation:
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>OpenFAST</strong></p></td>
-<td><p>Unchanged ExaWind benchmark case (OpenFAST–AMR-Wind).</p></td>
+<td><p>Unchanged Kynema benchmark case (OpenFAST–Kyenma-SGF).</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OF no twr</strong></p></td>
 <td><p>Benchmark case with tower aerodynamic points disabled.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Kynema-FMB</strong></p></td>
-<td><p>Kynema-FMB–AMR-Wind using the same time step as OpenFAST.</p></td>
+<td><p>Kynema-FMB/SGF using the same time step as OpenFAST.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Kyn. 10dt</strong></p></td>
-<td><p>Kynema-FMB–AMR-Wind using 10× the OpenFAST time step (2 Kynema-FMB steps per AMR-Wind step).</p></td>
+<td><p>Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema FMB steps per SGF step).</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Kyn. 20dt</strong></p></td>
-<td><p>Kynema-FMB–AMR-Wind using 20× the OpenFAST time step (1 Kynema-FMB step per AMR-Wind step).</p></td>
+<td><p>Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema FMB step per SGF step).</p></td>
 </tr>
 </tbody>
 </table>
