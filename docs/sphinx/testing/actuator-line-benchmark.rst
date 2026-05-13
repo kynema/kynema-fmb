@@ -4,7 +4,7 @@ Actuator-line benchmark: NREL 5MW Turbine
 -----------------------------------------
 
 This page documents results from an actuator-line CFD benchmark based on the NREL 5MW reference
-wind turbine, as defined in the ExaWind benchmark repository. The benchmark models a single NREL
+wind turbine, as defined in the Kynema benchmark repository. The benchmark models a single NREL
 5MW turbine using an actuator-line representation within a slightly convective, unstable
 atmospheric boundary layer (ABL).
 
@@ -15,9 +15,9 @@ between the two simulation frameworks.
 
 .. note::
    Complete details of the benchmark definition, simulation setup, inflow, and
-   post-processing steps are provided in the ExaWind Benchmarks documentation:
-   `ExaWind Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)
-   <https://exawind.github.io/exawind-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html>`_.
+   post-processing steps are provided in the Kynema Benchmarks documentation:
+   `Kynema Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)
+   <https://kynema.github.io/kynema-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html>`_.
 
 
 Simulation cases
@@ -32,7 +32,7 @@ The figures below compare multiple simulation configurations, identified in the 
    * - Legend label
      - Description
    * - **OpenFAST**
-     - Unchanged ExaWind benchmark case (OpenFAST–AMR-Wind).
+     - Unchanged Kynema benchmark case (OpenFAST–AMR-Wind).
    * - **OF no twr**
      - Benchmark case with tower aerodynamic points disabled.
    * - **Kynema-FMB**
