@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <span>
 #include <tuple>
 
@@ -23,7 +24,7 @@
 #include "solver/solver.hpp"
 #include "state/state.hpp"
 
-namespace kynema {
+namespace kynema_fmb {
 
 /**
  * @brief Compute freedom tables for state, elements, and constraints, then construct and return
@@ -155,15 +156,17 @@ public:
      * @param node_ids A list of the node IDs to be contained in the beam
      * @param sections The physical properties defined at each quadrature point
      * @param quadrature The quadrature point locations and weights
+     * @param mu Stiffness-proportional damping coefficients
      *
      * @return the index of the newly added beam
      */
     size_t AddBeamElement(
         std::span<const size_t> node_ids, std::span<const BeamSection> sections,
-        std::span<const std::array<double, 2>> quadrature
+        std::span<const std::array<double, 2>> quadrature,
+        const std::array<double, 6>& mu = {0., 0., 0., 0., 0., 0.}
     ) {
         const auto elem_id = this->beam_elements_.size();
-        this->beam_elements_.emplace_back(elem_id, node_ids, sections, quadrature);
+        this->beam_elements_.emplace_back(elem_id, node_ids, sections, quadrature, mu);
         this->mesh_connectivity_.AddBeamElementConnectivity(elem_id, node_ids);
         return elem_id;
     }
@@ -222,7 +225,7 @@ public:
      */
     template <typename DeviceType>
     [[nodiscard]] Beams<DeviceType> CreateBeams() const {
-        return kynema::CreateBeams<DeviceType>(this->CreateBeamsInput(), this->nodes_);
+        return kynema_fmb::CreateBeams<DeviceType>(this->CreateBeamsInput(), this->nodes_);
     }
 
     /**
@@ -353,7 +356,7 @@ public:
      */
     template <typename DeviceType>
     [[nodiscard]] Masses<DeviceType> CreateMasses() const {
-        return kynema::CreateMasses<DeviceType>(
+        return kynema_fmb::CreateMasses<DeviceType>(
             MassesInput(this->mass_elements_, this->gravity_), this->nodes_
         );
     }
@@ -422,7 +425,9 @@ public:
      */
     template <typename DeviceType>
     [[nodiscard]] Springs<DeviceType> CreateSprings() const {
-        return kynema::CreateSprings<DeviceType>(SpringsInput(this->spring_elements_), this->nodes_);
+        return kynema_fmb::CreateSprings<DeviceType>(
+            SpringsInput(this->spring_elements_), this->nodes_
+        );
     }
 
     //--------------------------------------------------------------------------
@@ -694,4 +699,4 @@ private:
         mesh_connectivity_;  //< Mesh connectivity tracking element-node relationships
 };
 
-}  // namespace kynema
+}  // namespace kynema_fmb

@@ -5,7 +5,7 @@
 #include "beam.hpp"
 #include "math/matrix_operations.hpp"
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::interfaces::components {
 BeamBuilder& BeamBuilder::SetElementOrder(size_t element_order) {
     input.element_order = element_order;
     return *this;
@@ -29,6 +29,11 @@ BeamBuilder& BeamBuilder::SetSectionRefinement(size_t section_refinement) {
 BeamBuilder& BeamBuilder::ClearReferenceAxisPoints() {
     input.ref_axis.coordinate_grid.clear();
     input.ref_axis.coordinates.clear();
+    return *this;
+}
+
+BeamBuilder& BeamBuilder::SetDampingProperties(const std::array<double, 6>& mu) {
+    input.mu = mu;
     return *this;
 }
 
@@ -114,4 +119,4 @@ const BeamInput& BeamBuilder::Input() const {
 Beam BeamBuilder::Build(Model& model) const {
     return {this->input, model};
 }
-}  // namespace kynema::interfaces::components
+}  // namespace kynema_fmb::interfaces::components

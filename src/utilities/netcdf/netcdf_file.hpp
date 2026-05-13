@@ -6,7 +6,7 @@
 
 #include <netcdf.h>
 
-namespace kynema::util {
+namespace kynema_fmb::util {
 
 /*
  * @brief Class for managing NetCDF files for writing outputs
@@ -56,6 +56,11 @@ public:
      * @note If the file is already open, no action is taken
      */
     void Open();
+
+    /**
+     * @brief Checks if the NetCDF file is open
+     */
+    [[nodiscard]] bool IsOpen() const { return netcdf_id_ != -1; }
 
     //--------------------------------------------------------------------------
     // Setter/Write methods
@@ -263,4 +268,4 @@ private:
     std::string file_path_;
 };
 
-}  // namespace kynema::util
+}  // namespace kynema_fmb::util

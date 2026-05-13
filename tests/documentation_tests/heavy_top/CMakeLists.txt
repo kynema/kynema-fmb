@@ -20,5 +20,5 @@ if(PROJECT_IS_TOP_LEVEL)
 endif()
 
 add_executable(heavy_top)
-target_link_libraries(heavy_top PRIVATE Kynema::kynema_library)
+target_link_libraries(heavy_top PRIVATE KynemaFMB::kynema_fmb_library)
 target_sources(heavy_top PRIVATE heavy_top.cpp)

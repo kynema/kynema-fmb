@@ -10,7 +10,7 @@
 #include "interfaces/components/controller_io.hpp"
 #include "vendor/dylib/dylib.hpp"
 
-namespace kynema::tests {
+namespace kynema_fmb::tests {
 
 TEST(ControllerTest, DisconController) {
     // Test data generated using the following regression test from the
@@ -138,4 +138,4 @@ TEST(ControllerTest, ControllerExceptionInvalidControllerFunctionName) {
     );
 }
 
-}  // namespace kynema::tests
+}  // namespace kynema_fmb::tests

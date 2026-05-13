@@ -4,11 +4,11 @@
 
 #include "beam_input.hpp"
 
-namespace kynema {
+namespace kynema_fmb {
 class Model;
 }
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::interfaces::components {
 
 class Beam;
 
@@ -77,6 +77,14 @@ public:
      * @return A reference to this BeamBuilder
      */
     BeamBuilder& ClearReferenceAxisPoints();
+
+    /**
+     * @brief Sets the stiffness-proportional damping coefficients
+     *
+     * @param mu Stiffness-proportional damping coefficients
+     * @return A reference to this BeamBuilder
+     */
+    BeamBuilder& SetDampingProperties(const std::array<double, 6>& mu);
 
     /**
      * @brief Adds a reference axis point with specified orientation
@@ -170,4 +178,4 @@ private:
     BeamInput input;
 };
 
-}  // namespace kynema::interfaces::components
+}  // namespace kynema_fmb::interfaces::components
