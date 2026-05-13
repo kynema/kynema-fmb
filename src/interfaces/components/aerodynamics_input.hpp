@@ -22,6 +22,11 @@ struct AerodynamicBodyInput {
     size_t id{};
     std::vector<size_t> beam_node_ids;
     std::vector<AerodynamicSection> aero_sections;
+    AerodynamicBodyInput(
+        size_t id_val, const std::vector<size_t>& node_ids,
+        const std::vector<AerodynamicSection>& sections
+    )
+        : id(id_val), beam_node_ids(node_ids), aero_sections(sections) {}
 };
 
 class AerodynamicsInput {
