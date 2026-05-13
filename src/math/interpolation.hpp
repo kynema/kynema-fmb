@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-namespace kynema_fmb::math {
+namespace kynema::math {
 
 /**
  * @brief Computes weights for linear interpolation
@@ -112,7 +112,8 @@ inline void LagrangePolynomialDerivWeights(
                          }) |
                          std::views::common;
             auto prod = std::transform_reduce(
-                std::begin(range), std::end(range), 1., std::multiplies<>(), [&xs, x, xi](auto k) {
+                std::begin(range), std::end(range), 1., std::multiplies<>(),
+                [&xs, x, xi](auto k) {
                     return (x - xs[k]) / (xi - xs[k]);
                 }
             );
@@ -223,4 +224,4 @@ inline std::vector<double> GenerateGLLPoints(const size_t order) {
     return gll_points;
 }
 
-}  // namespace kynema_fmb::math
+}  // namespace kynema::math

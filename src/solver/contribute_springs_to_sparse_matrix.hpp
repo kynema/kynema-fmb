@@ -5,7 +5,7 @@
 
 #include "dof_management/freedom_signature.hpp"
 
-namespace kynema_fmb::solver {
+namespace kynema::solver {
 
 /**
  * @brief A Kernel which sums the system matrix contributions computed at each of the nodes in a
@@ -41,7 +41,8 @@ struct ContributeSpringsToSparseMatrix {
         constexpr auto hint = static_cast<typename CrsMatrixType::ordinal_type>(0);
 
         Kokkos::parallel_for(
-            Kokkos::TeamVectorRange(member, num_nodes * num_nodes), [&](int node_12) {
+            Kokkos::TeamVectorRange(member, num_nodes * num_nodes),
+            [&](int node_12) {
                 const auto node_1 = node_12 / num_nodes;
                 const auto node_2 = node_12 % num_nodes;
                 const auto first_column = static_cast<typename CrsMatrixType::ordinal_type>(
@@ -70,4 +71,4 @@ struct ContributeSpringsToSparseMatrix {
     };
 };
 
-}  // namespace kynema_fmb::solver
+}  // namespace kynema::solver

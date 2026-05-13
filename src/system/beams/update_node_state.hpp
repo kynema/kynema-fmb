@@ -3,7 +3,7 @@
 #include <KokkosBatched_Copy_Decl.hpp>
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::beams {
+namespace kynema::beams {
 
 template <typename DeviceType>
 struct UpdateNodeStateElement {
@@ -82,4 +82,4 @@ struct UpdateNodeState {
     }
 };
 
-}  // namespace kynema_fmb::beams
+}  // namespace kynema::beams

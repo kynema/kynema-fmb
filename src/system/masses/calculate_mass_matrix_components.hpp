@@ -3,7 +3,7 @@
 #include <KokkosBatched_Copy_Decl.hpp>
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::masses {
+namespace kynema::masses {
 
 template <typename DeviceType>
 KOKKOS_INLINE_FUNCTION void CalculateEta(
@@ -27,4 +27,4 @@ KOKKOS_INLINE_FUNCTION void CalculateRho(
     );
 }
 
-}  // namespace kynema_fmb::masses
+}  // namespace kynema::masses

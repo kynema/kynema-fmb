@@ -5,7 +5,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 template <typename DeviceType>
 struct HostConstraints;
@@ -46,4 +46,4 @@ struct ConstraintData {
     void SetInputs(HostConstraints<DeviceType>& host_constraints) const;
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces

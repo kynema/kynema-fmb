@@ -2,7 +2,7 @@
 
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::beams {
+namespace kynema::beams {
 
 template <typename DeviceType>
 struct IntegrateResidualVectorElement {
@@ -22,10 +22,8 @@ struct IntegrateResidualVectorElement {
     ConstLeftView<double**> shape_interp_;
     ConstLeftView<double**> shape_deriv_;
     ConstView<double* [6]> node_FX_;
-    ConstView<double* [6]> qp_FE1_;
-    ConstView<double* [6]> qp_FE2_;
-    ConstView<double* [6]> qp_FD1_;
-    ConstView<double* [6]> qp_FD2_;
+    ConstView<double* [6]> qp_Fc_;
+    ConstView<double* [6]> qp_Fd_;
     ConstView<double* [6]> qp_Fi_;
     ConstView<double* [6]> qp_Fe_;
     ConstView<double* [6]> qp_Fg_;
@@ -40,10 +38,9 @@ struct IntegrateResidualVectorElement {
             const auto coeff_dig = weight * qp_jacobian_(qp) * shape_interp_(node, qp);
             for (auto component = 0U; component < 6U; ++component) {
                 local_residual[component] +=
-                    coeff_c * (qp_FE1_(qp, component) + qp_FD1_(qp, component)) +
-                    coeff_dig *
-                        (qp_FE2_(qp, component) + qp_FD2_(qp, component) + qp_Fi_(qp, component) -
-                         qp_Fe_(qp, component) - qp_Fg_(qp, component));
+                    coeff_c * qp_Fc_(qp, component) +
+                    coeff_dig * (qp_Fd_(qp, component) + qp_Fi_(qp, component) -
+                                 qp_Fe_(qp, component) - qp_Fg_(qp, component));
             }
         }
         for (auto component = 0U; component < 6U; ++component) {
@@ -53,4 +50,4 @@ struct IntegrateResidualVectorElement {
     }
 };
 
-}  // namespace kynema_fmb::beams
+}  // namespace kynema::beams

@@ -1,8 +1,8 @@
-target_sources(kynema_fmb_library PRIVATE)
+target_sources(kynema_library PRIVATE)
 
 install(FILES
         calculate_tangent_operator.hpp
-        DESTINATION include/KynemaFMB/system/
+        DESTINATION include/Kynema/system/
 )
 
 add_subdirectory(beams)

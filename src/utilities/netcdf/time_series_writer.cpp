@@ -4,7 +4,7 @@
 #include <array>
 #include <stdexcept>
 
-namespace kynema_fmb::util {
+namespace kynema::util {
 
 TimeSeriesWriter::TimeSeriesWriter(const std::string& file_path, bool create)
     : file_(file_path, create), num_channels_{0}, buffer_size_{kDefaultBufferSize} {
@@ -186,10 +186,7 @@ void TimeSeriesWriter::FlushBuffer() {
 
 void TimeSeriesWriter::Flush() {
     this->FlushBuffer();
-    if (file_.IsOpen()) {
-        // Only do sync when file is open
-        file_.Sync();
-    }
+    file_.Sync();
 }
 
 void TimeSeriesWriter::Close() {
@@ -224,4 +221,4 @@ size_t TimeSeriesWriter::GetBufferSize() const {
     return this->buffer_size_;
 }
 
-}  // namespace kynema_fmb::util
+}  // namespace kynema::util

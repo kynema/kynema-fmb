@@ -7,7 +7,7 @@
 #include "constraints/update_lambda_prediction.hpp"
 #include "solver/solver.hpp"
 
-namespace kynema_fmb::step {
+namespace kynema::step {
 
 template <typename DeviceType>
 inline void UpdateConstraintPrediction(
@@ -24,4 +24,4 @@ inline void UpdateConstraintPrediction(
     );
 }
 
-}  // namespace kynema_fmb::step
+}  // namespace kynema::step

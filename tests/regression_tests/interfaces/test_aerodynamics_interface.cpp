@@ -11,7 +11,7 @@
 #include "interfaces/turbine/turbine_interface.hpp"
 #include "interfaces/turbine/turbine_interface_builder.hpp"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 void BuildBlades(
     interfaces::components::TurbineBuilder& turbine_builder, const YAML::Node& wio_blade,
@@ -366,7 +366,8 @@ TEST(AerodynamicsInterfaceTest, IEA15_Turbine) {
         const auto t = i * time_step;
 
         turbine_interface.UpdateAerodynamicLoads(
-            fluid_density, [t, &inflow](const std::array<double, 3>& pos) {
+            fluid_density,
+            [t, &inflow](const std::array<double, 3>& pos) {
                 return inflow.Velocity(t, pos);
             }
         );
@@ -559,7 +560,8 @@ TEST(AerodynamicsInterfaceTest, NREL5_Turbine) {
         const auto t = i * time_step;
 
         turbine_interface.UpdateAerodynamicLoads(
-            fluid_density, [t, &inflow](const std::array<double, 3>& pos) {
+            fluid_density,
+            [t, &inflow](const std::array<double, 3>& pos) {
                 return inflow.Velocity(t, pos);
             }
         );
@@ -573,4 +575,4 @@ TEST(AerodynamicsInterfaceTest, NREL5_Turbine) {
     }
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

@@ -2,7 +2,7 @@
 
 #include "math/quaternion_operations.hpp"
 
-namespace kynema_fmb {
+namespace kynema {
 
 /**
  * @brief Represents a node in the finite element model
@@ -409,4 +409,4 @@ private:
     Node& node;
 };
 
-}  // namespace kynema_fmb
+}  // namespace kynema

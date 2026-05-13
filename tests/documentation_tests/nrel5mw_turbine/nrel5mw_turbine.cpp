@@ -29,7 +29,7 @@ int main() {
 
         // Create interface builder
         // This object is the main interface for building turbines.
-        auto builder = kynema_fmb::interfaces::TurbineInterfaceBuilder{};
+        auto builder = kynema::interfaces::TurbineInterfaceBuilder{};
 
         // Set solution parameters
         // The .Solution() function provides options related to controling the solver,
@@ -113,7 +113,7 @@ int main() {
             for (auto i : std::views::iota(0U, axis_grid.size())) {
                 blade_builder.AddRefAxisPoint(
                     axis_grid[i], {x_values[i], y_values[i], z_values[i]},
-                    kynema_fmb::interfaces::components::ReferenceAxisOrientation::Z
+                    kynema::interfaces::components::ReferenceAxisOrientation::Z
                 );
             }
 
@@ -191,7 +191,7 @@ int main() {
                         {k15, k25, k35, k45, k55, k56},
                         {k16, k26, k36, k46, k56, k66},
                     }},
-                    kynema_fmb::interfaces::components::ReferenceAxisOrientation::Z
+                    kynema::interfaces::components::ReferenceAxisOrientation::Z
                 );
             }
         }
@@ -218,13 +218,12 @@ int main() {
         for (auto i : std::views::iota(0U, axis_grid.size())) {
             tower_builder.AddRefAxisPoint(
                 axis_grid[i], {x_values[i], y_values[i], z_values[i]},
-                kynema_fmb::interfaces::components::ReferenceAxisOrientation::Z
+                kynema::interfaces::components::ReferenceAxisOrientation::Z
             );
         }
 
         // Set tower base position from first reference axis point
-        turbine_builder.SetTowerBasePosition(
-            {x_values[0], y_values[0], z_values[0], 1., 0., 0., 0.}
+        turbine_builder.SetTowerBasePosition({x_values[0], y_values[0], z_values[0], 1., 0., 0., 0.}
         );
 
         // Add reference axis twist (zero for tower)
@@ -261,7 +260,7 @@ int main() {
 
         for (auto i : std::views::iota(0U, tower_diameter_grid.size())) {
             // Create section mass and stiffness matrices
-            const auto section = kynema_fmb::beams::GenerateHollowCircleSection(
+            const auto section = kynema::beams::GenerateHollowCircleSection(
                 tower_diameter_grid[i], elastic_modulus, shear_modulus, density,
                 tower_diameter_values[i], tower_wall_thickness_values[i], poisson_ratio
             );
@@ -269,7 +268,7 @@ int main() {
             // Add section
             tower_builder.AddSection(
                 section.position, section.M_star, section.C_star,
-                kynema_fmb::interfaces::components::ReferenceAxisOrientation::Z
+                kynema::interfaces::components::ReferenceAxisOrientation::Z
             );
         }
 
@@ -353,8 +352,7 @@ int main() {
 
         // Blade airfoil sections
         const auto& airfoil_io = wio["airfoils"];
-        auto blade_aero_sections =
-            std::vector<kynema_fmb::interfaces::components::AerodynamicSection>{};
+        auto blade_aero_sections = std::vector<kynema::interfaces::components::AerodynamicSection>{};
         auto id = 0UL;
         for (const auto& af : airfoil_io) {
             const auto s = af["spanwise_position"].as<double>();
@@ -379,8 +377,7 @@ int main() {
         aero_builder.SetAirfoilSections(0UL, blade_aero_sections);
 
         // Tower airfoil sections (simple circular cylinder)
-        auto tower_aero_sections =
-            std::vector<kynema_fmb::interfaces::components::AerodynamicSection>{};
+        auto tower_aero_sections = std::vector<kynema::interfaces::components::AerodynamicSection>{};
         const auto& tower_os = wio["components"]["tower"]["outer_shape"];
         const auto aoa = std::vector<double>{-180., 180.};
         const auto cl = std::vector<double>{0., 0.};
@@ -436,7 +433,7 @@ int main() {
         const auto n_steps{static_cast<size_t>(duration / time_step)};
 
         auto inflow =
-            kynema_fmb::interfaces::components::Inflow::SteadyWind(vel_h, h_ref, pl_exp, flow_angle);
+            kynema::interfaces::components::Inflow::SteadyWind(vel_h, h_ref, pl_exp, flow_angle);
 
         const bool might_crash{false};
 
@@ -452,7 +449,8 @@ int main() {
                       << " | " << std::setprecision(2) << t / duration * 100. << "%\n";
 
             interface.UpdateAerodynamicLoads(
-                fluid_density, [t, &inflow](const std::array<double, 3>& pos) {
+                fluid_density,
+                [t, &inflow](const std::array<double, 3>& pos) {
                     return inflow.Velocity(t, pos);
                 }
             );

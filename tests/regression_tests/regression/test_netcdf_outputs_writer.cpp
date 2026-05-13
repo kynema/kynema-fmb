@@ -7,7 +7,7 @@
 #include "step/step.hpp"
 #include "utilities/netcdf/node_state_writer.hpp"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 TEST(NetCDFOutputsWriterTest, SpringMassSystemOutputs) {
     auto model = Model();
@@ -108,4 +108,4 @@ TEST(NetCDFOutputsWriterTest, SpringMassSystemOutputs) {
     std::filesystem::remove(output_file);
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

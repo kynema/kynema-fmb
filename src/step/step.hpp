@@ -28,7 +28,7 @@
 #include "update_system_variables.hpp"
 #include "update_tangent_operator.hpp"
 
-namespace kynema_fmb {
+namespace kynema {
 
 /**
  * @brief Attempts to complete a single time step in the dynamic/static FEA simulation
@@ -205,4 +205,4 @@ inline bool Step(
     return solved;
 }
 
-}  // namespace kynema_fmb
+}  // namespace kynema

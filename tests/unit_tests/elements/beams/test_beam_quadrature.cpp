@@ -4,7 +4,7 @@
 
 #include "elements/beams/beam_quadrature.hpp"
 
-namespace kynema_fmb::beams::tests {
+namespace kynema::beams::tests {
 
 //--------------------------------------------------------------------------
 // Trapezoidal Quadrature
@@ -49,4 +49,4 @@ TEST(BeamQuadratureTest, CheckCreateTrapezoidalQuadrature_2) {
     }
 }
 
-}  // namespace kynema_fmb::beams::tests
+}  // namespace kynema::beams::tests

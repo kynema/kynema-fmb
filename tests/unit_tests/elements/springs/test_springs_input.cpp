@@ -3,7 +3,7 @@
 #include "elements/springs/springs_input.hpp"
 #include "model/model.hpp"
 
-namespace kynema_fmb::tests {
+namespace kynema::tests {
 
 class SpringsInputTest : public ::testing::Test {
 protected:
@@ -38,4 +38,4 @@ TEST_F(SpringsInputTest, NumElements) {
     EXPECT_EQ(input.NumElements(), 2);
 }
 
-}  // namespace kynema_fmb::tests
+}  // namespace kynema::tests

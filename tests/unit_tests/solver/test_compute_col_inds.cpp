@@ -24,7 +24,7 @@ typename Kokkos::View<ValueType>::const_type CreateView(
 }
 
 }  // namespace
-namespace kynema_fmb::solver::tests {
+namespace kynema::solver::tests {
 
 TEST(ComputeColInds, OneElementOneNode) {
     constexpr auto num_non_zero = 36UL;
@@ -405,4 +405,4 @@ TEST(ComputeColInds, OneElementOneNode_TwoConstraint) {
     }
 }
 
-}  // namespace kynema_fmb::solver::tests
+}  // namespace kynema::solver::tests

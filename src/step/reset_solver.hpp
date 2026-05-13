@@ -5,7 +5,7 @@
 
 #include "solver/solver.hpp"
 
-namespace kynema_fmb::step {
+namespace kynema::step {
 
 template <typename DeviceType>
 inline void ResetSolver(Solver<DeviceType>& solver) {
@@ -14,4 +14,4 @@ inline void ResetSolver(Solver<DeviceType>& solver) {
     Kokkos::deep_copy(solver.b, 0.);
 }
 
-}  // namespace kynema_fmb::step
+}  // namespace kynema::step

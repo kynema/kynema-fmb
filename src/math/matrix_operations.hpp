@@ -5,7 +5,7 @@
 #include <Eigen/Geometry>
 #include <Kokkos_Core.hpp>
 
-namespace kynema_fmb::math {
+namespace kynema::math {
 
 /**
  * @brief Computes AX(A) of a square matrix
@@ -82,4 +82,4 @@ inline std::array<std::array<double, 6>, 6> RotateMatrix6(
     };
 }
 
-}  // namespace kynema_fmb::math
+}  // namespace kynema::math

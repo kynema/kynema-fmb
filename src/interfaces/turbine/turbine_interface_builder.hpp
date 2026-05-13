@@ -7,7 +7,7 @@
 #include "interfaces/components/turbine_builder.hpp"
 #include "turbine_interface.hpp"
 
-namespace kynema_fmb::interfaces {
+namespace kynema::interfaces {
 
 /**
  * @brief Builder class to construct a TurbineInterface by composing Turbine and Solution components
@@ -63,4 +63,4 @@ private:
     components::OutputsBuilder outputs_builder;        ///< Builder for the Outputs component
 };
 
-}  // namespace kynema_fmb::interfaces
+}  // namespace kynema::interfaces
