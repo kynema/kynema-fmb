@@ -8,7 +8,7 @@
 #include "controller_io.hpp"
 #include "vendor/dylib/dylib.hpp"
 
-namespace kynema::interfaces::components {
+namespace kynema_fmb::interfaces::components {
 
 /// A turbine controller class that works as a wrapper around the shared library containing the
 /// controller logic
