@@ -11,12 +11,14 @@ TEST(ROSCO_Controller, initialize) {
     const auto shared_lib_path = std::string{static_cast<const char*>(KYNEMA_FMB_ROSCO_LIBRARY)};
     const auto controller_function_name = std::string{"DISCON"};
 
-    auto controller = interfaces::components::Controller(interfaces::components::ControllerInput{
-        .shared_lib_path = shared_lib_path,
-        .function_name = controller_function_name,
-        .input_file_path = "./IEA-15-240-RWT/DISCON.IN",
-        .output_file_path = ""
-    });
+    auto controller = interfaces::components::Controller(
+        interfaces::components::ControllerInput{
+            .shared_lib_path = shared_lib_path,
+            .function_name = controller_function_name,
+            .input_file_path = "./IEA-15-240-RWT/DISCON.IN",
+            .output_file_path = ""
+        }
+    );
 
     controller.SetStatusInit();
     controller.SetSimulationTime(0.);

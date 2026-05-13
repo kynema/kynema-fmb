@@ -112,12 +112,14 @@ TEST(ControllerTest, ControllerExceptionInvalidSharedLibraryPath) {
     const auto controller_function_name = std::string{"DISCON"};
 
     EXPECT_THROW(
-        auto controller = interfaces::components::Controller(interfaces::components::ControllerInput{
-            .shared_lib_path = shared_lib_path,
-            .function_name = controller_function_name,
-            .input_file_path = "",
-            .output_file_path = ""
-        }),
+        auto controller = interfaces::components::Controller(
+            interfaces::components::ControllerInput{
+                .shared_lib_path = shared_lib_path,
+                .function_name = controller_function_name,
+                .input_file_path = "",
+                .output_file_path = ""
+            }
+        ),
         std::runtime_error
     );
 }
@@ -128,12 +130,14 @@ TEST(ControllerTest, ControllerExceptionInvalidControllerFunctionName) {
     const auto controller_function_name = std::string{"INVALID"};
 
     EXPECT_THROW(
-        auto controller = interfaces::components::Controller(interfaces::components::ControllerInput{
-            .shared_lib_path = shared_lib_path,
-            .function_name = controller_function_name,
-            .input_file_path = "",
-            .output_file_path = ""
-        }),
+        auto controller = interfaces::components::Controller(
+            interfaces::components::ControllerInput{
+                .shared_lib_path = shared_lib_path,
+                .function_name = controller_function_name,
+                .input_file_path = "",
+                .output_file_path = ""
+            }
+        ),
         std::runtime_error
     );
 }
