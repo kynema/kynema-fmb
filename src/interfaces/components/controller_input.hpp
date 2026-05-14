@@ -44,7 +44,7 @@ struct ControllerInput {
     std::string shared_lib_path;   ///< Path to controller shared library
     std::string function_name;     ///< Controller function name (default: "DISCON")
     std::string input_file_path;   ///< Path to controller input file
-    std::string output_file_path;  ///< Simulation name for controller
+    std::string output_file_path;  ///< Path to controller output file
 };
 
 }  // namespace kynema_fmb::interfaces::components

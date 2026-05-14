@@ -135,6 +135,8 @@ TurbineBuilder& TurbineBuilder::SetHubWindSpeed(double speed) {
 }
 
 TurbineBuilder& TurbineBuilder::SetRestartFilePath(const std::string& path) {
+    // "Restart" is legacy terminology for the checkpoint file path used by the
+    // rest of the API (`checkpoint_file_path`, Read/WriteCheckpointFile, etc.).
     this->input.checkpoint_file_path = path;
     return *this;
 }

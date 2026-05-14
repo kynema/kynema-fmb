@@ -156,8 +156,8 @@ private:
     std::unique_ptr<components::Controller> controller;  ///< DISCON-style controller
     std::unique_ptr<components::Aerodynamics> aerodynamics;  ///< Aerodynamics component
     std::array<double, 3> hub_inflow{0., 0., 0.};            ///< Inflow velocity at the hub node
-    double gearbox_ratio;                                    ///< Gearbox ratio
-    double generator_efficiency;                             ///< Generator efficiency
+    double gearbox_ratio{1.0};                               ///< Gearbox ratio
+    double generator_efficiency{1.0};                        ///< Generator efficiency
 
     /**
      * @brief Write rotor time-series data based on constraint outputs

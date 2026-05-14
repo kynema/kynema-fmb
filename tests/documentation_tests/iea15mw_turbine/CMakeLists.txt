@@ -7,7 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Project declaration
 project(
-  IEA15MW_Trubine
+  IEA15MW_Turbine
   VERSION 1.0.0
   DESCRIPTION "Models a turbine with torque and pitch control"
   LANGUAGES CXX
