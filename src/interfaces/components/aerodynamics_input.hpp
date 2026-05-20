@@ -17,6 +17,8 @@ struct AerodynamicSection {
     std::vector<double> cd;
     std::vector<double> cm;
 
+    AerodynamicSection() = default;
+
     AerodynamicSection(
         const size_t id_,
         const double s_,
