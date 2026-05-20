@@ -21,8 +21,9 @@ struct AerodynamicSection {
 
     AerodynamicSection(
         size_t id_, double s_, double chord_, double section_offset_x_, double section_offset_y_,
-        double aerodynamic_center_, double twist_, std::vector<double>& aoa_,
-        std::vector<double>& cl_, std::vector<double>& cd_, std::vector<double>& cm_
+        double aerodynamic_center_, double twist_, const std::vector<double>& aoa_,
+        const std::vector<double>& cl_, const std::vector<double>& cd_,
+        const std::vector<double>& cm_
     )
         : id(id_),
           s(s_),
