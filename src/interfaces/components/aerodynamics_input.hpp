@@ -20,22 +20,22 @@ struct AerodynamicSection {
     AerodynamicSection() = default;
 
     AerodynamicSection(
-        const size_t id_,
-        const double s_,
-        const double chord_,
-        const double section_offset_x_,
-        const double section_offset_y_,
-        const double aerodynamic_center_,
-        const double twist_,
-        const std::vector<double>& aoa_,
-        const std::vector<double>& cl_,
-        const std::vector<double>& cd_,
-        const std::vector<double>& cm_
+        const size_t id_, const double s_, const double chord_, const double section_offset_x_,
+        const double section_offset_y_, const double aerodynamic_center_, const double twist_,
+        const std::vector<double>& aoa_, const std::vector<double>& cl_,
+        const std::vector<double>& cd_, const std::vector<double>& cm_
     )
-        : id(id_), s(s_), chord(chord_), 
-          section_offset_x(section_offset_x_), section_offset_y(section_offset_y_),
-          aerodynamic_center(aerodynamic_center_), twist(twist_),
-          aoa(aoa_), cl(cl_), cd(cd_), cm(cm_) {}
+        : id(id_),
+          s(s_),
+          chord(chord_),
+          section_offset_x(section_offset_x_),
+          section_offset_y(section_offset_y_),
+          aerodynamic_center(aerodynamic_center_),
+          twist(twist_),
+          aoa(aoa_),
+          cl(cl_),
+          cd(cd_),
+          cm(cm_) {}
 };
 
 struct AerodynamicBodyInput {
