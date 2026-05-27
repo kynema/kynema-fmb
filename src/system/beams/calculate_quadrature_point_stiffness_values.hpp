@@ -50,7 +50,7 @@ struct CalculateQuadraturePointStiffnessValues {
         using Kokkos::make_pair;
         using Kokkos::subview;
         using CopyMatrix = KokkosBatched::SerialCopy<>;
-        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose, 1>;
+        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose>;
 
         const auto r0_data = Array<double, 4>{
             qp_r0(element, qp, 0), qp_r0(element, qp, 1), qp_r0(element, qp, 2),

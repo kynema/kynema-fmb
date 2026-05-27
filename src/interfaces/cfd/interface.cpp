@@ -28,10 +28,10 @@ namespace {
  */
 void GetNodeMotion(
     kynema_fmb::interfaces::cfd::NodeData& node,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_x,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_q,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_v,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_vd
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_x,
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_q,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_v,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_vd
 ) {
     for (auto component : std::views::iota(0U, 7U)) {
         node.position[component] = host_state_x(node.id, component);
@@ -207,10 +207,10 @@ void SetPlatformLoads(
  */
 void GetFloatingPlatformMotion(
     kynema_fmb::interfaces::cfd::FloatingPlatform& platform,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_x,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_q,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_v,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_vd
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_x,
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_q,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_v,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_vd
 ) {
     // If platform is not active, return
     if (!platform.active) {
@@ -275,10 +275,10 @@ void SetTurbineLoads(
  */
 void GetTurbineMotion(
     kynema_fmb::interfaces::cfd::Turbine& turbine,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_x,
-    const Kokkos::View<double* [7]>::HostMirror::const_type& host_state_q,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_v,
-    const Kokkos::View<double* [6]>::HostMirror::const_type& host_state_vd
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_x,
+    const Kokkos::View<double* [7]>::host_mirror_type::const_type& host_state_q,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_v,
+    const Kokkos::View<double* [6]>::host_mirror_type::const_type& host_state_vd
 ) {
     GetFloatingPlatformMotion(
         turbine.floating_platform, host_state_x, host_state_q, host_state_v, host_state_vd

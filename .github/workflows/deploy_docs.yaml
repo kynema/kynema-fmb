@@ -34,7 +34,7 @@ jobs:
           spack install superlu
           spack install rosco@2.9.0
           spack install openfast
-          spack install kokkos-kernels@4.7.02
+          spack install kokkos-kernel
           spack install eigen@5.0.1
       - name: Set up Python
         uses: actions/setup-python@v5

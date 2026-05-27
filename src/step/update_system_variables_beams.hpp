@@ -23,7 +23,8 @@ inline void UpdateSystemVariablesBeams(
 
     const auto vector_length =
         std::min(static_cast<int>(num_nodes * num_nodes), TeamPolicy::vector_length_max());
-    auto range_policy = TeamPolicy(static_cast<int>(beams.num_elems), Kokkos::AUTO(), vector_length);
+    auto range_policy =
+        TeamPolicy(static_cast<int>(beams.num_elems), Kokkos::AUTO(), std::max(vector_length, 1));
 
     const auto shape_size = Kokkos::View<double**>::shmem_size(padded_num_nodes, num_qps);
     const auto weight_size = Kokkos::View<double*>::shmem_size(num_qps);
