@@ -34,7 +34,7 @@ jobs:
           source spack/share/spack/setup-env.sh
           spack compiler find
           spack install googletest
-          spack install cppcheck@2.18.0
+          spack install cppcheck
           spack install netcdf-c
           spack install yaml-cpp
           spack install suite-sparse
@@ -51,14 +51,14 @@ jobs:
       - name: Test Kynema-FMB
         run: |
           source spack/share/spack/setup-env.sh
-          spack load kokkos-kernels
+          spack load kokkos-kernels@4.7.02
           spack load suite-sparse
           spack load superlu
           spack load googletest
           spack load cppcheck
           spack load netcdf-c
           spack load yaml-cpp
-          spack load rosco
+          spack load rosco@2.9.0
           spack load openfast
           spack load eigen
           cd kynema-fmb
@@ -79,4 +79,4 @@ jobs:
             -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} \
             -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
           cmake --build .
-          ctest --output-on-failure
+          ctest --output-on-failure --extra-verbose
