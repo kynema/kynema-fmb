@@ -608,10 +608,8 @@ void TurbineInterface::ApplyController(double t) {
     this->turbine.rotor_torque_control = controller->GeneratorTorqueCommand() * this->gearbox_ratio;
     const double pitch_angle_collective = controller->PitchAngleCommand();
     const auto pitch_angle_individual = controller->PitchAngleCommandIndividual();
-    if (
-        pitch_angle_individual[0] == pitch_angle_collective && pitch_angle_individual[1] == 0.0 &&
-        pitch_angle_individual[2] == 0.0
-    ) {
+    if (pitch_angle_individual[0] == pitch_angle_collective && pitch_angle_individual[1] == 0.0 &&
+        pitch_angle_individual[2] == 0.0) {
         this->turbine.blade_pitch_control[0] = pitch_angle_collective;
         this->turbine.blade_pitch_control[1] = pitch_angle_collective;
         this->turbine.blade_pitch_control[2] = pitch_angle_collective;
