@@ -60,8 +60,8 @@ struct Constraints {
     View<double* [6]> lambda;
 
     // Host mirrors for CPU access
-    typename View<double* [7]>::HostMirror host_input;
-    typename View<double* [3]>::HostMirror host_output;
+    typename View<double* [7]>::host_mirror_type host_input;
+    typename View<double* [3]>::host_mirror_type host_output;
 
     // System contributions
     View<double* [6]> residual_terms;

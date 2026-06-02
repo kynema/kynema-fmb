@@ -20,7 +20,7 @@ namespace kynema_fmb::interfaces {
 template <typename DeviceType>
 struct HostConstraints {
     template <typename ValueType>
-    using HostView = typename Kokkos::View<ValueType, DeviceType>::HostMirror;
+    using HostView = typename Kokkos::View<ValueType, DeviceType>::host_mirror_type;
 
     /// @brief Host local copy of current inputs
     HostView<double* [7]> input;

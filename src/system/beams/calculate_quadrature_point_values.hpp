@@ -60,7 +60,7 @@ struct CalculateQuadraturePointValues {
         using Kokkos::TeamVectorRange;
         using CopyMatrix = KokkosBatched::TeamVectorCopy<member_type>;
         using CopyVector =
-            KokkosBatched::TeamVectorCopy<member_type, KokkosBatched::Trans::NoTranspose, 1>;
+            KokkosBatched::TeamVectorCopy<member_type, KokkosBatched::Trans::NoTranspose>;
 
         const auto element = static_cast<size_t>(member.league_rank());
         const auto num_nodes = num_nodes_per_element(element);

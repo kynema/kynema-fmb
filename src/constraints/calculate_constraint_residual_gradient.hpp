@@ -32,8 +32,8 @@ struct CalculateConstraintResidualGradient {
     using Gemm = KokkosBatched::SerialGemm<
         KokkosBatched::Trans::NoTranspose, KokkosBatched::Trans::NoTranspose,
         KokkosBatched::Algo::Gemm::Default>;
-    using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose, 1>;
-    using CopyMatrix = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose, 2>;
+    using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose>;
+    using CopyMatrix = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose>;
     template <typename ValueType>
     using View = Kokkos::View<ValueType, DeviceType>;
     template <typename ValueType>

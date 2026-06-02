@@ -21,7 +21,7 @@ namespace kynema_fmb::interfaces {
 template <typename DeviceType>
 struct HostState {
     template <typename ValueType>
-    using HostView = typename Kokkos::View<ValueType, DeviceType>::HostMirror;
+    using HostView = typename Kokkos::View<ValueType, DeviceType>::host_mirror_type;
 
     /// @brief Host local copy of current position
     HostView<double* [7]> x;

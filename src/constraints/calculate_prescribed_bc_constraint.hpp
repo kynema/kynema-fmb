@@ -27,7 +27,7 @@ struct CalculatePrescribedBCConstraint {
         using Kokkos::Array;
         using Kokkos::make_pair;
         using Kokkos::subview;
-        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose, 1>;
+        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose>;
         using CopyTransposeMatrix = KokkosBatched::SerialCopy<KokkosBatched::Trans::Transpose>;
 
         const auto u1_data = Array<double, 3>{inputs(0), inputs(1), inputs(2)};

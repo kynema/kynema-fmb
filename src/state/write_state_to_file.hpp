@@ -22,10 +22,10 @@ inline void WriteStateToFile(std::ostream& output, const State<DeviceType>& stat
     // NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)
     output.write(reinterpret_cast<char*>(&num_system_nodes), sizeof(size_t));
 
-    const auto mirror_7 = Kokkos::View<double* [7]>::HostMirror("mirror_7", num_system_nodes);
+    const auto mirror_7 = Kokkos::View<double* [7]>::host_mirror_type("mirror_7", num_system_nodes);
     const auto out_7 = Kokkos::View<double* [7], Kokkos::HostSpace>("out_7", num_system_nodes);
 
-    const auto mirror_6 = Kokkos::View<double* [6]>::HostMirror("mirror_6", num_system_nodes);
+    const auto mirror_6 = Kokkos::View<double* [6]>::host_mirror_type("mirror_6", num_system_nodes);
     const auto out_6 = Kokkos::View<double* [6], Kokkos::HostSpace>("out_6", num_system_nodes);
 
     const auto write_7 = [&](const Kokkos::View<double* [7]>& data) {

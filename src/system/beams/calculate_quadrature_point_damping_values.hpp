@@ -64,7 +64,7 @@ struct CalculateQuadraturePointDampingValues {
         using Kokkos::make_pair;
         using Kokkos::subview;
         using CopyMatrix = KokkosBatched::SerialCopy<>;
-        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose, 1>;
+        using CopyVector = KokkosBatched::SerialCopy<KokkosBatched::Trans::NoTranspose>;
 
         // If mu is all zeros, zero the output and skip the calculation
         if (mu(0) == 0.0 && mu(1) == 0.0 && mu(2) == 0.0 && mu(3) == 0.0 && mu(4) == 0.0 &&

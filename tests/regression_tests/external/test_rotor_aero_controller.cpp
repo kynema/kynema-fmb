@@ -24,7 +24,7 @@ namespace {
 constexpr bool use_node_loads = true;
 
 std::array<double, 6> GetNodeData(
-    const size_t index, const Kokkos::View<double* [6]>::HostMirror& state_matrix
+    const size_t index, const Kokkos::View<double* [6]>::host_mirror_type& state_matrix
 ) {
     return {
         state_matrix(index, 0), state_matrix(index, 1), state_matrix(index, 2),
@@ -33,7 +33,7 @@ std::array<double, 6> GetNodeData(
 }
 
 std::array<double, 7> GetNodeData(
-    const size_t index, const Kokkos::View<double* [7]>::HostMirror& state_matrix
+    const size_t index, const Kokkos::View<double* [7]>::host_mirror_type& state_matrix
 ) {
     return {
         state_matrix(index, 0), state_matrix(index, 1), state_matrix(index, 2),
