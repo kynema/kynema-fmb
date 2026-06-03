@@ -266,27 +266,27 @@ Build Options
 Kynema-FMB has several build options which can be set either when running
 CMake from the command line or through a GUI such as ccmake.
 
-- ``Kynema-FMB_ENABLE_CLANG_TIDY`` enables the Clang-Tidy static analysis tool
-- ``Kynema-FMB_ENABLE_COVERAGE`` enables code coverage analysis using gcov
-- ``Kynema-FMB_ENABLE_CPPCHECK`` enables the CppCheck static analysis tool
-- ``Kynema-FMB_ENABLE_IPO`` enables link time optimization
-- ``Kynema-FMB_ENABLE_PCH`` builds precompiled headers to potentially decrease compilation time
-- ``Kynema-FMB_ENABLE_SANITIZER_ADDRESS`` enables the address sanitizer runtime analysis tool
-- ``Kynema-FMB_ENABLE_SANITIZER_LEAK`` enables the leak sanitizer runtime analysis tool
-- ``Kynema-FMB_ENABLE_SANITIZER_MEMORY`` enables the memory sanitizer runtime analysis tool
-- ``Kynema-FMB_ENABLE_SANITIZER_THREAD`` enables the thread sanitizer runtime analysis tool
-- ``Kynema-FMB_ENABLE_SANITIZER_UNDEFINED`` enables the undefined behavior sanitizer runtime analysis tool
-- ``Kynema-FMB_ENABLE_TESTS`` builds Kynema-FMB's test suite
-- ``Kynema-FMB_ENABLE_UNITY_BUILD`` uses unity builds to potentially decrease compilation time
-- ``Kynema-FMB_WRITE_OUTPUTS`` builds Kynema-FMB with VTK support for visualization in tests. Will need the VTK TPL to be properly configured
-- ``Kynema-FMB_WARNINGS_AS_ERRORS`` treats warnings as errors, including warnings from static analysis tools
-- ``Kynema-FMB_ENABLE_KLU`` builds Kynema-FMB with support for Suite-Sparse's KLU solver; in our experience, this is solver is fast and robust for many of our problems.
-- ``Kynema-FMB_ENABLE_UMFPACK`` builds Kynema-FMB with support for Suite-Sparse's UMFPACK solver.
-- ``Kynema-FMB_ENABLE_SUPERLU`` builds Kynema-FMB with support forthe  SuperLU solver
-- ``Kynema-FMB_ENABLE_SUPERLU_MT`` builds Kynema-FMB with support for SuperLU-mt, a threaded version of SuperLU which may be configured to run in parallel on CPU.
-- ``Kynema-FMB_ENABLE_MKL`` builds Kynema-FMB with MKL's sparse direct solver, which can take advantage
-  of multiple threads to run in parallel on CPU.
-- ``Kynema-FMB_ENABLE_CUDSS`` builds Kynema-FMB with cuDSS, the next generation sparse direct solver of CUDA; still in pre-release at the time of writing, it is the preferred CUDA based solver if the platform supports it.
-- ``Kynema-FMB_ENABLE_CUSOLVERSP`` builds Kynema-FMB with the cuSolverSP sparse direct solver.
-- ``Kynema-FMB_ENABLE_ROSCO_CONTROLLER`` detects the ROSCO controller shared library and defines the `Kynema-FMB_ROSCO_LIBRARY` variable
-- ``Kynema-FMB_ENABLE_OPENFAST_ADI`` detects the OpenFAST AeroDyn shared library and defines the `Kynema-FMB_ADI_LIBRARY` variable
+- ``KYNEMA_FMB_ENABLE_CLANG_TIDY`` enables the Clang-Tidy static analysis tool
+- ``KYNEMA_FMB_ENABLE_COVERAGE`` enables code coverage analysis using gcov
+- ``KYNEMA_FMB_ENABLE_CPPCHECK`` enables the CppCheck static analysis tool
+- ``KYNEMA_FMB_ENABLE_IPO`` enables link time optimization
+- ``KYNEMA_FMB_ENABLE_PCH`` builds precompiled headers to potentially decrease compilation time
+- ``KYNEMA_FMB_ENABLE_SANITIZER_ADDRESS`` enables the address sanitizer runtime analysis tool
+- ``KYNEMA_FMB_ENABLE_SANITIZER_LEAK`` enables the leak sanitizer runtime analysis tool
+- ``KYNEMA_FMB_ENABLE_SANITIZER_MEMORY`` enables the memory sanitizer runtime analysis tool
+- ``KYNEMA_FMB_ENABLE_SANITIZER_THREAD`` enables the thread sanitizer runtime analysis tool
+- ``KYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED`` enables the undefined behavior sanitizer runtime analysis tool
+- ``KYNEMA_FMB_ENABLE_TESTS`` builds Kynema-FMB's test suite
+- ``KYNEMA_FMB_ENABLE_UNITY_BUILD`` uses unity builds to potentially decrease compilation time
+- ``KYNEMA_FMB_WRITE_OUTPUTS`` builds Kynema-FMB with VTK support for visualization in tests. Will need the VTK TPL to be properly configured
+- ``KYNEMA_FMB_WARNINGS_AS_ERRORS`` treats warnings as errors, including warnings from static analysis tools
+- ``KYNEMA_FMB_ENABLE_KLU`` builds Kynema-FMB with support for Suite-Sparse's KLU solver; in our experience, this is solver is fast and robust for many of our problems.
+- ``KYNEMA_FMB_ENABLE_UMFPACK`` builds Kynema-FMB with support for Suite-Sparse's UMFPACK solver.
+- ``KYNEMA_FMB_ENABLE_SUPERLU`` builds Kynema-FMB with support forthe  SuperLU solver
+- ``KYNEMA_FMB_ENABLE_SUPERLU_MT`` builds Kynema-FMB with support for SuperLU-mt, a threaded version of SuperLU which may be configured to run in parallel on CPU.
+- ``KYNEMA_FMB_ENABLE_MKL`` builds Kynema-FMB with MKL's sparse direct solver, which can take advantage
+  of MULTI_le threads to run in parallel on CPU.
+- ``KYNEMA_FMB_ENABLE_CUDSS`` builds Kynema-FMB with cuDSS, the next generation sparse direct solver of CUDA; still in pre-release at the time of writing, it is the preferred CUDA based solver if the platform supports it.
+- ``KYNEMA_FMB_ENABLE_CUSOLVERSP`` builds Kynema-FMB with the cuSolverSP sparse direct solver.
+- ``KYNEMA_FMB_ENABLE_ROSCO_CONTROLLER`` detects the ROSCO controller shared library and defines the `Kynema-FMB_ROSCO_LIBRARY` variable
+- ``KYNEMA_FMB_ENABLE_OPENFAST_ADI`` detects the OpenFAST AeroDyn shared library and defines the `Kynema-FMB_ADI_LIBRARY` variable
