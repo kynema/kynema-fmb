@@ -31,7 +31,9 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/spack/spack.git
+          git clone https://github.com/jrood-nrel/spack-packages.git
           source spack/share/spack/setup-env.sh
+          spack repo set --destination ./spack-packages builtin
           spack compiler find
           spack install googletest
           spack install cppcheck

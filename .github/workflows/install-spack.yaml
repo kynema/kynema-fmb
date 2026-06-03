@@ -18,7 +18,9 @@ jobs:
       - name: Install Kynema-FMB
         run: |
           git clone https://github.com/spack/spack.git
+          git clone https://github.com/jrood-nrel/spack-packages.git
           source spack/share/spack/setup-env.sh
+          spack repo set --destination ./spack-packages builtin
           spack compiler find
           spack env create -d .
           spack env activate .
