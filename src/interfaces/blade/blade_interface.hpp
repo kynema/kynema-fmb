@@ -59,12 +59,13 @@ private:
     components::Beam blade;         ///< Blade model input/output data
     State<DeviceType> state;        ///< Kynema-FMB class for storing system state
     Elements<DeviceType> elements;  ///< Kynema-FMB class for model elements (beams, masses, springs)
-    Constraints<DeviceType> constraints;  ///< Kynema-FMB class for constraints tying elements together
-    StepParameters parameters;            ///< Kynema-FMB class containing solution parameters
-    Solver<DeviceType> solver;            ///< Kynema-FMB class for solving the dynamic system
-    State<DeviceType> state_save;         ///< Kynema-FMB class state class for temporarily saving state
-    HostState<DeviceType> host_state;     ///< Host local copy of node state data
-    std::unique_ptr<Outputs> outputs;     ///< handle to Output for writing to NetCDF
+    Constraints<DeviceType>
+        constraints;                   ///< Kynema-FMB class for constraints tying elements together
+    StepParameters parameters;         ///< Kynema-FMB class containing solution parameters
+    Solver<DeviceType> solver;         ///< Kynema-FMB class for solving the dynamic system
+    State<DeviceType> state_save;      ///< Kynema-FMB class state class for temporarily saving state
+    HostState<DeviceType> host_state;  ///< Host local copy of node state data
+    std::unique_ptr<Outputs> outputs;  ///< handle to Output for writing to NetCDF
 };
 
 }  // namespace kynema_fmb::interfaces
