@@ -53,7 +53,7 @@ jobs:
       - name: Test Kynema-FMB
         run: |
           source spack/share/spack/setup-env.sh
-          spack load kokkos-kernels@4.7.02
+          spack load kokkos-kernels
           spack load suite-sparse
           spack load superlu
           spack load googletest
