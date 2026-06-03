@@ -23,8 +23,8 @@ namespace kynema_fmb::tests {
  *       J. C. Simo and L. Vu-Quoc (1986). "A three-dimensional finite-strain rod model. Part II."
  *       Computer Methods in Applied Mechanics and Engineering, 58:79–116.
  *
- * @see Kynema-FMB documentation for the full benchmark results (we are using the 15-node, 15 quadrature
- *      points with Gauss-Legendre quadrature case here):
+ * @see Kynema-FMB documentation for the full benchmark results (we are using the 15-node, 15
+ * quadrature points with Gauss-Legendre quadrature case here):
  *      https://kynema.github.io/kynema/testing/rollup.html
  */
 TEST(VerificationTest, Static_IsotropicBeamRollUp) {
