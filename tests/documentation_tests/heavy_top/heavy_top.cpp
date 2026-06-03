@@ -7,8 +7,8 @@
 #include <step/step.hpp>
 
 int main() {
-    // Kynema is based on Kokkos for performance portability.  Make sure to
-    // call Kokkos::initialize before creating any Kynema data structures
+    // Kynema-FMB is based on Kokkos for performance portability.  Make sure to
+    // call Kokkos::initialize before creating any Kynema-FMB data structures
     // and Kokkos::finalize after all of those data structures have been destroyed.
     Kokkos::initialize();
     {
@@ -24,9 +24,9 @@ int main() {
         const auto x_ddot =
             std::array{0., -21.3017325444000001, -30.9608307692308244};  // initial acceleration
 
-        // A Model is Kynema's low level interface for specifying elements, nodes, constraints,
+        // A Model is Kynema-FMB's low level interface for specifying elements, nodes, constraints,
         // and their connectivities.  Once everything has be specified, we will use to model to
-        // create Kynema's fundamental data structures and advance the problem in time.
+        // create Kynema-FMB's fundamental data structures and advance the problem in time.
         auto model = kynema_fmb::Model();
 
         // To add a node, we call the AddNode method on Model, which creates a NodeBuilder object.
@@ -70,7 +70,7 @@ int main() {
         // The gravity vector for the problem is set using the well named SetGravity method
         model.SetGravity(0., 0., -9.81);
 
-        // Now that the problem has been fully described in the model, we will create Kynema's
+        // Now that the problem has been fully described in the model, we will create Kynema-FMB's
         // main data structures: State, Elements, Constraints, and Solver.  The
         // CreateSystemWithSolver<> method takes an optional template argument with a Kokkos device
         // describing where the system will reside and run.  By default, it uses Kokkos' default
@@ -99,9 +99,9 @@ int main() {
         auto parameters =
             kynema_fmb::StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf, a_tol, r_tol);
 
-        // Kynema allows the user to control the actual time stepping process.  This includes
+        // Kynema-FMB allows the user to control the actual time stepping process.  This includes
         // setting forces, post-processing data, coupling to other codes.  This example does none of
-        // that. At each time step, we call Kynema's Step function and pass in the previously
+        // that. At each time step, we call Kynema-FMB's Step function and pass in the previously
         // created structures.
         for (auto i = 0; i < 400; ++i) {
             [[maybe_unused]] const auto converged =
@@ -125,7 +125,7 @@ int main() {
         assert(std::abs(q(0, 5) - -0.95947769608535960) < 1e-10);
         assert(std::abs(q(0, 6) - -0.017268392381761217) < 1e-10);
     }
-    // Make sure to call finalize after all Kynema data structures are deleted
+    // Make sure to call finalize after all Kynema-FMB data structures are deleted
     // and you're ready to exit your application.
     Kokkos::finalize();
     return 0;

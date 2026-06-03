@@ -4,7 +4,7 @@ Actuator-line benchmark: NREL 5MW Turbine
 -----------------------------------------
 
 This page documents results from an actuator-line CFD benchmark based on the NREL 5MW reference
-wind turbine, as defined in the Kynema benchmark repository. The benchmark models a single NREL
+wind turbine, as defined in the Kynema-FMB benchmark repository. The benchmark models a single NREL
 5MW turbine using an actuator-line representation within a slightly convective, unstable
 atmospheric boundary layer (ABL).
 
@@ -16,8 +16,8 @@ the two simulation frameworks.
 
 .. note::
    Complete details of the benchmark definition, simulation setup, inflow, and
-   post-processing steps are provided in the Kynema Benchmarks documentation:
-   `Kynema Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)
+   post-processing steps are provided in the Kynema-FMB Benchmarks documentation:
+   `Kynema-FMB Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)
    <https://kynema.github.io/kynema-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html>`_.
 
 
@@ -33,15 +33,15 @@ The figures below compare multiple simulation configurations, identified in the 
    * - Legend label
      - Description
    * - **OpenFAST**
-     - Unchanged Kynema benchmark case (OpenFAST–Kyenma-SGF).
+     - Unchanged Kynema-FMB benchmark case (OpenFAST–Kynema-SGF).
    * - **OF no twr**
      - Benchmark case with tower aerodynamic points disabled.
    * - **Kynema-FMB**
      - Kynema-FMB/SGF using the same time step as OpenFAST.
    * - **Kyn. 10dt**
-     - Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema FMB steps per SGF step).
+     - Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema-FMB steps per SGF step).
    * - **Kyn. 20dt**
-     - Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema FMB step per SGF step).
+     - Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema-FMB step per SGF step).
 
 The "OF, no damp,twr" case is included to isolate differences arising from damping treatment and
 tower aerodynamics. The larger time-step cases (Kyn. 10dt, Kyn. 20dt) demonstrate Kynema-FMB's ability

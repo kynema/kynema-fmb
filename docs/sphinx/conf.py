@@ -23,8 +23,8 @@ bibtex_bibfiles = []
 templates_path = ['_templates'] # path relative to conf.py
 source_suffix = ['.rst']        # options ['.rst', '.md']
 main_doc = 'index'              # top-level toctree document
-project = 'Kynema'
-title = 'Kynema Documentation'
+project = 'Kynema-FMB'
+title = 'Kynema-FMB Documentation'
 copyright = '2023 - Present, MIT License'
 author = 'National Renewable Energy Laboratory (NREL) and Sandia National Laboratories (SNL)'
 
@@ -106,5 +106,5 @@ texinfo_documents = [(
 
 def setup(app):
     app.add_object_type("input_param", "input_param",
-                       objname="Kynema input parameter",
-                       indextemplate="pair: %s; Kynema input parameter")
+                       objname="Kynema-FMB input parameter",
+                       indextemplate="pair: %s; Kynema-FMB input parameter")

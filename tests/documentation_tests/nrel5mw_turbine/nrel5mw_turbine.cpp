@@ -9,8 +9,8 @@
 #include <yaml-cpp/yaml.h>
 
 int main() {
-    // Kynema is based on Kokkos for performance portability.  Make sure to
-    // call Kokkos::initialize before creating any Kynema data structures
+    // Kynema-FMB is based on Kokkos for performance portability.  Make sure to
+    // call Kokkos::initialize before creating any Kynema-FMB data structures
     // and Kokkos::finalize after all of those data structures have been destroyed.
     Kokkos::initialize();
     {
@@ -35,7 +35,7 @@ int main() {
         // The .Solution() function provides options related to controling the solver,
         // such as the time step, numerical damping factor, and convergence criteria.
         //
-        // You can also optionally set an output file in which Kynema will write its
+        // You can also optionally set an output file in which Kynema-FMB will write its
         // solution data each iteration.  If this file is not set, no output will be performed.
         //
         // When using the builder, you can string together setter function calls as seen here,
@@ -478,7 +478,7 @@ int main() {
             interface.ApplyController(t);
         }
     }
-    // Make sure to call finalize after all Kynema data structures are deleted
+    // Make sure to call finalize after all Kynema-FMB data structures are deleted
     // and you're ready to exit your application.
     Kokkos::finalize();
     return 0;

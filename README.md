@@ -4,7 +4,7 @@
 Kynema-FMB is an open-source performance portable flexible multibody (FMB) dynamics
 solver designed for time-domain simulations.  While originally tailored for
 wind turbine structural dynamics, the formulation and implementation are those of a general flexible-multidbody dynamics solver that can readily be applied to a wide range of systems.
-Kynema was designed with a narrow focus, namely to provide a lightweight, fast,
+Kynema-FMB was designed with a narrow focus, namely to provide a lightweight, fast,
 accurate FMD solver for coupling to computational-fluid-dynamics (CFD) codes,
 especially the CFD codes in the [Kynema](https://github.com/kynema) suite, for
 fluid-structure-interaction (FSI) simulations.  
@@ -42,8 +42,8 @@ Kynema-FMB is written in C++ and leverages Kokkos and Kokkos-Kernels
 enabling simulations on both CPU and GPU systems. The repository is equipped
 with extensive automated testing at the unit and regression/system levels.
 
-The following describes the high-level development objectives conceived for Kynema:
-- Kynema will follow modern software development best practices, 
+The following describes the high-level development objectives conceived for Kynema-FMB:
+- Kynema-FMB will follow modern software development best practices, 
 including test-driven development (TDD), version control,
 hierarchical automated testing, and continuous integration (CI) for a
 robust development environment.
@@ -58,7 +58,7 @@ mathematical operations, resource allocation, and data management.
 integration with existing and future ecosystems for data science, machine learning,
 and AI.
 - Kynema-FMB is written in modern C++ and leverages [Kokkos](https://github.com/kokkos/kokkos)
-as its performance-portability library with inspiration from the kynema stack.
+as its performance-portability library with inspiration from the Kynema stack.
 
 ## Contributing 
 
@@ -89,4 +89,4 @@ Department of Energy (DOE) Office of Critical Minerals and Energy Innovation
 
 [Documentation](https://kynema.github.io/kynema-fmb/)
 
-Send questions to michael.a.sprague@nlr.gov, Kynema Principal Investigator.
+Send questions to michael.a.sprague@nlr.gov, Kynema-FMB Principal Investigator.

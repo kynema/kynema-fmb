@@ -1,4 +1,4 @@
-# Run this from the root of the Kynema repository e.g.
+# Run this from the root of the Kynema-FMB repository e.g.
 # docker build -f recipes/Dockerfile -t kynema-fmb:latest .
 
 FROM ubuntu:latest
@@ -42,7 +42,7 @@ RUN git clone https://github.com/spack/spack.git && \
     spack install rosco && \
     spack install openfast
 
-# Step 3: Set up the working directory and copy the Kynema repository
+# Step 3: Set up the working directory and copy the Kynema-FMB repository
 WORKDIR /projects/kynema-fmb
 COPY . .
 

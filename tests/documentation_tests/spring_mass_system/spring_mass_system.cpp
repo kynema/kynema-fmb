@@ -6,8 +6,8 @@
 #include <step/step.hpp>
 
 int main() {
-    // Kynema is based on Kokkos for performance portability.  Make sure to
-    // call Kokkos::initialize before creating any Kynema data structures
+    // Kynema-FMB is based on Kokkos for performance portability.  Make sure to
+    // call Kokkos::initialize before creating any Kynema-FMB data structures
     // and Kokkos::finalize after all of those data structures have been destroyed.
     Kokkos::initialize();
     {
@@ -23,9 +23,9 @@ int main() {
             std::array{0., 0., 0., 0., 0., inertia},  // inertia around z-axis
         };
 
-        // A Model is Kynema's low level interface for specifying elements, nodes, constraints,
+        // A Model is Kynema-FMB's low level interface for specifying elements, nodes, constraints,
         // and their connectivities.  Once everything has be specified, we will use to model to
-        // create Kynema's fundamental data structures and advance the problem in time.
+        // create Kynema-FMB's fundamental data structures and advance the problem in time.
         auto model = kynema_fmb::Model();
 
         // To add a node, we call the AddNode method on Model, which creates a NodeBuilder object.
@@ -81,7 +81,7 @@ int main() {
             model.AddFixedBC(anchor_node_id);
         }
 
-        // Now that the problem has been fully described in the model, we will create Kynema's
+        // Now that the problem has been fully described in the model, we will create Kynema-FMB's
         // main data structures: State, Elements, Constraints, and Solver.
         //
         // The CreateSystem method takes an optional template argument with a Kokkos device
@@ -114,7 +114,7 @@ int main() {
         const double step_size(final_time / static_cast<double>(num_steps));
         auto parameters = kynema_fmb::StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
-        // Kynema allows the user to control the actual time stepping process.  This includes
+        // Kynema-FMB allows the user to control the actual time stepping process.  This includes
         // setting forces, post-processing data, or coupling to other codes.  In this example, we'll
         // check that none of the nodes have moved - the chain is in constant tension and
         // equilibrium.
@@ -134,7 +134,7 @@ int main() {
             }
         }
     }
-    // Make sure to call finalize after all Kynema data structures are deleted
+    // Make sure to call finalize after all Kynema-FMB data structures are deleted
     // and you're ready to exit your application.
     Kokkos::finalize();
     return 0;

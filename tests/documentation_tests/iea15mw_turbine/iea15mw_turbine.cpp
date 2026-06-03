@@ -8,8 +8,8 @@
 #include <yaml-cpp/yaml.h>
 
 int main() {
-    // Kynema is based on Kokkos for performance portability.  Make sure to
-    // call Kokkos::initialize before creating any Kynema data structures
+    // Kynema-FMB is based on Kokkos for performance portability.  Make sure to
+    // call Kokkos::initialize before creating any Kynema-FMB data structures
     // and Kokkos::finalize after all of those data structures have been destroyed.
     Kokkos::initialize();
     {
@@ -27,7 +27,7 @@ int main() {
         // The .Solution() function provides options related to controling the solver,
         // such as the time step, numerical damping factor, and convergence criteria.
         //
-        // You can also optionally set an output file in which Kynema will write its
+        // You can also optionally set an output file in which Kynema-FMB will write its
         // solution data each iteration.  If this file is not set, no output will be performed.
         //
         // When using the builder, you can string together setter function calls as seen here,
@@ -89,7 +89,7 @@ int main() {
 
         // Loop through blades and set parameters
         // Each blade is added in reference coordinates and then rotated onto the rotor
-        // automatically by Kynema.  The blades of a turbine are assumed to be
+        // automatically by Kynema-FMB.  The blades of a turbine are assumed to be
         // equally spaced around the rotor - for example, a turbine with three blades
         // will have one blade every 120 degrees about hte X-axis, with the first blade
         // starting along the global Z-axis.
@@ -103,7 +103,7 @@ int main() {
             auto& blade_builder = turbine_builder.Blade(j);
 
             // Set blade parameters
-            // Kynema's Turbine model assumes one, high order, element per blade.
+            // Kynema-FMB's Turbine model assumes one, high order, element per blade.
             // In this case, eleven blade node are used, which we have seen to give accurate
             // results for the IEA15MW blades.
             //
@@ -234,7 +234,7 @@ int main() {
         const auto t_wall_thickness = t_layer["thickness"]["values"].as<std::vector<double>>();
         for (auto i = 0U; i < t_diameter_grid.size(); ++i) {
             // Create section mass and stiffness matrices
-            // Kynema provides the helper function GenerateHollowCircleSection to create the
+            // Kynema-FMB provides the helper function GenerateHollowCircleSection to create the
             // inertia and stiffness matrices (M_star and C_star) needed to represent the tower
             const auto section = kynema_fmb::beams::GenerateHollowCircleSection(
                 t_diameter_grid[i], t_material["E"].as<double>(), t_material["G"].as<double>(),
@@ -344,7 +344,7 @@ int main() {
             assert(converged);
         }
     }
-    // Make sure to call finalize after all Kynema data structures are deleted
+    // Make sure to call finalize after all Kynema-FMB data structures are deleted
     // and you're ready to exit your application.
     Kokkos::finalize();
     return 0;

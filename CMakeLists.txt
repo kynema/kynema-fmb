@@ -43,7 +43,7 @@ kynema_fmb_local_options()
 set(GIT_SHA "Unknown" CACHE STRING "SHA this build was generated from")
 string(SUBSTRING "${GIT_SHA}" 0 8 GIT_SHORT_SHA)
 
-# Set Kynema Version
+# Set Kynema-FMB Version
 set(KYNEMA_FMB_VERSION_MAJOR 0 CACHE STRING "major version" FORCE)
 set(KYNEMA_FMB_VERSION_MINOR 1 CACHE STRING "minor version" FORCE)
 set(KYNEMA_FMB_VERSION ${KYNEMA_FMB_VERSION_MAJOR}.${KYNEMA_FMB_VERSION_MINOR} CACHE STRING "version" FORCE)

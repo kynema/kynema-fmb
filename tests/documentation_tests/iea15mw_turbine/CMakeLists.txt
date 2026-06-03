@@ -15,7 +15,7 @@ project(
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-find_package(Kynema REQUIRED)
+find_package(KynemaFMB REQUIRED)
 
 add_executable(iea15mw_turbine)
 target_link_libraries(iea15mw_turbine PRIVATE KynemaFMB::kynema_fmb_library)

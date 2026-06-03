@@ -16,7 +16,7 @@ project(
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 if(PROJECT_IS_TOP_LEVEL)
-    find_package(Kynema REQUIRED)
+    find_package(KynemaFMB REQUIRED)
 endif()
 
 add_executable(nrel5mw_turbine)

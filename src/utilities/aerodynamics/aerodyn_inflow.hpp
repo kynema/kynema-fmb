@@ -308,7 +308,7 @@ struct TurbineData {
      * @brief Constructor for TurbineData based on a TurbineConfig object
      *
      * @details This constructor initializes the turbine data in AeroDyn/InflowWind compatible format
-     * based on the provided TurbineConfig object in 7x1 arrays i.e. Kynema format.
+     * based on the provided TurbineConfig object in 7x1 arrays i.e. Kynema-FMB format.
      *
      * @param tc The TurbineConfig object containing the initial state of the turbine
      */

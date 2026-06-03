@@ -29,7 +29,7 @@
  *
  * This file contains a series of unit tests that validate a curved beam problem consisting of
  * 3 nodes at GLL points (for second order polynomial). The validation dataset was created in
- * Mathematica during kynema theory development.
+ * Mathematica during kynema-fmb theory development.
  *
  * The Mathematica notebooks used to generate the validation dataset are:
  * - Run1-RotationLibrary.nb

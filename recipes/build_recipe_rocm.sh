@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# Run this from the root of the Kynema repository with the following arguments:
+# Run this from the root of the Kynema-FMB repository with the following arguments:
 # ./recipes/build_recipe_macos.sh <path_to_kynema_root> <path_to_spack_root>
 # -----------------------------------------------------------------------------
 
@@ -22,12 +22,12 @@ if [ -z "${FC}" ]; then
     exit 1
 fi
 
-# Clone Kynema repository if not present in the provided path
-kynema_path=$(dirname "$1") # Get the directory of the provided path
-if [ ! -d "$kynema_path/kynema" ]; then
-    git clone --recursive https://github.com/kynema/kynema.git $kynema_path/kynema
+# Clone Kynema-FMB repository if not present in the provided path
+kynema_fmb_path=$(dirname "$1") # Get the directory of the provided path
+if [ ! -d "$kynema_fmb_path/kynema-fmb" ]; then
+    git clone --recursive https://github.com/kynema/kynema-fmb.git $kynema_fmb_path/kynema-fmb
 fi
-cd $kynema_path/kynema
+cd $kynema_fmb_path/kynema-fmb
 
 # Install Spack if not present in the provided path
 spack_path=$(dirname "$2") # Get the directory of the provided path
@@ -62,7 +62,7 @@ install_if_missing openfast
 
 spack load kokkos kokkos-kernels netdcf-c suite-sparse eigen googletest yaml-cpp rosco openfast #llvm cppcheck
 
-# Build Kynema with the specified options
+# Build Kynema-FMB with the specified options
 mkdir -p build-from-script
 cd build-from-script
 cmake .. \

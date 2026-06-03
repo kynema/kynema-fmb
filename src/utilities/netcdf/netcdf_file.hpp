@@ -12,7 +12,7 @@ namespace kynema_fmb::util {
  * @brief Class for managing NetCDF files for writing outputs
  *
  * This class provides a wrapper around the NetCDF library's functions for creating,
- * writing, and reading NetCDF files. It is primarily used to write Kynema output data
+ * writing, and reading NetCDF files. It is primarily used to write Kynema-FMB output data
  * to a NetCDF file.
  */
 class NetCdfFile {

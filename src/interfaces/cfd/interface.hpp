@@ -57,28 +57,28 @@ public:
     /// @brief Write current state to output file if configured
     void WriteOutputs() const;
 
-    /// @brief  Kynema class used for model construction
+    /// @brief  Kynema-FMB class used for model construction
     Model model;
 
     /// @brief Turbine model input/output data
     Turbine turbine;
 
-    /// @brief  Kynema class for storing system state
+    /// @brief  Kynema-FMB class for storing system state
     State<DeviceType> state;
 
-    /// @brief  Kynema class for model elements (beams, masses, springs)
+    /// @brief  Kynema-FMB class for model elements (beams, masses, springs)
     Elements<DeviceType> elements;
 
-    /// @brief  Kynema class for constraints tying elements together
+    /// @brief  Kynema-FMB class for constraints tying elements together
     Constraints<DeviceType> constraints;
 
-    /// @brief  Kynema class containing solution parameters
+    /// @brief  Kynema-FMB class containing solution parameters
     StepParameters parameters;
 
-    /// @brief  Kynema class for solving the dynamic system
+    /// @brief  Kynema-FMB class for solving the dynamic system
     Solver<DeviceType> solver;
 
-    /// @brief  Kynema class state class for temporarily saving state
+    /// @brief  Kynema-FMB class state class for temporarily saving state
     State<DeviceType> state_save;
 
     /// @brief Host local copy of State

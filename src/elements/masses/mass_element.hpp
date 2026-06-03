@@ -5,7 +5,7 @@
 namespace kynema_fmb {
 
 /**
- * @brief Mass element constitutes rigid bodies/masses material behavior in kynema.
+ * @brief Mass element constitutes rigid bodies/masses material behavior in kynema-fmb.
  * It has a single node and a single section completely defined by a 6x6 mass matrix.
  */
 struct MassElement {

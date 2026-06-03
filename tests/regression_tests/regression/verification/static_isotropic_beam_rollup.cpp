@@ -10,7 +10,7 @@ namespace kynema_fmb::tests {
 /**
  * @brief Static pure bending benchmark test for an isotropic cantilever beam rolling into a circle
  *
- * @details This problem demonstrates Kynema's capability to analyze an isotropic beam with no
+ * @details This problem demonstrates Kynema-FMB's capability to analyze an isotropic beam with no
  * initial curvature and with highly nonlinear deflections. In fact, the displacement is so large
  * that the beam bends into a complete circular shape (2π radians of rotation over the 10-unit
  * length), providing a rigorous test of the geometrically exact beam formulation.
@@ -23,7 +23,7 @@ namespace kynema_fmb::tests {
  *       J. C. Simo and L. Vu-Quoc (1986). "A three-dimensional finite-strain rod model. Part II."
  *       Computer Methods in Applied Mechanics and Engineering, 58:79–116.
  *
- * @see Kynema documentation for the full benchmark results (we are using the 15-node, 15 quadrature
+ * @see Kynema-FMB documentation for the full benchmark results (we are using the 15-node, 15 quadrature
  *      points with Gauss-Legendre quadrature case here):
  *      https://kynema.github.io/kynema/testing/rollup.html
  */

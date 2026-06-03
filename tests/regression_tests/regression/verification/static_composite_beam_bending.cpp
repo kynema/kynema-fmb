@@ -10,8 +10,8 @@ namespace kynema_fmb::tests {
  * @brief Static bending benchmark test for an anisotropic, composite cantilever beam with coupling
  * effects
  *
- * @details This problem demonstrates the ability of Kynema to analyze a composite beam with
- * bend-bend and bend-twist coupling. This is an important use case for Kynema to be able to model
+ * @details This problem demonstrates the ability of Kynema-FMB to analyze a composite beam with
+ * bend-bend and bend-twist coupling. This is an important use case for Kynema-FMB to be able to model
  * since virtually all wind turbine blades are constructed with such coupling effects, where
  * off-diagonal terms in the 6x6 sectional stiffness matrix create interactions between bending
  * and torsional modes.
@@ -27,7 +27,7 @@ namespace kynema_fmb::tests {
  *       "BeamDyn: a high-fidelity wind turbine blade solver in the FAST modular framework."
  *       Wind Energy 20: 1439-1462.
  *
- * @see Kynema documentation for the full benchmark results (we are using the 15-node, 15 quadrature
+ * @see Kynema-FMB documentation for the full benchmark results (we are using the 15-node, 15 quadrature
  *      points with Gauss-Legendre quadrature case here):
  *      https://kynema.github.io/kynema/testing/composite.html
  */

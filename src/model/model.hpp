@@ -65,10 +65,10 @@ template <
 
 /**
  * @brief Struct to define the connectivity structure of elements, nodes, and constraints defining
- * an Kynema problem.
+ * a Kynema-FMB problem.
  *
  * @details A model is a collection of nodes, elements, and constraints that define the geometry and
- * relationships between components in an Kynema problem.
+ * relationships between components in a Kynema-FMB problem.
  * Model also provides methods to consistantly manipulate the nodes associated with a given element
  * (for example, rotating all nodes in a beam) to ease the process of defining problems.
  */

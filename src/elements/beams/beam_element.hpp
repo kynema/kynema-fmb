@@ -9,7 +9,7 @@
 namespace kynema_fmb {
 
 /**
- * @brief Beam element constitutes flexible beams material behavior in kynema.
+ * @brief Beam element constitutes flexible beams material behavior in kynema-fmb.
  *
  * @details A beam element is defined by a set of nodes and sections. Each section is defined by a
  * 6x6 mass matrix and a 6x6 stiffness matrix. The element quadrature is used to integrate the

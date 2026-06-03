@@ -47,7 +47,7 @@ void GetNodeMotion(
  * @brief Adds nodes to the provided model based on the provided input configuration
  *
  * @param input The configuration for the floating platform
- * @param model The Kynema Model to be populated with mass and spring element information
+ * @param model The Kynema-FMB Model to be populated with mass and spring element information
  * @return A FlatingPlatform object based on the provided configuration
  */
 kynema_fmb::interfaces::cfd::FloatingPlatform CreateFloatingPlatform(

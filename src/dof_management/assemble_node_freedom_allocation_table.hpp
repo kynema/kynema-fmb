@@ -130,7 +130,7 @@ struct AssembleNodeFreedomMapTable_Constraints {
  * contain this node.  The most common action using this information is to query how many
  * degrees of freedom are defined, so this information is also computed.
  *
- * @tparam DeviceType The Kokkos device defining where Kynema's structures reside
+ * @tparam DeviceType The Kokkos device defining where Kynema-FMB's structures reside
  *
  * @param state A structure containing the node freedom allocation table to be filled
  * @param elements A structure containing all of the elements and their connectivities

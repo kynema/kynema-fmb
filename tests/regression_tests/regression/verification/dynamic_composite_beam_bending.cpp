@@ -153,7 +153,7 @@ TEST(VerificationTest, Dynamic_ClampedCompositeBeamBending) {
     // verify tip displacements
     //-------------------------------------------
     // Using relative tolerance (20%) with minimum absolute threshold for small values
-    // NOTE: The tolerance is high since we don't expect Kynema's constraint-based approach
+    // NOTE: The tolerance is high since we don't expect Kynema-FMB's constraint-based approach
     // to match BeamDyn's Dirichlet BCs based approach
     constexpr double relative_tolerance{0.20};  // 20% relative tolerance
     constexpr double min_abs_tolerance{1e-5};   // Minimum absolute tolerance for near-zero values
