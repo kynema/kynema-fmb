@@ -32,9 +32,9 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/spack/spack.git
-          git clone https://github.com/jrood-nrel/spack-packages.git
           source spack/share/spack/setup-env.sh
-          spack repo set --destination ./spack-packages builtin
+          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
+          spack repo list
           spack compiler find
           spack external find
           spack install googletest
