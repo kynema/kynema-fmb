@@ -25,9 +25,11 @@ jobs:
         run: |
           git clone https://github.com/spack/spack.git
           source spack/share/spack/setup-env.sh
+          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
+          spack repo list
           spack compiler find
           spack install googletest
-          spack install cppcheck@2.18.0
+          spack install cppcheck
           spack install netcdf-c
           spack install yaml-cpp
           spack install suite-sparse
