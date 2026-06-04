@@ -1,8 +1,8 @@
-.. meta::a6ad468a4da72b42c9f3a6cc3433fe9c196ca1545e9a0c5f2f3b53beb27f2c3c76677802647301e29f310fe97adb193d5d2b92ed479ffc1eed21609209bb5e0f
+.. meta::13aa224e59eeab877d57974aabf83e1ca5776eb265f90d334dcdc1433d7836bf6b54c075d1feed9019533c62af283d0c37530e996560d57ea992a94a51ba1d08
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::SUPERLU &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::SUPERLU &gt; Class Reference
 
 SUPERLU &gt; Class Reference
 ============================

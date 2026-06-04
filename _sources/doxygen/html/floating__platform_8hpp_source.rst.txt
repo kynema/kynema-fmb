@@ -1,8 +1,8 @@
-.. meta::93a37b65df2b1ecd218843c002b256cb6b2d5e24b8bffe3c43e0cc2dc30e62dbb11ab66cad0599583f968ab71b3b51760e944254c09f91402ce62cc7309d4941
+.. meta::5f2085bf89bcd424b79285a1f1cca04e9fe61554642f95f7a2dde0b09ae8e12241dca634ef874aa29024562ca637988a28e65495c698021920a025f6fae62abb
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating_platform.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating_platform.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating\_platform.hpp Source File
 ========================================================================================================

@@ -1,8 +1,8 @@
-.. meta::0f08414376d8c70f941b7b79ca12de581b1335a2673ac67c83564c945213cbd0a7450a15bb2d4a334f8efb7001051ac1bd6731e64f01946c93fb6f3962d1f9f6
+.. meta::ae0166079eba3a4b75cf4ab1f2decc3936ee1d38a789f688fb9cfd47af29ffcfea90e32e96607e0077bbd8a8fed059a003a0514db858e3317b33b94ca8e96cc8
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::CUSOLVER_SP &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::CUSOLVER_SP &gt; Class Reference
 
 CUSOLVER\_SP &gt; Class Reference
 =================================

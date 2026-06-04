@@ -1,8 +1,8 @@
-.. meta::a3e4738364f87b869a320821db2ccf4a8715bd0457d4d14f6335d8185df92d30b174558e9845f7b49705976f009fc0ee807087527a317e450c15619c4227aabf
+.. meta::d7c3f55bcd6d549ac0e0f848858017fbff3b5b9156528402be49bba2586a20617019c3375f577362025d5c80fd1f28d64e878162ea6434842c1f371dfbeb8014
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateSystemMatrix&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateSystemMatrix&lt; DeviceType &gt; Struct Template Reference
 
 CalculateSystemMatrix&lt; DeviceType &gt; Struct Template Reference
 ===================================================================

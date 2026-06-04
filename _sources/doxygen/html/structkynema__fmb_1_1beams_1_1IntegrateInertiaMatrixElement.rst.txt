@@ -1,8 +1,8 @@
-.. meta::9234bd3732030d98958620ca16a8a96f216d34061c3178c831be77e1fc110cf000325e155ce6e6de50e995f69a1ce1ac69cad113be7db433de596ab5f67decd8
+.. meta::cd430aed070fe5014a29e5d0c4b27818f54536fdd18e2847bb6bb39a3c759317e8397c5a29d9504e78cb18b9532991b2f4b4ee694a9846afbccc510b2711aae2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::IntegrateInertiaMatrixElement&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::IntegrateInertiaMatrixElement&lt; DeviceType &gt; Struct Template Reference
 
 IntegrateInertiaMatrixElement&lt; DeviceType &gt; Struct Template Reference
 ===========================================================================

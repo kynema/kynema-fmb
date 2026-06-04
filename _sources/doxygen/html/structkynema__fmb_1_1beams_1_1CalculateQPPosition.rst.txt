@@ -1,8 +1,8 @@
-.. meta::3401fe1bd682576d0a7880f345a79f403cecba535ff5a31bf64e804bc8e193159e13e830915ecf50cea787e159ffde05f12816fb8b314f39eb969052eb8f74d1
+.. meta::c3403435ddb67a3d3b8936b5f1f6171913e746f415ba018005bb954e803a30f26efed177b2d72e62e619ab041b4d21b893241e955df5d82fd8d1f05c73edf21b
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateQPPosition&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateQPPosition&lt; DeviceType &gt; Struct Template Reference
 
 CalculateQPPosition&lt; DeviceType &gt; Struct Template Reference
 =================================================================

@@ -1,8 +1,8 @@
-.. meta::de1f4f0708b318410cf79d4b54b4119ce1ca92bef8d74b8e41b9b08bc9d2a5b9bd9474d9a39a16e8149f4c2369c0679686f34c3a9189418435048fe67d5298d9
+.. meta::66e0a4237fb3d67f03df74a10321d6179df4a18a5574322890a97b1106ea821bca937c0e88a5bf1a60abaedd2cc27ddafce8b35f38a88894c81b0ed405cc695e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::ControllerBuilder Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::ControllerBuilder Class Reference
 
 ControllerBuilder Class Reference
 =================================

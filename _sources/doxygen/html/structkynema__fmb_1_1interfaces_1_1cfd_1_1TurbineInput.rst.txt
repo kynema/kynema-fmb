@@ -1,8 +1,8 @@
-.. meta::e648107db621a72791b219118522874043b2a0123496f7c5bb8013b94a8c740b348416214b00d127d76b6ff3cdd65ab1406ef477b3ed1fa7c9a161b59ff62620
+.. meta::1c1b71631e32e33f15dfeb710f9ffb4805a91ac77713daa4fd8e33108fa09d6ff507081001b739e182215d3a5a168aaaf4acf2e14eb9ad6aa026909140f5136f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::TurbineInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::TurbineInput Struct Reference
 
 TurbineInput Struct Reference
 =============================

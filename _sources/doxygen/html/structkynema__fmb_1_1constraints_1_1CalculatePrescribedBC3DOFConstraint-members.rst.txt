@@ -1,8 +1,8 @@
-.. meta::b02efe6c078004cb6669f9987f340e2e591a1d0a60bce5a46c56c99503e46dadcb241dd5c6d94e32765c4a2c7dd2a44c5eba2740e77c341a24fa8f8cf0118f48
+.. meta::2b36eb3481df7bfe1de03eb8e4fd0eb2a60c3662b90680295afe1f7e1604e464375673ec34be4ffd66bdc9b84f364fc1744ebf8c0edfde0448372e48fdb5b671
 
 :orphan:
 
-.. title:: Kynema API: Member List
+.. title:: Kynema-FMB API: Member List
 
 Member List
 ===========

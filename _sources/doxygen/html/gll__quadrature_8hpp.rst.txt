@@ -1,8 +1,8 @@
-.. meta::37b2193bbe500e15789d0dc29968860e3f6a3a934aa65661f310d0e3f0bab4b3ed6f9f30b0c7496b8c9dbeb8612e07236996d57825f04098d074cfffafa45654
+.. meta::8bb21e961ebcba69393c69ba6544866525969e40699cab1101cbb2b48784d9ce5219129c4ee79190225d8e40f20c9e8f7fa2bfcec2f53d51ecef2828763c1257
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/gll_quadrature.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/gll_quadrature.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/gll\_quadrature.hpp File Reference
 ==============================================================================================

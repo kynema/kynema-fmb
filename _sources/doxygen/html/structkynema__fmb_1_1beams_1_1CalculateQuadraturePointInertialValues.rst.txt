@@ -1,8 +1,8 @@
-.. meta::6110ed94ad8e28c8602492ab36b66f9f9ac2b009f9d84e7a4e4edc0ddb6e9829f151a2680a264f5eb6d48b11ede6e56b995e82530af2e85a05007d885d0789c7
+.. meta::97ddf2b0a549d67b5a335a1d67b830e39b53d83fc0369f23b7b0e1af523cb30633f2f0387ab6639054eb0587480df4c6d407b3b62af051fd193edf14c1db6230
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateQuadraturePointInertialValues&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateQuadraturePointInertialValues&lt; DeviceType &gt; Struct Template Reference
 
 CalculateQuadraturePointInertialValues&lt; DeviceType &gt; Struct Template Reference
 ====================================================================================

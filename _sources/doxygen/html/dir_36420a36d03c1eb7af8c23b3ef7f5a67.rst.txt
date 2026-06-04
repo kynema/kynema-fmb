@@ -1,8 +1,8 @@
-.. meta::230921e3a9285c24beb6bf3f639c3aad3a8170c66995a80624279b718e37955c7a22f11f585ddd508bd8f288ccd89fa4c6d79c4541249dfb4f6eda53a8907461
+.. meta::f788283845028b3576ff692c5b7f9cce065b9917f6f36326368e7a9f31a4c4bdd94bdd6f597027580e718fb209b9ecdd76164757932574c1924578456b8b10dc
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs Directory Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs Directory Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs Directory Reference
 =========================================================================================

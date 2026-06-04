@@ -1,8 +1,8 @@
-.. meta::64777b846ee1c10b2c1a2ac79f889bc75a5fa52f36a9984d7bc07e4290961aa630195cb1d8b14797be99f20ff0635049017810e83ad8862a9eceaeb20a196504
+.. meta::511a717a4e2bdb471308af9164d83f63e6fd2d220173d85e4dfe0627b8345fa881d7c64328b78d3742be8b2162ae345cfa7e3666a95340b19a484764bd13157a
 
 :orphan:
 
-.. title:: Kynema API: Class Index
+.. title:: Kynema-FMB API: Class Index
 
 Class Index
 ===========

@@ -1,8 +1,8 @@
-.. meta::c95843d8ad112617eb54c95438ff893dbcc098948197f33fb841dacf3fc02a05cd2789bbe44a84b1d7a0c85dba1177fa141a7c319d8a9b83fa70dd63d67c7c90
+.. meta::55f1505d364db3e8ee4cf72416aafe0b4c1d4e9f6d34e66b06f5c15fa2cafa6541b1bf3362bc791910eb991a94c2a9292849d4d4e997c2922e6338333b40cf25
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::InternalState Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::InternalState Struct Reference
 
 InternalState Struct Reference
 ==============================

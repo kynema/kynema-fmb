@@ -1,8 +1,8 @@
-.. meta::b2309b4f3d08ebbaed33d571f72dd4b18d7754adfbe8d1c686e77ded70a682b5c663a0d48289722652c8893f53fb05fa0ecab569bd837edf8772b177fa941028
+.. meta::8d3efa3eee14844ccf4799c24d4a1398480da0f955159e373911964075a78151ad3d49a55b8ee43a203c8c42e8d18e1cffeb9c8196c362d24c34336b99232bb4
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::masses::CalculateGyroscopicMatrix&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::masses::CalculateGyroscopicMatrix&lt; DeviceType &gt; Struct Template Reference
 
 CalculateGyroscopicMatrix&lt; DeviceType &gt; Struct Template Reference
 =======================================================================

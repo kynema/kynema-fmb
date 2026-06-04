@@ -1,8 +1,8 @@
-.. meta::f774ba55edaf6f295ebc65c029aa492ab3d9cd9d29353c57d900ab415b97fbaa50288533b01fd34f881d8d2bf0ff4066251b8ce24a0deead5ce8c929a07db4e6
+.. meta::5954163c7cfe5dad666db905fb230b6849836620c69b334daf5943f3d4e861acbc8b5b6ec9b8d06915c0d850008cd26d79f53b467a989e9974876074611dc1a3
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/matrix_operations.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/matrix_operations.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/matrix\_operations.hpp File Reference
 =================================================================================================

@@ -1,8 +1,8 @@
-.. meta::b3a0f425996459b7a5eb2b5f656c74c10d35c161faa8d948d9c16d12a53cd38fd53ed2fb8a9faf00a5a63f5d01a75d90f3ecb49540ea7794c193703d8ee4a931
+.. meta::31dadf3a22226b3e7dbf7c66d0687ae63d16d139e2d689e2a2528f27412afed1ea3700cc6b477a6f63276622df1561210257e3b8a87d40660a642d68ae672039
 
 :orphan:
 
-.. title:: Kynema API: Namespace List
+.. title:: Kynema-FMB API: Namespace List
 
 Namespace List
 ==============

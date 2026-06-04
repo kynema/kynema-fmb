@@ -1,8 +1,8 @@
-.. meta::58efad98bfab58c4d6d25c24f367de6266a8fa8d264716faae100b4363e3cd7b92de2295d325a7e67d47fa727cf2b2d1950c90d20e1a645e916042b4449eba2d
+.. meta::ee8e030cc5e30a1059342425903d46c673cb20f8be29571c5af560231c4abf1c2d9fabe737443ba7a5daef10a67d741eea0a1bc39973515cfbc350870c7aa901
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_algorithmic_acceleration.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_algorithmic_acceleration.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update\_algorithmic\_acceleration.hpp Source File
 ==============================================================================================================

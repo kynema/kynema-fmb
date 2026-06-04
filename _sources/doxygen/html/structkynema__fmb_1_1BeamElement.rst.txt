@@ -1,8 +1,8 @@
-.. meta::b1bb14a1f119fd7dbdf1e8092efe084d1e32c9bfa8bd872ac8c5d3ae37ca3023f054f867ccab53d3cc9f7627d20d42b542a4cb698a4d0f5d4b794bfc1d93d400
+.. meta::c11b1c98a5354ccde6114986d79c56045382924f8604020218f24a203039f7f92b3c7242409e4fe935525d3a57e5a6b6b20012f7d2a671d78a865788a70945f6
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::BeamElement Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::BeamElement Struct Reference
 
 BeamElement Struct Reference
 ============================

@@ -1,0 +1,14 @@
+.. meta::63f6559fd3a814fd33630b667f5f5bd0ca6ad928e2ccb1afc8348e729d370b6e41a3dae29576209a7e67ca84858bf93ddf8ab4154f3b5cad8cb21d177edc85ce
+
+:orphan:
+
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::ControllerIO Struct Reference
+
+ControllerIO Struct Reference
+=============================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html

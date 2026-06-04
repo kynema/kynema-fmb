@@ -1,8 +1,8 @@
-.. meta::7971a6bf972904b18cede41854c21441d2c95814153df09e26e947aeee0bd36e8e466247e0866b09f6278ab213b0fadd4ef76cb79958e627799cb4d92904f868
+.. meta::5c1c91bc388456f385818a2aeb8cb112b74905b8722faaaf827fcd934fdd12d65d2d077b90ffc664334ab9dc819f2753939af49b1f0ee8b77ba8bd8d46266f67
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dof::AssembleNodeFreedomMapTable_Springs&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dof::AssembleNodeFreedomMapTable_Springs&lt; DeviceType &gt; Struct Template Reference
 
 AssembleNodeFreedomMapTable\_Springs&lt; DeviceType &gt; Struct Template Reference
 ==================================================================================

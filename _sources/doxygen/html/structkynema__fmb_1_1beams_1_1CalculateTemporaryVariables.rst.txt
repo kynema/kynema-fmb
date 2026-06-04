@@ -1,8 +1,8 @@
-.. meta::566ea1c84a19eed4cd8e69ae4801aa9075d2bd8bcf7420b30f69b6d26c216bce9b8edd3472e1c20acaf0e9285f48ef40ea90772dd7e458b57828e84e89708481
+.. meta::8c188f5bd08220d52272e0b712fb6219b4f217e14bbe0c1bdf3a8281dbf3a9d7e7f059168940ea12eb0c69af37c064710551c14fa6cd4ff0b6199e21ba37c264
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateTemporaryVariables&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateTemporaryVariables&lt; DeviceType &gt; Struct Template Reference
 
 CalculateTemporaryVariables&lt; DeviceType &gt; Struct Template Reference
 =========================================================================

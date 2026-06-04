@@ -1,8 +1,8 @@
-.. meta::690a12148426929d49ed6de05ce17aa56846f1aa3b7741cbb3263125d709b9c093ce0883910851b545991dffd407888a5fcb11c0b51c1b37d0179725ea5125c2
+.. meta::9ed6430d86b2ee9f2e4876acdff60272bfa1385159001a51678e7c34af5189a265ef4d6851c55dc33a42b47bff7e2fcc1ad785fcc0a726443d284cfd4b0436c2
 
 :orphan:
 
-.. title:: Kynema API: windio.Struct Class Reference
+.. title:: Kynema-FMB API: windio.Struct Class Reference
 
 windio.Struct Class Reference
 =============================

@@ -1,8 +1,8 @@
-.. meta::e133704f55c1f2f69c984e6b420ba51d57e9aa54219eb7a3936b90af3e2dbc0e09d5e20d76f03e829a72ee516137a9490bfc083f7cf9aa95f687b91fa95f1901
+.. meta::7603edeab3e433090c2b9be4cf3346f98af195cad1c1f916f4cf076d8d79101f40db629e5ac47b6aad9543f1ebc02407ab8bf47bcfcc7faed2fd8a857951d05f
 
 :orphan:
 
-.. title:: Kynema API: Class Members
+.. title:: Kynema-FMB API: Class Members
 
 Class Members
 =============

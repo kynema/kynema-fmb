@@ -1,8 +1,8 @@
-.. meta::fc668796060443c03e97b2483fed2fdc06adb3e44c7f2c616b5a57c973a0f28e0225143b829f06b3b81143a585b82cf336158aa23a0df4680915ef13a75e70f1
+.. meta::f40efb851abb57005621e0c65c51404c53e4f6f21485c5e3a424bbd6bb3961f2ba04b3ffe8024bcadc88813e7e02e601ed402964d1b90bfe8a68dd8f408c66ed
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::AerodynamicSection Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::AerodynamicSection Struct Reference
 
 AerodynamicSection Struct Reference
 ===================================

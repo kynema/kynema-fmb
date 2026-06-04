@@ -1,8 +1,8 @@
-.. meta::7d48352c9d51d438fd3882b9ce671d1bbd645e03074942bff3d349b851cbaf080d3a1d16c0d69bd602d6354eee2146c8412fb4e65c18593e931ff0471b5e5186
+.. meta::9381f4c1cf47d655a63e5cf7b95c0172e934de91f73570062b1afcc392e50739b9d4e65e07ad74cf80e7b206d1751ba288808d19127079ef2262f7725cde1a6a
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_springs_to_sparse_matrix.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_springs_to_sparse_matrix.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute\_springs\_to\_sparse\_matrix.hpp File Reference
 ========================================================================================================================

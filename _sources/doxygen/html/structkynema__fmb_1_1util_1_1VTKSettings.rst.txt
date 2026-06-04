@@ -1,8 +1,8 @@
-.. meta::d93f5311a691612535848733a049380fd68b97cf6e8aba8256128b64c74b7c05df6ef793a9eba2d4f14ec399f00ad88b7623cf818ffe69515b5c59554082176d
+.. meta::640e423b2d0dbfb5daf16790283bdcd3ae66496ba35cf77da1eb6bfcd5f30a7456545840a4b6916aee313b6accadfcac68ce9ac79628d4778e8c64b471bf121a
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::VTKSettings Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::VTKSettings Struct Reference
 
 VTKSettings Struct Reference
 ============================

@@ -1,8 +1,8 @@
-.. meta::c90bf30a596fe27515d3804b5a205044450f1d40fa4cb350cd7913553b0c70fe29b0904bc9d7d0f40a6ccd73b636b712c740c1b1ac472181c1b9d506f06bf59e
+.. meta::195e9905ade3761779f7f0b859c9ce041e63bef829a776cc9c547a3e920064fa438a561f54a574a3b6734a2830d0bce9d1140fc52397551424d0545c75c5398c
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::FloatingPlatformInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::FloatingPlatformInput Struct Reference
 
 FloatingPlatformInput Struct Reference
 ======================================

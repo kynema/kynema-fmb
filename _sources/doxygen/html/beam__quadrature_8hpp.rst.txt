@@ -1,8 +1,8 @@
-.. meta::c629202893198de5e1e2b3dd79edb9624f7d20f08a4cfd36991ee32bbc3c18d8830f5ab1e4686dfb853467d047fa0e06573da1e5b275c3b25b0777686a690cef
+.. meta::d8238cdebf4bab6309b0bb2f8deedc3c393355b66edee1789522f59d02c72258ae0c757010dd62d85923af7fb68088ccc733f1bcaf20b24a4ed6a70730fe6b2e
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beam_quadrature.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beam_quadrature.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beam\_quadrature.hpp File Reference
 =========================================================================================================

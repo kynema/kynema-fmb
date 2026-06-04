@@ -1,8 +1,8 @@
-.. meta::510a34d96049e0bd2dc324a9c08cbbe9d1dd1c48da2cfb04ed41f3542c623bb78b9057b8c302f9f1f19f440dcde53085745d3dc697620b929ed4bac0a743de21
+.. meta::fd263be46d92f9aae7083e1be8d1354fa11adae38bc1461b40c704a0420a3d8bcf957b06be8f0d6e3094057a5cee32be3d607a68fe2d517e5fb1d4dd90597946
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_rotation_control_constraint.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_rotation_control_constraint.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_rotation\_control\_constraint.hpp File Reference
 ==============================================================================================================================

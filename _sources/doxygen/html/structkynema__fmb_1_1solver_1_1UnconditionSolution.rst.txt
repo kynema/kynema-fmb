@@ -1,8 +1,8 @@
-.. meta::8a1b6d965a43d1297eb90e5504bc75e6b471ed837748a04159f867ade17dd4db39f9d5fa2b4bbf76aedb156d01019903f218caf633d82b4e1d851b5ac5ab64b8
+.. meta::c0b7e7cb8c014d4d04fb31e7170bdf73c51aa19979674a80d7d58ae671864a6962089386c9d1a80261a01f2851851b47f97a35c85069910b100b2e5a23bbb1de
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::UnconditionSolution&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::UnconditionSolution&lt; DeviceType &gt; Struct Template Reference
 
 UnconditionSolution&lt; DeviceType &gt; Struct Template Reference
 =================================================================

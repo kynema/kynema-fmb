@@ -1,8 +1,8 @@
-.. meta::f84f0fb1bef0c3926554ee85cde254320455f2020a5d9ba5ba8522857b26cf8c1d78df34f045287800918759991a7604b094c93775f7122326e8d49779ef5002
+.. meta::c7afcb793f964a371ee1549abba99925dd64f0f00d6661766394ee8a3d012b0d397989bea74f460bb7332222b5c76fb73dfce266697badedbd1c04514f66fb19
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateForceFD2&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateForceFD2&lt; DeviceType &gt; Struct Template Reference
 
 CalculateForceFD2&lt; DeviceType &gt; Struct Template Reference
 ===============================================================

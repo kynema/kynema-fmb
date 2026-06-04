@@ -1,8 +1,8 @@
-.. meta::28df5490dbc09575cec1152237e4a2114dfbeb1c8ff6959c4a0d90dba8efe6b2bb9a49b39058d2e5d6e1a899815869342db6ab180e6468ef3609567130059bd5
+.. meta::895255f39c1ddbd4aa504f91691d8648a75894656c68e86eaec2af14104ed33211465e15d3c9f5f3042525fbb0b481128595ae160148e0a434eeeedc12cf2b6c
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_inertia.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_inertia.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate\_to\_quadrature\_point\_for\_inertia.hpp Source File
 ====================================================================================================================================

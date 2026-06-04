@@ -1,8 +1,8 @@
-.. meta::b4824e7125788023e0fcba8c7ba27b543c7e62d7a41e3dda73554edf2df5ab2d0d7cd0b752182e8998b551bb62fb7d353e3f028afc21f0a8810391492341e626
+.. meta::21d1317235fa21413c9251278d8dfdf06a62e877e8eabe9a059e0d10275890aaa838e74bf0bc659c8aece40ddc5952170d370cc89f3a35efc4f0e35b76f51c30
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_fixed_bc_constraint.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_fixed_bc_constraint.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_fixed\_bc\_constraint.hpp Source File
 ===================================================================================================================

@@ -1,8 +1,8 @@
-.. meta::3fec36a5eae054164e326b07ffc0d6cd7539d4b2be2ccc95441141beccd640df5a89e74cfe6ca9ebe1b13c80170f90e9906745ab26e956d450c22323810258f2
+.. meta::8d37814b8e01fff2f67b4e0d906c17f45fb99a0f468ed27e16755803c167004921d2939367861f183c2407662e5f1634e88c7af0837ae1c84a48b62d7de43c21
 
 :orphan:
 
-.. title:: Kynema API: Class Members - Enumerations
+.. title:: Kynema-FMB API: Class Members - Enumerations
 
 Class Members - Enumerations
 ============================

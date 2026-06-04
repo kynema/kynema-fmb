@@ -1,8 +1,8 @@
-.. meta::58d289f1d68735f01b8b0718d4bff37aa9b37b5ed8dfa5786a55a4a63046d64a59950abc619946256f431fa0889d18f5a61c62102227d637b4a84ed9cc84c3f3
+.. meta::84d583b0cf1b778d3446ed917dd3fcca8069ed29d0226781ff99b4d5ab5039f17fd9d7457f24719e08e1586fe03ed7e64d0da36226ae0798c3a0302ea3329c95
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::NodeStateWriter Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::NodeStateWriter Class Reference
 
 NodeStateWriter Class Reference
 ===============================

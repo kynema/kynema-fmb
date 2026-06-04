@@ -1,8 +1,8 @@
-.. meta::787098419d063dc053b0e32a9ea6d5217c80a4374462e55c57816659e7791502be14f5faaa69e7175a8eec916a9925e9f42342576849fd87fe89169508cd5312
+.. meta::ca316a1908f44b2522b1faee5430653aa5471993e3aa97e60e102502fd4f12ecc947042c6a6d63a4dc3747a7022aebb68a83659a6f8e6bce38c4dd71a2171a18
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::AerodynamicBodyInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::AerodynamicBodyInput Struct Reference
 
 AerodynamicBodyInput Struct Reference
 =====================================

@@ -1,8 +1,8 @@
-.. meta::a53ed2f8a3df53b1ba01e51c803ca455d708ca4583ef731f931c9cefcb966bd9030d70018c875dd7ac7d510af296e1044a0c452bc27e1967db37b8c2f6cff1d9
+.. meta::2e68d6520e65354da73c53a983e60b48ef6c6e77b1058384d8d5bf2b17e594bea2a54829d53fbaf1ecf5069c1fc70c80e937fbeee109019b6f7d9ba309dabe36
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_symbolic_superlu.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_symbolic_superlu.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear\_solver/dss\_symbolic\_superlu.hpp File Reference
 ======================================================================================================================

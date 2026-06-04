@@ -1,8 +1,8 @@
-.. meta::ea2ebcc6037cb212a5c9c458f04c6e01848b273ae6f5c32cdb5810f8b3a4e715768167f45c02252efd28b7974f9abd6021cc2ec197884165540f6960a912d00e
+.. meta::d54777522c736c172a9079d2d5c54cde1c794f153af2d183ac50765765278c8f263dbd1187aa982319d04b64df296a9c26a52d87c93c37ffd0336a48d0c0db2f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::masses::CalculateQuadraturePointValues&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::masses::CalculateQuadraturePointValues&lt; DeviceType &gt; Struct Template Reference
 
 CalculateQuadraturePointValues&lt; DeviceType &gt; Struct Template Reference
 ============================================================================

@@ -1,8 +1,8 @@
-.. meta::2b296e39d74c34153d025e21b84b30fb7878a0db84541bcbd5d5c0c7b78b6bb92bc102a43cbff351ecc1a53b2f193d130d4b3a52ebf899635594f6d99420c3e0
+.. meta::75a4ebf0ba254dd61a9ac368db6cbb53691c6cf639683c1b59609168d38f91b8172f6a33ee6a0f45d75fe4a61ec6948ba549d8aac4700f2fc4353481f7648df0
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateConstraintOutput&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateConstraintOutput&lt; DeviceType &gt; Struct Template Reference
 
 CalculateConstraintOutput&lt; DeviceType &gt; Struct Template Reference
 =======================================================================

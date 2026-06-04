@@ -1,8 +1,8 @@
-.. meta::043dbef4decf73c95ab6ff05e79141ceea2f4310a86108c0e48bf6810aa540c3f4449d8c360361984335ddee3a5b3e750e7aeb21b1e99caa4f21dc3a21248d3c
+.. meta::3ca58aa8bc40d1c98965e7e6a7161c762dbe9d10350559c34c557371c897abc5b13e9edbe0c7040586daf993489a218e1e0025836890e53d102053cc5013ed3b
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/utilities/controllers/discon_rotor_test_controller.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/utilities/controllers/discon_rotor_test_controller.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/utilities/controllers/discon\_rotor\_test\_controller.hpp File Reference
 ===============================================================================================================================

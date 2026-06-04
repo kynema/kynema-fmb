@@ -1,8 +1,8 @@
-.. meta::954eba1008d4d5daa667a563c312baafddfc562da893d3c06b77aa18b32b2eb994597ef8619ef8a45edb9b5fd5f7240160fc3bf22077d217b40c2bf731e89c66
+.. meta::3c4bda65f483b975b59e496d4dfe95948ee4a0d5448b47bfb14a49f94609553cef36f7981a155daac922687df3f691ff67ee4596e6cda2c8d2794be66dd1e1da
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dof::AssembleNodeFreedomMapTable_Masses&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dof::AssembleNodeFreedomMapTable_Masses&lt; DeviceType &gt; Struct Template Reference
 
 AssembleNodeFreedomMapTable\_Masses&lt; DeviceType &gt; Struct Template Reference
 =================================================================================

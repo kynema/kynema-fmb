@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File &mdash; Kynema 0.0.1 documentation</title>
+  <title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -35,7 +35,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -64,7 +64,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Kynema</a>
+          <a href="../../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File</li>
+      <li class="breadcrumb-item active">Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/doxygen/html/calculate__prescribed__bc__constraint_8hpp_source.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,7 +92,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File</title>
+<title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_prescribed_bc_constraint.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,7 +115,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Kynema API
+   <div id="projectname">Kynema-FMB API
    </div>
    <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
   </td>
@@ -203,7 +203,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">using </span>Kokkos::Array;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">using </span>Kokkos::make_pair;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">using </span>Kokkos::subview;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">using </span>CopyVector = KokkosBatched::SerialCopy&lt;KokkosBatched::Trans::NoTranspose, 1&gt;;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">using </span>CopyVector = KokkosBatched::SerialCopy&lt;KokkosBatched::Trans::NoTranspose&gt;;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">using </span><a class="code hl_typedef" href="structkynema__fmb_1_1constraints_1_1CalculatePrescribedBCConstraint.html#a846673edd924bae36c0e44a6ad074a2b">CopyTransposeMatrix</a> = KokkosBatched::SerialCopy&lt;KokkosBatched::Trans::Transpose&gt;;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_typedef" href="structkynema__fmb_1_1constraints_1_1CalculatePrescribedBCConstraint.html#a846673edd924bae36c0e44a6ad074a2b">u1_data</a> = <a class="code hl_typedef" href="structkynema__fmb_1_1constraints_1_1CalculatePrescribedBCConstraint.html#a846673edd924bae36c0e44a6ad074a2b">Array&lt;double, 3&gt;</a>{inputs(0), inputs(1), inputs(2)};</div>

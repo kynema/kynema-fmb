@@ -1,21 +1,5 @@
 var searchData=
 [
-  ['kall_0',['kAll',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a3f05054168f07450108b6243c8e2a2caa34bdbffdb1c0e1b603f58fc0d49548b6',1,'kynema_fmb::util::SimulationControls']]],
-  ['kanimation_1',['kAnimation',['../structkynema__fmb_1_1util_1_1VTKSettings.html#a69b382317aa58342277f7ab72209bb2aafa8c38a17c2acc9ae3e7870217c552d5',1,'kynema_fmb::util::VTKSettings']]],
-  ['kbinary_2',['kBinary',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a79d49707135c3bdb1cf154fb28c866ffa212f9f34e4e151a9ba569c71e1aace47',1,'kynema_fmb::util::SimulationControls']]],
-  ['kdetailed_3',['kDetailed',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a3f05054168f07450108b6243c8e2a2caade970de858c5ffbaccdc0250e117ea9c',1,'kynema_fmb::util::SimulationControls']]],
-  ['kfatalerror_4',['kFatalError',['../structkynema__fmb_1_1util_1_1ErrorHandling.html#ae17067dc9f31b016f0b02876424e71a5a10e8de80528e7bc5e44bfee716604210',1,'kynema_fmb::util::ErrorHandling']]],
-  ['kinfo_5',['kInfo',['../structkynema__fmb_1_1util_1_1ErrorHandling.html#ae17067dc9f31b016f0b02876424e71a5a176a473e63c17ccdac91640c67f149bf',1,'kynema_fmb::util::ErrorHandling']]],
-  ['kinit_6',['kInit',['../structkynema__fmb_1_1util_1_1VTKSettings.html#a69b382317aa58342277f7ab72209bb2aab217b1cb58a6ee4ef35a6c84cf367659',1,'kynema_fmb::util::VTKSettings']]],
-  ['kinputfiles_7',['kInputFiles',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a3f05054168f07450108b6243c8e2a2caa4040db3385da12d7dfbf28b8ea02435b',1,'kynema_fmb::util::SimulationControls']]],
-  ['kline_8',['kLine',['../structkynema__fmb_1_1util_1_1VTKSettings.html#a2d2a07b5ecdeb41fbba554ae98df9654aee669fa7b5a35d96a396d4ed648afb45',1,'kynema_fmb::util::VTKSettings']]],
-  ['klu_9',['KLU',['../namespacekynema__fmb_1_1dss.html#a14d0ab73a88776d39b9126d546c3f351ad4dcdada1c05a280bb7e95da2874fa97',1,'kynema_fmb::dss']]],
-  ['knone_10',['knone',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a3f05054168f07450108b6243c8e2a2caa35c3ace1970663a16e5c65baa5941b13',1,'kynema_fmb::util::SimulationControls::kNone'],['../structkynema__fmb_1_1util_1_1SimulationControls.html#a79d49707135c3bdb1cf154fb28c866ffa35c3ace1970663a16e5c65baa5941b13',1,'kynema_fmb::util::SimulationControls::kNone'],['../structkynema__fmb_1_1util_1_1VTKSettings.html#a69b382317aa58342277f7ab72209bb2aa35c3ace1970663a16e5c65baa5941b13',1,'kynema_fmb::util::VTKSettings::kNone'],['../structkynema__fmb_1_1util_1_1ErrorHandling.html#ae17067dc9f31b016f0b02876424e71a5a35c3ace1970663a16e5c65baa5941b13',1,'kynema_fmb::util::ErrorHandling::kNone']]],
-  ['ksevereerror_11',['kSevereError',['../structkynema__fmb_1_1util_1_1ErrorHandling.html#ae17067dc9f31b016f0b02876424e71a5a75d0ec9360190495c8114e3b9737737f',1,'kynema_fmb::util::ErrorHandling']]],
-  ['ksummary_12',['kSummary',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a3f05054168f07450108b6243c8e2a2caa5316f21c59cf9dd9526061bcb5da9b76',1,'kynema_fmb::util::SimulationControls']]],
-  ['ksurface_13',['kSurface',['../structkynema__fmb_1_1util_1_1VTKSettings.html#a2d2a07b5ecdeb41fbba554ae98df9654aec4fcf1849718308d69b4fe7856ff67c',1,'kynema_fmb::util::VTKSettings']]],
-  ['ksurface_5fline_14',['kSurface_Line',['../structkynema__fmb_1_1util_1_1VTKSettings.html#a2d2a07b5ecdeb41fbba554ae98df9654a25bde5731c0a6f1ed2f864bfda53b33b',1,'kynema_fmb::util::VTKSettings']]],
-  ['ktext_15',['kText',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a79d49707135c3bdb1cf154fb28c866ffa3c8cbd89acf49a4b20aded693e13ae86',1,'kynema_fmb::util::SimulationControls']]],
-  ['ktext_5fbinary_16',['kText_Binary',['../structkynema__fmb_1_1util_1_1SimulationControls.html#a79d49707135c3bdb1cf154fb28c866ffac551be589b7892e096a0b186a4ef7e61',1,'kynema_fmb::util::SimulationControls']]],
-  ['kwarning_17',['kWarning',['../structkynema__fmb_1_1util_1_1ErrorHandling.html#ae17067dc9f31b016f0b02876424e71a5aec0da41f4e48b52c362303eb27ed5dee',1,'kynema_fmb::util::ErrorHandling']]]
+  ['justposition_0',['JustPosition',['../namespacekynema__fmb_1_1dof.html#afcc99d83b451e115cd97d1ef58625cd7ac3f1ed4c290648ed6b685b415448430d',1,'kynema_fmb::dof']]],
+  ['justrotation_1',['JustRotation',['../namespacekynema__fmb_1_1dof.html#afcc99d83b451e115cd97d1ef58625cd7a6bd15481aa8778fbfe716b3aee6fa8be',1,'kynema_fmb::dof']]]
 ];

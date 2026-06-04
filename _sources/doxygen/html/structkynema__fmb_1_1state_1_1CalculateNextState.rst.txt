@@ -1,8 +1,8 @@
-.. meta::c3b74bd02c01f000fd9b57bbfd6ee3f26e9c5eaab528bde77566cfcb9632d4b22718c10c780757f1345c5ccf1609b901cdab603a53b3601f70682347e7e61051
+.. meta::21dd4931eb513dd5d67c055f185c45d7d021808bd2ae0c4044ef10b1724766cf19b0ad918565429f2ec878824cf8cf61aaed24b69640630eda6aca0b8c9e71cd
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::state::CalculateNextState&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::state::CalculateNextState&lt; DeviceType &gt; Struct Template Reference
 
 CalculateNextState&lt; DeviceType &gt; Struct Template Reference
 ================================================================

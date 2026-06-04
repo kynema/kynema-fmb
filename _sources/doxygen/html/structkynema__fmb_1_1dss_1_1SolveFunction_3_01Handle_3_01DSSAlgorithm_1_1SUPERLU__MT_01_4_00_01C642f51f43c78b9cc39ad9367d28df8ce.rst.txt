@@ -1,8 +1,8 @@
-.. meta::a22680533aecb40ca4e1f54135ddfde82576397b058c833eaf96fcccc1e1a14c75b8687225e8657c2aab8893e4c0ae742c8b12c2d863100b6db9c84855356cf7
+.. meta::776bc21fc7673f5e67fb656640a7a5889fb04fc401dbc0e244a5fcbf2de46c756c3a5b0a5f67049f2886edf5e3d693335a4193e342e9dc795ec14ce7247462fd
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::SolveFunction&lt; Handle&lt; DSSAlgorithm::SUPERLU_MT &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::SolveFunction&lt; Handle&lt; DSSAlgorithm::SUPERLU_MT &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
 
 SUPERLU\_MT &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
 ===============================================================================

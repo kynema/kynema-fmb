@@ -1,8 +1,8 @@
-.. meta::7f19a40018a71cfac7b86fd29b12fb7ce263103191ad24c43856e72742f666dc19c8419f30055d2dd53f20f2b7dfa8b964c8520c313af9bed7264c92810ddadc
+.. meta::0898f7b74130b4fe0d4f3f415ec0330b6b0cfa246c9934b4bc4a3d5046099e6b8f328ae11b2fb49bcd6c7d1dea3eed47a2e7a93fb5de1ae3e09e15358c1c125f
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_stiffness.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_stiffness.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate\_to\_quadrature\_point\_for\_stiffness.hpp Source File
 ======================================================================================================================================

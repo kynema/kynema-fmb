@@ -1,8 +1,8 @@
-.. meta::09922b6f0ea1a49b393ae67f96a3122ec86dd4c486cab6c3423fc2b22d4e5220a6009d084c868f61b390c8e4a70d623c1db76fd7867e384ca76c5e1399b12ef1
+.. meta::6409daa4a6c4fd2fe568b6bd03e33b91442d2537aa91c48b849f032c0acefbb2861e68a9a3e91c231e3f932083723a216289d465749a0296c087b4fd61b88f10
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::masses::CalculateInertiaStiffnessMatrix&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::masses::CalculateInertiaStiffnessMatrix&lt; DeviceType &gt; Struct Template Reference
 
 CalculateInertiaStiffnessMatrix&lt; DeviceType &gt; Struct Template Reference
 =============================================================================

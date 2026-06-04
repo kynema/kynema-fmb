@@ -1,8 +1,8 @@
-.. meta::186ce702d128318e46391ccf14647ef83338c81ace50ade6fd4882aff1ddd7fc3a25fc9ff604e1100cd01afdf579a365829d51ba9a64e50578d1ba903d5c687f
+.. meta::dd0c0e23a1a78dff32b7ce1652651287d26139d583e46ff2fe31092e9169160676d108a185b1bf7067e7c35d896b6d2a2e0d77574441b7e5746e07f58c4185a2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::masses::CalculateInertialForce&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::masses::CalculateInertialForce&lt; DeviceType &gt; Struct Template Reference
 
 CalculateInertialForce&lt; DeviceType &gt; Struct Template Reference
 ====================================================================

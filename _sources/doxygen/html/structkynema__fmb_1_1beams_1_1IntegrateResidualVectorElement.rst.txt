@@ -1,8 +1,8 @@
-.. meta::ad99ed3d7107f6c81e7c4cf9d6580fe6fc3622eba31b7f76b933226090443ce22450529d6012bd972c713e5982aec97528971c8fc8fc6241261199230ac17e72
+.. meta::b8e7c83e65c8e5b8513555e7d442b1afdad4f8bf22d82325583bca1396f3863c9e8c773e7dacbe65c965c09e86bcc0677741aae1a2e6c77633263e5864158be2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::IntegrateResidualVectorElement&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::IntegrateResidualVectorElement&lt; DeviceType &gt; Struct Template Reference
 
 IntegrateResidualVectorElement&lt; DeviceType &gt; Struct Template Reference
 ============================================================================

@@ -1,8 +1,8 @@
-.. meta::5371113c12b04799b8c777c20769f2fb3f92b3afb6dee9ef904132a24ef6ed5c079fba8352a9c67a31a24990930be9ff960828b9dd35e05975b3d4767051cf12
+.. meta::51d984e1e37d13f6a6fc3d8d5d927f32a4842e980bf7e3e0c4d9692e23c1d76106fa3e0d1cac82e1526deb5b4a4b86df4fdccac896a51d12606d4bc05a907488
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::ComputeNumSystemDofsReducer&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::ComputeNumSystemDofsReducer&lt; DeviceType &gt; Struct Template Reference
 
 ComputeNumSystemDofsReducer&lt; DeviceType &gt; Struct Template Reference
 =========================================================================

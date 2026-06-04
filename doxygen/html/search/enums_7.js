@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quadraturerule_0',['QuadratureRule',['../structkynema__fmb_1_1interfaces_1_1components_1_1BeamInput.html#ac9dd99b5449b91d442e7aef42375a062',1,'kynema_fmb::interfaces::components::BeamInput']]],
-  ['quadraturestyle_1',['QuadratureStyle',['../structkynema__fmb_1_1interfaces_1_1components_1_1BeamInput.html#ae1acddc15026ecc9ec1f344a1c28f1b8',1,'kynema_fmb::interfaces::components::BeamInput']]]
+  ['pitchactuatortype_0',['PitchActuatorType',['../namespacekynema__fmb_1_1interfaces_1_1components.html#aaf3182c214a2590601b1eccc1263ee1d',1,'kynema_fmb::interfaces::components']]],
+  ['pitchcontroltype_1',['PitchControlType',['../namespacekynema__fmb_1_1interfaces_1_1components.html#a69ef98674160cc58569e0be0e8655021',1,'kynema_fmb::interfaces::components']]]
 ];

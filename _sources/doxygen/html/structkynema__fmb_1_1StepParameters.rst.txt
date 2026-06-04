@@ -1,8 +1,8 @@
-.. meta::34352027ee33de955d19dd8331fb3a13a4a612f69e03ce838aa60d86850eccdde841044aceea367f71157c498cf846481c5fd92b7a9b693b73cde8fb29f9df8e
+.. meta::9e47b73a13ffc89e0abb619ea31ad6187c2c93b01ac46da25e7d741da82208b693670c204e104f3486decfd8d80377ba8d407e00d58f851c92355c117f27bc92
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::StepParameters Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::StepParameters Struct Reference
 
 StepParameters Struct Reference
 ===============================

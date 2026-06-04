@@ -1,8 +1,8 @@
-.. meta::c0b2f3fdb6de4467c66aeb9071f25439689b8d5cf29c81be9734e679ee0f460dd264c92168607e1b2ab48cbfb73ec64eb58df30f16139c36f46a85be333faf79
+.. meta::4b8e441e0878485e3e57e791be9387df1f1e8d3f4acac21476a32134ebddb88eb4a1f777b414740c6140a8fa157d877e691ad2a329cb8fa1fec6c7bb932848b2
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_constraint_residual_gradient.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_constraint_residual_gradient.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_constraint\_residual\_gradient.hpp File Reference
 ===============================================================================================================================

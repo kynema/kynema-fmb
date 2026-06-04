@@ -1,8 +1,8 @@
-.. meta::55edd85014c0cbcc7ef30127cadc23880d03ab876520a1e4d94949fad8476cfd02c723c98304431c2fa7b80b19d99ddf10d7eaeebc0d6d9143b03ea890ffe8ae
+.. meta::67dcb8b4dfd4a4951601b7877c89739fedd502701033f60fd09e9fa5fae0f69d0fefd774b674bb33cb7e292c8aea3217cc98e9807f5bcf8148c433d069daee46
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateD_D2&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateD_D2&lt; DeviceType &gt; Struct Template Reference
 
 CalculateD\_D2&lt; DeviceType &gt; Struct Template Reference
 ============================================================

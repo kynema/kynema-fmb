@@ -1,8 +1,8 @@
-.. meta::e696006085ab1e874778885d3a1c9c68a465fcb8c60d5535a7a54353177307b7b32bf3f7be8731f8fad15ed749ac359f2c6b75d650c4788def6bbea3db404417
+.. meta::6fd4176c1633ce4e2817b4ada8015a6587efacad3da6f009d5981ca3a143bcedb61433613dac03367281ebd35874d5929a9c4928f94fbfecad8b76b0ba056a99
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateRevoluteJointOutput&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateRevoluteJointOutput&lt; DeviceType &gt; Struct Template Reference
 
 CalculateRevoluteJointOutput&lt; DeviceType &gt; Struct Template Reference
 ==========================================================================

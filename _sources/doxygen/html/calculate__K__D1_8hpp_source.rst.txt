@@ -1,8 +1,8 @@
-.. meta::6ab4ff381456049571abb754ab2f933722967dde9901fbe5733bf8417d76698be5ab88284f193c4135f272d843802e2f56e302e7cc0b5fac3dadfa6d8de81e0f
+.. meta::cca5d0f559cee1000ba88b9ef8175eecc7d54560131d08fc8bd41b099347001c4656a226877a82e85a69bd645f3bee4b3096e9f5d63354fe1966743a8a5eaf62
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_K_D1.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_K_D1.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_K\_D1.hpp Source File
 ====================================================================================================

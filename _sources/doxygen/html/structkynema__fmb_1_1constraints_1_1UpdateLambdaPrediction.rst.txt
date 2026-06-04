@@ -1,8 +1,8 @@
-.. meta::a5ea08cf2938418c36c35be786d4e4aa388e6adcd03e68a61c17de27e40adac51521f9eefee0c53515af11ac958b23b2ba7de08830be44d2408bcd7bae597a04
+.. meta::2bb67cf895c7de17e588ccf5ee85460c1e51bf789598084ffbf1bf0866dd9451262048785d661184c78af82ab241e41ff7f6896f926779a4cc2f0e69bf36ec0e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::UpdateLambdaPrediction&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::UpdateLambdaPrediction&lt; DeviceType &gt; Struct Template Reference
 
 UpdateLambdaPrediction&lt; DeviceType &gt; Struct Template Reference
 ====================================================================

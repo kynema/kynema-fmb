@@ -1,8 +1,8 @@
-.. meta::b5be0299f7bc4f2969ba98651e71f9ee0e684f6807e8f95cc95e2473260ee45a494b18107077087f936e2f3c30734a7d640c09450a635e12cd5f58e01774b583
+.. meta::971280f60d68800ac3acad916844bdf08c09ba4bddf92f71f3f96fa910b376286a856f3c2ab4f19afce59b27c3d58059697e8038c878cfb1556fce8cce497b61
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::UMFPACK &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::UMFPACK &gt; Class Reference
 
 UMFPACK &gt; Class Reference
 ============================

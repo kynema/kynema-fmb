@@ -1,8 +1,8 @@
-.. meta::f3d63a2e959d7d3bb69a47b76f1789f8ad76a80dea33e312dcd5fe84161fe64b2f044a3d8429a0b57e622453e53cda5bb2d039a7972974e97aa4c81c4fbee151
+.. meta::d0b3ba33eff651197b64daffc527b27c1315a78f4c6c603ac83c8f2b4d1788f881e970883ff042a0de3fd109f597918342f33fc9763f5c30d481cc1591a77887
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_lambda_to_vector.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_lambda_to_vector.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute\_lambda\_to\_vector.hpp Source File
 ============================================================================================================

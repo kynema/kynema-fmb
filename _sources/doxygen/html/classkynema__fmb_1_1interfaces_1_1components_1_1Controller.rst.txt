@@ -1,0 +1,14 @@
+.. meta::e2e370dce6ef5f6793f1d39ef0c67d33646c5c326aa3948f9d027d35c59fb51a0de249a702901d3af8cb29bc629f0c3e7b8469287cb48c43c241653b1be4e656
+
+:orphan:
+
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::Controller Class Reference
+
+Controller Class Reference
+==========================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html

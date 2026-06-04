@@ -1,8 +1,8 @@
-.. meta::8be9e422dd88a63f6d3c1579916a653b40bf632cc9d684f08b35122017b78bc36c14733a17f0aaf235ba4a0537fb1266b5e32fef0f2b7aa006b7dda36ce173a2
+.. meta::bb21ae2b971f31d66a98a8e2136ffe389ec04d505972662587bee4c2747dd3bf6f8b20376b9c16cef7fc31f119a50dba5f05c46d0e0b22bdd4957d8a06f7b84f
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_quadrature_point_values.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_quadrature_point_values.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_quadrature\_point\_values.hpp Source File
 =========================================================================================================================

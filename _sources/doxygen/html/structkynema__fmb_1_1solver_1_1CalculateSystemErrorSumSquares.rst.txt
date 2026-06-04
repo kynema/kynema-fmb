@@ -1,8 +1,8 @@
-.. meta::b71d5992a7d93f61067f333feea97c6b3ee9892c4b7b57fc02a6cb2c2a024cd705836517b3c9b8503fedefb37993d202695b802cf3ebcd90ab4ffdeb387aa76a
+.. meta::73f29f26b21babc817fc84c0e61a6b9003413bbd210ef0909b5af24cc7d144555b7eba65d4373b291f4ed7666afafa84eec11d03349756303cfe350a0c735295
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::CalculateSystemErrorSumSquares&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::CalculateSystemErrorSumSquares&lt; DeviceType &gt; Struct Template Reference
 
 CalculateSystemErrorSumSquares&lt; DeviceType &gt; Struct Template Reference
 ============================================================================

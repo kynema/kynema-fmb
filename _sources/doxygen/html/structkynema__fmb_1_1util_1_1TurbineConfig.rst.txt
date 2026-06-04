@@ -1,8 +1,8 @@
-.. meta::09f2a94dafe4822559a02e8bf9b0cf3b48b98d217f293d51b8262f0c7b5f237f3e23f61d4e944f813958a672f8cd8fa255cd929d032aca80ef27c7ab0f7133e0
+.. meta::93da6daecbc8fcdd889bff9dfe191031658c1c2f407074959391be169278d17ea4fa9b575451066921a64dbc99e9bf26a87d970d29de1e735d501fede4f857ef
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::TurbineConfig Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::TurbineConfig Struct Reference
 
 TurbineConfig Struct Reference
 ==============================

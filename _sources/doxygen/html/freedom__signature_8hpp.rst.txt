@@ -1,8 +1,8 @@
-.. meta::b95b80170b924b0e56bea0b83f43508d80f97db1c92b9afcce931e4ca7b6db71d785c628abda0c9fa4186307d282eb6cc0bd959f783dceb47a1c2824c16ea25e
+.. meta::a84132ff2a9fa5e48603796f5358eee23061bcdaa6c81d23422a3b4caa1d725b9f8b744f897a116970c63dd250296b02327cb287eea5ddb1556bb40c04cc85cf
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/freedom_signature.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/freedom_signature.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof\_management/freedom\_signature.hpp File Reference
 ============================================================================================================

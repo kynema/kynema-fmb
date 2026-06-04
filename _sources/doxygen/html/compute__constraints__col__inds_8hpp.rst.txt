@@ -1,8 +1,8 @@
-.. meta::9b4da2f92f5d451a22d55c727a71437743c73c308fe221282af8aeaa24697baa5c1a5e90d1d54ad8b214ca0bc88a8da0c002d1d5979fd53a53e4189608f045db
+.. meta::0e8b3ce378b7a7f67565acb840b737fdd4540ce587f788ade0448ec1a7eb2b9ed7d450bb7f3d057ddddf4b8b90c2a850753a44fb7e62453fd838204b41eb0f18
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_constraints_col_inds.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_constraints_col_inds.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute\_constraints\_col\_inds.hpp File Reference
 ================================================================================================================

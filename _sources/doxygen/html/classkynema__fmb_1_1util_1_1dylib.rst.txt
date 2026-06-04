@@ -1,8 +1,8 @@
-.. meta::f1be70f50c897782e7081f8c36ddfe800f86f96916058894d1e0fb9659858f91bb97d34cf1a4b983d74b29deacbeb56b2cdc312a6fa500d95ebbca7a4add4e95
+.. meta::b51e25010587b1f8962c00bb5f744f78526f6afc6811aa1805057e074ad2fa6a588d1c9ef7ef7e5ca472a06aeaea41149169160180cc7d904196b27835840f72
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::dylib Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::dylib Class Reference
 
 dylib Class Reference
 =====================

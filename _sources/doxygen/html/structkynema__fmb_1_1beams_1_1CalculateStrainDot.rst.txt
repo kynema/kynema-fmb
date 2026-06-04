@@ -1,8 +1,8 @@
-.. meta::f9d6ebb5f65cad0bb340ef188e6564987e7f2eab85746dfa283566c1a61f3c5f7283fa515b59f9fef11d3f8722c14e75d5ee8fdc089d8e327f097d844dd63c3a
+.. meta::fa0cae62e7250cce09a4974c9d7b4e1d0fc62b391539e54bfa14325097cbdfa6640520dd5aab6ccc38fec34ba67dd4aa368f3e6213a74cb386328f39fb8e0846
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateStrainDot&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateStrainDot&lt; DeviceType &gt; Struct Template Reference
 
 CalculateStrainDot&lt; DeviceType &gt; Struct Template Reference
 ================================================================

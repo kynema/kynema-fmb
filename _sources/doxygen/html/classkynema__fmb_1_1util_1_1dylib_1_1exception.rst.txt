@@ -1,8 +1,8 @@
-.. meta::6ca931defd3a6c9cbab333cf9b519b4569e14a098d57e04065f7003fb71d09d2f4a4253a8f8aa91f0d68f5ead232853dedb2c52231fcb385583f94bb63f81085
+.. meta::8ac4a9450e68db8644d2db4c8e7f652046730dde235ee21044495d26e945a124ac2216449b71ca39e33e4b9c8940c9d4be88f12ea1db978be4f9b6863355c39c
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::dylib::exception Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::dylib::exception Class Reference
 
 exception Class Reference
 =========================

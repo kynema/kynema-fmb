@@ -1,8 +1,8 @@
-.. meta::2e5619d63c27dc5a76b3431b0bf8f8bdd78f8902cb5756e1190ad574dde01c15e923134fd24ec6fe64baf3019fcf415dbcf3865eb13a7464bc0bae7f70244f14
+.. meta::a46420a414eb25b40633e7a0ff9d4dcb2031f518a1a120a95fe69f41b80a43af26adf2de6b802b86cc53fb1268f0baac2da659b43045f852e7499fa6e0ed59fe
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/rotate_section_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/rotate_section_matrix.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/rotate\_section\_matrix.hpp Source File
 ============================================================================================================

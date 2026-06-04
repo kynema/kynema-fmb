@@ -1,8 +1,8 @@
-.. meta::a278251e208b1593c6dc68b40872edab161ca402c9c63ab7aed5fc2b00b9a5293da7c17fc60ce5f895ade896a67672a4009934b7eb1a6137422e838f1f22a0c9
+.. meta::7935c5ef9cbb743fd33405fbab21a82e3e66a3994076b135a86d94efd339a22599d78afe4af8d220d6f9a9ad5d8ff4ccbffaaf610dc85bd460d4f978a69d62b9
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/least_squares_fit.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/least_squares_fit.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/least\_squares\_fit.hpp File Reference
 ==================================================================================================

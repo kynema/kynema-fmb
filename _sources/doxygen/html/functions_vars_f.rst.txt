@@ -1,8 +1,8 @@
-.. meta::a8911cd655265d4b0d4db91cf3ebf3b595d2ea88a623ca4ab8b78aaf9abaeb917e89599617b23306697a7d715f560f454a0d1a591d683820538a14bb6cbf3bc4
+.. meta::0f0372089cd4f66355beb2d11bc53f5603e97645bc271061903247f848e213ad5e78305272894b7bb0ba436145dc61c329c435f77b3f46e2a778bf56b641f457
 
 :orphan:
 
-.. title:: Kynema API: Class Members - Variables
+.. title:: Kynema-FMB API: Class Members - Variables
 
 Class Members - Variables
 =========================

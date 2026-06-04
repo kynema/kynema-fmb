@@ -1,8 +1,8 @@
-.. meta::c72722b032ef808d1d1cf50b5b4ebbcd7db4308846cb79634d8e123d4dc2530a9a38a3ab4c2a89b9640a88d3f94e0fd56d8208070bfcd595b83a1ce2ec2a868e
+.. meta::2ff75bfcd7df2aee411cd39d7292b50dea9bbad08e9255caf1286111778fb07b4884e4678f6e43dff1e8f4d9ae3f372bedc1c6bf8eba6acae05e1055c4102bb1
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::TurbineBuilder Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::TurbineBuilder Class Reference
 
 TurbineBuilder Class Reference
 ==============================

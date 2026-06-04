@@ -1,8 +1,8 @@
-.. meta::604b40ebf888b73bd8fcff2b54a9744296be3fbb8882cb57a8d95e84f0477c80cdcf837ed2bf542b88e4b015cdba4414fbf0030b5e28caf81df0e6571ceb826d
+.. meta::db6b70c1ab0f047310d0a9386349cb6fa4415af396988c50238bdb3b8c22b5ee994170a19e2064bbd22f805c4319e4a9296e8cc50fe8e6adbddec27764e617f8
 
 :orphan:
 
-.. title:: Kynema API: Class Members - Functions
+.. title:: Kynema-FMB API: Class Members - Functions
 
 Class Members - Functions
 =========================

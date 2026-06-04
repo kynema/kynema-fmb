@@ -1,8 +1,8 @@
-.. meta::24f034a5f8d4b606fae45a888c3ec50fd63a1e9f7452a12be6761907528982d5311dbd4fc9b20b627755450f442c73858630a638e7fb2860830c7707e27513b3
+.. meta::3b61e6476beea74f2f76e68258e415c4a666aa06206f3923a1ac10a49d482a601fc526615469d1f34a7041a9f00ec5f64134c11749b6215c3f4795b3064e796d
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::ComputeColInds&lt; RowPtrType, IndicesType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::ComputeColInds&lt; RowPtrType, IndicesType &gt; Struct Template Reference
 
 ComputeColInds&lt; RowPtrType, IndicesType &gt; Struct Template Reference
 =========================================================================

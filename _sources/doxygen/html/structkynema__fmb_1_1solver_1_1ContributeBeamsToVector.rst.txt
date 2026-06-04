@@ -1,8 +1,8 @@
-.. meta::3eb317ac952964f81af79f922827405d7f08af17798d38afda8e0eadc34cfbab479b3e4b1a4d7f63583ddf907ca4257d8ab5f41b7836a2f9fea3612a93a02718
+.. meta::a33496df9f2f34da93b437fe335c53efbe04fda9828c56de0249bf9dbb1292d2d181b346bd2df047c49d4eabc81a1896de00bf1d90b7676e98d66616f4eadc7c
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::ContributeBeamsToVector&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::ContributeBeamsToVector&lt; DeviceType &gt; Struct Template Reference
 
 ContributeBeamsToVector&lt; DeviceType &gt; Struct Template Reference
 =====================================================================

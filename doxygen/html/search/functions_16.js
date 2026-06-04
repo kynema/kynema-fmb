@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yawanglecommand_0',['YawAngleCommand',['../classkynema__fmb_1_1util_1_1TurbineController.html#ab22f7b1ffc2e913df89e50c4a2f30a6d',1,'kynema_fmb::util::TurbineController']]]
+  ['yawanglecommand_0',['YawAngleCommand',['../classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a93a7cc23a0ccdfd51406118fa5f92c55',1,'kynema_fmb::interfaces::components::Controller']]]
 ];

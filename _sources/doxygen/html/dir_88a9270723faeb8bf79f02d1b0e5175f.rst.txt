@@ -1,8 +1,8 @@
-.. meta::f538022285987b1482ed262ee1d4777782a58c7650a1f3788ff5a94fbab37917ed6e141c5528052c2e7cf4e307bdf3f0bb271152875bedeae3010011778be4fc
+.. meta::e686214e9f5baaa322af29fff605234e2b56441983ab77bdbe37a40ee0e8443ca7f477101a9f23c50fd1cbd106d0da0318d9d997d1df09ef86168a1fe521ab68
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver Directory Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver Directory Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear\_solver Directory Reference
 ================================================================================================

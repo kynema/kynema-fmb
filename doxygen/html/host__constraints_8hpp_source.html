@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File &mdash; Kynema 0.0.1 documentation</title>
+  <title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -35,7 +35,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -64,7 +64,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Kynema</a>
+          <a href="../../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File</li>
+      <li class="breadcrumb-item active">Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/doxygen/html/host__constraints_8hpp_source.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,7 +92,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File</title>
+<title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/host_constraints.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,7 +115,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Kynema API
+   <div id="projectname">Kynema-FMB API
    </div>
    <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
   </td>
@@ -186,13 +186,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html">HostConstraints</a> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">HostView</a> = <span class="keyword">typename</span> Kokkos::View&lt;ValueType, DeviceType&gt;::HostMirror;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">HostView</a> = <span class="keyword">typename</span> Kokkos::View&lt;ValueType, DeviceType&gt;::host_mirror_type;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a69e9262972733e4854bd09c0e5b0ac16">   26</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">HostView&lt;double* [7]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a69e9262972733e4854bd09c0e5b0ac16">input</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a69e9262972733e4854bd09c0e5b0ac16">   26</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">HostView&lt;double* [7]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a69e9262972733e4854bd09c0e5b0ac16">input</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a9c6fc20a50b637a84f6af0a2aa6ab6f2">   29</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">HostView&lt;double* [3]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a9c6fc20a50b637a84f6af0a2aa6ab6f2">output</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a9c6fc20a50b637a84f6af0a2aa6ab6f2">   29</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">HostView&lt;double* [3]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a9c6fc20a50b637a84f6af0a2aa6ab6f2">output</a>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a50aed189c11562d41ba8263126ef9d0a">   32</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">HostView&lt;double* [6]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a50aed189c11562d41ba8263126ef9d0a">loads</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a50aed189c11562d41ba8263126ef9d0a">   32</a></span>    <a class="code hl_typedef" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">HostView&lt;double* [6]&gt;</a> <a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a50aed189c11562d41ba8263126ef9d0a">loads</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a3843266f981dc50257527bc935c7f76d">   35</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a3843266f981dc50257527bc935c7f76d">HostConstraints</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structkynema__fmb_1_1Constraints.html">Constraints&lt;DeviceType&gt;</a>&amp; constraints)</div>
@@ -228,10 +228,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_a3843266f981dc50257527bc935c7f76d"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a3843266f981dc50257527bc935c7f76d">kynema_fmb::interfaces::HostConstraints::HostConstraints</a></div><div class="ttdeci">HostConstraints(const Constraints&lt; DeviceType &gt; &amp;constraints)</div><div class="ttdoc">Construct host state from state.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:35</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_a50aed189c11562d41ba8263126ef9d0a"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a50aed189c11562d41ba8263126ef9d0a">kynema_fmb::interfaces::HostConstraints::loads</a></div><div class="ttdeci">HostView&lt; double *[6]&gt; loads</div><div class="ttdoc">Host local copy of current loads.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:32</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_a69e9262972733e4854bd09c0e5b0ac16"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a69e9262972733e4854bd09c0e5b0ac16">kynema_fmb::interfaces::HostConstraints::input</a></div><div class="ttdeci">HostView&lt; double *[7]&gt; input</div><div class="ttdoc">Host local copy of current inputs.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:26</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_a6f7d9f7fd95202a8dc27aed25e39b677"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677">kynema_fmb::interfaces::HostConstraints::HostView</a></div><div class="ttdeci">typename Kokkos::View&lt; ValueType, DeviceType &gt;::host_mirror_type HostView</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:23</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_a9c6fc20a50b637a84f6af0a2aa6ab6f2"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a9c6fc20a50b637a84f6af0a2aa6ab6f2">kynema_fmb::interfaces::HostConstraints::output</a></div><div class="ttdeci">HostView&lt; double *[3]&gt; output</div><div class="ttdoc">Host local copy of current outputs.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:29</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_aa072a5c685056ee936c21bb25412cbed"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aa072a5c685056ee936c21bb25412cbed">kynema_fmb::interfaces::HostConstraints::CopyFromConstraints</a></div><div class="ttdeci">void CopyFromConstraints(const Constraints&lt; DeviceType &gt; &amp;constraints)</div><div class="ttdoc">Copy state data to host state.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:41</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_ac2352c2c137257bd4a097b567723e65f"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#ac2352c2c137257bd4a097b567723e65f">kynema_fmb::interfaces::HostConstraints::CopyInputsToConstraints</a></div><div class="ttdeci">void CopyInputsToConstraints(Constraints&lt; DeviceType &gt; &amp;constraints) const</div><div class="ttdoc">Set inputs in constraints from host constraints.</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:49</div></div>
-<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1HostConstraints_html_aeab5f8538153cee8e86ef06e872902ac"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1HostConstraints.html#aeab5f8538153cee8e86ef06e872902ac">kynema_fmb::interfaces::HostConstraints::HostView</a></div><div class="ttdeci">typename Kokkos::View&lt; ValueType, DeviceType &gt;::HostMirror HostView</div><div class="ttdef"><b>Definition</b> host_constraints.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,0 +1,14 @@
+.. meta::cafc0208e19cdb77576c3cba542fbc573352542a37dfe1dbc3384ec538eabae11a3842bd26bcf3b0320edae2c91dab966cd41bc581ac6d2146571cbbd44ccab1
+
+:orphan:
+
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp File Reference
+
+/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp File Reference
+==========================================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: controller_8hpp.html

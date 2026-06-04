@@ -1,8 +1,8 @@
-.. meta::6005e5cae4425a71a779a680ec0daa13e71e2f5f7238a8ae467d4c039db0a01a043e2b456bd62cdf7da0b14199f80adfed90ce2f0dda11273995f8cc44e53a51
+.. meta::e112f04ee8b4812bd08d9f2ba6ff4c9958f3776f25851df782271395653dd5d36b32caecb8d4efc6bcc7d17268689c53728a26f4d68a062739523c9cd2f01efc
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::masses Namespace Reference
+.. title:: Kynema-FMB API: kynema_fmb::masses Namespace Reference
 
 masses Namespace Reference
 ==========================

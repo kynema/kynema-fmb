@@ -1,8 +1,8 @@
-.. meta::07a2e454bea0c061e707b61ecb4f9843fe495894db56df101e39b770239962871875096762b6ecce60061de7a87b9939650c7b65754dedc6e1fb15546adefbd4
+.. meta::6ed964883fe2c4361d63c8542a4a6139446676fd5adf117f5569398b8b3374dadcce2aea292ad141f4f393b1f1631b77c5cb63863dd07a84669dd64eb48da959
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::SymbolicFunction&lt; Handle&lt; Algorithm::SUPERLU_MT &gt;, CrsMatrixType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::SymbolicFunction&lt; Handle&lt; Algorithm::SUPERLU_MT &gt;, CrsMatrixType &gt; Struct Template Reference
 
 SUPERLU\_MT &gt;, CrsMatrixType &gt; Struct Template Reference
 ==============================================================

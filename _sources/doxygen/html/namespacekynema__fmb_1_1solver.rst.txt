@@ -1,8 +1,8 @@
-.. meta::2855aba3b60cd780dea40acc3d5e55e24eda8cb4428217a3efb7661b23ab7dad92f5bd2cccb2c6303cfbad5f7f98bc67b917e92813c476e445e7bfc06433c338
+.. meta::d602c4214c976a3fe97ae9feb9dbe43768af04f803ad370c553f9a17fe91ab6708a6bbbca9d6276ea9e2bba232ec10d6e8ebb054c80004b704b208f4d3d87551
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver Namespace Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver Namespace Reference
 
 solver Namespace Reference
 ==========================

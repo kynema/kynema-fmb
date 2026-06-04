@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kynema API: kynema_fmb::interfaces::TurbineInterface Class Reference &mdash; Kynema 0.0.1 documentation</title>
+  <title>Kynema-FMB API: kynema_fmb::interfaces::TurbineInterface Class Reference &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -35,7 +35,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -64,7 +64,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Kynema</a>
+          <a href="../../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Kynema API: kynema_fmb::interfaces::TurbineInterface Class Reference</li>
+      <li class="breadcrumb-item active">Kynema-FMB API: kynema_fmb::interfaces::TurbineInterface Class Reference</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/doxygen/html/classkynema__fmb_1_1interfaces_1_1TurbineInterface.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,7 +92,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kynema API: kynema_fmb::interfaces::TurbineInterface Class Reference</title>
+<title>Kynema-FMB API: kynema_fmb::interfaces::TurbineInterface Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,7 +115,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Kynema API
+   <div id="projectname">Kynema-FMB API
    </div>
    <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
   </td>
@@ -245,6 +245,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af5d021addb54dfd74b9843b9f952471e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6ae54819bba550ef73f582d791a123c" id="r_ae6ae54819bba550ef73f582d791a123c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1TurbineInterface.html#ae6ae54819bba550ef73f582d791a123c">CloseOutputFile</a> ()</td></tr>
 <tr class="separator:ae6ae54819bba550ef73f582d791a123c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb44c2d173821564be3ea9166eac3c04" id="r_afb44c2d173821564be3ea9166eac3c04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1TurbineInterface.html#afb44c2d173821564be3ea9166eac3c04">WriteCheckpointFile</a> (const std::string &amp;file_path) const</td></tr>
+<tr class="memdesc:afb44c2d173821564be3ea9166eac3c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write checkpoint file of current state.  <br /></td></tr>
+<tr class="separator:afb44c2d173821564be3ea9166eac3c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07103e5f327d775a461efd90da7804ef" id="r_a07103e5f327d775a461efd90da7804ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1TurbineInterface.html#a07103e5f327d775a461efd90da7804ef">ReadCheckpointFile</a> (const std::string &amp;file_path)</td></tr>
+<tr class="memdesc:a07103e5f327d775a461efd90da7804ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read checkpoint file and restore state.  <br /></td></tr>
+<tr class="separator:a07103e5f327d775a461efd90da7804ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for blade simulation that manages state, solver, and components. </p>
@@ -653,6 +659,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a07103e5f327d775a461efd90da7804ef" name="a07103e5f327d775a461efd90da7804ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07103e5f327d775a461efd90da7804ef">&#9670;&#160;</a></span>ReadCheckpointFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::TurbineInterface::ReadCheckpointFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read checkpoint file and restore state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>Name of the checkpoint file to read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2686854e6c66517d546d59652ef87ce1" name="a2686854e6c66517d546d59652ef87ce1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2686854e6c66517d546d59652ef87ce1">&#9670;&#160;</a></span>RestoreState()</h2>
 
@@ -788,6 +820,32 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">fluid_density</td><td>The density of the air (assumed constant) </td></tr>
     <tr><td class="paramname">inflow_function</td><td>A function that takes in a position and returns the velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb44c2d173821564be3ea9166eac3c04" name="afb44c2d173821564be3ea9166eac3c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb44c2d173821564be3ea9166eac3c04">&#9670;&#160;</a></span>WriteCheckpointFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::TurbineInterface::WriteCheckpointFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write checkpoint file of current state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>Name of the checkpoint file to write </td></tr>
   </table>
   </dd>
 </dl>

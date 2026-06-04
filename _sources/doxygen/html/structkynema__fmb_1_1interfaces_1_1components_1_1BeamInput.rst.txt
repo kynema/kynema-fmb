@@ -1,8 +1,8 @@
-.. meta::3c40614aede4e440164c1e37f7c9ff0b3ab0c172f29e320638c52c9a13a4f59db7f96d030df5cc35ad54c36822e8bab3ac050feeaece28859c9fb1a6d792bdb7
+.. meta::1ed8480e639210656a2f30188c5edeb3263d2e33bdd5d5802dd43d7f8024f9c3ed0d1689c5243652d84fb50c268d5d7dde1429d403c8fa5e3dff4835cd995e4f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::BeamInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::BeamInput Struct Reference
 
 BeamInput Struct Reference
 ==========================

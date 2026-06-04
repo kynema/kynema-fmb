@@ -1,8 +1,8 @@
-.. meta::597fbc53710a7bdc819b598c4101d0fd126221c6c5d22849d2f36f9c974ddc720327e536d126d964b1f711b59408f1ca63af8260c2e7547d4adbdff56f08f2d9
+.. meta::dafcc5be08ceb44568e77053fe22f5d70fcb3d8cd00ed9e90ebb47ece69e8d8c2dbb1b68e66493ff0f8173ca6963722f93fe03f9a5afa5c8268ac624e84ec4f4
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::BladeInterfaceBuilder Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::BladeInterfaceBuilder Class Reference
 
 BladeInterfaceBuilder Class Reference
 =====================================

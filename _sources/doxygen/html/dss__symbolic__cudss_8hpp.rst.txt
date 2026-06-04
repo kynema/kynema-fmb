@@ -1,8 +1,8 @@
-.. meta::71b79a4f2b99f8edd9a3a6f8c38cb726cdbcf2dc14fe7d8d8ac00424b3d964d0a5e9151f174351a1ad9c5e5f5c8faca84552cdcc579156e5b5d38ef02d32f1b6
+.. meta::2f8138f3b8e764cedbae920a344207fd8d189efa01991a79ffa6e558264e5d9575316ce84e73663ba81c70e0d4b8ec71ba1d52e18619f84098e2d78ec1933712
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_symbolic_cudss.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_symbolic_cudss.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear\_solver/dss\_symbolic\_cudss.hpp File Reference
 ====================================================================================================================

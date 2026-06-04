@@ -1,8 +1,8 @@
-.. meta::622d634b1819c0e56a3ed070a91a523c6b72e0830ae521dc381c1eb2b9c71ef2e9623049bdb8988c274af3d4ce8d8bbf58f543af69e73666af2111c13ea026e7
+.. meta::882c5fdc1d0cc07134017cf530004fcb19c40b05f44e2022503db4608d1b8727ec7193f20474135014f5b48d7740b50f0f53cd63a43773bd3aea0b5e9a4cc28e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::CopyConstraintsResidualToVector&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::CopyConstraintsResidualToVector&lt; DeviceType &gt; Struct Template Reference
 
 CopyConstraintsResidualToVector&lt; DeviceType &gt; Struct Template Reference
 =============================================================================

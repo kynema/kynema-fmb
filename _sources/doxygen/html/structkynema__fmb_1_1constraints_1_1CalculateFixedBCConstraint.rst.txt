@@ -1,8 +1,8 @@
-.. meta::4d4120cf5d7d20ce0abba60aa400304c28628b69d201e63011c830f885b20aaf515a47d354354205ee722cf1edbb7f07b36ec2561efdcfb8e3e83d6616f9af68
+.. meta::3fa414a75d74a836559a4cc7aca4f0d72f1716950a28f85d49dc0b182ed68ebcfa95998b47053b9a51ac52c391ae7a243712338e31c030d02a257f573bbce266
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateFixedBCConstraint&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateFixedBCConstraint&lt; DeviceType &gt; Struct Template Reference
 
 CalculateFixedBCConstraint&lt; DeviceType &gt; Struct Template Reference
 ========================================================================

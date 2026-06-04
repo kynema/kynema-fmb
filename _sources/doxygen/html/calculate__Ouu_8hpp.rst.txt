@@ -1,8 +1,8 @@
-.. meta::57bceec4a9fa127d16246c3dec659c45bb22ad45cfdc20b0ebf8c6b826b423fd73fc30035739c4364948e386c24ad7e692036d3cb4382bc57c18f40fc03bd012
+.. meta::ca6be293c91b64e1b584dff263e2484f522854e08e13836f681f7942696fbd0a35c54edc3c582190f3b84d0f33073553a9d01c5840f8984cb44f9f56ee5c09d5
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Ouu.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Ouu.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_Ouu.hpp File Reference
 =====================================================================================================

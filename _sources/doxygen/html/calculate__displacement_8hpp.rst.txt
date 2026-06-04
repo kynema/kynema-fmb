@@ -1,8 +1,8 @@
-.. meta::e67ae58e25e1e848ca25a4527cf25c1fa4d22f15b40a26ad10f75a7b6c8adf54283522e9d071538c648d2b94cf647700061f64dec05e8f44c716f61f05ca9815
+.. meta::baeb7571d8621ce48d50687af827717983b7fd98cad8e2e73ecec49ee9f06c017e1c5c538e1527e96370987b1aadbda80f135334fcc4f715b210b8c7066c57d9
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate_displacement.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate_displacement.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate\_displacement.hpp File Reference
 =======================================================================================================

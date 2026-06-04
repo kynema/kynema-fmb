@@ -1,8 +1,8 @@
-.. meta::51b315959d7053c1495fdb1883b6c70acdd37672e965442595e63131d380b1ccb7b629c136e3bda6e2fa93ad2b23ded5c9251b8a3328af27e9fc9ef85fe7b2c5
+.. meta::7f13dad68084829fd07e612e8d8ca8ccabf9b1ba64e629b669b3dfb129400ad67c3f1028e3073db838cbabe986c5107e1b0b37aea451e629dedf92ded64ed169
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_masses_to_vector.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_masses_to_vector.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute\_masses\_to\_vector.hpp Source File
 ============================================================================================================

@@ -1,8 +1,8 @@
-.. meta::06a7520766719ca4883dcbb51f832f93de8e6ff85a060df70457bf2a08471431addfa832f3fa3b3b69ecec708cca03f57af9af1b3989d3417c517abad9e4ab82
+.. meta::1d7f9afe7380b93e6303269a361ac31ded59f1caa59fc2d980b9b5bc2e7bc117a62e4d70311bf670c7f0a72d856f5b0a69737da7ec221d200a003e34f3b7f9fd
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dof::ComputeNodeFreedomMapTable&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dof::ComputeNodeFreedomMapTable&lt; DeviceType &gt; Struct Template Reference
 
 ComputeNodeFreedomMapTable&lt; DeviceType &gt; Struct Template Reference
 ========================================================================

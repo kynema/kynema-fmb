@@ -1,8 +1,8 @@
-.. meta::25991182846b5d2bf193e400fbdfaa7a21a83a4e8ebfd61a2a64199bb3fc89a2cc97e0bd009c36bfbfec588e82ee0164c798c3d432a77409cb46c629c8ec0581
+.. meta::1d5caef078bc097d64a4098e720acb7d5c8da96f86039b6a67c96238fe922839052afefccb374aa8993d6c4780d939244b0d4b9dc5a970261429944ba4a09b69
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::IntegrateStiffnessMatrixElement&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::IntegrateStiffnessMatrixElement&lt; DeviceType &gt; Struct Template Reference
 
 IntegrateStiffnessMatrixElement&lt; DeviceType &gt; Struct Template Reference
 =============================================================================

@@ -1,8 +1,8 @@
-.. meta::600729ed190f1dd37c0ec1d160a8e2d66444b376d5ce1a28d524b573188b372d342ab7815874b4b6815bbeab92eab791d19ff5f8fb78f948586a723e8a06dab1
+.. meta::5d5d4de9e128ec743ba92c8a2a9696c0e447a733ad919e09d4b53ce5e84f5dbe2ce0f59c643c5d988fdf855b9074da52ccfdd00ccefe7288fed0a121071c5fd8
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateOuu&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateOuu&lt; DeviceType &gt; Struct Template Reference
 
 CalculateOuu&lt; DeviceType &gt; Struct Template Reference
 ==========================================================

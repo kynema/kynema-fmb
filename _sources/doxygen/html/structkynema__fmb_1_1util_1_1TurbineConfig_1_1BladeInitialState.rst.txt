@@ -1,8 +1,8 @@
-.. meta::3c6a5e3a2fd2bae72a545a2f0c1adb24e2d5122cd13f6713f1384d6d45a9abf22c12faf4e639035729e3cb9aa740f5b9713ab090d5a0d97056ae41d329190a7f
+.. meta::46d447435264ab991fe468ff31823e343aa3ecbd66c72446836158790843baf3a8281e9d7df3b2ff346934130c66e51448da28d6331469f93cf541a1f3f32fd9
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::TurbineConfig::BladeInitialState Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::TurbineConfig::BladeInitialState Struct Reference
 
 BladeInitialState Struct Reference
 ==================================

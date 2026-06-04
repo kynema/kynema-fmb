@@ -1,8 +1,8 @@
-.. meta::6d0cc1a5109ae059ea668e283214ab536943cec8897d559feba752898bedb695c03a4e83d4105cb73edf93821c94351d1db6f0abbe6e8638a3fce4e9e3c6dc48
+.. meta::251af08b264ca302a07ecf2e551fe7ef23f67047d74ca1f2f0af72379135d112a33960f9306a19beb421b31a3f63a337070b7c0a0371bdb554364e99d24c2ee2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::SpringElement Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::SpringElement Struct Reference
 
 SpringElement Struct Reference
 ==============================

@@ -1,8 +1,8 @@
-.. meta::d1e097c907094876a212b94321ab76d6345cbd81029520707b5072737e4ceb4646f644bb876a009d3ad2309c649fb3c71ed3ca14610e550c20c805ca41c1f278
+.. meta::19bad26c0379a256234fd3b41bf9db97b42727fffb8e42f788cebc985ec5165dcf08e432d14e4f2eece7d679e10bd82a1040a58c74456e782a7c412b861ff538
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::InterpolateQPVector&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::InterpolateQPVector&lt; DeviceType &gt; Struct Template Reference
 
 InterpolateQPVector&lt; DeviceType &gt; Struct Template Reference
 =================================================================

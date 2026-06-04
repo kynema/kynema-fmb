@@ -1,8 +1,8 @@
-.. meta::5c1da204d24a27b0a441dd8bb2f55ac5fdc0aa68e9a04b8e94019b3ce64a34613887c3cf30d87e02446f0c81093794471ef41e4311709e2d118c226f567161ef
+.. meta::67bf5e88ade22f75c2204591d0ff29964bbb52f88c6209d7dbe2571123ae997dfd10d52b5f2ca74cd18d06cccf727f7896ac56a78d2176a851a064c083b977d4
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/create_constraint_freedom_table.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/create_constraint_freedom_table.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof\_management/create\_constraint\_freedom\_table.hpp Source File
 =========================================================================================================================

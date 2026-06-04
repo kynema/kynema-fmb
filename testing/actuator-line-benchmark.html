@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actuator-line benchmark: NREL 5MW Turbine &mdash; Kynema 0.0.1 documentation</title>
+  <title>Actuator-line benchmark: NREL 5MW Turbine &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -37,7 +37,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -84,7 +84,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Kynema</a>
+          <a href="../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -106,7 +106,7 @@
   <div class="section" id="actuator-line-benchmark-nrel-5mw-turbine">
 <span id="sec-actuator-line-benchmark"></span><h1>Actuator-line benchmark: NREL 5MW Turbine<a class="headerlink" href="#actuator-line-benchmark-nrel-5mw-turbine" title="Permalink to this heading"></a></h1>
 <p>This page documents results from an actuator-line CFD benchmark based on the NREL 5MW reference
-wind turbine, as defined in the Kynema benchmark repository. The benchmark models a single NREL
+wind turbine, as defined in the Kynema-FMB benchmark repository. The benchmark models a single NREL
 5MW turbine using an actuator-line representation within a slightly convective, unstable
 atmospheric boundary layer (ABL).</p>
 <p>Fully coupled fluid–structure interaction (FSI) simulations performed with
@@ -117,8 +117,8 @@ the two simulation frameworks.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Complete details of the benchmark definition, simulation setup, inflow, and
-post-processing steps are provided in the Kynema Benchmarks documentation:
-<a class="reference external" href="https://kynema.github.io/kynema-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html">Kynema Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)</a>.</p>
+post-processing steps are provided in the Kynema-FMB Benchmarks documentation:
+<a class="reference external" href="https://kynema.github.io/kynema-benchmarks/amr-wind/actuator_line/NREL5MW_ALM_BD/README.html">Kynema-FMB Benchmarks (Actuator-line NREL 5MW in a convectively unstable ABL)</a>.</p>
 </div>
 <div class="section" id="simulation-cases">
 <h2>Simulation cases<a class="headerlink" href="#simulation-cases" title="Permalink to this heading"></a></h2>
@@ -135,7 +135,7 @@ post-processing steps are provided in the Kynema Benchmarks documentation:
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>OpenFAST</strong></p></td>
-<td><p>Unchanged Kynema benchmark case (OpenFAST–Kyenma-SGF).</p></td>
+<td><p>Unchanged Kynema-FMB benchmark case (OpenFAST–Kynema-SGF).</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OF no twr</strong></p></td>
 <td><p>Benchmark case with tower aerodynamic points disabled.</p></td>
@@ -144,10 +144,10 @@ post-processing steps are provided in the Kynema Benchmarks documentation:
 <td><p>Kynema-FMB/SGF using the same time step as OpenFAST.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Kyn. 10dt</strong></p></td>
-<td><p>Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema FMB steps per SGF step).</p></td>
+<td><p>Kynema-FMB/SGF using 10× the OpenFAST time step (2 Kynema-FMB steps per SGF step).</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Kyn. 20dt</strong></p></td>
-<td><p>Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema FMB step per SGF step).</p></td>
+<td><p>Kynema-FMB/SGF using 20× the OpenFAST time step (1 Kynema-FMB step per SGF step).</p></td>
 </tr>
 </tbody>
 </table>

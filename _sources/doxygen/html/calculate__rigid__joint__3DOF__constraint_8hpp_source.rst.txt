@@ -1,8 +1,8 @@
-.. meta::0f8f8aa05d679c97acbe1769862ea67e4047019cbf534a10e0e78cee303c58b13628341ad4d9bef65f0d0730e7a651800d4e2085eb057fed1cc0b01342bbe9d4
+.. meta::1537907acc87c596a5b3cd8ff05f50ed21585bf6b9ebd21dd04f1749a1f85e68761baaae3515354c68a3d2c76caaa4d8afdeaa1ff1d5b170bf852349df1bc8df
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_rigid_joint_3DOF_constraint.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_rigid_joint_3DOF_constraint.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_rigid\_joint\_3DOF\_constraint.hpp Source File
 ============================================================================================================================

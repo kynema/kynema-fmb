@@ -1,8 +1,8 @@
-.. meta::6e41fd6e65cbea5c9a509b7d6fbf59266880d56dda0724d99d0181d1781a22a28ad0df92f961476308bf69190ad95152b25a2a2c6a92cd34d8aeae995ee4a734
+.. meta::77d10fc935d7875e6d6ae73b5019d3620f669aadd6f564ccc799d8be441c043e82be70b20a0524f863932e65c6e48557f5154876abf667f8b8837ac3ecef3c22
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::CUDSS &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::CUDSS &gt; Class Reference
 
 CUDSS &gt; Class Reference
 ==========================

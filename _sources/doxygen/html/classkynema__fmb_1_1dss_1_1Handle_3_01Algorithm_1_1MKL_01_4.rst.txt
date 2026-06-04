@@ -1,8 +1,8 @@
-.. meta::922070b570005f5d058c30ae4469a72d7673ae1a98eef677983f137541c1b6de80f7916525c37903f6ec274330e412526cb312f75f342736ee915f87937e5406
+.. meta::d096b9f97749a5a60a89378ddd6a53ee90bfdbe6b3d0c4cea9e220fceb17d077bce8dbfbae2e626fe3ea71f94d5c4371b74cc022a9e94fab63a8f0b79bbd651a
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::MKL &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::MKL &gt; Class Reference
 
 MKL &gt; Class Reference
 ========================

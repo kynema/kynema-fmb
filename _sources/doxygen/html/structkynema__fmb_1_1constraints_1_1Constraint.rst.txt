@@ -1,8 +1,8 @@
-.. meta::4bd31064401b1c987a60e081485964fc9d9cf4c5c764e2500e976b0973864574d70c6fb418a89fa5bfd814098f7eb314bb3df9fc7904ef258aedac702bb95bdd
+.. meta::997a479a30bf6713d17fc7c20a7e85b2d1d1192cf14eb04b22410edb75b4b2bef3e55755aa15748015d58ee54095ca017e3bda09540bbbcf3eedcad570c83e26
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::Constraint Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::Constraint Struct Reference
 
 Constraint Struct Reference
 ===========================

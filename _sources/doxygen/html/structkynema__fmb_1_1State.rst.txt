@@ -1,8 +1,8 @@
-.. meta::a7354cae47a9ec0fb463edff68e7d5cb80f39e567daf56144acb2490fb21804041b0230663b8e7b3cf0550c3c63b8a54ab052d6577e8ff07c1a8ea851d166219
+.. meta::500184adcadc64535cdfc2ec358f304a3a24427545fa32b233dd09cbf6193c47362dbc479a06258007e83430b9f599198ebb20d2c280332910731411178ef661
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::State&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::State&lt; DeviceType &gt; Struct Template Reference
 
 State&lt; DeviceType &gt; Struct Template Reference
 ===================================================

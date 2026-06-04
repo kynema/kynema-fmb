@@ -1,8 +1,8 @@
-.. meta::50a235cfe042461a88ff14d6647b3bdf53d07886555f3df0daae8cc03935c158b8c3eb8daccaa96911a5fb01c71021a3785f2317b3f6a1e78a7887ba4e12cf21
+.. meta::1029e54f2b5a6e6b8b80ed0c64fa82ed5aa361f4e0165e85c9d9a8258e9a97a9195f21293ab4965a6979af4b2b59e0eec6d164928bbbc8376218409f831fd2e3
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_gyroscopic_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_gyroscopic_matrix.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_gyroscopic\_matrix.hpp Source File
 ==================================================================================================================

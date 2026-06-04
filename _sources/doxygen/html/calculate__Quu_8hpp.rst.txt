@@ -1,8 +1,8 @@
-.. meta::8f2667a3c6c03802da8250e56d87c362e494eb1a62e6725faa140a338ac5f3945b67c2a4ee7c9505a6c1bb2eeb4161192796dd67313fbdb5b6b83332a51f0b36
+.. meta::0a452ca5b54c85c451387a0af55e1d6258084ceae5023268f0ea5fc413070e3ab5dfa5dabf69c41906fac3da33d6fc9cad6f7d2810d472054d1bfd6067d6e01c
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Quu.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Quu.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_Quu.hpp File Reference
 =====================================================================================================

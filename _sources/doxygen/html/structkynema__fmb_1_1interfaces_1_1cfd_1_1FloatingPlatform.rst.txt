@@ -1,8 +1,8 @@
-.. meta::705ab8aef7d805b71f116feed5325837bb3255aed3e5998e2e53a92fa22ac1b476bf4d5eec0b7bdeb9f5f445d45755e53d19285e961cf33592e89104d8c1f02c
+.. meta::1d461d1a594aebf6d68c7150de4f83612b6fa4c805a5c4b29b7ef17affa2e318f233bd351cd8c457cabf101b16bad9b6aab2040e375ed94044471cb50138345c
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::FloatingPlatform Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::FloatingPlatform Struct Reference
 
 FloatingPlatform Struct Reference
 =================================

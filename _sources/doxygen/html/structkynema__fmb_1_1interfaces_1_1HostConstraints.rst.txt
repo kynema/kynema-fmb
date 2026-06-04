@@ -1,8 +1,8 @@
-.. meta::0a0a08a45e227b517cbb0f7033bb27ba45fe7f6cb4fb8d7c78bfd9ecd894157c65144d5becc397a484071d3473f420cdc005d3718c129bfdd9e8f84f56175128
+.. meta::8a4d1e79316306b72f6a30184eb64a255160d6d65629fbcee065f151116fbe36dc9ec981e3fc215f024414c1b2283aebc5cc7445468e8c9d74fb9aae583cb438
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::HostConstraints&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::HostConstraints&lt; DeviceType &gt; Struct Template Reference
 
 HostConstraints&lt; DeviceType &gt; Struct Template Reference
 =============================================================

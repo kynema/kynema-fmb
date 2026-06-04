@@ -1,8 +1,8 @@
-.. meta::bf844cf193d35afd4021c012fb21c117e33b3c5f49604db4ad98dabb2fea4109d4b72d06978c4e2fd1f2babe7d6d3668492a51a991e43a70ba8f13853fbdf7a7
+.. meta::5ee7582ba917d08199d22815abd604fd6c253a299bffdc4befd77165ad8b4b842d1491876432d62061a45a1fb608bbc80dc79cdc5c0fefe95a7b936d0b5d0332
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Beams&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::Beams&lt; DeviceType &gt; Struct Template Reference
 
 Beams&lt; DeviceType &gt; Struct Template Reference
 ===================================================

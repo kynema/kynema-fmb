@@ -1,8 +1,8 @@
-.. meta::3c4f6c5e74812deb2e18a30325e5a3f0b6419e517d7eb12163a2b0762cc96fea21adb6f8e5899919df1219f1d8f3a787a5e0f3c6746acf1bd53c38f20fc4f258
+.. meta::97b01891294d6f75af0ef0c65e23a5983446d9df2290175297059199da7d2644363563f288a5d3ddeaf8031af239a3ff2129fae59d47f2593a55d19895fc2a69
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::state::UpdateDynamicPrediction&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::state::UpdateDynamicPrediction&lt; DeviceType &gt; Struct Template Reference
 
 UpdateDynamicPrediction&lt; DeviceType &gt; Struct Template Reference
 =====================================================================

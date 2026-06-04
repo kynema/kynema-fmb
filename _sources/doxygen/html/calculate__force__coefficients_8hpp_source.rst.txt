@@ -1,8 +1,8 @@
-.. meta::4cd62a487945d76a4c9e7781ed5b82dadb1cd0e5e65d64c489ea9ef5b6fa4e93a6c47f94c986617c31683bce174a469aa15dd2db9c239613c9dcb64e26d43bb1
+.. meta::be4ef5342f2e03b5d79e07ca912c0bf1562bd24b0234ebd4fb3d29f4a5aff52a941ceae0e0c61b6a6bf65045c73356acf9105d14d45395b2040f03c7d3b148eb
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate_force_coefficients.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate_force_coefficients.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate\_force\_coefficients.hpp Source File
 ====================================================================================================================

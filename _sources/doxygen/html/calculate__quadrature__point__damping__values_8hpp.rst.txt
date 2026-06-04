@@ -1,8 +1,8 @@
-.. meta::a7e6cf30b21c50a2a6a5b6aa5caf1160ad3f5ed75e084ebe4f1ad01b821800fae2cef893076bd8f7c46134e27c02793682f001a462c7f6e61c727593fe08e81d
+.. meta::3cec8b22447005128967bf66f0b51fd83702b4ff482cd6b1f6ccdbb3cde6bdcd2c8e924879913413e729a3b68a0dbc8ef87350d54e37a69a54de2dda6987d193
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_damping_values.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_damping_values.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_quadrature\_point\_damping\_values.hpp File Reference
 ====================================================================================================================================

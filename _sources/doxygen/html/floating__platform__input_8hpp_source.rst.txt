@@ -1,8 +1,8 @@
-.. meta::377ea19d1de949fe0452671d6ea626946813c4b008174fece00795bd2d6c720f23bfc844b9d9f3d16251e9d6c20ddc18838eeef98d31bafa4b46b465db34fe70
+.. meta::00325c823b550086a51950675b9f87cb85197696b18f9a9befb4af640714b34fbc6cb4712a37bec519f6fa077b9f6179b167234735bb44a1aa8c3ef924e85b0c
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating_platform_input.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating_platform_input.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/cfd/floating\_platform\_input.hpp Source File
 ===============================================================================================================

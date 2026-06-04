@@ -1,8 +1,8 @@
-.. meta::9b21e2447b6e545d07510144e5a69c0959e1e3224670e513c69c25b4b9c9d00c639a2d383b1a67fbd31d47100bb36886d904cb72414630f044610fad98eca883
+.. meta::0b40aaa6595be1891dc9977f69575fe78c44bc354d8fdf619cb616fe4fc223d5d276e643eb8c3d31af75ad473288f7a3ebf7ff0945b290596a3c27b340e6d316
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses Directory Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses Directory Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses Directory Reference
 ========================================================================================

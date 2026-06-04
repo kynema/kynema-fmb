@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['umfpack_0',['UMFPACK',['../namespacekynema__fmb_1_1dss.html#a14d0ab73a88776d39b9126d546c3f351ad2a602ed8582b78e22141784e4a86165',1,'kynema_fmb::dss']]],
-  ['uniform_1',['Uniform',['../namespacekynema__fmb_1_1interfaces_1_1components.html#a55638e2b65965fbf7e8142a4b5b191aaaf19516d11f2946f894070e92fcb56b6d',1,'kynema_fmb::interfaces::components']]]
+  ['segmented_0',['Segmented',['../structkynema__fmb_1_1interfaces_1_1components_1_1BeamInput.html#ae1acddc15026ecc9ec1f344a1c28f1b8a8484a13cbb8a8a53d6c4285938d21f60',1,'kynema_fmb::interfaces::components::BeamInput']]],
+  ['superlu_1',['SUPERLU',['../namespacekynema__fmb_1_1dss.html#a14d0ab73a88776d39b9126d546c3f351ae85f79ff3d82385beca51faebc04ab92',1,'kynema_fmb::dss']]],
+  ['superlu_5fmt_2',['SUPERLU_MT',['../namespacekynema__fmb_1_1dss.html#a14d0ab73a88776d39b9126d546c3f351a2b5fb6f9206e24cb33edd6cf64195c31',1,'kynema_fmb::dss']]]
 ];

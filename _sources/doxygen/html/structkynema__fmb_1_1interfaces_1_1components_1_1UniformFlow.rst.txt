@@ -1,8 +1,8 @@
-.. meta::bc21c1cc472b3e0469a628330f9d344cd14846e03343f5c716345f680d72564c678016ddbe2f40b11d3a3f452cf7964fd0d723f1bf2457ee74df70ba43cbfff6
+.. meta::2a4c1b012a07239f35c7506a4d02b402090a80a206e2e663753dd2c17e35fc55f312e0be75d0ad68e3d836f9db8fb7e0c4430221fb44442fd6ddbd667e3cdaf9
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::UniformFlow Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::UniformFlow Struct Reference
 
 UniformFlow Struct Reference
 ============================

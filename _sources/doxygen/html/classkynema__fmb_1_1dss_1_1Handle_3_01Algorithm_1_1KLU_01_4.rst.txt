@@ -1,8 +1,8 @@
-.. meta::842de929247da239f46310d05ee21e1903ad51045ea356cf5ffa7c2869149dbaf0b1b31fd2825c03213446536b8729f871ee30d91d22228a03dee61ff3575e45
+.. meta::48041c576ea7ce8bf1c6c6af36215f45b1d3d1abebcbb446cf85021f68cc0ffd86050f8b326d123cf11d44ef1142787d66fc2dff6d0dd69a12e8c8b8ac6b1ab4
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm::KLU &gt; Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm::KLU &gt; Class Reference
 
 KLU &gt; Class Reference
 ========================

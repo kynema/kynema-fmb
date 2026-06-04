@@ -1,8 +1,8 @@
-.. meta::6f476f99cb0b3d8dfe6c6cf4255a460b6d33cf9faa20be1dd16cc9e8bd2193ba2a1254b04877915424b8aa821b2d75d9f597e8f6b7375489a133cb9b8860c918
+.. meta::59a7198707d27e9fe98569aef0fede05171264b45520e9dd0afb95d2e43f436ad35463fe38fa0ce435a21b77a7c429a15669d65464037157dbf3bf2ac11e369e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Masses&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::Masses&lt; DeviceType &gt; Struct Template Reference
 
 Masses&lt; DeviceType &gt; Struct Template Reference
 ====================================================

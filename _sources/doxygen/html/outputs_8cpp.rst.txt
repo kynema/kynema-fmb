@@ -1,8 +1,8 @@
-.. meta::a31fd0355a72708ee9f7e1fafc19b2f1739a35418853277442dce8b1f10a21c80d0b383ce16db48bfabf6ce68867d9f022289182cdb5562d301981d50edfb8e9
+.. meta::b015d8fd21a31c2f3a5a5516784ef2b6d0ae25695e260ed9569457bdc7974b01bba0690f8c95208d175052b5478bd48d2033862f88868522c4f20697b7257c34
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/outputs.cpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/outputs.cpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/outputs.cpp File Reference
 ============================================================================================

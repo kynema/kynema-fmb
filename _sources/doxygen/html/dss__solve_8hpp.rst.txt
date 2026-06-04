@@ -1,8 +1,8 @@
-.. meta::531457777402de330bac95f1a74e9f54bf07269b260d56f47a0406c5b77d6de972986dbbeead2f33cfb81820c81b82b65f8c69061443d492aa644e09fc98f6e8
+.. meta::8531bfdb1207f0acb7650831782d254dc124294f26ba581b3cfad4c5272d307fed9d4d3b3bac5f429472757c3c8149b8156a38e8015e9370665788e1a61f2b5c
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_solve.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_solve.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear\_solver/dss\_solve.hpp File Reference
 ==========================================================================================================

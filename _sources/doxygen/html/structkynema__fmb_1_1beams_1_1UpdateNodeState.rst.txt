@@ -1,8 +1,8 @@
-.. meta::346ed886246dc677918f0a93277633adcd600ab29ee2206a175f17cd3d7db9775bfc8d4af557528c3314cfb7af5d344b2bb5774a137158754a04ea13fbae26f9
+.. meta::e0410028b1aa9446dd271083aa5ea022ce6a194b3749580f4063ab762dfc0b5b4a66acbd3c849fbf33cd31c33f1440a4e9c02108ddfb4460a328b519b0163b7a
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::UpdateNodeState&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::UpdateNodeState&lt; DeviceType &gt; Struct Template Reference
 
 UpdateNodeState&lt; DeviceType &gt; Struct Template Reference
 =============================================================

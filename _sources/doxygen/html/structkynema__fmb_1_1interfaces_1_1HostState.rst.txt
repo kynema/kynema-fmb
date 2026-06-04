@@ -1,8 +1,8 @@
-.. meta::9144410abc352e51fa4aeb036444331907b251e23d4ce25196eb6ad47274d2e5950b44cea77c2dcaead945659fbc3607bbfd58381c966fcfddbc807087fbecd4
+.. meta::bf57ebce486a720a4f3d271873529b6edd99c50ca0200e3d1067a1ec66aa943bde21df346dde4b37ce796b15df4d3b465aa75fa883f941a1198575e819b6500b
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::HostState&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::HostState&lt; DeviceType &gt; Struct Template Reference
 
 HostState&lt; DeviceType &gt; Struct Template Reference
 =======================================================

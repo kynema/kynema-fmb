@@ -1,8 +1,8 @@
-.. meta::c002b53ba8a62bf36cf3700ce2834ceff4c3863dbcbb1de0420fdfb8a417ee0c80971ccfd68476f74c0d03218e9f2b075c0ac6cf324df87abcea2e817f997565
+.. meta::841eb341a981f7ada68e3cefa0f1aaa77f3ce70a12b32c9d44c746a6e03d199b1c010efd9c02b918c3685ae8418d0711f4d10ff13d91a92f2ca14a53b03ef501
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::Handle&lt; Algorithm &gt; Class Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::Handle&lt; Algorithm &gt; Class Template Reference
 
 Handle&lt; Algorithm &gt; Class Template Reference
 ==================================================

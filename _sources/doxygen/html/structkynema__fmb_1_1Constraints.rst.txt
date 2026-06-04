@@ -1,8 +1,8 @@
-.. meta::f531862b3bbf4baa4dca6db7181d9838a477f7a31e1297d47102104af4f5f447defcf213b9e44296035cb4190122c67870b4cbe45207b800f44d2c038f6cc476
+.. meta::c919a2e3e59de9941ce97ba70dfac949fb94447dff74087e4e33cb32f4cb229cf6fe3a9787704ba08789e919a5fc1ddccb1b32ac3f5d0531cb5b3d732d86acf3
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Constraints&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::Constraints&lt; DeviceType &gt; Struct Template Reference
 
 Constraints&lt; DeviceType &gt; Struct Template Reference
 =========================================================

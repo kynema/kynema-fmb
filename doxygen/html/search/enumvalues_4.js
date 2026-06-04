@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['justposition_0',['JustPosition',['../namespacekynema__fmb_1_1dof.html#afcc99d83b451e115cd97d1ef58625cd7ac3f1ed4c290648ed6b685b415448430d',1,'kynema_fmb::dof']]],
-  ['justrotation_1',['JustRotation',['../namespacekynema__fmb_1_1dof.html#afcc99d83b451e115cd97d1ef58625cd7a6bd15481aa8778fbfe716b3aee6fa8be',1,'kynema_fmb::dof']]]
+  ['individual_0',['INDIVIDUAL',['../namespacekynema__fmb_1_1interfaces_1_1components.html#a69ef98674160cc58569e0be0e8655021a938873bbf7fe69b2f3836e6103f2a323',1,'kynema_fmb::interfaces::components']]]
 ];

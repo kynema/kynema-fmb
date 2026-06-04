@@ -1,8 +1,8 @@
-.. meta::1f6ea59e7c00055330ea681897c56ad494642b487917156ea2f7102d6091f243fb2eee5ba8a2476151abdc9c6f33b22cdba2bbc6d3aedc7c0a45926e6191c869
+.. meta::ea42c0add1317bca11dbcc0ad67025aa11dcd30fb82e2e43590c7ccd58a68aeae469672ca217be7687ae8864045eb9a0ee0f579151418b92f6ac52d9987a2440
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateRevoluteJointForce&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateRevoluteJointForce&lt; DeviceType &gt; Struct Template Reference
 
 CalculateRevoluteJointForce&lt; DeviceType &gt; Struct Template Reference
 =========================================================================

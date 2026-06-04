@@ -1,8 +1,8 @@
-.. meta::276b1835d948167e20a9a4b2a26761b4a812b0d2ead602d0d0e2d4e780bb7f60320323b675bb91d1d8b2da4cd3eb793ca5eaf5caec6daba903938384827bc4f8
+.. meta::15fb252c07410fc835d5bf33ec58431208e6d4a283d64af96977b5241268a4db110952372e09e6f3a10305bffcd48f4f937ccf8147b605ab83f29906fa2082f8
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Solver&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::Solver&lt; DeviceType &gt; Struct Template Reference
 
 Solver&lt; DeviceType &gt; Struct Template Reference
 ====================================================

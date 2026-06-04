@@ -1,8 +1,8 @@
-.. meta::ceedd09a1e20634c788c56b3220723376ef4fa57d5ac6cc33f2d5d56352050455549df1817fab91253b2143198ef030c21c1eb914668ae1079cb178592968b31
+.. meta::abb54bd91f81ab91f202b02075033319fec799a8b6b850b0a8a612849a61738f7e46894ec584821e6f453861cab63c4ff8e5f2d2b842bd98972ce6af2ebcc9ae
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Node Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::Node Struct Reference
 
 Node Struct Reference
 =====================

@@ -1,8 +1,8 @@
-.. meta::371697ead1d057228834aa93f3338d448ae94a5dccf802c37a9b35351671dc0cb367bc727fd2bcd69765204bd6d10ce8cf9df20950ec473d25b1f7b5716f88c6
+.. meta::92eec6d19135c947d061c7ec8c8c6d40143ac37edf0674abcb7b96902a66135571d127c4e4919f6774c5deb850e7673ee722797ab766582acd82743082a07d51
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::InterpolateToQuadraturePointForStiffness&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::InterpolateToQuadraturePointForStiffness&lt; DeviceType &gt; Struct Template Reference
 
 InterpolateToQuadraturePointForStiffness&lt; DeviceType &gt; Struct Template Reference
 ======================================================================================

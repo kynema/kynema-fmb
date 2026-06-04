@@ -1,8 +1,8 @@
-.. meta::f17bdadee79c657b8110b3df752ebb5ec17c30a135f40d89f69c0323febb5ecb460ee5306e49ad6b02a26d6ba49ff0c85a051133ccfe1faa8020c52a2df9ee19
+.. meta::1099ce71228763d373cecba0ca5365da23f96edba40dfc5c0b9df361e40ded0714b8765ee2573533317e1d018be02ddabbd4d234b1a612656509263cb4ab4fa1
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::SolutionInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::SolutionInput Struct Reference
 
 SolutionInput Struct Reference
 ==============================

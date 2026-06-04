@@ -1,8 +1,8 @@
-.. meta::fd815ce44a13e46ec226bc65a8e0bbe3f7012099a10d09796f6ebdf65cc336b606dad03f6520516591f7887b1aa0e6be0f826974e735ef9326dc31ac0537f7ce
+.. meta::5d507932af112b95f517f11380db499b856537ad027f25708887aecde0b48d45356e2038dee9a9a7818c43b3ed98880e51a4b1f713dab615f65b1351df10cfc9
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/springs/springs.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/springs/springs.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/springs/springs.hpp File Reference
 ==================================================================================================

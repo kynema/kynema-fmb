@@ -1,8 +1,8 @@
-.. meta::52b0857306bc628fffdcb1923f6e5692543a844484b0e80a681762814931faede786027eb11f98fb3979aa9bf73e277288be13c4009c40eb8927419c8a2ca43b
+.. meta::143680592885345e82f62cf649799823b8dc629c9c2b870780ec5542ccfcdd987b18b3edc51f3303284e0574488b1d894684c9f9c3b21dedf96ea32e93b9104e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::springs::CalculateDistanceComponents&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::springs::CalculateDistanceComponents&lt; DeviceType &gt; Struct Template Reference
 
 CalculateDistanceComponents&lt; DeviceType &gt; Struct Template Reference
 =========================================================================

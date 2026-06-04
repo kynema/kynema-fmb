@@ -1,8 +1,8 @@
-.. meta::bcdb0abd18e7b721bb1a682b89821b3dba01743918474f8655069de8d1b40d9fd73d3d48bfb78936e991c2a63ffe0a92b8d5a1d5537187720476d179cc517724
+.. meta::327e1be544c11fca5f633397b1beb07a517ad1a9c9786c5af9bbfecef507510a3925d5b8ccb10dfee6567bfd84f6dcecb7c353a04feb0a558a56f137eef4af98
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::state::UpdateGlobalPosition&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::state::UpdateGlobalPosition&lt; DeviceType &gt; Struct Template Reference
 
 UpdateGlobalPosition&lt; DeviceType &gt; Struct Template Reference
 ==================================================================

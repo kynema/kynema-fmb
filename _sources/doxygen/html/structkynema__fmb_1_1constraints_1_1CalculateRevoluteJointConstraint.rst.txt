@@ -1,8 +1,8 @@
-.. meta::7134792af7d8d2e173ca8b0d891baf56c50edc4a3913f6342899c74b50024ed14cf7a0f47f9da8661bbf940d13c41aa12c6208ee7d5f6d208b22373c7b37f88b
+.. meta::1aef5bb87e25be940c3285d2f9663a2e19c98e1f6fb4f4680532d7a963ff840d6e03deb94e71481bf99220db3273ecb75d1a37d4c2434ace4a0d6b91b92185d3
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateRevoluteJointConstraint&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateRevoluteJointConstraint&lt; DeviceType &gt; Struct Template Reference
 
 CalculateRevoluteJointConstraint&lt; DeviceType &gt; Struct Template Reference
 ==============================================================================

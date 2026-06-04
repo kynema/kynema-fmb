@@ -1,8 +1,8 @@
-.. meta::c121cb44437766bbdad02c97d5c58436edab486076c7c58d8ffbf63cb05ac17672adcf9ddfe903afdff9fb86217f7b3b633e4bdd04fc0ab14993242f420d443e
+.. meta::b4bc5932a34c79778c55a86565de59dfb08ed78fc11e306c30395997963519fb03d1d6ab364d7aa5758eceeb0290e2eb1e1fdbac9ec58ad79697484a8a4bd13e
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::Interface Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::Interface Class Reference
 
 Interface Class Reference
 =========================

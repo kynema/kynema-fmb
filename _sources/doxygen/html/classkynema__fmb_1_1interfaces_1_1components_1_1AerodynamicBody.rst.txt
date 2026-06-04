@@ -1,8 +1,8 @@
-.. meta::4bfe961ad13a77061d87599fbc4bdf4510bf7ec12d8299791f959f9eefb942c354b663261abf5d377a8543e61f3a54a095b53489506db42c09fe32e26c3587e4
+.. meta::05c87b0cafe37f2461be28e28b18c37e9ca1dbf41a814b0038c9ba00349b850a870e6b651227e39bb5ff87727c0b4e7f505544d1f50c30ff6e6a278d06ffb87c
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::AerodynamicBody Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::AerodynamicBody Class Reference
 
 AerodynamicBody Class Reference
 ===============================

@@ -1,8 +1,8 @@
-.. meta::879cdeaf140896b8c51830c814ff9b7a6597d86977b1c1ecc1560e811662b8e014a0a4d3b55a149df94c82e5ee1846730c1536c4c8c27e2b92ab3cb8d3cbd81d
+.. meta::2969b230670ddcf1b4dc18b6034d655e3d230c9091a8013de3c4cd54794fd563b47ae6832257c22eef762694814a1d1845adae12f6559bfe948c79ec3e8e47b3
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_global_position.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_global_position.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update\_global\_position.hpp Source File
 =====================================================================================================

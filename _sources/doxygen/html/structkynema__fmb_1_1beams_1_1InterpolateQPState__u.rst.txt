@@ -1,8 +1,8 @@
-.. meta::a0889151958d6341ddcd3b3f95d5b7604b3566101a2b06807e2e47c162be2b85b47fcb0a8c864fd20f5b9c5e5c5a85e79134e33159180bb200e41f358eb5d0e1
+.. meta::3177047469e71c5fb1e411e68b580e2df4de276875974ace9b65e01d717f335d3deddb29d59e433df6cd4955bc748c000880e52b1991848c0de1dc2b86ea8846
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::InterpolateQPState_u&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::InterpolateQPState_u&lt; DeviceType &gt; Struct Template Reference
 
 InterpolateQPState\_u&lt; DeviceType &gt; Struct Template Reference
 ===================================================================

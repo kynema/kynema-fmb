@@ -1,8 +1,8 @@
-.. meta::d043299e065efa83edf107aaa76e1e25ed05c45d2e0dab6734e9b5b079031febbea121d83dfe28c9b705a163f5e84a6fabd0a1388da1b1062c638e0549e96d09
+.. meta::dd2f319bbad4bbfe5775160a476fe4463898678cdefd14a5c13f0277517bcb8f213341401170aede0c7dbfb7068d697052a3cefa0f6ef8068ad289eab97c7f64
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::InterpolateToQuadraturePoints&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::InterpolateToQuadraturePoints&lt; DeviceType &gt; Struct Template Reference
 
 InterpolateToQuadraturePoints&lt; DeviceType &gt; Struct Template Reference
 ===========================================================================

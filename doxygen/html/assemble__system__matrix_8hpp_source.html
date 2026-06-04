@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File &mdash; Kynema 0.0.1 documentation</title>
+  <title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -35,7 +35,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -64,7 +64,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Kynema</a>
+          <a href="../../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File</li>
+      <li class="breadcrumb-item active">Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/doxygen/html/assemble__system__matrix_8hpp_source.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,7 +92,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File</title>
+<title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,7 +115,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Kynema API
+   <div id="projectname">Kynema-FMB API
    </div>
    <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
   </td>
@@ -205,36 +205,37 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_springs = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.num_elems);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vector_length = std::min(num_nodes, TeamPolicy::vector_length_max());</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">auto</span> beams_sparse_matrix_policy = TeamPolicy(num_beams, Kokkos::AUTO(), vector_length);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">auto</span> masses_sparse_matrix_policy = TeamPolicy(num_masses, Kokkos::AUTO());</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">auto</span> springs_sparse_matrix_policy = TeamPolicy(num_springs, Kokkos::AUTO());</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="stringliteral">&quot;ContributeBeamsToSparseMatrix&quot;</span>, beams_sparse_matrix_policy,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeBeamsToSparseMatrix.html">solver::ContributeBeamsToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.num_nodes_per_element,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.element_freedom_signature, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.element_freedom_table,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.system_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    );</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="stringliteral">&quot;ContributeMassesToSparseMatrix&quot;</span>, masses_sparse_matrix_policy,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeMassesToSparseMatrix.html">solver::ContributeMassesToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.element_freedom_signature,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.element_freedom_table, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.system_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    );</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Kokkos::parallel_for(</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="stringliteral">&quot;ContributeSpringsToSparseMatrix&quot;</span>, springs_sparse_matrix_policy,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeSpringsToSparseMatrix.html">solver::ContributeSpringsToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.element_freedom_signature,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.element_freedom_table, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.stiffness_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    );</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">auto</span> beams_sparse_matrix_policy =</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        TeamPolicy(num_beams, Kokkos::AUTO(), std::max(vector_length, 1));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">auto</span> masses_sparse_matrix_policy = TeamPolicy(num_masses, Kokkos::AUTO());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">auto</span> springs_sparse_matrix_policy = TeamPolicy(num_springs, Kokkos::AUTO());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="stringliteral">&quot;ContributeBeamsToSparseMatrix&quot;</span>, beams_sparse_matrix_policy,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeBeamsToSparseMatrix.html">solver::ContributeBeamsToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.num_nodes_per_element,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.element_freedom_signature, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.element_freedom_table,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36">beams</a>.system_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    );</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="stringliteral">&quot;ContributeMassesToSparseMatrix&quot;</span>, masses_sparse_matrix_policy,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeMassesToSparseMatrix.html">solver::ContributeMassesToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.element_freedom_signature,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.element_freedom_table, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a3071ef3f268a823c459df7335d20af8f">masses</a>.system_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    );</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    Kokkos::parallel_for(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="stringliteral">&quot;ContributeSpringsToSparseMatrix&quot;</span>, springs_sparse_matrix_policy,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_struct" href="structkynema__fmb_1_1solver_1_1ContributeSpringsToSparseMatrix.html">solver::ContributeSpringsToSparseMatrix</a>&lt;<span class="keyword">typename</span> <a class="code hl_typedef" href="structkynema__fmb_1_1Solver.html#a9104803a2f82961770bb85cd770b0019">Solver&lt;DeviceType&gt;::CrsMatrixType</a>&gt;{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ac4abe2e335aec71a1c0b2ce4ead5bed4">conditioner</a>, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.element_freedom_signature,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.element_freedom_table, elements.<a class="code hl_variable" href="structkynema__fmb_1_1Elements.html#a90ea67493be3d9b41b056063ff2467cf">springs</a>.stiffness_matrix_terms, solver.<a class="code hl_variable" href="structkynema__fmb_1_1Solver.html#a264d5a540da091c33dace1b495cf7a6e">A</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    );</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}  <span class="comment">// namespace kynema_fmb::step</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}  <span class="comment">// namespace kynema_fmb::step</span></div>
 <div class="ttc" id="acontribute__beams__to__sparse__matrix_8hpp_html"><div class="ttname"><a href="contribute__beams__to__sparse__matrix_8hpp.html">contribute_beams_to_sparse_matrix.hpp</a></div></div>
 <div class="ttc" id="acontribute__masses__to__sparse__matrix_8hpp_html"><div class="ttname"><a href="contribute__masses__to__sparse__matrix_8hpp.html">contribute_masses_to_sparse_matrix.hpp</a></div></div>
 <div class="ttc" id="acontribute__springs__to__sparse__matrix_8hpp_html"><div class="ttname"><a href="contribute__springs__to__sparse__matrix_8hpp.html">contribute_springs_to_sparse_matrix.hpp</a></div></div>

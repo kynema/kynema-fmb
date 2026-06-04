@@ -1,8 +1,8 @@
-.. meta::7865f9d3a7bf5b4114493f77f8a8200789c6ab44b936e823768e8f13c1ffd9281d85ddf5e4872e9e07178fa1f1d0986989ca3ffc20c08f71bfb81feee419b38f
+.. meta::f85fdeb3ef9f970b527ad5caf6fb6ed9693285d09a9f82d6c14f13b9fc4ff907bcc00c1d8a78efb18dbbbbb89d0c6b2dd1be0aaf928a834dd975bc3824be906f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculatePuu&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculatePuu&lt; DeviceType &gt; Struct Template Reference
 
 CalculatePuu&lt; DeviceType &gt; Struct Template Reference
 ==========================================================

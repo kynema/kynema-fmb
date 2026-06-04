@@ -1,8 +1,8 @@
-.. meta::d4eaa4ad668c4844b615b5632875c2666ee1e248824d65927d1a6f9ebcb3b30ab8d1864646f0627d87e92194ed37b55ee03d99f1730f0bb199c52c8d774968c4
+.. meta::8d5aa108ffe94a39d60e4dd873655aa71f98f985c127cc4e5b16c3c38634c30748807a5a817cf41d92200d1181d869f2de6b2b2d5c4c55ba2778321b87c639e8
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_mass_matrix_components.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_mass_matrix_components.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_mass\_matrix\_components.hpp Source File
 ========================================================================================================================

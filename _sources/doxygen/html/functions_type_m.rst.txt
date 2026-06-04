@@ -1,8 +1,8 @@
-.. meta::65800c312c9b6ee544c8701c1e986b0f8699b6cb80c32c67c02f6461f67ab48f5bf3c6efd0d66cbf89f92942dcb208e12062ee3a0e19049f55a7f8eae9ce65cb
+.. meta::632e9d495d1b01d897e7433927407c6710f9291b695c9fd7946a86d982dc9f79efb0b31b3a859329196309841760424f9d48c5f4d2e31b7ff1a3764c764275ea
 
 :orphan:
 
-.. title:: Kynema API: Class Members - Typedefs
+.. title:: Kynema-FMB API: Class Members - Typedefs
 
 Class Members - Typedefs
 ========================

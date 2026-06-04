@@ -1,8 +1,8 @@
-.. meta::f888ad94645de6c27ece06cf1323f0d626db15e3dbce986abd1f52560580529524817a86c8d14ccccf8982cb088a228052de51633d1192a8eaa387fb4918d4fb
+.. meta::b2b2eb1626daecf1b5eb4cf32d62c4d36f6e7ae01171f1c92f9144a29a9f2025f7cd0cec004f81f832ff057a11d82e701105bc8ffe4109b6927ad5844006b086
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::TimeSeriesWriter Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::TimeSeriesWriter Class Reference
 
 TimeSeriesWriter Class Reference
 ================================

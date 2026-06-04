@@ -1,8 +1,8 @@
-.. meta::4466fbf16871215efa10b71f01b3f9cbefd372c8ff6d444a61531202ad6afbc64a2aa589b920311562bdfa479daa1970c0d3706405b5876de36e71d69a15a4d4
+.. meta::2475af31eba8f9984734fa4d693eab6a42a0c9facd5495d7511eca53c05b32f9f18a6e54a4816270e43e92938b43aafaa239481d8e7944ccd8167507d4091a52
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::constraints::CalculateRigidJoint3DOFConstraint&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::constraints::CalculateRigidJoint3DOFConstraint&lt; DeviceType &gt; Struct Template Reference
 
 CalculateRigidJoint3DOFConstraint&lt; DeviceType &gt; Struct Template Reference
 ===============================================================================

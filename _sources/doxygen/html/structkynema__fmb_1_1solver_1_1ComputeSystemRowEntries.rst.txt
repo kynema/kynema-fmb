@@ -1,8 +1,8 @@
-.. meta::b29c17278dd813feb8d06d40444c5e06fa352064415bac9ef3acdbb363050941e6239b2ebcecccd8c49f9a5a2996befc550e9a83b25c683949a82e5d8850fa1e
+.. meta::1e2864ca13ca2b05eea7c9014eb0c31c09181e017625c36dd6f8a718528572f27beb44dcf997e8843dbd0f270c5c96dfc75af0628a59532200fcd80b99993746
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::ComputeSystemRowEntries&lt; RowPtrType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::ComputeSystemRowEntries&lt; RowPtrType &gt; Struct Template Reference
 
 ComputeSystemRowEntries&lt; RowPtrType &gt; Struct Template Reference
 =====================================================================

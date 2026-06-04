@@ -1,8 +1,8 @@
-.. meta::7c1de113b8c33c156cafaf78cf9387d7cb007f1f3e799d24d2f7568d01a18f30c429445d683a08a43ddb15a8d6a0290159ffcff5890a6e28e12ccde3d7835b17
+.. meta::a48b87aed336fad197e481b9fa361ebb098a4d35eae2ea4dc713c2645138cccffe8da970250f3e82ff077e1fa5d61d2344f69bec6bafb2fb20b59d27ade2363f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::ControllerInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::ControllerInput Struct Reference
 
 ControllerInput Struct Reference
 ================================

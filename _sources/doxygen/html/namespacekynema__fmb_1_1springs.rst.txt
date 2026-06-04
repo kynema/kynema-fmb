@@ -1,8 +1,8 @@
-.. meta::4d8d20e6365d16639e34cc97ba14b6423a437acac893c8fec949956b2c733a1e7a2a928ff5dcc004ba34752c81703639d178db1bf0e77fc24f402cbec22463aa
+.. meta::7de8c7bca1a5f26d6441dea3f85e67852905b10eba2cfb0bd97e6318480702a9feba2aff7ee03a36b86ab480debe6eabca8248e965559eadd48831ac81ff17ed
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::springs Namespace Reference
+.. title:: Kynema-FMB API: kynema_fmb::springs Namespace Reference
 
 springs Namespace Reference
 ===========================

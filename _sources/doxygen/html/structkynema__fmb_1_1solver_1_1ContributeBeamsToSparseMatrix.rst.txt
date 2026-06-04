@@ -1,8 +1,8 @@
-.. meta::821e51d5291bef7a8b2e30e87c40cabc1d84b4bdf6c1925ec445fc2c449cce8924feb81cfe4fa46dc660568cda47482fa4d48f762dec030227869825d106b41b
+.. meta::e4f1e1197359d2b5713b6cff531dad63cc662ad863ce1f62673add12e22fbfa8716e6083b58b3909150a42771e9d36960baada13514df86b803aece239ae9478
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::ContributeBeamsToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::ContributeBeamsToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
 
 ContributeBeamsToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
 ==============================================================================

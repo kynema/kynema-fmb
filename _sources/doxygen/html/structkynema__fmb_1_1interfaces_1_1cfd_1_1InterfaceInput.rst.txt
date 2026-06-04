@@ -1,8 +1,8 @@
-.. meta::b51e8fc253ec098b428f9a04304652d0ad0c9d73abc59251f182de0a868dd8e320b456ea2e4c902556d4437dbd4a65b51bcecfa860cdcd7fe56f8aca601edad2
+.. meta::9c424319f4d56bcae185d624f0cac08cf06aab6b7b5fd23c9bb17a32ea44ea418320073a2704fa91a3d49182766c77124cda1f54c3d4f113cf0f2fc81fc19b88
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::InterfaceInput Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::InterfaceInput Struct Reference
 
 InterfaceInput Struct Reference
 ===============================

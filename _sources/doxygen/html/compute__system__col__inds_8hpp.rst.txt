@@ -1,8 +1,8 @@
-.. meta::57db189248664b228c3b4f08ab1f358b78d5d3fe0e21a0caec243e714f51c0dadb42056140a5eb9252fbb045491dd74804975501f82ff99709acde4a5eb09ea2
+.. meta::64c995c3bad9c342aef8f3e8e711f57d701bbacc25361aad196d8066d7b8ac2e16830725c33b330ade0c1a822b79ec140f433e0a869cb85484bc515ad54f4953
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_system_col_inds.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_system_col_inds.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute\_system\_col\_inds.hpp File Reference
 ===========================================================================================================

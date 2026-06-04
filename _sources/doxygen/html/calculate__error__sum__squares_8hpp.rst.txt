@@ -1,8 +1,8 @@
-.. meta::52fe124889f125a5e54ceb86b8f61a33f3065f1f30a04ad85440862d2f53842c43e11808a1233de76d0951e68b0367debe6892727a934971776ec18abf0329c0
+.. meta::a9d3e1cea62b159acdee1ec443b94b3a87b69b2d76b663a142c486e2d49622b495236bf37ae291267a9cff67b956b2b8effb905096d1310f21969dd31f0c7e28
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/calculate_error_sum_squares.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/calculate_error_sum_squares.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/calculate\_error\_sum\_squares.hpp File Reference
 ===============================================================================================================

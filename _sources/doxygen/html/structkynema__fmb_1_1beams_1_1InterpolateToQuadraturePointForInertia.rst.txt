@@ -1,8 +1,8 @@
-.. meta::86d65fd862806b8288c332f684249e171413c30e7824631ed3f838ad6b33f2bc0dab66f71036e85516eda080fa005dce2805be9b9bea5aef63741c27bf48b7a8
+.. meta::526297101ef14cde39eb3ef0142c2e37fd87892ac7565b6068da0344d3f1cdbc24ae44ca8916a025289ac548276f5f5a4b19aba3cf33670c8a15ff5e0da32e61
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::InterpolateToQuadraturePointForInertia&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::InterpolateToQuadraturePointForInertia&lt; DeviceType &gt; Struct Template Reference
 
 InterpolateToQuadraturePointForInertia&lt; DeviceType &gt; Struct Template Reference
 ====================================================================================

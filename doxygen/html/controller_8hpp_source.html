@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp Source File &mdash; Kynema-FMB 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Kynema-FMB
+              <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/user.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theory/index.html">Theory Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer/index.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing/index.html">Benchmark Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Kynema-FMB Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">Acknowledgements</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kynema-FMB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp Source File</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doxygen/html/controller_8hpp_source.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="home-runner-work-kynema-fmb-kynema-fmb-kynema-fmb-src-interfaces-components-controller-hpp-source-file">
+<h1>/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp Source File<a class="headerlink" href="#home-runner-work-kynema-fmb-kynema-fmb-kynema-fmb-src-interfaces-components-controller-hpp-source-file" title="Permalink to this heading"></a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/controller.hpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Kynema-FMB API
+   </div>
+   <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee3f1a7951c308657a65f8199076c1d6.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_ec19d290f88d8e9c8cebb340555e4418.html">components</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">controller.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="controller_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="controller__input_8hpp.html">controller_input.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="controller__io_8hpp.html">controller_io.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="dylib_8hpp.html">vendor/dylib/dylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacekynema__fmb_1_1interfaces_1_1components.html">kynema_fmb::interfaces::components</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerInput.html">ControllerInput</a>&amp; input);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a780d2faf168ecc8fc4d19c5316a61602">CallController</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a70c389d8fb00827e1bb69087b1adbcc2">   25</a></span>    [[nodiscard]] <span class="keywordtype">double</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a70c389d8fb00827e1bb69087b1adbcc2">PitchAngleCommand</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;pitch_angle_command_; }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a8ec3d77226c30e7a4423b0a28dba9607">   28</a></span>    [[nodiscard]] std::array&lt;double, 3&gt; <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a8ec3d77226c30e7a4423b0a28dba9607">PitchAngleCommandIndividual</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ad302f8264291a51583c2b94abe75cbdc">pitch_blade1_command</a>, this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#aa92baedbfaa47a9b5c6b7011ca0ea2d3">pitch_blade2_command</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a0a953e80b28ba0749333526f2fd127ad">pitch_blade3_command</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        };</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#add7776c7e40e58167c647b2507d5b20f">   36</a></span>    [[nodiscard]] <span class="keywordtype">double</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#add7776c7e40e58167c647b2507d5b20f">GeneratorTorqueCommand</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;generator_torque_command_; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a93a7cc23a0ccdfd51406118fa5f92c55">   39</a></span>    [[nodiscard]] <span class="keywordtype">double</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a93a7cc23a0ccdfd51406118fa5f92c55">YawAngleCommand</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;yaw_angle_command_; }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a49e22a7772ba46c462289a3d53b8e2b9">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a49e22a7772ba46c462289a3d53b8e2b9">SetStatusInit</a>() { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a809385f1f76670523ffd90e1ca569407">status</a> = 0; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a51cc870212241282f4a4f4449fa67b9b">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a51cc870212241282f4a4f4449fa67b9b">SetStatusOperating</a>() { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a809385f1f76670523ffd90e1ca569407">status</a> = 1; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a61427abe47a994f58f7b604f617acc91">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a61427abe47a994f58f7b604f617acc91">SetStatusWriteCheckpoint</a>() { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a809385f1f76670523ffd90e1ca569407">status</a> = -8; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1e8e8d785329f8aaebb6c2d3b4a65664">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1e8e8d785329f8aaebb6c2d3b4a65664">SetStatusReadCheckpoint</a>() { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a809385f1f76670523ffd90e1ca569407">status</a> = -9; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a86d07e8c8656fb4944ce17ddf9f8f3be">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a86d07e8c8656fb4944ce17ddf9f8f3be">SetSimulationTime</a>(<span class="keywordtype">double</span> simulation_time) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a79b9cd2f120621435a2dd80494994139">time</a> = simulation_time; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a906c47ad01cd709f3c7a69c6c0f9f5">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a906c47ad01cd709f3c7a69c6c0f9f5">SetSimulationTimeStep</a>(<span class="keywordtype">double</span> simulation_time_step) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a2057b443f9b33bf17b5bb8e85870339a">dt</a> = simulation_time_step; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1140f17627ae098f773ae53716b6f9c9">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1140f17627ae098f773ae53716b6f9c9">SetYawAngle</a>(<span class="keywordtype">double</span> yaw_angle) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#acf9f0123ad0939309c56f4d39e33e376">yaw_angle_actual</a> = yaw_angle; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a33025704bb26655009518f2fd520fb02">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a33025704bb26655009518f2fd520fb02">SetRotorSpeed</a>(<span class="keywordtype">double</span> rotor_speed) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a17195d731d63e7ff066ac88bc5378fa3">rotor_speed_actual</a> = rotor_speed; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a6ddfac6ea886142d75af726cb89d3190">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a6ddfac6ea886142d75af726cb89d3190">SetGeneratorSpeed</a>(<span class="keywordtype">double</span> generator_speed) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a6ef9dd2c94d3749f169e8436fba302cb">generator_speed_actual</a> = generator_speed;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a262d4a775f925e56805aeb727f42b8e0">   71</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a262d4a775f925e56805aeb727f42b8e0">SetGeneratorTorque</a>(<span class="keywordtype">double</span> generator_torque) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a06899baea368beaf9b710aaee230a70e">generator_torque_actual</a> = generator_torque;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a52997e878ec7e459ec3e13b4313a9d76">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a52997e878ec7e459ec3e13b4313a9d76">SetGeneratorPower</a>(<span class="keywordtype">double</span> generator_power) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a342a9ef4d77b0f5b3625bd213893bc15">generator_power_actual</a> = generator_power;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a88d2dcf7715493d9af1f62a7b76eecde">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a88d2dcf7715493d9af1f62a7b76eecde">SetWindSpeed</a>(<span class="keywordtype">double</span> wind_speed) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#aa9803a750881355980a1da1a4b539ecb">horizontal_wind_speed</a> = wind_speed; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aad4ef00423bdedb78a69bac92cd0ff56">   84</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aad4ef00423bdedb78a69bac92cd0ff56">SetRotorAzimuth</a>(<span class="keywordtype">double</span> rotor_azimuth) { this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a9a396edea1d4fe7e5be0747a68609695">azimuth_angle</a> = rotor_azimuth; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a9433fb294d4dda7af48277731cd9ca">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a9433fb294d4dda7af48277731cd9ca">SetBladePitch</a>(<span class="keywordtype">double</span> blade_pitch_collective) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a08d4de75702768e9cfc1fc3fcb7f9051">pitch_blade1_actual</a> = blade_pitch_collective;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a8de255c522e9a8cd0bb494262bae909b">pitch_blade2_actual</a> = blade_pitch_collective;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ad9d0c3b695da4a8b4fd24f997902173c">pitch_blade3_actual</a> = blade_pitch_collective;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#ae8a9b8213b31a7f93c75f8c6c4da0c77">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#ae8a9b8213b31a7f93c75f8c6c4da0c77">SetBladePitch</a>(std::array&lt;double, 3&gt; blade_pitch) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a08d4de75702768e9cfc1fc3fcb7f9051">pitch_blade1_actual</a> = blade_pitch[0];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a8de255c522e9a8cd0bb494262bae909b">pitch_blade2_actual</a> = blade_pitch[1];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ad9d0c3b695da4a8b4fd24f997902173c">pitch_blade3_actual</a> = blade_pitch[2];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aa583456c1b0e25ac44ef73229769b354">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aa583456c1b0e25ac44ef73229769b354">SetOutOfPlaneRootBendingMoment</a>(std::array&lt;double, 3&gt; root_moment) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a29d7a255a346409612d5322c3790dd95">out_of_plane_root_bending_moment_blade1</a> = root_moment[0];</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a5b42c9e7eb8cc315fdbc9c5d84f4f1aa">out_of_plane_root_bending_moment_blade2</a> = root_moment[1];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        this-&gt;io.<a class="code hl_variable" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ac911291b46cb45c574c0c87fe06251a9">out_of_plane_root_bending_moment_blade3</a> = root_moment[2];</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_struct" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html">ControllerIO</a> io;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> pitch_control_enabled_{<span class="keyword">false</span>};   <span class="comment">//&lt; Flag to enable pitch control</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">bool</span> torque_control_enabled_{<span class="keyword">false</span>};  <span class="comment">//&lt; Flag to enable torque control</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">bool</span> yaw_control_enabled_{<span class="keyword">false</span>};     <span class="comment">//&lt; Flag to enable yaw control</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">double</span> generator_torque_command_{0.0};  <span class="comment">//&lt; Commanded torque (Nm)</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">double</span> pitch_angle_command_{0.0};       <span class="comment">//&lt; Commanded pitch angle (rad)</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">double</span> yaw_angle_command_{0.0};  <span class="comment">//&lt; Commanded yaw angle (rad) integrated from yaw rate command</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    std::string input_file_path_;           <span class="comment">//&lt; Path to the input file</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::string output_file_path_;          <span class="comment">//&lt; Path to the output file</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::string shared_lib_path_;           <span class="comment">//&lt; Path to shared library</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::string controller_function_name_;  <span class="comment">//&lt; Name of the controller function in the shared library</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    util::dylib lib_;  <span class="comment">//&lt; Handle to the shared library</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    std::function&lt;void(<span class="keywordtype">float</span>*, <span class="keywordtype">int</span>*, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span>, <span class="keywordtype">char</span>* <span class="keyword">const</span>)&gt;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        controller_function_;  <span class="comment">//&lt; Function pointer to the controller function</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}  <span class="comment">// namespace kynema_fmb::interfaces::components</span></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">kynema_fmb::interfaces::components::Controller</a></div><div class="ttdef"><b>Definition</b> controller.hpp:15</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a1140f17627ae098f773ae53716b6f9c9"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1140f17627ae098f773ae53716b6f9c9">kynema_fmb::interfaces::components::Controller::SetYawAngle</a></div><div class="ttdeci">void SetYawAngle(double yaw_angle)</div><div class="ttdoc">Set the measured yaw angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:60</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a1e8e8d785329f8aaebb6c2d3b4a65664"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1e8e8d785329f8aaebb6c2d3b4a65664">kynema_fmb::interfaces::components::Controller::SetStatusReadCheckpoint</a></div><div class="ttdeci">void SetStatusReadCheckpoint()</div><div class="ttdoc">Set the controller status to read checkpoint file (only valid for ROSCO controller)</div><div class="ttdef"><b>Definition</b> controller.hpp:51</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a262d4a775f925e56805aeb727f42b8e0"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a262d4a775f925e56805aeb727f42b8e0">kynema_fmb::interfaces::components::Controller::SetGeneratorTorque</a></div><div class="ttdeci">void SetGeneratorTorque(double generator_torque)</div><div class="ttdoc">Set the measured generator torque (Nm)</div><div class="ttdef"><b>Definition</b> controller.hpp:71</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a33025704bb26655009518f2fd520fb02"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a33025704bb26655009518f2fd520fb02">kynema_fmb::interfaces::components::Controller::SetRotorSpeed</a></div><div class="ttdeci">void SetRotorSpeed(double rotor_speed)</div><div class="ttdoc">Set the measured rotor speed (rad/s)</div><div class="ttdef"><b>Definition</b> controller.hpp:63</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a49e22a7772ba46c462289a3d53b8e2b9"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a49e22a7772ba46c462289a3d53b8e2b9">kynema_fmb::interfaces::components::Controller::SetStatusInit</a></div><div class="ttdeci">void SetStatusInit()</div><div class="ttdoc">Set the controller status to initialization.</div><div class="ttdef"><b>Definition</b> controller.hpp:42</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a51cc870212241282f4a4f4449fa67b9b"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a51cc870212241282f4a4f4449fa67b9b">kynema_fmb::interfaces::components::Controller::SetStatusOperating</a></div><div class="ttdeci">void SetStatusOperating()</div><div class="ttdoc">Set the controller status to operating.</div><div class="ttdef"><b>Definition</b> controller.hpp:45</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a52997e878ec7e459ec3e13b4313a9d76"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a52997e878ec7e459ec3e13b4313a9d76">kynema_fmb::interfaces::components::Controller::SetGeneratorPower</a></div><div class="ttdeci">void SetGeneratorPower(double generator_power)</div><div class="ttdoc">Set measured generator power (W)</div><div class="ttdef"><b>Definition</b> controller.hpp:76</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a5a906c47ad01cd709f3c7a69c6c0f9f5"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a906c47ad01cd709f3c7a69c6c0f9f5">kynema_fmb::interfaces::components::Controller::SetSimulationTimeStep</a></div><div class="ttdeci">void SetSimulationTimeStep(double simulation_time_step)</div><div class="ttdoc">Set the simulation time step (s)</div><div class="ttdef"><b>Definition</b> controller.hpp:57</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a5a9433fb294d4dda7af48277731cd9ca"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a9433fb294d4dda7af48277731cd9ca">kynema_fmb::interfaces::components::Controller::SetBladePitch</a></div><div class="ttdeci">void SetBladePitch(double blade_pitch_collective)</div><div class="ttdoc">Set measured blade pitch angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:87</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a61427abe47a994f58f7b604f617acc91"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a61427abe47a994f58f7b604f617acc91">kynema_fmb::interfaces::components::Controller::SetStatusWriteCheckpoint</a></div><div class="ttdeci">void SetStatusWriteCheckpoint()</div><div class="ttdoc">Set the controller status to write checkpoint file (only valid for ROSCO controller)</div><div class="ttdef"><b>Definition</b> controller.hpp:48</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a6ddfac6ea886142d75af726cb89d3190"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a6ddfac6ea886142d75af726cb89d3190">kynema_fmb::interfaces::components::Controller::SetGeneratorSpeed</a></div><div class="ttdeci">void SetGeneratorSpeed(double generator_speed)</div><div class="ttdoc">Set the measured generator speed (rad/s)</div><div class="ttdef"><b>Definition</b> controller.hpp:66</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a70c389d8fb00827e1bb69087b1adbcc2"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a70c389d8fb00827e1bb69087b1adbcc2">kynema_fmb::interfaces::components::Controller::PitchAngleCommand</a></div><div class="ttdeci">double PitchAngleCommand() const</div><div class="ttdoc">Get the collective commanded pitch angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:25</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a780d2faf168ecc8fc4d19c5316a61602"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a780d2faf168ecc8fc4d19c5316a61602">kynema_fmb::interfaces::components::Controller::CallController</a></div><div class="ttdeci">void CallController()</div><div class="ttdoc">Method to call the controller function from the shared library.</div><div class="ttdef"><b>Definition</b> controller.cpp:58</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a86d07e8c8656fb4944ce17ddf9f8f3be"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a86d07e8c8656fb4944ce17ddf9f8f3be">kynema_fmb::interfaces::components::Controller::SetSimulationTime</a></div><div class="ttdeci">void SetSimulationTime(double simulation_time)</div><div class="ttdoc">Set the simulation time (s)</div><div class="ttdef"><b>Definition</b> controller.hpp:54</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a88d2dcf7715493d9af1f62a7b76eecde"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a88d2dcf7715493d9af1f62a7b76eecde">kynema_fmb::interfaces::components::Controller::SetWindSpeed</a></div><div class="ttdeci">void SetWindSpeed(double wind_speed)</div><div class="ttdoc">Set measured wind speed at hub (m/s)</div><div class="ttdef"><b>Definition</b> controller.hpp:81</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a8ec3d77226c30e7a4423b0a28dba9607"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a8ec3d77226c30e7a4423b0a28dba9607">kynema_fmb::interfaces::components::Controller::PitchAngleCommandIndividual</a></div><div class="ttdeci">std::array&lt; double, 3 &gt; PitchAngleCommandIndividual() const</div><div class="ttdoc">Get the commanded individual pitch angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:28</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_a93a7cc23a0ccdfd51406118fa5f92c55"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a93a7cc23a0ccdfd51406118fa5f92c55">kynema_fmb::interfaces::components::Controller::YawAngleCommand</a></div><div class="ttdeci">double YawAngleCommand() const</div><div class="ttdoc">Get the commanded yaw angle (rad) integrated from yaw rate command.</div><div class="ttdef"><b>Definition</b> controller.hpp:39</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_aa583456c1b0e25ac44ef73229769b354"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aa583456c1b0e25ac44ef73229769b354">kynema_fmb::interfaces::components::Controller::SetOutOfPlaneRootBendingMoment</a></div><div class="ttdeci">void SetOutOfPlaneRootBendingMoment(std::array&lt; double, 3 &gt; root_moment)</div><div class="ttdoc">Set measured out-of-plane root bending moment for each blade (Nm)</div><div class="ttdef"><b>Definition</b> controller.hpp:101</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_aad4ef00423bdedb78a69bac92cd0ff56"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aad4ef00423bdedb78a69bac92cd0ff56">kynema_fmb::interfaces::components::Controller::SetRotorAzimuth</a></div><div class="ttdeci">void SetRotorAzimuth(double rotor_azimuth)</div><div class="ttdoc">Set the rotor azimuth angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:84</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_add7776c7e40e58167c647b2507d5b20f"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#add7776c7e40e58167c647b2507d5b20f">kynema_fmb::interfaces::components::Controller::GeneratorTorqueCommand</a></div><div class="ttdeci">double GeneratorTorqueCommand() const</div><div class="ttdoc">Get the commanded generator torque (Nm)</div><div class="ttdef"><b>Definition</b> controller.hpp:36</div></div>
+<div class="ttc" id="aclasskynema__fmb_1_1interfaces_1_1components_1_1Controller_html_ae8a9b8213b31a7f93c75f8c6c4da0c77"><div class="ttname"><a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#ae8a9b8213b31a7f93c75f8c6c4da0c77">kynema_fmb::interfaces::components::Controller::SetBladePitch</a></div><div class="ttdeci">void SetBladePitch(std::array&lt; double, 3 &gt; blade_pitch)</div><div class="ttdoc">Set measured blade pitch angle (rad)</div><div class="ttdef"><b>Definition</b> controller.hpp:94</div></div>
+<div class="ttc" id="acontroller__input_8hpp_html"><div class="ttname"><a href="controller__input_8hpp.html">controller_input.hpp</a></div></div>
+<div class="ttc" id="acontroller__io_8hpp_html"><div class="ttname"><a href="controller__io_8hpp.html">controller_io.hpp</a></div></div>
+<div class="ttc" id="adylib_8hpp_html"><div class="ttname"><a href="dylib_8hpp.html">dylib.hpp</a></div><div class="ttdoc">C++ cross-platform wrapper around dynamic loading of shared libraries.</div></div>
+<div class="ttc" id="anamespacekynema__fmb_1_1interfaces_1_1components_html"><div class="ttname"><a href="namespacekynema__fmb_1_1interfaces_1_1components.html">kynema_fmb::interfaces::components</a></div><div class="ttdef"><b>Definition</b> aerodynamics.cpp:5</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html">kynema_fmb::interfaces::components::ControllerIO</a></div><div class="ttdef"><b>Definition</b> controller_io.hpp:11</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a06899baea368beaf9b710aaee230a70e"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a06899baea368beaf9b710aaee230a70e">kynema_fmb::interfaces::components::ControllerIO::generator_torque_actual</a></div><div class="ttdeci">double generator_torque_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:20</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a08d4de75702768e9cfc1fc3fcb7f9051"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a08d4de75702768e9cfc1fc3fcb7f9051">kynema_fmb::interfaces::components::ControllerIO::pitch_blade1_actual</a></div><div class="ttdeci">double pitch_blade1_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:15</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a0a953e80b28ba0749333526f2fd127ad"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a0a953e80b28ba0749333526f2fd127ad">kynema_fmb::interfaces::components::ControllerIO::pitch_blade3_command</a></div><div class="ttdeci">double pitch_blade3_command</div><div class="ttdef"><b>Definition</b> controller_io.hpp:38</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a17195d731d63e7ff066ac88bc5378fa3"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a17195d731d63e7ff066ac88bc5378fa3">kynema_fmb::interfaces::components::ControllerIO::rotor_speed_actual</a></div><div class="ttdeci">double rotor_speed_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:19</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a2057b443f9b33bf17b5bb8e85870339a"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a2057b443f9b33bf17b5bb8e85870339a">kynema_fmb::interfaces::components::ControllerIO::dt</a></div><div class="ttdeci">double dt</div><div class="ttdef"><b>Definition</b> controller_io.hpp:14</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a29d7a255a346409612d5322c3790dd95"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a29d7a255a346409612d5322c3790dd95">kynema_fmb::interfaces::components::ControllerIO::out_of_plane_root_bending_moment_blade1</a></div><div class="ttdeci">double out_of_plane_root_bending_moment_blade1</div><div class="ttdef"><b>Definition</b> controller_io.hpp:24</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a342a9ef4d77b0f5b3625bd213893bc15"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a342a9ef4d77b0f5b3625bd213893bc15">kynema_fmb::interfaces::components::ControllerIO::generator_power_actual</a></div><div class="ttdeci">double generator_power_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:17</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a5b42c9e7eb8cc315fdbc9c5d84f4f1aa"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a5b42c9e7eb8cc315fdbc9c5d84f4f1aa">kynema_fmb::interfaces::components::ControllerIO::out_of_plane_root_bending_moment_blade2</a></div><div class="ttdeci">double out_of_plane_root_bending_moment_blade2</div><div class="ttdef"><b>Definition</b> controller_io.hpp:26</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a6ef9dd2c94d3749f169e8436fba302cb"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a6ef9dd2c94d3749f169e8436fba302cb">kynema_fmb::interfaces::components::ControllerIO::generator_speed_actual</a></div><div class="ttdeci">double generator_speed_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:18</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a79b9cd2f120621435a2dd80494994139"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a79b9cd2f120621435a2dd80494994139">kynema_fmb::interfaces::components::ControllerIO::time</a></div><div class="ttdeci">double time</div><div class="ttdef"><b>Definition</b> controller_io.hpp:13</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a809385f1f76670523ffd90e1ca569407"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a809385f1f76670523ffd90e1ca569407">kynema_fmb::interfaces::components::ControllerIO::status</a></div><div class="ttdeci">int status</div><div class="ttdef"><b>Definition</b> controller_io.hpp:12</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a8de255c522e9a8cd0bb494262bae909b"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a8de255c522e9a8cd0bb494262bae909b">kynema_fmb::interfaces::components::ControllerIO::pitch_blade2_actual</a></div><div class="ttdeci">double pitch_blade2_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:30</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_a9a396edea1d4fe7e5be0747a68609695"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#a9a396edea1d4fe7e5be0747a68609695">kynema_fmb::interfaces::components::ControllerIO::azimuth_angle</a></div><div class="ttdeci">double azimuth_angle</div><div class="ttdef"><b>Definition</b> controller_io.hpp:49</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_aa92baedbfaa47a9b5c6b7011ca0ea2d3"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#aa92baedbfaa47a9b5c6b7011ca0ea2d3">kynema_fmb::interfaces::components::ControllerIO::pitch_blade2_command</a></div><div class="ttdeci">double pitch_blade2_command</div><div class="ttdef"><b>Definition</b> controller_io.hpp:37</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_aa9803a750881355980a1da1a4b539ecb"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#aa9803a750881355980a1da1a4b539ecb">kynema_fmb::interfaces::components::ControllerIO::horizontal_wind_speed</a></div><div class="ttdeci">double horizontal_wind_speed</div><div class="ttdef"><b>Definition</b> controller_io.hpp:22</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_ac911291b46cb45c574c0c87fe06251a9"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ac911291b46cb45c574c0c87fe06251a9">kynema_fmb::interfaces::components::ControllerIO::out_of_plane_root_bending_moment_blade3</a></div><div class="ttdeci">double out_of_plane_root_bending_moment_blade3</div><div class="ttdef"><b>Definition</b> controller_io.hpp:28</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_acf9f0123ad0939309c56f4d39e33e376"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#acf9f0123ad0939309c56f4d39e33e376">kynema_fmb::interfaces::components::ControllerIO::yaw_angle_actual</a></div><div class="ttdeci">double yaw_angle_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:34</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_ad302f8264291a51583c2b94abe75cbdc"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ad302f8264291a51583c2b94abe75cbdc">kynema_fmb::interfaces::components::ControllerIO::pitch_blade1_command</a></div><div class="ttdeci">double pitch_blade1_command</div><div class="ttdef"><b>Definition</b> controller_io.hpp:36</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO_html_ad9d0c3b695da4a8b4fd24f997902173c"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerIO.html#ad9d0c3b695da4a8b4fd24f997902173c">kynema_fmb::interfaces::components::ControllerIO::pitch_blade3_actual</a></div><div class="ttdeci">double pitch_blade3_actual</div><div class="ttdef"><b>Definition</b> controller_io.hpp:31</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1interfaces_1_1components_1_1ControllerInput_html"><div class="ttname"><a href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerInput.html">kynema_fmb::interfaces::components::ControllerInput</a></div><div class="ttdoc">Configuration parameters for a DISCON-style turbine controller.</div><div class="ttdef"><b>Definition</b> controller_input.hpp:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 - Present, MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

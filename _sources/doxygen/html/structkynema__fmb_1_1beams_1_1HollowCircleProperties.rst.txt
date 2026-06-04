@@ -1,8 +1,8 @@
-.. meta::5dfa1227b54e2a38dc398dcf3a0eac096ed1d9f7e4662e2845f9105cf2392301664978122a0bbb54aa57c7d2a2921f6b769a892ed304c7f771a96a0ebbe2402e
+.. meta::948b6a800dea11a533e07c8084447c4d9ce7345ea374b19c7b95abe16141366bc3a6a10f713f0facf4db58815774b1a5165d1c0ec40b77fe12995d4f1a50b30a
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::HollowCircleProperties Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::HollowCircleProperties Struct Reference
 
 HollowCircleProperties Struct Reference
 =======================================

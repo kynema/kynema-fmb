@@ -1,8 +1,8 @@
-.. meta::1bb0ef69b7306eb02c70ac4f6a5581993e4a6842d7962a6f7218f756a09ea603dd99c2de931acb0dd11a8ef1d1a75fec3a1adfa769c51d609d1beb6273263f80
+.. meta::216846cd0d6b7e38e5d20fde909dec03d34cbe05fb5d263a33dafe466babdbc59b193931c248e4a715446bee291a5c41905dd244ab0155572d5803cb1602ed63
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Puu.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Puu.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_Puu.hpp File Reference
 =====================================================================================================

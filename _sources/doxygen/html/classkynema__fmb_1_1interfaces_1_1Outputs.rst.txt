@@ -1,8 +1,8 @@
-.. meta::89a492d3d260ab0c365a87504e7abe78fef5c56c304b34fab7aa1d06cf0fe248bf10031b26de302ea8ee7f45b0aa6facc05e9030b106ecaff67406b538a49510
+.. meta::bef237a7a6ec115ee08983490f4cb188c377c7d0d398faf9b363bfa98862efb5d763cf387bbf3421618865764b0d9b982816a4db78dbffe1511333c5d3e66e6f
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::Outputs Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::Outputs Class Reference
 
 Outputs Class Reference
 =======================

@@ -1,8 +1,8 @@
-.. meta::20881b7a26c2d602513e3a95320f071f27553bb0fac475548b03711b8e009df0bafd606f2cfb42fa1aa7bbb645fc966410015dcda3cb747466c78b6cd80bec07
+.. meta::353bce62dcaa57b7615e8ba1f2d410605d922b58bd456a8598e179face27d4ae5a0d4b4792159fc94ca8a092e986d4d530449f4215ef0894dbc40fe5b4ebd99b
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::BeamSection Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::BeamSection Struct Reference
 
 BeamSection Struct Reference
 ============================

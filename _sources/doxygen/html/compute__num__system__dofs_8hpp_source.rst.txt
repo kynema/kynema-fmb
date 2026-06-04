@@ -1,8 +1,8 @@
-.. meta::3deece5acbeaa37f8fe2626994f626a7312b573588c3a68b56691b3688732c12baf31f514256c526b2aec89e87850331e9b2b39631bd936d500b16f3f14aacf3
+.. meta::2bb53e3b4f21655a2bc8c19e0a2b6bea32c0d2751fd7badefca9067add193cb60ff555feea9dcfdeef441e55b5c0dd4c602f370a86ee0985adc5fa85b66a8e6d
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_num_system_dofs.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_num_system_dofs.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute\_num\_system\_dofs.hpp Source File
 ========================================================================================================

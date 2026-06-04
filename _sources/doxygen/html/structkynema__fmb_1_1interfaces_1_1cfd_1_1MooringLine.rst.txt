@@ -1,8 +1,8 @@
-.. meta::33a653e2b27bb39f2af70a52a2cd98154854c9795e3ab4f148689919d5efa58cc9212eb1b1e878ead8cf33b3f3a07fb499a2df243d4210ae656fc08b05d1a414
+.. meta::1cc2ba54465263dc27a814520ccd9728b76dc3b3b7cb65b682a7014b9f492e174fe313dc9e3e96c227a5ab69e455d8a5adb6b9f726e1da4b695889ba7f1e04ce
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::cfd::MooringLine Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::cfd::MooringLine Struct Reference
 
 MooringLine Struct Reference
 ============================

@@ -1,8 +1,8 @@
-.. meta::108a01a107aef173bc66154fe3b4c4f65b21cf4f753f0b936bb40d9704e85c6e9259a975ec4c423f728fb963c4cd7e83c53e21d53b53980e9c96bb90e56b80fa
+.. meta::348ed4d32d8730a4d4cdb8862e6adb10981ee301d47743db90aee410d26bb10b9fd20210ee4f014ef61bb2b7ea405a062018196570ef835fddf46469261dc84d
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::SymbolicFunction&lt; Handle&lt; Algorithm::KLU &gt;, CrsMatrixType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::SymbolicFunction&lt; Handle&lt; Algorithm::KLU &gt;, CrsMatrixType &gt; Struct Template Reference
 
 KLU &gt;, CrsMatrixType &gt; Struct Template Reference
 ======================================================

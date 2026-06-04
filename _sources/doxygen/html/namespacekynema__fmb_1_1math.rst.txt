@@ -1,8 +1,8 @@
-.. meta::f08da520a40997174655d99a3af5df11bb9de8c681c43d40d47cd040ac525e3e98d08fca11711c208a76ad60d4deded9201f986c0d8a9fc60599a48481401139
+.. meta::51ec9ed7a3c7042cce64a3c4835bf41e81fce97d642c673dadbc4fd30a24d170b9a1b86a46ec0a61afde705480bb6461c71c0b2f647285e2d46c46853f2232ee
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::math Namespace Reference
+.. title:: Kynema-FMB API: kynema_fmb::math Namespace Reference
 
 math Namespace Reference
 ========================

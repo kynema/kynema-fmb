@@ -1,8 +1,8 @@
-.. meta::f3c8445cd58e03da096053c45bf5ee018a835fde776d17e6617e6eea739acadb4c263f0934a4502b1699234a0c2bdd46441ca7a714376fd5dcd68912c19cb73e
+.. meta::a16f3f689f25fe4b45549b15158104dbe6fa513bd07c988a56b4eae417d5e0d87f4bcb9febe6a7b268cf96c6b6aa66bb5448c16abc90906daea57ec4e2ca538b
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/compute_node_freedom_map_table.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/compute_node_freedom_map_table.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof\_management/compute\_node\_freedom\_map\_table.hpp Source File
 =========================================================================================================================

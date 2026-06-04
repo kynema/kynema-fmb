@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kynema-FMB API: kynema_fmb::interfaces::components::Controller Class Reference &mdash; Kynema-FMB 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Kynema-FMB
+              <img src="../../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/user.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../theory/index.html">Theory Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer/index.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing/index.html">Benchmark Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Kynema-FMB Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">Acknowledgements</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kynema-FMB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Kynema-FMB API: kynema_fmb::interfaces::components::Controller Class Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/doxygen/html/classkynema__fmb_1_1interfaces_1_1components_1_1Controller.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="controller-class-reference">
+<h1>Controller Class Reference<a class="headerlink" href="#controller-class-reference" title="Permalink to this heading"></a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kynema-FMB API: kynema_fmb::interfaces::components::Controller Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Kynema-FMB API
+   </div>
+   <div id="projectbrief">A flexible multibody structural dynamics code for wind turbines</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacekynema__fmb.html">kynema_fmb</a></li><li class="navelem"><a class="el" href="namespacekynema__fmb_1_1interfaces.html">interfaces</a></li><li class="navelem"><a class="el" href="namespacekynema__fmb_1_1interfaces_1_1components.html">components</a></li><li class="navelem"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kynema_fmb::interfaces::components::Controller Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="controller_8hpp_source.html">controller.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a02e92c16064ffd9c8e22f455a3d0fbef" id="r_a02e92c16064ffd9c8e22f455a3d0fbef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a02e92c16064ffd9c8e22f455a3d0fbef">Controller</a> (const <a class="el" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerInput.html">ControllerInput</a> &amp;input)</td></tr>
+<tr class="memdesc:a02e92c16064ffd9c8e22f455a3d0fbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a> class.  <br /></td></tr>
+<tr class="separator:a02e92c16064ffd9c8e22f455a3d0fbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780d2faf168ecc8fc4d19c5316a61602" id="r_a780d2faf168ecc8fc4d19c5316a61602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a780d2faf168ecc8fc4d19c5316a61602">CallController</a> ()</td></tr>
+<tr class="memdesc:a780d2faf168ecc8fc4d19c5316a61602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to call the controller function from the shared library.  <br /></td></tr>
+<tr class="separator:a780d2faf168ecc8fc4d19c5316a61602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c389d8fb00827e1bb69087b1adbcc2" id="r_a70c389d8fb00827e1bb69087b1adbcc2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a70c389d8fb00827e1bb69087b1adbcc2">PitchAngleCommand</a> () const</td></tr>
+<tr class="memdesc:a70c389d8fb00827e1bb69087b1adbcc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the collective commanded pitch angle (rad)  <br /></td></tr>
+<tr class="separator:a70c389d8fb00827e1bb69087b1adbcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec3d77226c30e7a4423b0a28dba9607" id="r_a8ec3d77226c30e7a4423b0a28dba9607"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a8ec3d77226c30e7a4423b0a28dba9607">PitchAngleCommandIndividual</a> () const</td></tr>
+<tr class="memdesc:a8ec3d77226c30e7a4423b0a28dba9607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the commanded individual pitch angle (rad)  <br /></td></tr>
+<tr class="separator:a8ec3d77226c30e7a4423b0a28dba9607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7776c7e40e58167c647b2507d5b20f" id="r_add7776c7e40e58167c647b2507d5b20f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#add7776c7e40e58167c647b2507d5b20f">GeneratorTorqueCommand</a> () const</td></tr>
+<tr class="memdesc:add7776c7e40e58167c647b2507d5b20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the commanded generator torque (Nm)  <br /></td></tr>
+<tr class="separator:add7776c7e40e58167c647b2507d5b20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a7cc23a0ccdfd51406118fa5f92c55" id="r_a93a7cc23a0ccdfd51406118fa5f92c55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a93a7cc23a0ccdfd51406118fa5f92c55">YawAngleCommand</a> () const</td></tr>
+<tr class="memdesc:a93a7cc23a0ccdfd51406118fa5f92c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the commanded yaw angle (rad) integrated from yaw rate command.  <br /></td></tr>
+<tr class="separator:a93a7cc23a0ccdfd51406118fa5f92c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e22a7772ba46c462289a3d53b8e2b9" id="r_a49e22a7772ba46c462289a3d53b8e2b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a49e22a7772ba46c462289a3d53b8e2b9">SetStatusInit</a> ()</td></tr>
+<tr class="memdesc:a49e22a7772ba46c462289a3d53b8e2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller status to initialization.  <br /></td></tr>
+<tr class="separator:a49e22a7772ba46c462289a3d53b8e2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51cc870212241282f4a4f4449fa67b9b" id="r_a51cc870212241282f4a4f4449fa67b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a51cc870212241282f4a4f4449fa67b9b">SetStatusOperating</a> ()</td></tr>
+<tr class="memdesc:a51cc870212241282f4a4f4449fa67b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller status to operating.  <br /></td></tr>
+<tr class="separator:a51cc870212241282f4a4f4449fa67b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61427abe47a994f58f7b604f617acc91" id="r_a61427abe47a994f58f7b604f617acc91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a61427abe47a994f58f7b604f617acc91">SetStatusWriteCheckpoint</a> ()</td></tr>
+<tr class="memdesc:a61427abe47a994f58f7b604f617acc91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller status to write checkpoint file (only valid for ROSCO controller)  <br /></td></tr>
+<tr class="separator:a61427abe47a994f58f7b604f617acc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8e8d785329f8aaebb6c2d3b4a65664" id="r_a1e8e8d785329f8aaebb6c2d3b4a65664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1e8e8d785329f8aaebb6c2d3b4a65664">SetStatusReadCheckpoint</a> ()</td></tr>
+<tr class="memdesc:a1e8e8d785329f8aaebb6c2d3b4a65664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller status to read checkpoint file (only valid for ROSCO controller)  <br /></td></tr>
+<tr class="separator:a1e8e8d785329f8aaebb6c2d3b4a65664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d07e8c8656fb4944ce17ddf9f8f3be" id="r_a86d07e8c8656fb4944ce17ddf9f8f3be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a86d07e8c8656fb4944ce17ddf9f8f3be">SetSimulationTime</a> (double simulation_time)</td></tr>
+<tr class="memdesc:a86d07e8c8656fb4944ce17ddf9f8f3be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulation time (s)  <br /></td></tr>
+<tr class="separator:a86d07e8c8656fb4944ce17ddf9f8f3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a906c47ad01cd709f3c7a69c6c0f9f5" id="r_a5a906c47ad01cd709f3c7a69c6c0f9f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a906c47ad01cd709f3c7a69c6c0f9f5">SetSimulationTimeStep</a> (double simulation_time_step)</td></tr>
+<tr class="memdesc:a5a906c47ad01cd709f3c7a69c6c0f9f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulation time step (s)  <br /></td></tr>
+<tr class="separator:a5a906c47ad01cd709f3c7a69c6c0f9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1140f17627ae098f773ae53716b6f9c9" id="r_a1140f17627ae098f773ae53716b6f9c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a1140f17627ae098f773ae53716b6f9c9">SetYawAngle</a> (double yaw_angle)</td></tr>
+<tr class="memdesc:a1140f17627ae098f773ae53716b6f9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the measured yaw angle (rad)  <br /></td></tr>
+<tr class="separator:a1140f17627ae098f773ae53716b6f9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33025704bb26655009518f2fd520fb02" id="r_a33025704bb26655009518f2fd520fb02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a33025704bb26655009518f2fd520fb02">SetRotorSpeed</a> (double rotor_speed)</td></tr>
+<tr class="memdesc:a33025704bb26655009518f2fd520fb02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the measured rotor speed (rad/s)  <br /></td></tr>
+<tr class="separator:a33025704bb26655009518f2fd520fb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddfac6ea886142d75af726cb89d3190" id="r_a6ddfac6ea886142d75af726cb89d3190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a6ddfac6ea886142d75af726cb89d3190">SetGeneratorSpeed</a> (double generator_speed)</td></tr>
+<tr class="memdesc:a6ddfac6ea886142d75af726cb89d3190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the measured generator speed (rad/s)  <br /></td></tr>
+<tr class="separator:a6ddfac6ea886142d75af726cb89d3190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262d4a775f925e56805aeb727f42b8e0" id="r_a262d4a775f925e56805aeb727f42b8e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a262d4a775f925e56805aeb727f42b8e0">SetGeneratorTorque</a> (double generator_torque)</td></tr>
+<tr class="memdesc:a262d4a775f925e56805aeb727f42b8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the measured generator torque (Nm)  <br /></td></tr>
+<tr class="separator:a262d4a775f925e56805aeb727f42b8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52997e878ec7e459ec3e13b4313a9d76" id="r_a52997e878ec7e459ec3e13b4313a9d76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a52997e878ec7e459ec3e13b4313a9d76">SetGeneratorPower</a> (double generator_power)</td></tr>
+<tr class="memdesc:a52997e878ec7e459ec3e13b4313a9d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set measured generator power (W)  <br /></td></tr>
+<tr class="separator:a52997e878ec7e459ec3e13b4313a9d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d2dcf7715493d9af1f62a7b76eecde" id="r_a88d2dcf7715493d9af1f62a7b76eecde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a88d2dcf7715493d9af1f62a7b76eecde">SetWindSpeed</a> (double wind_speed)</td></tr>
+<tr class="memdesc:a88d2dcf7715493d9af1f62a7b76eecde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set measured wind speed at hub (m/s)  <br /></td></tr>
+<tr class="separator:a88d2dcf7715493d9af1f62a7b76eecde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ef00423bdedb78a69bac92cd0ff56" id="r_aad4ef00423bdedb78a69bac92cd0ff56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aad4ef00423bdedb78a69bac92cd0ff56">SetRotorAzimuth</a> (double rotor_azimuth)</td></tr>
+<tr class="memdesc:aad4ef00423bdedb78a69bac92cd0ff56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rotor azimuth angle (rad)  <br /></td></tr>
+<tr class="separator:aad4ef00423bdedb78a69bac92cd0ff56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9433fb294d4dda7af48277731cd9ca" id="r_a5a9433fb294d4dda7af48277731cd9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#a5a9433fb294d4dda7af48277731cd9ca">SetBladePitch</a> (double blade_pitch_collective)</td></tr>
+<tr class="memdesc:a5a9433fb294d4dda7af48277731cd9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set measured blade pitch angle (rad)  <br /></td></tr>
+<tr class="separator:a5a9433fb294d4dda7af48277731cd9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a9b8213b31a7f93c75f8c6c4da0c77" id="r_ae8a9b8213b31a7f93c75f8c6c4da0c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#ae8a9b8213b31a7f93c75f8c6c4da0c77">SetBladePitch</a> (std::array&lt; double, 3 &gt; blade_pitch)</td></tr>
+<tr class="memdesc:ae8a9b8213b31a7f93c75f8c6c4da0c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set measured blade pitch angle (rad)  <br /></td></tr>
+<tr class="separator:ae8a9b8213b31a7f93c75f8c6c4da0c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa583456c1b0e25ac44ef73229769b354" id="r_aa583456c1b0e25ac44ef73229769b354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html#aa583456c1b0e25ac44ef73229769b354">SetOutOfPlaneRootBendingMoment</a> (std::array&lt; double, 3 &gt; root_moment)</td></tr>
+<tr class="memdesc:aa583456c1b0e25ac44ef73229769b354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set measured out-of-plane root bending moment for each blade (Nm)  <br /></td></tr>
+<tr class="separator:aa583456c1b0e25ac44ef73229769b354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A turbine controller class that works as a wrapper around the shared library containing the controller logic </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a02e92c16064ffd9c8e22f455a3d0fbef" name="a02e92c16064ffd9c8e22f455a3d0fbef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e92c16064ffd9c8e22f455a3d0fbef">&#9670;&#160;</a></span>Controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kynema_fmb::interfaces::components::Controller::Controller </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structkynema__fmb_1_1interfaces_1_1components_1_1ControllerInput.html">ControllerInput</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for the <a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td><a class="el" href="classkynema__fmb_1_1interfaces_1_1components_1_1Controller.html">Controller</a> input parameters structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a780d2faf168ecc8fc4d19c5316a61602" name="a780d2faf168ecc8fc4d19c5316a61602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a780d2faf168ecc8fc4d19c5316a61602">&#9670;&#160;</a></span>CallController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::CallController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to call the controller function from the shared library. </p>
+
+</div>
+</div>
+<a id="add7776c7e40e58167c647b2507d5b20f" name="add7776c7e40e58167c647b2507d5b20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7776c7e40e58167c647b2507d5b20f">&#9670;&#160;</a></span>GeneratorTorqueCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kynema_fmb::interfaces::components::Controller::GeneratorTorqueCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the commanded generator torque (Nm) </p>
+
+</div>
+</div>
+<a id="a70c389d8fb00827e1bb69087b1adbcc2" name="a70c389d8fb00827e1bb69087b1adbcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c389d8fb00827e1bb69087b1adbcc2">&#9670;&#160;</a></span>PitchAngleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kynema_fmb::interfaces::components::Controller::PitchAngleCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the collective commanded pitch angle (rad) </p>
+
+</div>
+</div>
+<a id="a8ec3d77226c30e7a4423b0a28dba9607" name="a8ec3d77226c30e7a4423b0a28dba9607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec3d77226c30e7a4423b0a28dba9607">&#9670;&#160;</a></span>PitchAngleCommandIndividual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; double, 3 &gt; kynema_fmb::interfaces::components::Controller::PitchAngleCommandIndividual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the commanded individual pitch angle (rad) </p>
+
+</div>
+</div>
+<a id="a5a9433fb294d4dda7af48277731cd9ca" name="a5a9433fb294d4dda7af48277731cd9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9433fb294d4dda7af48277731cd9ca">&#9670;&#160;</a></span>SetBladePitch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetBladePitch </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>blade_pitch_collective</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set measured blade pitch angle (rad) </p>
+
+</div>
+</div>
+<a id="ae8a9b8213b31a7f93c75f8c6c4da0c77" name="ae8a9b8213b31a7f93c75f8c6c4da0c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a9b8213b31a7f93c75f8c6c4da0c77">&#9670;&#160;</a></span>SetBladePitch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetBladePitch </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; double, 3 &gt;&#160;</td>
+          <td class="paramname"><em>blade_pitch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set measured blade pitch angle (rad) </p>
+
+</div>
+</div>
+<a id="a52997e878ec7e459ec3e13b4313a9d76" name="a52997e878ec7e459ec3e13b4313a9d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52997e878ec7e459ec3e13b4313a9d76">&#9670;&#160;</a></span>SetGeneratorPower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetGeneratorPower </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>generator_power</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set measured generator power (W) </p>
+
+</div>
+</div>
+<a id="a6ddfac6ea886142d75af726cb89d3190" name="a6ddfac6ea886142d75af726cb89d3190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddfac6ea886142d75af726cb89d3190">&#9670;&#160;</a></span>SetGeneratorSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetGeneratorSpeed </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>generator_speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the measured generator speed (rad/s) </p>
+
+</div>
+</div>
+<a id="a262d4a775f925e56805aeb727f42b8e0" name="a262d4a775f925e56805aeb727f42b8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262d4a775f925e56805aeb727f42b8e0">&#9670;&#160;</a></span>SetGeneratorTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetGeneratorTorque </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>generator_torque</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the measured generator torque (Nm) </p>
+
+</div>
+</div>
+<a id="aa583456c1b0e25ac44ef73229769b354" name="aa583456c1b0e25ac44ef73229769b354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa583456c1b0e25ac44ef73229769b354">&#9670;&#160;</a></span>SetOutOfPlaneRootBendingMoment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetOutOfPlaneRootBendingMoment </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; double, 3 &gt;&#160;</td>
+          <td class="paramname"><em>root_moment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set measured out-of-plane root bending moment for each blade (Nm) </p>
+
+</div>
+</div>
+<a id="aad4ef00423bdedb78a69bac92cd0ff56" name="aad4ef00423bdedb78a69bac92cd0ff56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ef00423bdedb78a69bac92cd0ff56">&#9670;&#160;</a></span>SetRotorAzimuth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetRotorAzimuth </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rotor_azimuth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the rotor azimuth angle (rad) </p>
+
+</div>
+</div>
+<a id="a33025704bb26655009518f2fd520fb02" name="a33025704bb26655009518f2fd520fb02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33025704bb26655009518f2fd520fb02">&#9670;&#160;</a></span>SetRotorSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetRotorSpeed </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rotor_speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the measured rotor speed (rad/s) </p>
+
+</div>
+</div>
+<a id="a86d07e8c8656fb4944ce17ddf9f8f3be" name="a86d07e8c8656fb4944ce17ddf9f8f3be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d07e8c8656fb4944ce17ddf9f8f3be">&#9670;&#160;</a></span>SetSimulationTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetSimulationTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>simulation_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the simulation time (s) </p>
+
+</div>
+</div>
+<a id="a5a906c47ad01cd709f3c7a69c6c0f9f5" name="a5a906c47ad01cd709f3c7a69c6c0f9f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a906c47ad01cd709f3c7a69c6c0f9f5">&#9670;&#160;</a></span>SetSimulationTimeStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetSimulationTimeStep </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>simulation_time_step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the simulation time step (s) </p>
+
+</div>
+</div>
+<a id="a49e22a7772ba46c462289a3d53b8e2b9" name="a49e22a7772ba46c462289a3d53b8e2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e22a7772ba46c462289a3d53b8e2b9">&#9670;&#160;</a></span>SetStatusInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetStatusInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the controller status to initialization. </p>
+
+</div>
+</div>
+<a id="a51cc870212241282f4a4f4449fa67b9b" name="a51cc870212241282f4a4f4449fa67b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51cc870212241282f4a4f4449fa67b9b">&#9670;&#160;</a></span>SetStatusOperating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetStatusOperating </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the controller status to operating. </p>
+
+</div>
+</div>
+<a id="a1e8e8d785329f8aaebb6c2d3b4a65664" name="a1e8e8d785329f8aaebb6c2d3b4a65664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8e8d785329f8aaebb6c2d3b4a65664">&#9670;&#160;</a></span>SetStatusReadCheckpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetStatusReadCheckpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the controller status to read checkpoint file (only valid for ROSCO controller) </p>
+
+</div>
+</div>
+<a id="a61427abe47a994f58f7b604f617acc91" name="a61427abe47a994f58f7b604f617acc91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61427abe47a994f58f7b604f617acc91">&#9670;&#160;</a></span>SetStatusWriteCheckpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetStatusWriteCheckpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the controller status to write checkpoint file (only valid for ROSCO controller) </p>
+
+</div>
+</div>
+<a id="a88d2dcf7715493d9af1f62a7b76eecde" name="a88d2dcf7715493d9af1f62a7b76eecde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d2dcf7715493d9af1f62a7b76eecde">&#9670;&#160;</a></span>SetWindSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetWindSpeed </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wind_speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set measured wind speed at hub (m/s) </p>
+
+</div>
+</div>
+<a id="a1140f17627ae098f773ae53716b6f9c9" name="a1140f17627ae098f773ae53716b6f9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1140f17627ae098f773ae53716b6f9c9">&#9670;&#160;</a></span>SetYawAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kynema_fmb::interfaces::components::Controller::SetYawAngle </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yaw_angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the measured yaw angle (rad) </p>
+
+</div>
+</div>
+<a id="a93a7cc23a0ccdfd51406118fa5f92c55" name="a93a7cc23a0ccdfd51406118fa5f92c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a7cc23a0ccdfd51406118fa5f92c55">&#9670;&#160;</a></span>YawAngleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kynema_fmb::interfaces::components::Controller::YawAngleCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the commanded yaw angle (rad) integrated from yaw rate command. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/<a class="el" href="controller_8hpp_source.html">controller.hpp</a></li>
+<li>/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/<a class="el" href="controller_8cpp.html">controller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 - Present, MIT License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

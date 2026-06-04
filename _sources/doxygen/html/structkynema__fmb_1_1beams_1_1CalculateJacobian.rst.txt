@@ -1,8 +1,8 @@
-.. meta::db3421fbe871362fb26d275b2160d94c2a384e49465a98d696a2f86004fb89af1d3574717171850edbbe10cc09a78b6c382a9509ea845e11655f79cb6b23cfed
+.. meta::b12c787233c979031ecbf70fb8a929a5538c6f54f071a468eb229a0e202c8671ce9b7ae73d83b58eae9570eba150c9078465d3301fcfad02b652d1d40dfc0126
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::beams::CalculateJacobian&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::beams::CalculateJacobian&lt; DeviceType &gt; Struct Template Reference
 
 CalculateJacobian&lt; DeviceType &gt; Struct Template Reference
 ===============================================================

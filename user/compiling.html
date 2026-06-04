@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compiling &mdash; Kynema 0.0.1 documentation</title>
+  <title>Compiling &mdash; Kynema-FMB 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -37,7 +37,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Kynema
+            Kynema-FMB
               <img src="../_static/oturb_logo_v2.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -98,7 +98,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Kynema</a>
+          <a href="../index.html">Kynema-FMB</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -223,23 +223,23 @@ spack<span class="w"> </span>install<span class="w"> </span>suite-sparse
 <div class="section" id="install-kokkos-and-kokkos-kernels">
 <h3>Install Kokkos and Kokkos Kernels<a class="headerlink" href="#install-kokkos-and-kokkos-kernels" title="Permalink to this heading"></a></h3>
 <p>For a simple serial build</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos
-spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos@4.7.02
+spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels@4.7.02
 </pre></div>
 </div>
 <p>To compile with OpenMP support for parallelism on CPU based machines</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos+openmp
-spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels+openmp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos@4.7.02+openmp
+spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels@4.7.02+openmp
 </pre></div>
 </div>
 <p>To compile with CUDA support</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos+cuda+wrapper
-spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels+cuda+cublas
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos@4.7.02+cuda+wrapper
+spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels@4.7.02+cuda+cublas
 </pre></div>
 </div>
 <p>To compile with ROCm support</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos+rocm
-spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels+rocblas
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>install<span class="w"> </span>kokkos@4.7.02+rocm
+spack<span class="w"> </span>install<span class="w"> </span>kokkos-kernels@4.7.02+rocblas
 </pre></div>
 </div>
 </div>
@@ -329,30 +329,30 @@ To find this library, if it is in the system path, configure Kynema-FMB with the
 <p>Kynema-FMB has several build options which can be set either when running
 CMake from the command line or through a GUI such as ccmake.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_CLANG_TIDY</span></code> enables the Clang-Tidy static analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_COVERAGE</span></code> enables code coverage analysis using gcov</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_CPPCHECK</span></code> enables the CppCheck static analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_IPO</span></code> enables link time optimization</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_PCH</span></code> builds precompiled headers to potentially decrease compilation time</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SANITIZER_ADDRESS</span></code> enables the address sanitizer runtime analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SANITIZER_LEAK</span></code> enables the leak sanitizer runtime analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SANITIZER_MEMORY</span></code> enables the memory sanitizer runtime analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SANITIZER_THREAD</span></code> enables the thread sanitizer runtime analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SANITIZER_UNDEFINED</span></code> enables the undefined behavior sanitizer runtime analysis tool</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_TESTS</span></code> builds Kynema-FMB’s test suite</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_UNITY_BUILD</span></code> uses unity builds to potentially decrease compilation time</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_WRITE_OUTPUTS</span></code> builds Kynema-FMB with VTK support for visualization in tests. Will need the VTK TPL to be properly configured</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_WARNINGS_AS_ERRORS</span></code> treats warnings as errors, including warnings from static analysis tools</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_KLU</span></code> builds Kynema-FMB with support for Suite-Sparse’s KLU solver; in our experience, this is solver is fast and robust for many of our problems.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_UMFPACK</span></code> builds Kynema-FMB with support for Suite-Sparse’s UMFPACK solver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SUPERLU</span></code> builds Kynema-FMB with support forthe  SuperLU solver</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_SUPERLU_MT</span></code> builds Kynema-FMB with support for SuperLU-mt, a threaded version of SuperLU which may be configured to run in parallel on CPU.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_MKL</span></code> builds Kynema-FMB with MKL’s sparse direct solver, which can take advantage
-of multiple threads to run in parallel on CPU.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_CUDSS</span></code> builds Kynema-FMB with cuDSS, the next generation sparse direct solver of CUDA; still in pre-release at the time of writing, it is the preferred CUDA based solver if the platform supports it.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_CUSOLVERSP</span></code> builds Kynema-FMB with the cuSolverSP sparse direct solver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_ROSCO_CONTROLLER</span></code> detects the ROSCO controller shared library and defines the <cite>Kynema-FMB_ROSCO_LIBRARY</cite> variable</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kynema-FMB_ENABLE_OPENFAST_ADI</span></code> detects the OpenFAST AeroDyn shared library and defines the <cite>Kynema-FMB_ADI_LIBRARY</cite> variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_CLANG_TIDY</span></code> enables the Clang-Tidy static analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_COVERAGE</span></code> enables code coverage analysis using gcov</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_CPPCHECK</span></code> enables the CppCheck static analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_IPO</span></code> enables link time optimization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_PCH</span></code> builds precompiled headers to potentially decrease compilation time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SANITIZER_ADDRESS</span></code> enables the address sanitizer runtime analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SANITIZER_LEAK</span></code> enables the leak sanitizer runtime analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SANITIZER_MEMORY</span></code> enables the memory sanitizer runtime analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SANITIZER_THREAD</span></code> enables the thread sanitizer runtime analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED</span></code> enables the undefined behavior sanitizer runtime analysis tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_TESTS</span></code> builds Kynema-FMB’s test suite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_UNITY_BUILD</span></code> uses unity builds to potentially decrease compilation time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_WRITE_OUTPUTS</span></code> builds Kynema-FMB with VTK support for visualization in tests. Will need the VTK TPL to be properly configured</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_WARNINGS_AS_ERRORS</span></code> treats warnings as errors, including warnings from static analysis tools</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_KLU</span></code> builds Kynema-FMB with support for Suite-Sparse’s KLU solver; in our experience, this is solver is fast and robust for many of our problems.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_UMFPACK</span></code> builds Kynema-FMB with support for Suite-Sparse’s UMFPACK solver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SUPERLU</span></code> builds Kynema-FMB with support forthe  SuperLU solver</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_SUPERLU_MT</span></code> builds Kynema-FMB with support for SuperLU-mt, a threaded version of SuperLU which may be configured to run in parallel on CPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_MKL</span></code> builds Kynema-FMB with MKL’s sparse direct solver, which can take advantage
+of MULTI_le threads to run in parallel on CPU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_CUDSS</span></code> builds Kynema-FMB with cuDSS, the next generation sparse direct solver of CUDA; still in pre-release at the time of writing, it is the preferred CUDA based solver if the platform supports it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_CUSOLVERSP</span></code> builds Kynema-FMB with the cuSolverSP sparse direct solver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_ROSCO_CONTROLLER</span></code> detects the ROSCO controller shared library and defines the <cite>Kynema-FMB_ROSCO_LIBRARY</cite> variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KYNEMA_FMB_ENABLE_OPENFAST_ADI</span></code> detects the OpenFAST AeroDyn shared library and defines the <cite>Kynema-FMB_ADI_LIBRARY</cite> variable</p></li>
 </ul>
 </div>
 </div>

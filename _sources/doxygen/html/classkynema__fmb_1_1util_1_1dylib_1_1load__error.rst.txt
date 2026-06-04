@@ -1,8 +1,8 @@
-.. meta::fa63162388f2cc0f24ff45019addbbb758bf8832ccfbec77330df919d4a7fe42f8950bdf82119976224e66308836c7d2977da64e93de3ae29107849976bf16af
+.. meta::f7db485cb99cd9c8d10088317d67e060cc2e3219590b23b40c47367131c4fc9341c4e35a2591fff2270efc9292b4725c60f42f4540199ccb48812def845b6dd6
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::util::dylib::load_error Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::util::dylib::load_error Class Reference
 
 load\_error Class Reference
 ===========================

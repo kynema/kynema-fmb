@@ -1,8 +1,8 @@
-.. meta::ea25d59de3ccb79b68348f9459ac9b2c24ed72bef18083a93496c0469b429273f5258004ec7049a22cdef2025020ee5c5639f447404e08c2f7a6ff2cec6ed40e
+.. meta::fbba56c1d72d00fc5eb60feb4579004f8fe5c2c4ba13fe7ce7e1d0fcd6bc945907cf91fe0fa9d3670160850a718ba39d964c2fb1645cf4c022545f8615e3205b
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/masses/masses_input.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/masses/masses_input.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/masses/masses\_input.hpp Source File
 ====================================================================================================

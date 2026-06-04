@@ -1,8 +1,8 @@
-.. meta::ab5b522dd294bf91a0a9a87a7648cb5d0c0a38c849405475592639bb2e552a2b4e38c68f1a2345c5db600f55ab132b9bf4f10dd5b01b26dd51daa80ccd411241
+.. meta::be81557e53b2cab96174afcbe33823cd63689ab7a47c141b508395b0a62096975fc2543f4df78d0057f8672515c84348433c4dc379c0895887dfc5b9a3d570f2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::Model Class Reference
+.. title:: Kynema-FMB API: kynema_fmb::Model Class Reference
 
 Model Class Reference
 =====================

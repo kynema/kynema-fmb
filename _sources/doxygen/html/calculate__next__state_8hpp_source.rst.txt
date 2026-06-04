@@ -1,8 +1,8 @@
-.. meta::caedc9628545df6f4316c7591ddf2d4a416458fa3236b0bc7bb9121109875cf4899608ee3138ac921452fe5b38a2beac0e32fb6835a737f3a15f73e73f1cf766
+.. meta::243c7eb074a9505d4e157537572e10b3f3154d54d58160da93a86fd34d72563702897656dff2340d7623c05aec0823bb60ddd3b09036aa6b31f964e8ac7d54e4
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate_next_state.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate_next_state.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/calculate\_next\_state.hpp Source File
 ===================================================================================================

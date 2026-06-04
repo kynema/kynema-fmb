@@ -1,8 +1,8 @@
-.. meta::658725434b9cd981236389496a4afa14f8a0456d43abe5144ae4f3c8a0787de2d9c3779b79dd16237634383a40a700d939f2f1248ac3339447b5ca127402481e
+.. meta::42fe27083ae9517e3005722963a54b86a042d5f54a942adedd6a470c2cb8a692280c7e9d83634ef945ef920c6e172b4602a38106760c8503f7098abc5d650604
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beams_input.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beams_input.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beams\_input.hpp Source File
 ==================================================================================================

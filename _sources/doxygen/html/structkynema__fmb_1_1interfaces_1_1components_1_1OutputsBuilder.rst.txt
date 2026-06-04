@@ -1,8 +1,8 @@
-.. meta::59d11df142f70fddfe281ec9731d8f3c2528fb33f80529f409f2d3f66fdcb4025e5ae70a4e5398c9f9785c9641890c839ce1efc3a1451c6b5a0eba5c8c1a5696
+.. meta::d2b6fdc03209a61731b89ddd86e08780a0fd150f97cda11f786d29c4447eec19085d566ec33ee5bcbdd826c32ffea127c276d7a5686afa7253ef383afda96d3b
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::OutputsBuilder Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::OutputsBuilder Struct Reference
 
 OutputsBuilder Struct Reference
 ===============================

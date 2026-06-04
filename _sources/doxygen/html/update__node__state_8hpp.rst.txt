@@ -1,8 +1,8 @@
-.. meta::97b1870f639dbaad5b75bfb0af1f59819d9827bf60a4feecf304404c58fe606296b14287fbfffe1f5a60990c49d6795c36ae10fa5343465623096c78ecbb7426
+.. meta::fb2f07bedabf7aa30f6b427c051f5131015a56e4cb32cd8fcc7d9da0724027f3210498fddcd81737f6a09e460f12551992d8c911709abf8cca3af898d62653a7
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/update_node_state.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/update_node_state.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/update\_node\_state.hpp File Reference
 ==========================================================================================================

@@ -1,8 +1,8 @@
-.. meta::4fb163db66162dea14496c39a5f8828e1a37a5f931f0230d3158d907cc2ab062a5e14b33cd92240e963dd2966e56aed071c29d28ffcb05f7c1067cce1d3f82e5
+.. meta::f1c1eab146530438233520b31cdb8f2ca274b0eb58450d76bdbc3fa0428712e977f998b79d27a18deaf1e61cc591adb8a6dd4d7d5153012aca9b406d7ca5173d
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_revolute_joint_constraint.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_revolute_joint_constraint.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_revolute\_joint\_constraint.hpp Source File
 =========================================================================================================================

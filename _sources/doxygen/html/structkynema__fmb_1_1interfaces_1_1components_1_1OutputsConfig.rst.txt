@@ -1,8 +1,8 @@
-.. meta::f97dd0896bd2bc802c1d9292345a30b4af69c5155f812d665cced228d21a2b07bc7998264dae25de3f8661d9efcdfd83e578d83fdd3d4d592755a8eead7dbac8
+.. meta::c69afdc1aff1a4dda54b80f804b7f6aa777ffd24aa66595a212693a7bcfef51b1000aa8230d1e79fe8f67717a8f1c25fc2989b85abc85c07376cdb11a6ae1bc4
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::interfaces::components::OutputsConfig Struct Reference
+.. title:: Kynema-FMB API: kynema_fmb::interfaces::components::OutputsConfig Struct Reference
 
 OutputsConfig Struct Reference
 ==============================

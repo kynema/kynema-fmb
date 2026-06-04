@@ -1,8 +1,8 @@
-.. meta::ef52d3833b8d45d8487fbaeda5d20b53f9e22d142e52183975fc6ec450fd8abaa8d07f16cb3aef857faa71aa80e89b4d2fbb6672cd0552104946f89b9343b955
+.. meta::63ed4a5b4f7e88e69436fc7cbed97b4d4a1bf12b2c0c424f4082ac6cabb85c50bdcd0b7beb4e07e7ed7a1849062a7af879ff4e250882624356210d2358d5fd00
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/copy_constraints_to_sparse_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/copy_constraints_to_sparse_matrix.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/copy\_constraints\_to\_sparse\_matrix.hpp Source File
 ===================================================================================================================

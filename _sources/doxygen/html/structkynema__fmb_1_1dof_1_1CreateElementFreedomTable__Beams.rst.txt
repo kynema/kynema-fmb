@@ -1,8 +1,8 @@
-.. meta::4fa7e340f97b979b4e16d0368ec893beddd95efc793d86567bb4850b84c3345df2dac9dab2f64d64e7ccd820c4b052f81036a46a6ce8ddbc243a3fbae74d3aef
+.. meta::26d9e4c880f9193fc72962cefa9d8b6192087978b80440828b1147e1b9f011cc5fc8deaa11b0952818305e9340f605002c5f60e8da4c100e5be0a119879d3544
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dof::CreateElementFreedomTable_Beams&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dof::CreateElementFreedomTable_Beams&lt; DeviceType &gt; Struct Template Reference
 
 CreateElementFreedomTable\_Beams&lt; DeviceType &gt; Struct Template Reference
 ==============================================================================

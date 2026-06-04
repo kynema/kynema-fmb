@@ -1,8 +1,8 @@
-.. meta::861af546a7631e25d63b41adc8609c6f3568d3df6fbc2216159a5d552de9c3625d6ee12600c9d528ce3b5dd3ec33d7e5efacee62c3de51d221233d25fa8cd44e
+.. meta::d907f993805bcf7a86bfdd1e0f81a4fd64ddbee93a3f4a4041b75859ee8f0fe3071d9c968dbbe13c2cfeefbd2a9c573d821e68d2832da67cf17c29c21d7ebb35
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::state Namespace Reference
+.. title:: Kynema-FMB API: kynema_fmb::state Namespace Reference
 
 state Namespace Reference
 =========================

@@ -1,8 +1,8 @@
-.. meta::88671cecafdf8c1bfd6ca438d0c4f82f1e94bc444112fafb14fb828e22c47cbf9bd17792588aa05695fc90c8f76d36a7e4ed080b6a7037f6cc28ecc82eabd00c
+.. meta::4cb096f504ecd9861a95445418d67888c2f98c6bcadcc17c4df0321ebe1041b6caf7e555532acabbbabbda7805cecf2ebcf45a23cd34d29f79c11ba90057eef2
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::solver::CopyConstraintsTransposeToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::solver::CopyConstraintsTransposeToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
 
 CopyConstraintsTransposeToSparseMatrix&lt; CrsMatrixType &gt; Struct Template Reference
 =======================================================================================

@@ -1,8 +1,8 @@
-.. meta::9b07437b6cdfc34abdcd47c67e0671aa6e4580dce1e010557b08976c6f38c781ef645865ec8dc8d1ab8925f215eb5754d0d862b9a35302e6d2fd93ac789e830a
+.. meta::c5fa803dbc3075e07ab47b4e1fa2d7f374eed1344c631192ce14cf26108dd4ad1cf45b9e675ac4122b33d186168530a38f7ced778c399db3cf9eaea45953b207
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::system::CalculateTangentOperator&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::system::CalculateTangentOperator&lt; DeviceType &gt; Struct Template Reference
 
 CalculateTangentOperator&lt; DeviceType &gt; Struct Template Reference
 ======================================================================

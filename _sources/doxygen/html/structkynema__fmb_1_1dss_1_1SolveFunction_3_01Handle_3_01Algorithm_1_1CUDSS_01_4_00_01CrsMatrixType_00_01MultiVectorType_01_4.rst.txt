@@ -1,8 +1,8 @@
-.. meta::dde6ef4d7d2e04159f59aee6437690d9705f54216940b7576a6ea4a1789b629d7cb51064f57ff02f4ae2b3a04c215a944d6a232b4891aed5892664d23c543c0e
+.. meta::20087eefc5396452cf2b6d1a0ff21742903492d1a8dfa4912a154e3d2a7d49f93bad9bb8a9036e4baab2ef775ccc5eb7d46b017e98619e5d17d6e8dfa8378925
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dss::SolveFunction&lt; Handle&lt; Algorithm::CUDSS &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dss::SolveFunction&lt; Handle&lt; Algorithm::CUDSS &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
 
 CUDSS &gt;, CrsMatrixType, MultiVectorType &gt; Struct Template Reference
 =========================================================================

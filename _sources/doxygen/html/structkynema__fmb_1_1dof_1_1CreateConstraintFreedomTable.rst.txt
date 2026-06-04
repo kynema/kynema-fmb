@@ -1,8 +1,8 @@
-.. meta::d7677b2805077fab847ed4d060025ccfce7acd6070984b76884962b987cb2f283639070766d008363159c139d7258afdd068d66019e3d539f6c016e468d8e135
+.. meta::fa2f3986383eeca7de124bb426163974c1dc3ce01b7c3d12483b17b540c7909ac7fd18cfc98dea9a59fa99734a21c0a4ee70fdd91ca412a39a1254f58aefa207
 
 :orphan:
 
-.. title:: Kynema API: kynema_fmb::dof::CreateConstraintFreedomTable&lt; DeviceType &gt; Struct Template Reference
+.. title:: Kynema-FMB API: kynema_fmb::dof::CreateConstraintFreedomTable&lt; DeviceType &gt; Struct Template Reference
 
 CreateConstraintFreedomTable&lt; DeviceType &gt; Struct Template Reference
 ==========================================================================

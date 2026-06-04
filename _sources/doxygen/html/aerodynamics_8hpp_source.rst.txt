@@ -1,8 +1,8 @@
-.. meta::7442053cffe830a3e154d359c8e2b23dbd5bc3ac0aa702e29801ea6bec1d0fd5d632831982353af76685066e245b01a3bead201c8e53e911482ab6cf55099b6d
+.. meta::73e63410489810e4952a77f69304ecf200a061f0d3b515d78df3878b993003a0f8ec1ebb46b0c165aabbc88d96ea321cb2ecbd40bdcccec5fe3d7fe3de5a97dc
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics.hpp Source File
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics.hpp Source File
 =========================================================================================================

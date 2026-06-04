@@ -1,8 +1,8 @@
-.. meta::eaae462fab6d84f3ee0868252ea2947c396ca512d32c6e4d4e5d9a2413f66712469aef0d3f6614483b0aa0465b9b56d771312baad00fbe7d19ed74346e248820
+.. meta::479544e3e1879e4987b4ba80e61570102a47b1727bc53f30f6bc1effd901ed374b81947b317fa02a57dd5b153021d862d057eec9aa0897004f8b7d6696fe88c9
 
 :orphan:
 
-.. title:: Kynema API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/interpolation.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/interpolation.hpp File Reference
 
 /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/interpolation.hpp File Reference
 ============================================================================================
