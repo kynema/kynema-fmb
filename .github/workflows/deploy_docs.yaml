@@ -25,16 +25,18 @@ jobs:
         run: |
           git clone https://github.com/spack/spack.git
           source spack/share/spack/setup-env.sh
+          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
+          spack repo list
           spack compiler find
           spack install googletest
-          spack install cppcheck@2.18.0
+          spack install cppcheck
           spack install netcdf-c
           spack install yaml-cpp
           spack install suite-sparse
           spack install superlu
           spack install rosco@2.9.0
           spack install openfast
-          spack install kokkos-kernel
+          spack install kokkos-kernels
           spack install eigen@5.0.1
       - name: Set up Python
         uses: actions/setup-python@v5
