@@ -24,5 +24,5 @@ Checks: "bugprone*,
 CheckOptions:
   readability-function-cognitive-complexity.IgnoreMacros: 'true'
 WarningsAsErrors: ''
-HeaderFilterRegex: '^.*kynema-fmb/src/.*\.h(pp)?$'
+HeaderFilterRegex: '^.*/src/.*\.h(pp)?$'
 FormatStyle:     none
