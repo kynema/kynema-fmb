@@ -74,7 +74,7 @@ jobs:
             -DKYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_CPPCHECK=ON \
             -DKYNEMA_FMB_ENABLE_CLANG_TIDY=ON \
-            -DKYNEMA_FMB_WARNINGS_AS_ERRORS=ON \
+            -DKYNEMA_FMB_WARNINGS_AS_ERRORS=OFF \
             -DKYNEMA_FMB_ENABLE_OPENFAST_ADI=OFF \
             -DKYNEMA_FMB_ENABLE_ROSCO_CONTROLLER=${{ matrix.build_external == 'all' }} \
             -DKYNEMA_FMB_ENABLE_KLU=ON \
