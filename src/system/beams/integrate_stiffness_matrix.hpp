@@ -86,7 +86,7 @@ struct IntegrateStiffnessMatrixElement {
             const auto KD1_local = subview(qp_KD1, qp, ALL);
             const auto KD2_local = subview(qp_KD2, qp, ALL);
             const auto PD2_local = subview(qp_PD2, qp, ALL);
-            for (std::size_t component = 0; component < 36; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{36}; ++component) {
                 const auto Kuu = simd_type(Kuu_local(component));
                 const auto Cuu = simd_type(Cuu_local(component));
                 const auto Quu = simd_type(Quu_local(component));
@@ -110,7 +110,7 @@ struct IntegrateStiffnessMatrixElement {
         );
 
         for (int lane = 0; lane < num_lanes; ++lane) {
-            for (std::size_t component = 0; component < 36; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{36}; ++component) {
                 M_slice(lane, component) = local_M[component][lane];
             }
         }

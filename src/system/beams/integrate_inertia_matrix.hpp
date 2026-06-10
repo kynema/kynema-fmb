@@ -80,7 +80,7 @@ struct IntegrateInertiaMatrixElement {
             const auto GD1_local = subview(qp_GD1, qp, ALL);
             const auto GD2_local = subview(qp_GD2, qp, ALL);
             const auto DD2_local = subview(qp_DD2, qp, ALL);
-            for (std::size_t i = 0; i < 36; ++i) {
+            for (std::size_t i = 0U; i < std::size_t{36}; ++i) {
                 const auto Muu = simd_type(Muu_local(i));
                 const auto G_I = simd_type(G_I_local(i));
                 const auto Duu = simd_type(Duu_local(i));
@@ -102,7 +102,7 @@ struct IntegrateInertiaMatrixElement {
         );
 
         for (int lane = 0; lane < num_lanes; ++lane) {
-            for (std::size_t component = 0; component < 36; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{36}; ++component) {
                 M_slice(lane, component) = local_M[component][lane];
             }
         }

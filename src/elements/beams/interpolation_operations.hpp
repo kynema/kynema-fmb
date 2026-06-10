@@ -12,11 +12,11 @@ KOKKOS_INLINE_FUNCTION void InterpVector3(
         auto local_total = Kokkos::Array<double, 3>{};
         for (int node = 0; node < node_v.extent_int(0); ++node) {
             const auto phi = shape_matrix(node, qp);
-            for (std::size_t component = 0; component < 3; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{3}; ++component) {
                 local_total[component] += node_v(node, component) * phi;
             }
         }
-        for (std::size_t component = 0; component < 3; ++component) {
+        for (std::size_t component = 0U; component < std::size_t{3}; ++component) {
             qp_v(qp, component) = local_total[component];
         }
     }
@@ -30,11 +30,11 @@ KOKKOS_INLINE_FUNCTION void InterpVector4(
         auto local_total = Kokkos::Array<double, 4>{};
         for (int node = 0; node < node_v.extent_int(0); ++node) {
             const auto phi = shape_matrix(node, qp);
-            for (std::size_t component = 0; component < 4; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{4}; ++component) {
                 local_total[component] += node_v(node, component) * phi;
             }
         }
-        for (std::size_t component = 0; component < 4; ++component) {
+        for (std::size_t component = 0U; component < std::size_t{4}; ++component) {
             qp_v(qp, component) = local_total[component];
         }
     }
@@ -52,11 +52,11 @@ KOKKOS_INLINE_FUNCTION void InterpQuaternion(
             Kokkos::pow(qp_v(qp, 3), 2)
         );
         if (length == 0.) {
-            for (std::size_t component = 0; component < 4; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{4}; ++component) {
                 qp_v(qp, component) = length_zero_result[component];
             }
         } else {
-            for (std::size_t component = 0; component < 4; ++component) {
+            for (std::size_t component = 0U; component < std::size_t{4}; ++component) {
                 qp_v(qp, component) /= length;
             }
         }
@@ -71,7 +71,7 @@ KOKKOS_INLINE_FUNCTION void InterpVector3Deriv(
     InterpVector3(shape_matrix_deriv, node_v, qp_v);
     for (int qp = 0; qp < qp_v.extent_int(0); ++qp) {
         const auto jac = jacobian(qp);
-        for (std::size_t component = 0; component < qp_v.extent_int(1); ++component) {
+        for (std::size_t component = 0U; component < qp_v.extent(1); ++component) {
             qp_v(qp, component) /= jac;
         }
     }
@@ -85,7 +85,7 @@ KOKKOS_INLINE_FUNCTION void InterpVector4Deriv(
     InterpVector4(shape_matrix_deriv, node_v, qp_v);
     for (int qp = 0; qp < qp_v.extent_int(0); ++qp) {
         const auto jac = jacobian(qp);
-        for (std::size_t component = 0; component < qp_v.extent_int(1); ++component) {
+        for (std::size_t component = 0U; component < qp_v.extent(1); ++component) {
             qp_v(qp, component) /= jac;
         }
     }
