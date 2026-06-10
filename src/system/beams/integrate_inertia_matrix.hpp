@@ -80,7 +80,7 @@ struct IntegrateInertiaMatrixElement {
             const auto GD1_local = subview(qp_GD1, qp, ALL);
             const auto GD2_local = subview(qp_GD2, qp, ALL);
             const auto DD2_local = subview(qp_DD2, qp, ALL);
-            for (auto i = 0; i < 36; ++i) {
+            for (auto i = 0U; i < 36; ++i) {
                 const auto Muu = simd_type(Muu_local(i));
                 const auto G_I = simd_type(G_I_local(i));
                 const auto Duu = simd_type(Duu_local(i));
@@ -96,11 +96,13 @@ struct IntegrateInertiaMatrixElement {
         const auto num_lanes =
             Kokkos::min(width, static_cast<decltype(width)>(num_nodes - simd_node));
         const auto global_M = View<double** [36]>(gbl_M_.data(), num_nodes, num_nodes);
-        const auto M_slice =
-            subview(global_M, node, make_pair(simd_node, simd_node + num_lanes), ALL);
+        const auto M_slice = subview(
+            global_M, node, make_pair(simd_node, simd_node + static_cast<std::size_t>(num_lanes)),
+            ALL
+        );
 
-        for (auto lane = 0U; lane < num_lanes; ++lane) {
-            for (auto component = 0; component < 36; ++component) {
+        for (auto lane = 0; lane < num_lanes; ++lane) {
+            for (auto component = 0U; component < 36; ++component) {
                 M_slice(lane, component) = local_M[component][lane];
             }
         }
