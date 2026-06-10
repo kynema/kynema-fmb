@@ -64,7 +64,7 @@ struct IntegrateStiffnessMatrixElement {
         const auto qp_KD2 = ConstView<double* [36]>(qp_KD2_.data(), num_qps);
         const auto qp_PD2 = ConstView<double* [36]>(qp_PD2_.data(), num_qps);
 
-        for (auto qp = 0U; qp < num_qps; ++qp) {
+        for (std::size_t qp = 0U; qp < num_qps; ++qp) {
             const auto w = simd_type(qp_weight_(qp));
             const auto jacobian = simd_type(qp_jacobian_(qp));
             const auto phi_1 = simd_type(shape_interp_(node, qp));
@@ -86,7 +86,7 @@ struct IntegrateStiffnessMatrixElement {
             const auto KD1_local = subview(qp_KD1, qp, ALL);
             const auto KD2_local = subview(qp_KD2, qp, ALL);
             const auto PD2_local = subview(qp_PD2, qp, ALL);
-            for (auto component = 0; component < 36; ++component) {
+            for (std::size_t component = 0; component < 36; ++component) {
                 const auto Kuu = simd_type(Kuu_local(component));
                 const auto Cuu = simd_type(Cuu_local(component));
                 const auto Quu = simd_type(Quu_local(component));
@@ -104,11 +104,13 @@ struct IntegrateStiffnessMatrixElement {
         const auto num_lanes =
             Kokkos::min(width, static_cast<decltype(width)>(num_nodes - simd_node));
         const auto global_M = View<double** [36]>(gbl_M_.data(), num_nodes, num_nodes);
-        const auto M_slice =
-            subview(global_M, node, make_pair(simd_node, simd_node + num_lanes), ALL);
+        const auto M_slice = subview(
+            global_M, node, make_pair(simd_node, simd_node + static_cast<std::size_t>(num_lanes)),
+            ALL
+        );
 
-        for (auto lane = 0U; lane < num_lanes; ++lane) {
-            for (auto component = 0; component < 36; ++component) {
+        for (int lane = 0; lane < num_lanes; ++lane) {
+            for (std::size_t component = 0; component < 36; ++component) {
                 M_slice(lane, component) = local_M[component][lane];
             }
         }
