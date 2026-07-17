@@ -28,7 +28,10 @@ jobs:
           path: |
             ${{ github.workspace }}/spack
             ${{ github.workspace }}/spack-packages
-          key: linux-spack_v7
+          key: linux-spack_v8-${{ runner.os }}-${{ matrix.compiler }}-${{ matrix.build_type }}-${{ matrix.build_external }}
+          restore-keys: |
+            linux-spack_v8-${{ runner.os }}-${{ matrix.compiler }}-
+            linux-spack_v8-${{ runner.os }}-
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
