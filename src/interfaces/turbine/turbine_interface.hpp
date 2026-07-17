@@ -141,6 +141,9 @@ public:
      */
     void ReadCheckpointFile(const std::string& file_path);
 
+    /// @brief Allows time step index to be set externally (e.g., for checkpoint restart)
+    void SetTimeStepIndex(int idx) {state.time_step = idx;}
+
 private:
     Model model;                    ///< Kynema-FMB class for model construction
     components::Turbine turbine;    ///< Turbine model input/output data
