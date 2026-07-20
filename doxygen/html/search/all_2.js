@@ -29,7 +29,7 @@ var searchData=
   ['beambuilder_26',['BeamBuilder',['../classkynema__fmb_1_1interfaces_1_1components_1_1BeamBuilder.html',1,'kynema_fmb::interfaces::components']]],
   ['beamelement_27',['beamelement',['../structkynema__fmb_1_1BeamElement.html',1,'kynema_fmb::BeamElement'],['../structkynema__fmb_1_1BeamElement.html#a2686fb36d1428bb2a57ee8c9a755433f',1,'kynema_fmb::BeamElement::BeamElement()']]],
   ['beaminput_28',['BeamInput',['../structkynema__fmb_1_1interfaces_1_1components_1_1BeamInput.html',1,'kynema_fmb::interfaces::components']]],
-  ['beams_29',['beams',['../structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36',1,'kynema_fmb::Elements::beams'],['../structkynema__fmb_1_1Beams.html#a993885576da70c1374f7bb2fe7a155dd',1,'kynema_fmb::Beams::Beams()'],['../structkynema__fmb_1_1Beams.html',1,'kynema_fmb::Beams&lt; DeviceType &gt;']]],
+  ['beams_29',['beams',['../structkynema__fmb_1_1Beams.html#a993885576da70c1374f7bb2fe7a155dd',1,'kynema_fmb::Beams::Beams()'],['../structkynema__fmb_1_1Elements.html#a6e162d331d0221e10c13cfb45ad75b36',1,'kynema_fmb::Elements::beams'],['../structkynema__fmb_1_1Beams.html',1,'kynema_fmb::Beams&lt; DeviceType &gt;']]],
   ['beams_2ehpp_30',['beams.hpp',['../beams_8hpp.html',1,'']]],
   ['beams_5finput_2ehpp_31',['beams_input.hpp',['../beams__input_8hpp.html',1,'']]],
   ['beamsection_32',['beamsection',['../structkynema__fmb_1_1BeamSection.html#afcd82968a81e9757a5b66e56c10cbc0a',1,'kynema_fmb::BeamSection::BeamSection()'],['../structkynema__fmb_1_1BeamSection.html',1,'kynema_fmb::BeamSection']]],
