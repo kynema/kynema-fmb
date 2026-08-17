@@ -35,6 +35,7 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
+          sudo apt-get update
           git clone https://github.com/spack/spack.git
           source spack/share/spack/setup-env.sh
           spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
