@@ -107,5 +107,19 @@ To build the documentation:
 
        $ export PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.dylib
 
+   Alternatively, macOS users can avoid the cmake build described above and build the documentation directly with sphinx:
+
+   .. code-block:: bash
+
+        $ conda create -n kynema-env python=3.12
+        $ conda activate kynema-env
+        $ cd $KYNEMA_FMB
+        $ pip install -r docs/requirements.txt
+        $ cd $KYNEMA_FMB/docs/sphinx
+        $ sphinx-build -M html . html/
+        $ open html/html/index.html
+
+   This does not generate the source code documentation and will produce a warning about a missing ``doxygen/html/index`` file.
+
 The built documentation will be available in the ``docs/sphinx/html`` directory. For other output formats,
 see the `Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/builders/index.html>`_.
