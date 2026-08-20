@@ -215,7 +215,7 @@ Control commands and loads can be changed freely throughout the simulation, eith
 <p>Finally, we call the <code class="docutils literal notranslate"><span class="pre">Step</span></code> function to advance the simulation forward one time step.
 This function returns a boolean stating if the time step converged or not.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">converged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interface</span><span class="p">.</span><span class="n">Step</span><span class="p">();</span>
-<span class="p">[[</span><span class="n">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">converged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interface</span><span class="p">.</span><span class="n">Step</span><span class="p">();</span>
+<span class="p">[[</span><span class="na">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">converged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interface</span><span class="p">.</span><span class="n">Step</span><span class="p">();</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">converged</span><span class="p">);</span>
 </pre></div>
 </div>

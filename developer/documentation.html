@@ -193,6 +193,17 @@ to rely on comments to follow the code structure.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PYENCHANT_LIBRARY_PATH</span><span class="o">=</span>/opt/homebrew/lib/libenchant-2.dylib
 </pre></div>
 </div>
+<p>Alternatively, macOS users can avoid the CMake <code class="docutils literal notranslate"><span class="pre">docs</span></code> target (which runs Doxygen + Doxysphinx) and build only the Sphinx manual directly:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>kynema-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
+$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>kynema-env
+<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/kynema-fmb
+<span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
+<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>docs/sphinx
+<span class="w"> </span>$<span class="w"> </span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>.<span class="w"> </span>html
+<span class="w"> </span>$<span class="w"> </span>open<span class="w"> </span>html/index.html
+</pre></div>
+</div>
+<p>This does not generate the source code documentation and will produce a warning about a missing <code class="docutils literal notranslate"><span class="pre">doxygen/html/index</span></code> file.</p>
 </div>
 <p>The built documentation will be available in the <code class="docutils literal notranslate"><span class="pre">docs/sphinx/html</span></code> directory. For other output formats,
 see the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">Sphinx documentation</a>.</p>
