@@ -38,19 +38,9 @@ jobs:
           sudo apt-get update
           git clone https://github.com/spack/spack.git
           source spack/share/spack/setup-env.sh
-          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
-          spack repo list
           spack compiler find
-          spack install googletest
           spack install cppcheck
-          spack install netcdf-c
-          spack install yaml-cpp
-          spack install suite-sparse
-          spack install superlu
-          spack install rosco@2.9.0
-          spack install openfast
-          spack install kokkos-kernels
-          spack install eigen@5.0.1
+          spack install --only dependencies kynema-fmb+klu+rosco+superlu+superlu-mt+tests+umfpack ^superlu-mt cflags="-std=gnu17"
       - name: Clone
         uses: actions/checkout@v4
         with:
@@ -59,16 +49,7 @@ jobs:
       - name: Test Kynema-FMB
         run: |
           source spack/share/spack/setup-env.sh
-          spack load kokkos-kernels
-          spack load suite-sparse
-          spack load superlu
-          spack load googletest
-          spack load cppcheck
-          spack load netcdf-c
-          spack load yaml-cpp
-          spack load rosco@2.9.0
-          spack load openfast
-          spack load eigen
+          spack load kokkos-kernels suite-sparse superlu googletest cppcheck netcdf-c yaml-cpp rosco@2.9.0 eigen
           cd kynema-fmb
           mkdir build
           cd build
