@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Kynema-FMB: A Performance-Portable Flexible-Multibody-Dynamics Solver"
+authors:
+  - family-names: "Sprague"
+    given-names: "Michael"
+    orcid: "https://orcid.org/0000-0003-0519-0379"
+  - family-names: "Slaughter"
+    given-names: "Derek"
+  - family-names: "Dement"
+    given-names: "David"
+  - family-names: "Bhuiyan"
+    given-names: "Faisal"
+    orcid: "https://orcid.org/0009-0001-1029-0908"
+  - family-names: "Kuhn"
+    given-names: "Michael"
+    orcid: "https://orcid.org/0000-0002-5506-7777"
+  - family-names: "Crozier"
+    given-names: "Paul S."
+repository-code: "https://github.com/kynema/kynema-fmb"
+license: "MIT"
+version: "0.1.0"
