@@ -6,9 +6,13 @@
 #include <numeric>
 #include <vector>
 
+#include <Eigen/Dense>
 #include <gtest/gtest.h>
 
+#include "math/gl_quadrature.hpp"
+#include "math/gll_quadrature.hpp"
 #include "model/model.hpp"
+#include "step/extract_system_matrices.hpp"
 #include "step/step.hpp"
 #include "test_utilities.hpp"
 
@@ -55,7 +59,10 @@ TEST(DynamicBeamTest, Damping) {
     };
 
     // Node locations (GLL quadrature)
-    const auto node_s = std::vector{0., 0.17267316464601146, 0.5, 0.8273268353539885, 1.};
+    const auto num_nodes = 5UL;
+    const auto gll_locations = math::GetGllLocations(num_nodes - 1);
+    std::vector<double> node_s(gll_locations.size());
+    std::ranges::transform(gll_locations, node_s.begin(), [](auto xi) { return 0.5 * (xi + 1.0); });
 
     // Create model for managing nodes and constraints
     auto model = Model();
@@ -72,8 +79,18 @@ TEST(DynamicBeamTest, Damping) {
             .Build();
     });
 
-
     const double scalar_mu(0.0001);  // 1/s
+    const auto array_mu = std::array{0.0001, 0.0004, 0.0002,
+                                     0.0003, 0.0002, 0.0004}; // 1/s
+
+    const auto quad_order = 7UL;
+    const auto gl_locations = math::GetGlLocations(quad_order);
+    const auto gl_weights = math::GetGlWeights(quad_order);
+
+    std::vector<std::array<double, 2>> quad_points(gl_locations.size());
+    for (size_t i = 0; i < gl_locations.size(); ++i) {
+        quad_points[i] = {gl_locations[i], gl_weights[i]};
+    }
 
     // Add beam element
     model.AddBeamElement(
@@ -82,16 +99,8 @@ TEST(DynamicBeamTest, Damping) {
             BeamSection(0., mass_matrix, stiffness_matrix),
             BeamSection(1., mass_matrix, stiffness_matrix),
         },
-        std::array{
-            std::array{-0.9491079123427585, 0.1294849661688697},
-            std::array{-0.7415311855993943, 0.27970539148927664},
-            std::array{-0.40584515137739696, 0.3818300505051189},
-            std::array{6.123233995736766e-17, 0.4179591836734694},
-            std::array{0.4058451513773971, 0.3818300505051189},
-            std::array{0.7415311855993945, 0.27970539148927664},
-            std::array{0.9491079123427585, 0.1294849661688697},
-        },
-        std::array{scalar_mu, scalar_mu, scalar_mu, scalar_mu, scalar_mu, scalar_mu}
+        quad_points,
+        array_mu
     );
 
     // Fix first node position
@@ -100,11 +109,13 @@ TEST(DynamicBeamTest, Damping) {
     // Solution parameters
     const bool is_dynamic_solve(true);
     const size_t max_iter(5);
-    const double step_size(0.0001);  // seconds
+    // step_size and num_steps are updated below once the mode's natural frequency is known.
+    constexpr size_t steps_per_cycle = 128;
+    const double num_cycles = 1.5;
+    double step_size(0.0001);  // seconds
     const double rho_inf(1.0);
-    const int num_steps(1000);
 
-    // Create solver parameters
+    // Create solver parameters (step_size is refined after the eigenanalysis).
     auto parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
     // Create solver, elements, constraints, and state
@@ -120,6 +131,8 @@ TEST(DynamicBeamTest, Damping) {
     // (x/L)^3 is a rough approx of first bending mode,
     // technically need rotational velocity as well
 
+    /*
+    OLD Initialization
     // Start the beam with an initial velocity in the first component
     for (size_t i = 0; i < beam_node_ids.size(); ++i) {
         auto node_v = Kokkos::subview(state.v, beam_node_ids[i], Kokkos::ALL);
@@ -130,6 +143,84 @@ TEST(DynamicBeamTest, Damping) {
         node_v(4) = 0.;
         node_v(5) = 0.;
     }
+    */
+
+
+    // Mode to use for the initial velocity shape.
+    const size_t mode_ind = 0;
+
+    // Extract the system matrices at the initial (undeformed) state so we can
+    // solve the generalized eigenvalue problem K v = lambda M v.
+    auto matrices = step::ExtractSystemMatrices(parameters, solver, elements, state, constraints);
+
+    const auto row_map =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.row_map);
+    const auto col_ids =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.entries);
+    const auto mass_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.mass_matrix_values);
+    const auto stiff_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.stiffness_matrix_values);
+
+    // Apply the fixed root constraint by eliminating the first node's DOFs.
+    const auto num_reduced_dofs = 6 * (beam_node_ids.size() - 1);
+    Eigen::MatrixXd M = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
+    Eigen::MatrixXd K = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
+    for (size_t row = 6; row < num_reduced_dofs + 6; ++row) {
+        for (auto j = row_map(row); j < row_map(row + 1); ++j) {
+            const auto col = static_cast<size_t>(col_ids(j));
+            if (col >= 6 && col < num_reduced_dofs + 6) {
+                M(row - 6, col - 6) = mass_vals(j);
+                K(row - 6, col - 6) = stiff_vals(j);
+            }
+        }
+    }
+
+    const Eigen::GeneralizedEigenSolver<Eigen::MatrixXd> eigensolver(K, M);
+    const auto raw_eigenvalues = eigensolver.eigenvalues();
+    const auto raw_eigenvectors = eigensolver.eigenvectors();
+
+    // Sort eigenpairs by ascending real part of the eigenvalue.
+    std::vector<Eigen::Index> sort_indices(raw_eigenvalues.size());
+    std::iota(sort_indices.begin(), sort_indices.end(), 0);
+    std::stable_sort(
+        sort_indices.begin(), sort_indices.end(),
+        [&](Eigen::Index i, Eigen::Index j) {
+            return raw_eigenvalues(i).real() < raw_eigenvalues(j).real();
+        }
+    );
+
+    ASSERT_LT(mode_ind, static_cast<size_t>(raw_eigenvalues.size()));
+    const auto sorted_col = sort_indices[mode_ind];
+    const double eigenvalue = raw_eigenvalues(sorted_col).real();
+    const double omega = std::sqrt(eigenvalue);
+    Eigen::VectorXd eigvec = raw_eigenvectors.col(sorted_col).real();
+
+    // Find direction of mode shape
+    // Only check the first 4 of the last 6 components 
+    // interested in translation + torsion (not bending rotations)
+    Eigen::Index dominant_tip_dof = 0;
+    eigvec.tail(6).head(4).cwiseAbs().maxCoeff(&dominant_tip_dof);
+    const size_t dir_ind = static_cast<size_t>(dominant_tip_dof);
+
+    // Scale so |last node value in the dominant direction| / sqrt(eigenvalue) = 1e-3.
+    const double max_last_abs = eigvec.tail(6)(static_cast<Eigen::Index>(dir_ind));
+    eigvec *= (1.0e-3 * omega / max_last_abs);
+
+    // Set initial velocity from the (scaled) mode shape. The root node stays fixed.
+    for (size_t i = 1; i < beam_node_ids.size(); ++i) {
+        auto node_v = Kokkos::subview(state.v, beam_node_ids[i], Kokkos::ALL);
+        for (int j = 0; j < 6; ++j) {
+            node_v(j) = eigvec(static_cast<Eigen::Index>((i - 1) * 6 + j));
+        }
+    }
+
+    // Set num_steps to cover exactly 1.5 cycles of the natural frequency
+    // note, this is the undamped natural frequency so will be slightly off from
+    // a perfect (damped) 1.5 cycles.
+    step_size = (2. * std::numbers::pi) / (omega * static_cast<double>(steps_per_cycle));
+    const auto num_steps = static_cast<int>(steps_per_cycle*num_cycles);
+    parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
     // Time Stepping Loop for num_steps time steps saving the response at each step
 
@@ -163,14 +254,12 @@ TEST(DynamicBeamTest, Damping) {
         }
     }
 
-    // WriteMatrixToFile(displacement_history, "beam_damping_displacement_history.csv");
-    // WriteMatrixToFile(velocity_history, "beam_damping_velocity_history.csv");
+    WriteMatrixToFile(displacement_history, "beam_damping_displacement_history.csv");
+    WriteMatrixToFile(velocity_history, "beam_damping_velocity_history.csv");
 
     // Calculate the damping values based on log decrement
     // and verify against the analytical stiffness proportional damping
 
-    // This should match the direction of the initial velocity
-    constexpr size_t dir_ind = 0;
 
     // 3 translations + 4 quaternions per node
     const auto tip_displacement_col = 1 + dir_ind + 7*(beam_node_ids.size() - 1);
@@ -236,6 +325,7 @@ TEST(DynamicBeamTest, Damping) {
             eval_count < 3 && idx > 4;
             ++eval_count, --idx) 
     {
+        // Needs to actually refer to the array instead of the scalar here.
         ASSERT_NEAR(zeta[idx], scalar_mu * omega_n[idx] / 2.0, 1e-3*zeta[idx]);
     }
 }
