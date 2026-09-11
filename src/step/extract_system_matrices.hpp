@@ -19,7 +19,15 @@ namespace kynema_fmb {
 
 template <typename DeviceType>
 struct SystemMatrices {
-    using ValuesType = typename Solver<DeviceType>::CrsMatrixType::values_type::non_const_type;
+    using CrsMatrixType = typename Solver<DeviceType>::CrsMatrixType;
+    using ValuesType = typename CrsMatrixType::values_type::non_const_type;
+    using RowMapType = typename CrsMatrixType::staticcrsgraph_type::row_map_type;
+    using EntriesType = typename CrsMatrixType::staticcrsgraph_type::entries_type;
+
+    // CRS graph shared by all assembled matrices
+    RowMapType row_map;
+    EntriesType col_indices;
+
     ValuesType mass_matrix_values;
     ValuesType stiffness_matrix_values;
     ValuesType damping_matrix_values;
@@ -39,6 +47,10 @@ inline SystemMatrices<DeviceType> ExtractSystemMatrices(
     using ValuesType = typename SystemMatrices<DeviceType>::ValuesType;
     SystemMatrices<DeviceType> result;
     const auto num_values = solver.A.values.extent(0);
+
+    // Capture the shared sparsity pattern that is created with the solver.
+    result.row_map = solver.A.graph.row_map;
+    result.col_indices = solver.A.graph.entries;
 
     // Tangent depends only on state and base parameters — compute once
     auto params_for_tangent = base_parameters;

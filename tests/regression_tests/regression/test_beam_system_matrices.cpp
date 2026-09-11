@@ -123,7 +123,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
 
     // Check total mass and rotational inertia.
     // Add all entries in translation in a given direction or axial rotation to compare.
-    const auto row_map = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.row_map);
+    const auto row_map = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.row_map);
     const auto mass_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.mass_matrix_values);
 
     std::array<double, 6> total_inertia{0., 0., 0., 0., 0., 0.};
@@ -148,7 +148,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
     ASSERT_NEAR(total_inertia[5], mass_matrix[5][5]*length, 1e-12*mass_matrix[5][5]*length);
 
     // Check natural frequencies (undamped)
-    const auto col_ids = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.entries);
+    const auto col_ids = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.col_indices);
     const auto stiff_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.stiffness_matrix_values);
     const auto damp_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.damping_matrix_values);
 
@@ -253,7 +253,32 @@ TEST(DynamicBeamTest, SystemMatrices) {
         ASSERT_NEAR(zeta_mu, zeta_matrix, 1e-5);
     }
 
+    // Verify the extracted constraint matrix. For a fixed BC on the first node it should be
+    // zero everywhere except two Identity(6) blocks: first-node rows x Lagrange columns
+    // (B^T block) and Lagrange rows x first-node columns (B block).
+    const auto constraint_vals = Kokkos::create_mirror_view_and_copy(
+        Kokkos::HostSpace{}, matrices.constraint_matrix_values
+    );
 
+    const auto num_dofs = row_map.extent(0) - 1;
+    const auto num_system_dofs = 6 * node_s.size();
+    ASSERT_EQ(num_dofs, num_system_dofs + 6);
+
+    for (size_t row = 0; row < num_dofs; ++row) {
+        for (auto j = row_map(row); j < row_map(row + 1); ++j) {
+            const auto col = static_cast<size_t>(col_ids(j));
+            double expected = 0.;
+            // B^T block: first-node rows crossed with Lagrange columns.
+            if (row < 6 && col - num_system_dofs == row) {
+                expected = 1.;
+            }
+            // B block: Lagrange rows crossed with first-node columns.
+            if (col < 6 && row - num_system_dofs == col) {
+                expected = 1.;
+            }
+            ASSERT_NEAR(constraint_vals(j), expected, 1e-12);
+        }
+    }
 }
 
 

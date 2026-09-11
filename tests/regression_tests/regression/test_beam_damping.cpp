@@ -112,9 +112,9 @@ TEST_P(DynamicBeamTest, Damping) {
     auto matrices = step::ExtractSystemMatrices(parameters, solver, elements, state, constraints);
 
     const auto row_map =
-        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.row_map);
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.row_map);
     const auto col_ids =
-        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, solver.A.graph.entries);
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.col_indices);
     const auto mass_vals =
         Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.mass_matrix_values);
     const auto stiff_vals =
