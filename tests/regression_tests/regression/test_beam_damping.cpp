@@ -1,8 +1,5 @@
 #include <array>
 #include <cmath>
-#include <fstream>
-#include <initializer_list>
-#include <iostream>
 #include <numeric>
 #include <string>
 #include <vector>
@@ -16,25 +13,6 @@
 #include "step/extract_system_matrices.hpp"
 #include "step/step.hpp"
 #include "test_utilities.hpp"
-
-namespace {
-template <typename T>
-void WriteMatrixToFile(const std::vector<std::vector<T>>& data, const std::string& filename) {
-    std::ofstream file(filename);
-    if (!file.is_open()) {
-        std::cerr << "Unable to open file: " << filename << "\n";
-        return;
-    }
-    for (const auto& innerVector : data) {
-        for (const auto& element : innerVector) {
-            file << element << ",";
-        }
-        file << "\n";
-    }
-    file.close();
-}
-
-}  // namespace
 
 namespace kynema_fmb::tests {
 
@@ -113,22 +91,18 @@ TEST_P(DynamicBeamTest, Damping) {
     // Solution parameters
     const bool is_dynamic_solve(true);
     const size_t max_iter(5);
-    // step_size and num_steps are updated below once the mode's natural frequency is known.
     constexpr size_t steps_per_cycle = 256;
     const double num_cycles = 1.5;
-    double step_size(0.0001);  // seconds
-    const double rho_inf(1.0);
+    const auto num_steps = static_cast<int>(steps_per_cycle*num_cycles);
+    double step_size(0.0001);  // seconds, updated below based on natural frequency
+    const double rho_inf(1.0); // no numerical damping, want accurate model damping
 
-    // Create solver parameters (step_size is refined after the eigenanalysis).
+    // Create solver parameters (step_size is updated after the eigenanalysis).
     auto parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
     // Create solver, elements, constraints, and state
     auto [state, elements, constraints] = model.CreateSystem();
     auto solver = CreateSolver<>(state, elements, constraints);
-
-    // Eventually will want this to only track the tip displacement
-    // // Get ID of last node
-    // const auto last_node_id = beam_node_ids.back();
 
     // Mode to use for the initial velocity shape.
     const size_t mode_ind = GetParam();
@@ -186,13 +160,21 @@ TEST_P(DynamicBeamTest, Damping) {
     eigvec.tail(6).head(4).cwiseAbs().maxCoeff(&dominant_tip_dof);
     const size_t dir_ind = static_cast<size_t>(dominant_tip_dof);
 
+    // Determine which tip DOF corresponds to the current mode
+    // 3 translations + 4 quaternions per node
+    auto tip_dof = dir_ind;
+    if (dir_ind >= 3) {
+        // need to go past the first entry of the quaternion if it is a rotation.
+        tip_dof++;
+    }
+
     // Analytical modal properties from eigensolution / stiffness prop damping
     const double omega_eig = std::sqrt(eigenvalue);
     const double zeta_eig = array_mu[dir_ind] * omega_eig / 2.0;
 
-    // Scale so |last node value in the dominant direction| / sqrt(eigenvalue) = 1e-3.
-    const double max_last_abs = eigvec.tail(6)(static_cast<Eigen::Index>(dir_ind));
-    eigvec *= (1.0e-3 * omega_eig / max_last_abs);
+    // Scale so (last node value in the dominant direction) / sqrt(eigenvalue) = 1e-3.
+    const double tip_amplitude = eigvec.tail(6)(static_cast<Eigen::Index>(dir_ind));
+    eigvec *= (1.0e-3 * omega_eig / tip_amplitude);
 
     // Set initial velocity from the (scaled) mode shape. The root node stays fixed.
     for (size_t i = 1; i < beam_node_ids.size(); ++i) {
@@ -203,90 +185,48 @@ TEST_P(DynamicBeamTest, Damping) {
     }
 
     // Set num_steps to cover exactly 1.5 cycles of the natural frequency
-    // note, this is the undamped natural frequency so will be slightly off from
-    // a perfect (damped) 1.5 cycles.
-    step_size = (2. * std::numbers::pi) / (omega_eig * std::sqrt(1 - zeta_eig * zeta_eig) * static_cast<double>(steps_per_cycle));
-    const auto num_steps = static_cast<int>(steps_per_cycle*num_cycles);
+    // note, this is with the damped natural frequency.
+    step_size = (2. * std::numbers::pi) / (omega_eig * std::sqrt(1 - zeta_eig * zeta_eig) 
+                                            * static_cast<double>(steps_per_cycle));
     parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
     // Time Stepping Loop for num_steps time steps saving the response at each step
-
-    std::vector<std::vector<double>> displacement_history;
-    displacement_history.reserve(num_steps);
-    std::vector<std::vector<double>> velocity_history;
-    velocity_history.reserve(num_steps);
+    std::vector<double> tip_dof_history;
+    tip_dof_history.reserve(num_steps);
 
     for ([[maybe_unused]] auto i : std::views::iota(0, num_steps)) {
         auto converged = Step(parameters, solver, elements, state, constraints);
         EXPECT_TRUE(converged);
 
         const auto q_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), state.q);
-        auto& displacement_row = displacement_history.emplace_back();
-        displacement_row.reserve(1 + q_host.extent(0) * q_host.extent(1));
-        displacement_row.push_back(static_cast<double>(state.time_step) * step_size);
-        for (size_t node = 0; node < q_host.extent(0); ++node) {
-            for (size_t dof = 0; dof < q_host.extent(1); ++dof) {
-                displacement_row.push_back(q_host(node, dof));
-            }
-        }
+        tip_dof_history.push_back(q_host(beam_node_ids.back(), tip_dof));
 
-        const auto v_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), state.v);
-        auto& velocity_row = velocity_history.emplace_back();
-        velocity_row.reserve(1 + v_host.extent(0) * v_host.extent(1));
-        velocity_row.push_back(static_cast<double>(state.time_step) * step_size);
-        for (size_t node = 0; node < v_host.extent(0); ++node) {
-            for (size_t dof = 0; dof < v_host.extent(1); ++dof) {
-                velocity_row.push_back(v_host(node, dof));
-            }
-        }
     }
-
-    const auto suffix = "_mode" + std::to_string(mode_ind) + ".csv";
-    WriteMatrixToFile(displacement_history, "beam_damping_displacement_history" + suffix);
-    WriteMatrixToFile(velocity_history, "beam_damping_velocity_history" + suffix);
 
     // Calculate the damping values based on log decrement
     // and verify against the analytical stiffness proportional damping
     // Also check the natural frequency
 
-
-    // Determine which tip DOF corresponds to the current mode
-    // 3 translations + 4 quaternions per node
-    auto tip_displacement_col = 1 + dir_ind + 7*(beam_node_ids.size() - 1);
-    if (dir_ind >= 3) {
-        // need to go past the first entry of the quaternion if it is a rotation.
-        tip_displacement_col++;
-    }
-
-    std::vector<size_t> peak_inds;
     // Only simulating two peaks
-    peak_inds.reserve(2);
+    std::vector<double> peak_times; // Peak times are just (peak_inds + 1) * step_size
+    peak_times.reserve(2);
+    std::vector<double> peak_vals;
+    peak_vals.reserve(2);
 
-    for (size_t i = 1; i + 1 < displacement_history.size(); ++i) {
-        const auto prev = displacement_history[i - 1][tip_displacement_col];
-        const auto curr = displacement_history[i][tip_displacement_col];
-        const auto next = displacement_history[i + 1][tip_displacement_col];
+    for (size_t i = 1; i + 1 < tip_dof_history.size(); ++i) {
+        const auto prev = tip_dof_history[i - 1];
+        const auto curr = tip_dof_history[i];
+        const auto next = tip_dof_history[i + 1];
         if (curr > 0. && curr > prev && curr > next) {
             // Require peaks > 0 to avoid undefined log below.
-            peak_inds.push_back(i);
+            peak_times.push_back(step_size * (i+1));
+            peak_vals.push_back(tip_dof_history[i]);
         }
     }
 
     // Should have exactly two peaks by doing 1.5 cycles
     // starting towards the positive direction.
-    ASSERT_EQ(peak_inds.size(), 2U);
-
-    std::vector<double> peak_vals;
-    peak_vals.reserve(peak_inds.size());
-
-    // Peak times are really just (peak_inds + 1) * step_size
-    std::vector<double> peak_times;
-    peak_times.reserve(peak_inds.size());
-    
-    for (const auto peak_ind : peak_inds) {
-        peak_vals.push_back(displacement_history[peak_ind][tip_displacement_col]);
-        peak_times.push_back(displacement_history[peak_ind][0]);
-    }
+    ASSERT_EQ(peak_times.size(), 2U);
 
     constexpr auto two_pi = 2. * std::numbers::pi;
 
@@ -296,8 +236,6 @@ TEST_P(DynamicBeamTest, Damping) {
                          / std::sqrt(1. - zeta_num * zeta_num);
 
     // _num = time integration, _eig = eigensolution
-
-
     // Tolerances that pass with 256 time steps/cycle
     ASSERT_NEAR(zeta_num, zeta_eig, 4e-4 * zeta_eig);
     ASSERT_NEAR(omega_num, omega_eig, 1e-6 * omega_eig);
@@ -306,9 +244,9 @@ TEST_P(DynamicBeamTest, Damping) {
     // ASSERT_NEAR(zeta_num, zeta_eig, 2e-5 * zeta_eig);
     // ASSERT_NEAR(omega_num, omega_eig, 1e-6 * omega_eig);
 
-    // These tolerances pass with 8192 steps/cycle for first 6 modes,
-    // helps verify convergence, but keeping test at faster/fewer steps
-    // with above tolerances.
+    // // These tolerances pass with 8192 steps/cycle for first 6 modes,
+    // // helps verify convergence, but keeping test at faster/fewer steps
+    // // with above tolerances.
     // ASSERT_NEAR(zeta_num, zeta_eig, 2e-6 * zeta_eig);
     // ASSERT_NEAR(omega_num, omega_eig, 1e-8 * omega_eig);
 }
