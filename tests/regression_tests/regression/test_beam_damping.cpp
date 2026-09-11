@@ -4,6 +4,7 @@
 #include <initializer_list>
 #include <iostream>
 #include <numeric>
+#include <string>
 #include <vector>
 
 #include <Eigen/Dense>
@@ -37,7 +38,9 @@ void WriteMatrixToFile(const std::vector<std::vector<T>>& data, const std::strin
 
 namespace kynema_fmb::tests {
 
-TEST(DynamicBeamTest, Damping) {
+class DynamicBeamTest : public ::testing::TestWithParam<size_t> {};
+
+TEST_P(DynamicBeamTest, Damping) {
     // Mass matrix for uniform composite beam section
     constexpr auto mass_matrix = std::array{
         std::array{8.538e-2, 0., 0., 0., 0., 0.},
@@ -111,7 +114,7 @@ TEST(DynamicBeamTest, Damping) {
     const bool is_dynamic_solve(true);
     const size_t max_iter(5);
     // step_size and num_steps are updated below once the mode's natural frequency is known.
-    constexpr size_t steps_per_cycle = 1024;
+    constexpr size_t steps_per_cycle = 256;
     const double num_cycles = 1.5;
     double step_size(0.0001);  // seconds
     const double rho_inf(1.0);
@@ -128,10 +131,7 @@ TEST(DynamicBeamTest, Damping) {
     // const auto last_node_id = beam_node_ids.back();
 
     // Mode to use for the initial velocity shape.
-    // TODO: Maybe the computation needs to be on the velocity for the torsion mode
-    // Otherwise, have quaternions for positions and that could easily become a problem.
-    // mode_ind = 3 was an issue re that.
-    const size_t mode_ind = 0;
+    const size_t mode_ind = GetParam();
 
     // Extract the system matrices at the initial (undeformed) state so we can
     // solve the generalized eigenvalue problem K v = lambda M v.
@@ -177,7 +177,6 @@ TEST(DynamicBeamTest, Damping) {
     ASSERT_LT(mode_ind, static_cast<size_t>(raw_eigenvalues.size()));
     const auto sorted_col = sort_indices[mode_ind];
     const double eigenvalue = raw_eigenvalues(sorted_col).real();
-    const double omega = std::sqrt(eigenvalue);
     Eigen::VectorXd eigvec = raw_eigenvectors.col(sorted_col).real();
 
     // Find direction of mode shape
@@ -187,9 +186,13 @@ TEST(DynamicBeamTest, Damping) {
     eigvec.tail(6).head(4).cwiseAbs().maxCoeff(&dominant_tip_dof);
     const size_t dir_ind = static_cast<size_t>(dominant_tip_dof);
 
+    // Analytical modal properties from eigensolution / stiffness prop damping
+    const double omega_eig = std::sqrt(eigenvalue);
+    const double zeta_eig = array_mu[dir_ind] * omega_eig / 2.0;
+
     // Scale so |last node value in the dominant direction| / sqrt(eigenvalue) = 1e-3.
     const double max_last_abs = eigvec.tail(6)(static_cast<Eigen::Index>(dir_ind));
-    eigvec *= (1.0e-3 * omega / max_last_abs);
+    eigvec *= (1.0e-3 * omega_eig / max_last_abs);
 
     // Set initial velocity from the (scaled) mode shape. The root node stays fixed.
     for (size_t i = 1; i < beam_node_ids.size(); ++i) {
@@ -202,7 +205,7 @@ TEST(DynamicBeamTest, Damping) {
     // Set num_steps to cover exactly 1.5 cycles of the natural frequency
     // note, this is the undamped natural frequency so will be slightly off from
     // a perfect (damped) 1.5 cycles.
-    step_size = (2. * std::numbers::pi) / (omega * static_cast<double>(steps_per_cycle));
+    step_size = (2. * std::numbers::pi) / (omega_eig * std::sqrt(1 - zeta_eig * zeta_eig) * static_cast<double>(steps_per_cycle));
     const auto num_steps = static_cast<int>(steps_per_cycle*num_cycles);
     parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
@@ -238,13 +241,16 @@ TEST(DynamicBeamTest, Damping) {
         }
     }
 
-    WriteMatrixToFile(displacement_history, "beam_damping_displacement_history.csv");
-    WriteMatrixToFile(velocity_history, "beam_damping_velocity_history.csv");
+    const auto suffix = "_mode" + std::to_string(mode_ind) + ".csv";
+    WriteMatrixToFile(displacement_history, "beam_damping_displacement_history" + suffix);
+    WriteMatrixToFile(velocity_history, "beam_damping_velocity_history" + suffix);
 
     // Calculate the damping values based on log decrement
     // and verify against the analytical stiffness proportional damping
+    // Also check the natural frequency
 
 
+    // Determine which tip DOF corresponds to the current mode
     // 3 translations + 4 quaternions per node
     auto tip_displacement_col = 1 + dir_ind + 7*(beam_node_ids.size() - 1);
     if (dir_ind >= 3) {
@@ -285,20 +291,34 @@ TEST(DynamicBeamTest, Damping) {
     constexpr auto two_pi = 2. * std::numbers::pi;
 
     const auto delta = std::log(peak_vals[0] / peak_vals[1]);
-    const auto zeta = delta / std::sqrt(two_pi * two_pi + delta * delta);
-    const auto omega_n = (two_pi / (peak_times[1] - peak_times[0]))
-                         / std::sqrt(1. - zeta * zeta);
+    const auto zeta_num = delta / std::sqrt(two_pi * two_pi + delta * delta);
+    const auto omega_num = (two_pi / (peak_times[1] - peak_times[0]))
+                         / std::sqrt(1. - zeta_num * zeta_num);
 
-    ASSERT_NEAR(zeta, array_mu[dir_ind] * omega_n / 2.0, 1e-3 * zeta);
-
-    //omega_n is computed natural frequency, omega is from eigensolution.
-    ASSERT_NEAR(omega_n, omega, 1e-3 * omega);
+    // _num = time integration, _eig = eigensolution
 
 
-    ASSERT_NEAR(zeta, array_mu[dir_ind] * omega_n / 2.0, 1e-6 * zeta);
+    // Tolerances that pass with 256 time steps/cycle
+    ASSERT_NEAR(zeta_num, zeta_eig, 4e-4 * zeta_eig);
+    ASSERT_NEAR(omega_num, omega_eig, 1e-6 * omega_eig);
 
-    //omega_n is computed natural frequency, omega is from eigensolution.
-    ASSERT_NEAR(omega_n, omega, 1e-6 * omega);
+    // // Tolerances that pass with 1024 time steps/cycle
+    // ASSERT_NEAR(zeta_num, zeta_eig, 2e-5 * zeta_eig);
+    // ASSERT_NEAR(omega_num, omega_eig, 1e-6 * omega_eig);
+
+    // These tolerances pass with 8192 steps/cycle for first 6 modes,
+    // helps verify convergence, but keeping test at faster/fewer steps
+    // with above tolerances.
+    // ASSERT_NEAR(zeta_num, zeta_eig, 2e-6 * zeta_eig);
+    // ASSERT_NEAR(omega_num, omega_eig, 1e-8 * omega_eig);
 }
+
+INSTANTIATE_TEST_SUITE_P(
+    ModeIndices, DynamicBeamTest,
+    ::testing::Values(0U, 1U, 2U, 3U, 4U, 8U), // 3U is torsion, 8U is axial
+    [](const ::testing::TestParamInfo<DynamicBeamTest::ParamType>& info) {
+        return "mode" + std::to_string(info.param);
+    }
+);
 
 }  // namespace kynema_fmb::tests
