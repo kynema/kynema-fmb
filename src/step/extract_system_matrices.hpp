@@ -39,8 +39,7 @@ namespace step {
 template <typename DeviceType>
 inline SystemMatrices<DeviceType> ExtractSystemMatrices(
     const StepParameters& base_parameters, Solver<DeviceType>& solver,
-    Elements<DeviceType>& elements, State<DeviceType>& state,
-    Constraints<DeviceType>& constraints
+    Elements<DeviceType>& elements, State<DeviceType>& state, Constraints<DeviceType>& constraints
 ) {
     auto region = Kokkos::Profiling::ScopedRegion("Extract System Matrices");
 
@@ -54,7 +53,7 @@ inline SystemMatrices<DeviceType> ExtractSystemMatrices(
 
     // Tangent depends only on state and base parameters — compute once
     auto params_for_tangent = base_parameters;
-    params_for_tangent.h = 0.0; // effectively turn off the tangent operator
+    params_for_tangent.h = 0.0;  // effectively turn off the tangent operator
     step::UpdateTangentOperator(params_for_tangent, state);
 
     // --- Mass pass ---
@@ -131,4 +130,4 @@ inline SystemMatrices<DeviceType> ExtractSystemMatrices(
 }
 
 }  // namespace step
-}  // namespace kynema
+}  // namespace kynema_fmb

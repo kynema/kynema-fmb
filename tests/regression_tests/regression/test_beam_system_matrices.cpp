@@ -16,39 +16,33 @@
 #include "step/step.hpp"
 #include "test_utilities.hpp"
 
-
 namespace kynema_fmb::tests {
 
 TEST(DynamicBeamTest, SystemMatrices) {
-
     const double length(10.0);
 
     // Mass matrix for uniform composite beam section
     constexpr auto mass_matrix = std::array{
-        std::array{8.538e-2, 0., 0., 0., 0., 0.},
-        std::array{0., 8.538e-2, 0., 0., 0., 0.},
-        std::array{0., 0., 8.538e-2, 0., 0., 0.},
-        std::array{0., 0., 0., 1.4433e-2, 0., 0.},
-        std::array{0., 0., 0., 0., 0.40972e-2, 0.},
-        std::array{0., 0., 0., 0., 0., 1.0336e-2},
+        std::array{8.538e-2, 0., 0., 0., 0., 0.},   std::array{0., 8.538e-2, 0., 0., 0., 0.},
+        std::array{0., 0., 8.538e-2, 0., 0., 0.},   std::array{0., 0., 0., 1.4433e-2, 0., 0.},
+        std::array{0., 0., 0., 0., 0.40972e-2, 0.}, std::array{0., 0., 0., 0., 0., 1.0336e-2},
     };
 
     // Stiffness matrix for uniform composite beam section
     // Diagonal with high shear stiffness to match Euler-Bernoulli Theory
     constexpr auto stiffness_matrix = std::array{
-        std::array{1368.17e3, 0., 0., 0., 0., 0.},
-        std::array{0., 88.56e3*1e9, 0., 0., 0., 0.},
-        std::array{0., 0., 38.78e3*1e9, 0., 0., 0.},
-        std::array{0., 0., 0., 16.9600e3, 0., 0.},
-        std::array{0., 0., 0., 0., 59.1200e3, 0.},
-        std::array{0., 0., 0., 0., 0., 141.470e3},
+        std::array{1368.17e3, 0., 0., 0., 0., 0.},     std::array{0., 88.56e3 * 1e9, 0., 0., 0., 0.},
+        std::array{0., 0., 38.78e3 * 1e9, 0., 0., 0.}, std::array{0., 0., 0., 16.9600e3, 0., 0.},
+        std::array{0., 0., 0., 0., 59.1200e3, 0.},     std::array{0., 0., 0., 0., 0., 141.470e3},
     };
 
     // Node locations (GLL quadrature)
     const auto num_nodes = 10UL;
     const auto gll_locations = math::GetGllLocations(num_nodes - 1);
     std::vector<double> node_s(gll_locations.size());
-    std::ranges::transform(gll_locations, node_s.begin(), [](auto xi) { return 0.5 * (xi + 1.0); });
+    std::ranges::transform(gll_locations, node_s.begin(), [](auto xi) {
+        return 0.5 * (xi + 1.0);
+    });
 
     // Create model for managing nodes and constraints
     auto model = Model();
@@ -67,8 +61,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
 
     const double scalar_mu(0.0001);  // 1/s
 
-    const auto array_mu = std::array{0.0001, 0.0004, 0.0002,
-                                     0.0003, 0.0002, 0.0004};
+    const auto array_mu = std::array{0.0001, 0.0004, 0.0002, 0.0003, 0.0002, 0.0004};
 
     const auto quad_order = 20UL;
     const auto gl_locations = math::GetGlLocations(quad_order);
@@ -86,8 +79,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
             BeamSection(0., mass_matrix, stiffness_matrix),
             BeamSection(1., mass_matrix, stiffness_matrix),
         },
-        quad_points,
-        array_mu
+        quad_points, array_mu
     );
 
     // Fix first node position
@@ -124,7 +116,8 @@ TEST(DynamicBeamTest, SystemMatrices) {
     // Check total mass and rotational inertia.
     // Add all entries in translation in a given direction or axial rotation to compare.
     const auto row_map = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.row_map);
-    const auto mass_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.mass_matrix_values);
+    const auto mass_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.mass_matrix_values);
 
     std::array<double, 6> total_inertia{0., 0., 0., 0., 0., 0.};
 
@@ -138,19 +131,22 @@ TEST(DynamicBeamTest, SystemMatrices) {
     }
 
     // Translational mass in x,y,z
-    ASSERT_NEAR(total_inertia[0], mass_matrix[0][0]*length, 1e-12*mass_matrix[0][0]*length);
-    ASSERT_NEAR(total_inertia[1], mass_matrix[1][1]*length, 1e-12*mass_matrix[1][1]*length);
-    ASSERT_NEAR(total_inertia[2], mass_matrix[2][2]*length, 1e-12*mass_matrix[2][2]*length);
+    ASSERT_NEAR(total_inertia[0], mass_matrix[0][0] * length, 1e-12 * mass_matrix[0][0] * length);
+    ASSERT_NEAR(total_inertia[1], mass_matrix[1][1] * length, 1e-12 * mass_matrix[1][1] * length);
+    ASSERT_NEAR(total_inertia[2], mass_matrix[2][2] * length, 1e-12 * mass_matrix[2][2] * length);
 
     // Rotational Inertia
-    ASSERT_NEAR(total_inertia[3], mass_matrix[3][3]*length, 1e-12*mass_matrix[3][3]*length);
-    ASSERT_NEAR(total_inertia[4], mass_matrix[4][4]*length, 1e-12*mass_matrix[4][4]*length);
-    ASSERT_NEAR(total_inertia[5], mass_matrix[5][5]*length, 1e-12*mass_matrix[5][5]*length);
+    ASSERT_NEAR(total_inertia[3], mass_matrix[3][3] * length, 1e-12 * mass_matrix[3][3] * length);
+    ASSERT_NEAR(total_inertia[4], mass_matrix[4][4] * length, 1e-12 * mass_matrix[4][4] * length);
+    ASSERT_NEAR(total_inertia[5], mass_matrix[5][5] * length, 1e-12 * mass_matrix[5][5] * length);
 
     // Check natural frequencies (undamped)
-    const auto col_ids = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.col_indices);
-    const auto stiff_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.stiffness_matrix_values);
-    const auto damp_vals = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.damping_matrix_values);
+    const auto col_ids =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.col_indices);
+    const auto stiff_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.stiffness_matrix_values);
+    const auto damp_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.damping_matrix_values);
 
     // Manually applying the root node constraint by eliminating the first node.
     const auto num_reduced_dofs = 6 * (node_s.size() - 1);
@@ -193,9 +189,9 @@ TEST(DynamicBeamTest, SystemMatrices) {
     // Analytical frequencies and eigenvalues are noted in comments.
 
     // Bending in y
-    // Analytical (rad/s): [3.52, 22.0, 61.7] * sqrt(stiffness_matrix[4][4] / (mass[1][1] * length^4))
-    // omega = [ 29.29083827, 183.06773922, 513.4217959]
-    // omega**2 = [857.95320656,  33513.79714312, 263601.94050518]
+    // Analytical (rad/s): [3.52, 22.0, 61.7] * sqrt(stiffness_matrix[4][4] / (mass[1][1] *
+    // length^4)) omega = [ 29.29083827, 183.06773922, 513.4217959] omega**2 = [857.95320656,
+    // 33513.79714312, 263601.94050518]
     ASSERT_NEAR(eigenvalues[0].real(), 853.86, 1.0);
     ASSERT_NEAR(eigenvalues[3].real(), 33103.8, 10.0);
     ASSERT_NEAR(eigenvalues[5].real(), 254151., 100.0);
@@ -208,21 +204,20 @@ TEST(DynamicBeamTest, SystemMatrices) {
     ASSERT_NEAR(eigenvalues[8].real(), 576762., 100.0);
 
     // Torsion
-    // Analytical (rad/s): [0.5, 1.5, 2.5]* pi * sqrt(stiffness_matrix[3][3] / (mass[3][3] * length^2))
-    // omega = [170.27641391, 510.82924172, 851.38206954]
-    // omega**2 = [28994.05713405, 260946.51419623, 724851.42833421]
+    // Analytical (rad/s): [0.5, 1.5, 2.5]* pi * sqrt(stiffness_matrix[3][3] / (mass[3][3] *
+    // length^2)) omega = [170.27641391, 510.82924172, 851.38206954] omega**2 = [28994.05713405,
+    // 260946.51419623, 724851.42833421]
     ASSERT_NEAR(eigenvalues[2].real(), 28994.1, 1.0);
     ASSERT_NEAR(eigenvalues[6].real(), 260947., 10.0);
     ASSERT_NEAR(eigenvalues[9].real(), 724852., 10.0);
 
     // Axial
-    // Analytical (rad/s): [0.5, 1.5, 2.5]* pi * sqrt(stiffness_matrix[0][0] / (mass[0][0] * length^2))
-    // omega = [628.79898715, 1886.39696145, 3143.99493575]
-    // omega**2 = [395388.16624087, 3558493.49616779, 9884704.15602165]
+    // Analytical (rad/s): [0.5, 1.5, 2.5]* pi * sqrt(stiffness_matrix[0][0] / (mass[0][0] *
+    // length^2)) omega = [628.79898715, 1886.39696145, 3143.99493575] omega**2 = [395388.16624087,
+    // 3558493.49616779, 9884704.15602165]
     ASSERT_NEAR(eigenvalues[7].real(), 395388., 1.0);
     ASSERT_NEAR(eigenvalues[15].real(), 3.55849e6, 10.0);
     ASSERT_NEAR(eigenvalues[20].real(), 9.88471e6, 10.0);
-
 
     // Check damping ratios from matrix
     double omega;
@@ -235,7 +230,6 @@ TEST(DynamicBeamTest, SystemMatrices) {
     double zeta_matrix;
 
     for (size_t i = 0; i < 10; ++i) {
-
         eigvec = eigenvectors.col(i).real();
 
         // Find which mode direction and then the analytical damping from mu
@@ -256,9 +250,8 @@ TEST(DynamicBeamTest, SystemMatrices) {
     // Verify the extracted constraint matrix. For a fixed BC on the first node it should be
     // zero everywhere except two Identity(6) blocks: first-node rows x Lagrange columns
     // (B^T block) and Lagrange rows x first-node columns (B block).
-    const auto constraint_vals = Kokkos::create_mirror_view_and_copy(
-        Kokkos::HostSpace{}, matrices.constraint_matrix_values
-    );
+    const auto constraint_vals =
+        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.constraint_matrix_values);
 
     const auto num_dofs = row_map.extent(0) - 1;
     const auto num_system_dofs = 6 * node_s.size();
@@ -280,7 +273,6 @@ TEST(DynamicBeamTest, SystemMatrices) {
         }
     }
 }
-
 
 TEST(DynamicBeamTest, StepAndSystemMatrices) {
     // Test verifies that evaluating system matrices between
@@ -386,7 +378,6 @@ TEST(DynamicBeamTest, StepAndSystemMatrices) {
         Kokkos::deep_copy(result, Kokkos::subview(state.q, 4, Kokkos::make_pair(0, 3)));
         expect_kokkos_view_1D_equal(result, {-1.00926258E-06, -7.91711079E-07, 2.65017558E-03});
     }
-
 }
 
 }  // namespace kynema_fmb::tests

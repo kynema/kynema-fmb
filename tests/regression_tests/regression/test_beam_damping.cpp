@@ -21,31 +21,26 @@ class DynamicBeamTest : public ::testing::TestWithParam<size_t> {};
 TEST_P(DynamicBeamTest, Damping) {
     // Mass matrix for uniform composite beam section
     constexpr auto mass_matrix = std::array{
-        std::array{8.538e-2, 0., 0., 0., 0., 0.},
-        std::array{0., 8.538e-2, 0., 0., 0., 0.},
-        std::array{0., 0., 8.538e-2, 0., 0., 0.},
-        std::array{0., 0., 0., 1.4433e-2, 0., 0.},
-        std::array{0., 0., 0., 0., 0.40972e-2, 0.},
-        std::array{0., 0., 0., 0., 0., 1.0336e-2},
+        std::array{8.538e-2, 0., 0., 0., 0., 0.},   std::array{0., 8.538e-2, 0., 0., 0., 0.},
+        std::array{0., 0., 8.538e-2, 0., 0., 0.},   std::array{0., 0., 0., 1.4433e-2, 0., 0.},
+        std::array{0., 0., 0., 0., 0.40972e-2, 0.}, std::array{0., 0., 0., 0., 0., 1.0336e-2},
     };
 
     // Stiffness matrix for uniform composite beam section
     // Made diagonal so can test directional mu.
     constexpr auto stiffness_matrix = std::array{
-        std::array{1368.17e3, 0., 0., 0., 0., 0.},
-        std::array{0., 88.56e3, 0., 0., 0., 0.},
-        std::array{0., 0., 38.78e3, 0., 0., 0.},
-        std::array{0., 0., 0., 16.9600e3, 0., 0.},
-        std::array{0., 0., 0., 0., 59.1200e3, 0.},
-        std::array{0., 0., 0., 0., 0., 141.470e3},
+        std::array{1368.17e3, 0., 0., 0., 0., 0.}, std::array{0., 88.56e3, 0., 0., 0., 0.},
+        std::array{0., 0., 38.78e3, 0., 0., 0.},   std::array{0., 0., 0., 16.9600e3, 0., 0.},
+        std::array{0., 0., 0., 0., 59.1200e3, 0.}, std::array{0., 0., 0., 0., 0., 141.470e3},
     };
-    
 
     // Node locations (GLL quadrature)
     const auto num_nodes = 5UL;
     const auto gll_locations = math::GetGllLocations(num_nodes - 1);
     std::vector<double> node_s(gll_locations.size());
-    std::ranges::transform(gll_locations, node_s.begin(), [](auto xi) { return 0.5 * (xi + 1.0); });
+    std::ranges::transform(gll_locations, node_s.begin(), [](auto xi) {
+        return 0.5 * (xi + 1.0);
+    });
 
     // Create model for managing nodes and constraints
     auto model = Model();
@@ -62,8 +57,7 @@ TEST_P(DynamicBeamTest, Damping) {
             .Build();
     });
 
-    const auto array_mu = std::array{0.0001, 0.0004, 0.0002,
-                                     0.0003, 0.0002, 0.0004}; // 1/s
+    const auto array_mu = std::array{0.0001, 0.0004, 0.0002, 0.0003, 0.0002, 0.0004};  // 1/s
 
     const auto quad_order = 7UL;
     const auto gl_locations = math::GetGlLocations(quad_order);
@@ -81,8 +75,7 @@ TEST_P(DynamicBeamTest, Damping) {
             BeamSection(0., mass_matrix, stiffness_matrix),
             BeamSection(1., mass_matrix, stiffness_matrix),
         },
-        quad_points,
-        array_mu
+        quad_points, array_mu
     );
 
     // Fix first node position
@@ -93,9 +86,9 @@ TEST_P(DynamicBeamTest, Damping) {
     const size_t max_iter(5);
     constexpr size_t steps_per_cycle = 256;
     const double num_cycles = 1.5;
-    const auto num_steps = static_cast<int>(steps_per_cycle*num_cycles);
-    double step_size(0.0001);  // seconds, updated below based on natural frequency
-    const double rho_inf(1.0); // no numerical damping, want accurate model damping
+    const auto num_steps = static_cast<int>(steps_per_cycle * num_cycles);
+    double step_size(0.0001);   // seconds, updated below based on natural frequency
+    const double rho_inf(1.0);  // no numerical damping, want accurate model damping
 
     // Create solver parameters (step_size is updated after the eigenanalysis).
     auto parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
@@ -111,8 +104,7 @@ TEST_P(DynamicBeamTest, Damping) {
     // solve the generalized eigenvalue problem K v = lambda M v.
     auto matrices = step::ExtractSystemMatrices(parameters, solver, elements, state, constraints);
 
-    const auto row_map =
-        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.row_map);
+    const auto row_map = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.row_map);
     const auto col_ids =
         Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.col_indices);
     const auto mass_vals =
@@ -141,12 +133,9 @@ TEST_P(DynamicBeamTest, Damping) {
     // Sort eigenpairs by ascending real part of the eigenvalue.
     std::vector<Eigen::Index> sort_indices(raw_eigenvalues.size());
     std::iota(sort_indices.begin(), sort_indices.end(), 0);
-    std::stable_sort(
-        sort_indices.begin(), sort_indices.end(),
-        [&](Eigen::Index i, Eigen::Index j) {
-            return raw_eigenvalues(i).real() < raw_eigenvalues(j).real();
-        }
-    );
+    std::stable_sort(sort_indices.begin(), sort_indices.end(), [&](Eigen::Index i, Eigen::Index j) {
+        return raw_eigenvalues(i).real() < raw_eigenvalues(j).real();
+    });
 
     ASSERT_LT(mode_ind, static_cast<size_t>(raw_eigenvalues.size()));
     const auto sorted_col = sort_indices[mode_ind];
@@ -154,7 +143,7 @@ TEST_P(DynamicBeamTest, Damping) {
     Eigen::VectorXd eigvec = raw_eigenvectors.col(sorted_col).real();
 
     // Find direction of mode shape
-    // Only check the first 4 of the last 6 components 
+    // Only check the first 4 of the last 6 components
     // interested in translation + torsion (not bending rotations)
     Eigen::Index dominant_tip_dof = 0;
     eigvec.tail(6).head(4).cwiseAbs().maxCoeff(&dominant_tip_dof);
@@ -186,8 +175,8 @@ TEST_P(DynamicBeamTest, Damping) {
 
     // Set num_steps to cover exactly 1.5 cycles of the natural frequency
     // note, this is with the damped natural frequency.
-    step_size = (2. * std::numbers::pi) / (omega_eig * std::sqrt(1 - zeta_eig * zeta_eig) 
-                                            * static_cast<double>(steps_per_cycle));
+    step_size = (2. * std::numbers::pi) / (omega_eig * std::sqrt(1 - zeta_eig * zeta_eig) *
+                                           static_cast<double>(steps_per_cycle));
     parameters = StepParameters(is_dynamic_solve, max_iter, step_size, rho_inf);
 
     // Time Stepping Loop for num_steps time steps saving the response at each step
@@ -200,7 +189,6 @@ TEST_P(DynamicBeamTest, Damping) {
 
         const auto q_host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), state.q);
         tip_dof_history.push_back(q_host(beam_node_ids.back(), tip_dof));
-
     }
 
     // Calculate the damping values based on log decrement
@@ -208,7 +196,7 @@ TEST_P(DynamicBeamTest, Damping) {
     // Also check the natural frequency
 
     // Only simulating two peaks
-    std::vector<double> peak_times; // Peak times are just (peak_inds + 1) * step_size
+    std::vector<double> peak_times;  // Peak times are just (peak_inds + 1) * step_size
     peak_times.reserve(2);
     std::vector<double> peak_vals;
     peak_vals.reserve(2);
@@ -219,7 +207,7 @@ TEST_P(DynamicBeamTest, Damping) {
         const auto next = tip_dof_history[i + 1];
         if (curr > 0. && curr > prev && curr > next) {
             // Require peaks > 0 to avoid undefined log below.
-            peak_times.push_back(step_size * (i+1));
+            peak_times.push_back(step_size * (i + 1));
             peak_vals.push_back(tip_dof_history[i]);
         }
     }
@@ -232,8 +220,8 @@ TEST_P(DynamicBeamTest, Damping) {
 
     const auto delta = std::log(peak_vals[0] / peak_vals[1]);
     const auto zeta_num = delta / std::sqrt(two_pi * two_pi + delta * delta);
-    const auto omega_num = (two_pi / (peak_times[1] - peak_times[0]))
-                         / std::sqrt(1. - zeta_num * zeta_num);
+    const auto omega_num =
+        (two_pi / (peak_times[1] - peak_times[0])) / std::sqrt(1. - zeta_num * zeta_num);
 
     // _num = time integration, _eig = eigensolution
     // Tolerances that pass with 256 time steps/cycle
@@ -253,7 +241,7 @@ TEST_P(DynamicBeamTest, Damping) {
 
 INSTANTIATE_TEST_SUITE_P(
     ModeIndices, DynamicBeamTest,
-    ::testing::Values(0U, 1U, 2U, 3U, 4U, 8U), // 3U is torsion, 8U is axial
+    ::testing::Values(0U, 1U, 2U, 3U, 4U, 8U),  // 3U is torsion, 8U is axial
     [](const ::testing::TestParamInfo<DynamicBeamTest::ParamType>& info) {
         return "mode" + std::to_string(info.param);
     }

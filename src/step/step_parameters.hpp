@@ -22,7 +22,7 @@ struct StepParameters {
     double conditioner;               //< diagonal preconditioner value
     double absolute_convergence_tol;  //< absolute convergence tolerance
     double relative_convergence_tol;  //< relative convergence tolerance
-    size_t static_load_retries;  //< maximum number of load reduction attempts for static analysis
+    size_t static_load_retries;    //< maximum number of load reduction attempts for static analysis
     bool include_stiffness{true};  //< include stiffness terms in system matrix
 
     /**
