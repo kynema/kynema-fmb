@@ -31,25 +31,21 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          git clone https://github.com/spack/spack.git
-          source spack/share/spack/setup-env.sh
+          git clone https://github.com/spack/spack.git ${{github.workspace}}/spack
+          source ${{github.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
           spack external find
           spack install cppcheck
           spack install --only dependencies kynema-fmb+klu+rosco+superlu+superlu-mt+tests+umfpack ^superlu-mt cflags="-std=gnu17"
       - name: Clone
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
           path: kynema-fmb
-      - name: Test Kynema-FMB
+      - name: Configure Kynema-FMB
         run: |
-          source spack/share/spack/setup-env.sh
-          spack load kokkos-kernels suite-sparse superlu cppcheck googletest yaml-cpp rosco@2.9.0 eigen
-          cd kynema-fmb
-          mkdir build
-          cd build
-          cmake .. \
+          source ${{github.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env kynema-fmb cmake -B ${{runner.workspace}}/build \
             -DKYNEMA_FMB_ENABLE_SANITIZER_ADDRESS=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_CPPCHECK=ON \
@@ -62,6 +58,13 @@ jobs:
             -DKYNEMA_FMB_ENABLE_UMFPACK=ON \
             -DKYNEMA_FMB_ENABLE_SUPERLU=ON \
             -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} \
-            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
-          cmake --build .
-          ctest --output-on-failure --extra-verbose
+            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
+            ${{github.workspace}}
+      - name: Build Kynema-FMB
+        run: |
+          source ${{github.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env kynema-fmb cmake --build ${{runner.workspace}}/build
+      - name: Test Kynema-FMB
+        run: |
+          source ${{github.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env kynema-fmb ctest --test-dir ${{runner.workspack}}/build --output-on-failure --extra-verbose

@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: kynema-fmb
       - name: Install documentation dependencies
