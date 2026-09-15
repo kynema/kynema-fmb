@@ -41,7 +41,6 @@ jobs:
         uses: actions/checkout@v6
         with:
           submodules: true
-          path: kynema-fmb
       - name: Configure Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
