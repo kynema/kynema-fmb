@@ -37,12 +37,10 @@ jobs:
         run: |
           if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
             git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
-            source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-            spack compiler find
-            spack external find
-          else
-            source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           fi
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          spack compiler find
+          spack external find
           spack install cppcheck
           spack install --only dependencies "${SPACK_SPEC}"
       - name: Configure Kynema-FMB
