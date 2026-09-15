@@ -27,7 +27,7 @@ jobs:
           source spack/share/spack/setup-env.sh
           spack compiler find
           spack install cppcheck
-          spack install --only dependencies kynema-fmb+klu+rosco+superlu+superlu-mt+tests+umfpack
+          spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

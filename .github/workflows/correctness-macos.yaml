@@ -36,7 +36,7 @@ jobs:
           spack compiler find
           spack external find
           spack install cppcheck
-          spack install --only dependencies kynema-fmb+klu+rosco+superlu+superlu-mt+tests+umfpack ^superlu-mt cflags="-std=gnu17"
+          spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Clone
         uses: actions/checkout@v6
         with:
