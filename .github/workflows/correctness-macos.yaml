@@ -27,14 +27,15 @@ jobs:
           path: |
             ${{ runner.workspace }}/spack
             ${{ runner.workspace }}/spack-packages
-          key: macos-spack_v7
+          key: macos-spack-${{ hashFiles('.github/workflows/correctness-macos.yaml') }}
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          git clone https://github.com/spack/spack.git ${{runner.workspace}}/spack
-          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-          spack compiler find
-          spack external find
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh || {
+            git clone https://github.com/spack/spack.git ${{runner.workspace}}/spack
+            source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+            spack compiler find
+            spack external find
+          }
           spack install cppcheck
           spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Clone
