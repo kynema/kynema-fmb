@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: |
           if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
-            git clone --depth 1 https://github.com/spack/spack.git
+            git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
           fi
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
