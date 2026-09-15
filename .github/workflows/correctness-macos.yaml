@@ -30,12 +30,14 @@ jobs:
           key: macos-spack-${{ hashFiles('.github/workflows/correctness-macos.yaml') }}
       - name: Install Dependencies
         run: |
-          source ${{runner.workspace}}/spack/share/spack/setup-env.sh || {
-            git clone https://github.com/spack/spack.git ${{runner.workspace}}/spack
+          if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
+            git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
             source ${{runner.workspace}}/spack/share/spack/setup-env.sh
             spack compiler find
             spack external find
-          }
+          else
+            source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          fi
           spack install cppcheck
           spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Clone
@@ -67,4 +69,4 @@ jobs:
       - name: Test Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-          spack build-env kynema-fmb ctest --test-dir ${{runner.workspack}}/build --output-on-failure --extra-verbose
+          spack build-env kynema-fmb ctest --test-dir ${{runner.workspace}}/build --output-on-failure --extra-verbose

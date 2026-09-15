@@ -35,12 +35,14 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          source ${{runner.workspace}}/spack/share/spack/setup-env.sh || {
-            git clone https://github.com/spack/spack.git ${{runner.workspace}}/spack
+          if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
+            git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
             source ${{runner.workspace}}/spack/share/spack/setup-env.sh
             spack compiler find
             spack external find
-          }
+          else
+            source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          fi
           spack install cppcheck
           spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Clone
