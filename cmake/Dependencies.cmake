@@ -14,7 +14,7 @@ function(kynema_fmb_setup_dependencies)
     # Sparse Direct Linear Solvers
     #----------------------------------------
     if(KYNEMA_FMB_ENABLE_SUPERLU)
-        find_package(SuperLU REQUIRED)
+        find_package(superlu REQUIRED)
     endif()
 
     if(KYNEMA_FMB_ENABLE_SUPERLU_MT)

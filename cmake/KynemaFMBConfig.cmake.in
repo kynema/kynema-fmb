@@ -11,7 +11,7 @@ find_dependency(NetCDF REQUIRED)
 find_dependency(Eigen3 REQUIRED)
 
 if(@KYNEMA_FMB_ENABLE_SUPERLU@)
-  find_dependency(SuperLU REQUIRED)
+  find_dependency(superlu REQUIRED)
 endif()
 
 if(@KYNEMA_FMB_ENABLE_SUPERLU_MT@)
