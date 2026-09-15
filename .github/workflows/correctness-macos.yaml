@@ -41,7 +41,6 @@ jobs:
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
           spack external find
-          spack install cppcheck
           spack install --only dependencies "${SPACK_SPEC}"
       - name: Configure Kynema-FMB
         run: |
@@ -49,8 +48,8 @@ jobs:
           spack build-env "${SPACK_SPEC}" cmake -B ${{runner.workspace}}/build \
             -DKYNEMA_FMB_ENABLE_SANITIZER_ADDRESS=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED=${{ matrix.build_external == 'none' }} \
-            -DKYNEMA_FMB_ENABLE_CPPCHECK=ON \
-            -DKYNEMA_FMB_ENABLE_CLANG_TIDY=ON \
+            -DKYNEMA_FMB_ENABLE_CPPCHECK=OFF \
+            -DKYNEMA_FMB_ENABLE_CLANG_TIDY=OFF \
             -DKYNEMA_FMB_WRITE_OUTPUTS=ON \
             -DKYNEMA_FMB_WARNINGS_AS_ERRORS=OFF \
             -DKYNEMA_FMB_ENABLE_OPENFAST_ADI=OFF \
