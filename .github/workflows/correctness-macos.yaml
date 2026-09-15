@@ -20,6 +20,10 @@ jobs:
         build_type: [Release, Debug]
         build_external: [all, none]
     steps:
+      - name: Clone
+        uses: actions/checkout@v6
+        with:
+          submodules: true
       - name: Cache install Dependencies
         id: cache-dependencies
         uses: actions/cache@v5
@@ -40,10 +44,6 @@ jobs:
           fi
           spack install cppcheck
           spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
-      - name: Clone
-        uses: actions/checkout@v6
-        with:
-          submodules: true
       - name: Configure Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
