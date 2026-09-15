@@ -11,6 +11,7 @@ jobs:
   Correctness-MacOS:
     runs-on: macos-latest
     env:
+      SPACK_SPEC: "kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack"
       CMAKE_BUILD_PARALLEL_LEVEL: 4
       CTEST_PARALLEL_LEVEL: 2
     strategy:
@@ -43,11 +44,11 @@ jobs:
             source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           fi
           spack install cppcheck
-          spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
+          spack install --only dependencies "${SPACK_SPEC}"
       - name: Configure Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-          spack build-env kynema-fmb cmake -B ${{runner.workspace}}/build \
+          spack build-env "${SPACK_SPEC}" cmake -B ${{runner.workspace}}/build \
             -DKYNEMA_FMB_ENABLE_SANITIZER_ADDRESS=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_CPPCHECK=ON \
@@ -65,8 +66,8 @@ jobs:
       - name: Build Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-          spack build-env kynema-fmb cmake --build ${{runner.workspace}}/build
+          spack build-env "${SPACK_SPEC}" cmake --build ${{runner.workspace}}/build
       - name: Test Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
-          spack build-env kynema-fmb ctest --test-dir ${{runner.workspace}}/build --output-on-failure --extra-verbose
+          spack build-env "${SPACK_SPEC}" ctest --test-dir ${{runner.workspace}}/build --output-on-failure --extra-verbose
