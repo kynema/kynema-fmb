@@ -78,7 +78,7 @@ endif()
 
 if(KYNEMA_FMB_ENABLE_SUPERLU)
     target_link_system_libraries(kynema_fmb_library PUBLIC
-  superlu::superlu
+  SuperLU::SuperLU
 )
 endif()
 
