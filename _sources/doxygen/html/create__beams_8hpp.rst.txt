@@ -1,11 +1,11 @@
-.. meta::ac7a237dc7358fd2e5044dc38414b869b9e56465a9c01c62a971d3eaa16cee0c476a958e34ac56e099005edabf58b3ad260a3f62902fcf8317fab52775546d68
+.. meta::5f975ad8af692f1cd548216a5fb4b7ae988fed1e81cb8a98b75665f76a935acd9dac0371a7ac50d133cb055e201967cf25c872af0c89c941628d84853878ff9e
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/create_beams.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/create_beams.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/create\_beams.hpp File Reference
-======================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/create\_beams.hpp File Reference
+===========================================================================================
 
 .. container:: doxygen-content
 

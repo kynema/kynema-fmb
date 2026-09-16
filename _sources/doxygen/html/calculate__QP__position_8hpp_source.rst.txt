@@ -1,11 +1,11 @@
-.. meta::7d8dd6e370e7e47bc5f62833206a8e1cd6829dcd2b9b121a955bc7e04290186b3523ce04d1be780b6330e8f9320ee9aaabc9bd8615e9725c0df39cd491637e8d
+.. meta::d448062298f9b47751d104d453defda2c7f1b29a512e904d74d525032987885507722b89dd2220c92ad92e67ec39e55bdceebb7c461647092fdfcf3c2d656cc0
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/calculate_QP_position.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/calculate_QP_position.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/calculate\_QP\_position.hpp Source File
-=============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/calculate\_QP\_position.hpp Source File
+==================================================================================================
 
 .. container:: doxygen-content
 

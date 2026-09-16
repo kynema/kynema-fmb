@@ -1,11 +1,11 @@
-.. meta::3f7a2300669c6b8f4ae03287a87740506c9ab6fd8b1bfe822aea732b26851b682d04785c2c9d4e060976317895181f03d9c311dc4b34aa9011b1212a4f7a4245
+.. meta::ec3e017f05fe677beb7a253fe8ecb879cd8daabf1d55da29b2c2d2874095e6491d233ccb534c7fd77fbf42be36ee797f6dca73ea8c3cdf2d4595473edfae90d6
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/integrate_inertia_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/integrate_inertia_matrix.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/integrate\_inertia\_matrix.hpp Source File
-==============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/integrate\_inertia\_matrix.hpp Source File
+===================================================================================================
 
 .. container:: doxygen-content
 

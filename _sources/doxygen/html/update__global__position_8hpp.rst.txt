@@ -1,11 +1,11 @@
-.. meta::d3ee4b01e9039b8c3f16c72ae28caa44aa8699e12394672972ca524262d201a3e0dae53ef60a80799e5706d8c38a50611f2b6d333298c5f781f6a0e2afef7387
+.. meta::36d7683f0af9498241e91fc4e656c0f8f22b4dcc1d8479668fef85c9cf1a0573311dc3a1661d23b233550f200688f7a704ead2e0f9d96f9ccfb0c6adb54c3f8d
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_global_position.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/state/update_global_position.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update\_global\_position.hpp File Reference
-========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/state/update\_global\_position.hpp File Reference
+=============================================================================================
 
 .. container:: doxygen-content
 

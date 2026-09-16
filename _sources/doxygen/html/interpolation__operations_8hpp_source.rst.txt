@@ -1,11 +1,11 @@
-.. meta::3d0b3c4a4eba7482603edd6395b37dcc225344ac42c9aecd958c54fa8ac70fb6edbd0814caf82344d4ec2d3dc3d7cf466777a6b7082fdf0bfa85ab010db451d9
+.. meta::6d1065e11625c004aa5ab0509d358b347e7ecdf926b5e50dfb4bd4793c91bb386d5d062a94254e8926fffa6980a9deb6613ece453d46a985f9dc1a12b7b5250d
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolation_operations.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolation_operations.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolation\_operations.hpp Source File
-===============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolation\_operations.hpp Source File
+====================================================================================================
 
 .. container:: doxygen-content
 

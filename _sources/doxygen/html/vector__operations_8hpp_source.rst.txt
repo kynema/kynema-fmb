@@ -1,11 +1,11 @@
-.. meta::c38e2c4dfc2ad20d0153355b4bf6ebc5e6d93f2b1138d758bc06dc57a8ecddd3877c7baf750042f4c6e39cbfaae3b639afc9f46f49c5ee9b1343a4690ce5d79f
+.. meta::392063f6653ac55674c8a0c29adf021aa9ff42c490d947ea8f5e77969b88d2c0486722235430d9ddebddc73e0d2debeb427b0c36e789f363ce399ebd5b3f7309
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/vector_operations.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/math/vector_operations.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/vector\_operations.hpp Source File
-==============================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/math/vector\_operations.hpp Source File
+===================================================================================
 
 .. container:: doxygen-content
 

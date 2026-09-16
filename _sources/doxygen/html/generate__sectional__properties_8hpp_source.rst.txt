@@ -1,11 +1,11 @@
-.. meta::f4a7bb9638bb8cfb2c105f2f66bcdd19255b6fed7c066fae1170a14be6c73cd08184e98ad2b52b6764f4d3edd5afb5a53ca731a05400be6a0a844525310345b7
+.. meta::306ef81329281af616a0ba8039f82ed0a3c9115bd0ff2636b532a1d7407763eb30610f225f770ef488cb83c91de44f891f3e18f1be6e04e14ae34107f18a8ce1
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/generate_sectional_properties.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/generate_sectional_properties.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/generate\_sectional\_properties.hpp Source File
-=====================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/generate\_sectional\_properties.hpp Source File
+==========================================================================================================
 
 .. container:: doxygen-content
 

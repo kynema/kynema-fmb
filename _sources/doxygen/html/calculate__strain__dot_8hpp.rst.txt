@@ -1,11 +1,11 @@
-.. meta::cbd204e127a4a2d7329076d5eba37cd2844ca7ca6ee4f2b4d1de960f6636f86ace476b27736198b116b990bb65191ee6d8a673f19b56533ce896b093f8adc7da
+.. meta::b337eed9cd7d151ee18c1b39ccd5995aaafb15bd0f03923e6204c177ef793b4bca2b2fe7161a9548a80c62bf542d3f49423ae3f17e6a154eb226424ddf70207f
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_strain_dot.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate_strain_dot.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_strain\_dot.hpp File Reference
-=============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate\_strain\_dot.hpp File Reference
+==================================================================================================
 
 .. container:: doxygen-content
 

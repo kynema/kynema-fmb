@@ -1,11 +1,11 @@
-.. meta::e888750eff26e4fbc8c2248bc963200c40a5fb124a7238a9493cdd4ee4858ae08db45efb1ed8bbdc3f71f3bfb96798ebc4d86c5a430b190e5d9156b896dff963
+.. meta::3461c68531fb752c9027abc43d52ea413047b308a104804a2bfd873d0fe470b42cf25fff03a22f251c27af6ec34eb258da41d818cced353a92b2ba7ff56067c7
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_inertial_values.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_inertial_values.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_quadrature\_point\_inertial\_values.hpp Source File
-==================================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate\_quadrature\_point\_inertial\_values.hpp Source File
+=======================================================================================================================
 
 .. container:: doxygen-content
 

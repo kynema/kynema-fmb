@@ -1,11 +1,11 @@
-.. meta::d8238cdebf4bab6309b0bb2f8deedc3c393355b66edee1789522f59d02c72258ae0c757010dd62d85923af7fb68088ccc733f1bcaf20b24a4ed6a70730fe6b2e
+.. meta::70013859d3ff486b243598ec15f00546141fa6251e585d46cf68a97b34d276e777be7824f1c1a4b4acd3211535ca1427de3939b265a96048f71fe45bb4aaab38
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beam_quadrature.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/beam_quadrature.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/beam\_quadrature.hpp File Reference
-=========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/beam\_quadrature.hpp File Reference
+==============================================================================================
 
 .. container:: doxygen-content
 

@@ -1,11 +1,11 @@
-.. meta::871795d056f92d400036d91656ce5af43cdea3d9ca7ddf945289cd1c2bfa8d49082dbb7236dbd1b2e3a02e1bdfecc6734820e19fe3e0205f89cbd74f23a79bed
+.. meta::05a5d81cbcb92bc1fe61681ce0d750488f3e28536d876205f84e831f0134e9f1c7ef86f5c1d5ce7f7d6cc7503be577dc66189aa2ade5fdf54e78709d15238372
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_beams_to_sparse_matrix.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/solver/contribute_beams_to_sparse_matrix.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute\_beams\_to\_sparse\_matrix.hpp File Reference
-======================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/solver/contribute\_beams\_to\_sparse\_matrix.hpp File Reference
+===========================================================================================================
 
 .. container:: doxygen-content
 

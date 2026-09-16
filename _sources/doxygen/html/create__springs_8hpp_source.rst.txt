@@ -1,11 +1,11 @@
-.. meta::d0896edaa4eded5ea3d5d62551daf5f4d8f628776c55154caf4f7acfc04fe71d7c435259675bbbb2525e37e19304eeac3d9303811bcfe0e8463165d4b7cf3e4b
+.. meta::ad4c6061b3311c4098de029892cb1ea0d90bb87e08e0877da0be5834bf192edb0603e6b24fd817cd12695266861b56fe72989f28259ac72a55032e693560c99e
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/springs/create_springs.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/springs/create_springs.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/springs/create\_springs.hpp Source File
-=======================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/springs/create\_springs.hpp Source File
+============================================================================================
 
 .. container:: doxygen-content
 

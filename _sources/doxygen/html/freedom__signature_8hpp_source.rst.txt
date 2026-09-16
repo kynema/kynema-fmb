@@ -1,11 +1,11 @@
-.. meta::e185e57c828fcd5309f831a1281766bd48c7c9945f1ccfb38829dd327a34302716e710f59c01c52e541b0aa4fc6be35b7ce849632d61e33be87a3fc6e6eb611e
+.. meta::42b7e256f0d539e1613836104aff221ac80cd0cb2c64e24411712ed5c75e5ff642ef225803fc3719becbc8b028dd9821836902f3f017eb0fcb117037bd23864b
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof_management/freedom_signature.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/dof_management/freedom_signature.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/dof\_management/freedom\_signature.hpp Source File
-=========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/dof\_management/freedom\_signature.hpp Source File
+==============================================================================================
 
 .. container:: doxygen-content
 

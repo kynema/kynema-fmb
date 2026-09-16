@@ -1,11 +1,11 @@
-.. meta::96b3f6e326c4fab02645c81bab4e7efa3daefc9d9093cd1609ab90b14887e85d3be7e0e91bc4435fe17c7f231d854beaebdaea345b588ca861ebcd7f0639de83
+.. meta::fe300e3482fee529b05a95a8fc97cc31b9dd49a1db65d6c7b092b9341a6f22cd959aaaf3254c7b501cc78d5b11210343d598aed9043fa53c91f47ceb7b12890d
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/step/assemble_system_matrix.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/step/assemble\_system\_matrix.hpp Source File
-====================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/step/assemble\_system\_matrix.hpp Source File
+=========================================================================================
 
 .. container:: doxygen-content
 

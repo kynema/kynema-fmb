@@ -1,11 +1,11 @@
-.. meta::ce728ba0e2058cfd7b51393bd4e6a1f1fdd2cbf3b95c8f4a981a4c0cd3c6db58b98cfa4a88a28440a9e8b170a2a81eb8250036a18f02d4f494131aabdd442b1f
+.. meta::4d4f689d9c5fd6958184b5bd4fc7518253a70e2b76dec7a789fd8eb96a5b5215ba6f5a5dd47c5321db68bf7b06bc23d9ccd68c590dc6bec383630e3bb71e2303
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_revolute_joint_output.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate_revolute_joint_output.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_revolute\_joint\_output.hpp File Reference
-========================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate\_revolute\_joint\_output.hpp File Reference
+=============================================================================================================
 
 .. container:: doxygen-content
 

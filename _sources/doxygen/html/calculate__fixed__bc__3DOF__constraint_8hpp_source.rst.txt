@@ -1,11 +1,11 @@
-.. meta::fa39757892a5158670ef9c40fc7899ea93d18fc91fdc43af8af08df11eca05cade0553d48963fb5108391695ef3266311404f64818747e28d37ad225e9dbaf0f
+.. meta::fde778e5c569b12f28ad52047298666b44b7eb5ca6d89c12cac88de38500244ca58b948673b9eb67b51355104b5f08e032f08e476c415c287b8e3e988ff531c9
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_fixed_bc_3DOF_constraint.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate_fixed_bc_3DOF_constraint.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_fixed\_bc\_3DOF\_constraint.hpp Source File
-=========================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate\_fixed\_bc\_3DOF\_constraint.hpp Source File
+==============================================================================================================
 
 .. container:: doxygen-content
 

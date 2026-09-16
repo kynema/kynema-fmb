@@ -1,11 +1,11 @@
-.. meta::99f061c53db08aedf906c735746398fd2db8de7aa7fc056f56a772aa71c1063b5d1d1c95fb5b9f0a3668d284c42c77e8711b13c42931aba85443e27293c705f4
+.. meta::297ab41a995d88bb6d577b1df5e88dd07db20ee015c2d6e8f3787b000313d6b5d33b27e8c6052f845ec1a39c3412f895d6e600e28a44b21a7b96916ceb7e020d
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute_num_system_dofs.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/solver/compute_num_system_dofs.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/compute\_num\_system\_dofs.hpp File Reference
-===========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/solver/compute\_num\_system\_dofs.hpp File Reference
+================================================================================================
 
 .. container:: doxygen-content
 

@@ -1,0 +1,14 @@
+.. meta::c2bab851f007dcc2879e583aa2d06b6c9f52ada097e65845efee4c17a5ad17f5433f15a69fe09f313f5b27d508deb0e448b68ddf50beefb024dbc78fc2dc9626
+
+:orphan:
+
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/docs Directory Reference
+
+/home/runner/work/kynema-fmb/kynema-fmb/docs Directory Reference
+================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_a19fe06841ac39384869d34963a306a4.html

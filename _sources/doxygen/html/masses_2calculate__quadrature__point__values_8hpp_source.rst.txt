@@ -1,11 +1,11 @@
-.. meta::bb21ae2b971f31d66a98a8e2136ffe389ec04d505972662587bee4c2747dd3bf6f8b20376b9c16cef7fc31f119a50dba5f05c46d0e0b22bdd4957d8a06f7b84f
+.. meta::5590a600c8494a23387cf8fe7c62dcb309747ace0c0c8f33d2d85265ed964e5b4d78813393c5a3b6de002b6d42a8f83602244ac2b267d479dfaabb01f45895cd
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_quadrature_point_values.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate_quadrature_point_values.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_quadrature\_point\_values.hpp Source File
-=========================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate\_quadrature\_point\_values.hpp Source File
+==============================================================================================================
 
 .. container:: doxygen-content
 

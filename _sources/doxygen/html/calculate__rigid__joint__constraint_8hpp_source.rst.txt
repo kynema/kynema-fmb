@@ -1,11 +1,11 @@
-.. meta::70637a01f523fd8b674b1204942b415bd635de9ff6b3dd581c31abdf1cf48fdd914f7c1ef7dda98bf80cf0b433c7320789d0821f9a488702a99af7592e73f13b
+.. meta::a45e8ffaa0e41ce68ff765ae38be4077b1aaa53d60796f0a09576454016a592ce285638a8642708db1ac25ac81ad670089166a56ee3c9ada4b203ffa0ea763e3
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate_rigid_joint_constraint.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate_rigid_joint_constraint.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/calculate\_rigid\_joint\_constraint.hpp Source File
-======================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/constraints/calculate\_rigid\_joint\_constraint.hpp Source File
+===========================================================================================================
 
 .. container:: doxygen-content
 

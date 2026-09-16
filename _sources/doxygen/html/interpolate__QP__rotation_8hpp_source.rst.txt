@@ -1,11 +1,11 @@
-.. meta::4111782913002c5ce562069f83d85cab89e6f1af3d6939bcbf4c8684ab4b47c3aa1e2323f1c4eccb0c568f378e94fe24f95610c439633f915317fcb7f71a9b62
+.. meta::ea779be86c63b83b58f552987bf1eeee0ae54c1b895f9bb580f1103f2056cb92ad1dc7bc7cd623ec0e7ccf7225928e28689b3cdb6777c68db6db4d7f1874e3fd
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolate_QP_rotation.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolate_QP_rotation.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolate\_QP\_rotation.hpp Source File
-===============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolate\_QP\_rotation.hpp Source File
+====================================================================================================
 
 .. container:: doxygen-content
 

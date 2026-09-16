@@ -1,11 +1,11 @@
-.. meta::1bc2c232031990f101b5f3a71670f752aaba1cc261f3b10bd586be0c306fdaa1b7633b76aba7470ada6587c6561bf2537b718b29a848101cdf19649f25f60edb
+.. meta::cef94dbf90baf3e52fa9732bf2951654ed5570774d1d8536a684c0b2a93cc1f730b2384edf6dcd00c81273b9fdec594408dd63a3323065844b126cdf912607a4
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_damping.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/interpolate_to_quadrature_point_for_damping.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/interpolate\_to\_quadrature\_point\_for\_damping.hpp File Reference
-=======================================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/interpolate\_to\_quadrature\_point\_for\_damping.hpp File Reference
+============================================================================================================================
 
 .. container:: doxygen-content
 

@@ -1,11 +1,11 @@
-.. meta::0cd6ba6e6cfe7b206f51d634350091ed8de4f7d9692b67f9cd86fb52ec5890291cdc3172af361acaf9a07f61157b5fdb95308a99945ffa49a26d1c076228dc52
+.. meta::d53a163c1ca54cbe86db831a5b072b7fc786e7e6f60def673df4e6ef2910c42ffd158ad9fbc287070c09342e989081b51a993e1a2197f53e105364593a764f38
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/blade/blade_interface_builder.cpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/interfaces/blade/blade_interface_builder.cpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/blade/blade\_interface\_builder.cpp File Reference
-====================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/interfaces/blade/blade\_interface\_builder.cpp File Reference
+=========================================================================================================
 
 .. container:: doxygen-content
 

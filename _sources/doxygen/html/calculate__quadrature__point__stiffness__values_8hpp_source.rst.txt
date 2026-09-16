@@ -1,11 +1,11 @@
-.. meta::d8fef648b2f91d27992f7255d4496440ee4efb04ff1997e5ec0ecb175a99fbfc7adf96843469c5c3ca786a6c3be6dcc789be98aa62bd251f3dd0dcd2ee79e000
+.. meta::9e288fb98bf18428c1698e7769904e11dc2d54cf2bf3ebbf029175920952d68d3185457dcbfb51dd1bd3b2ca75985ceaf2ac8cd3ba00e606aec8b1a8e461bbc7
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_stiffness_values.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate_quadrature_point_stiffness_values.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_quadrature\_point\_stiffness\_values.hpp Source File
-===================================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate\_quadrature\_point\_stiffness\_values.hpp Source File
+========================================================================================================================
 
 .. container:: doxygen-content
 

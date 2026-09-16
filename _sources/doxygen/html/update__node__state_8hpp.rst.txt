@@ -1,11 +1,11 @@
-.. meta::fb2f07bedabf7aa30f6b427c051f5131015a56e4cb32cd8fcc7d9da0724027f3210498fddcd81737f6a09e460f12551992d8c911709abf8cca3af898d62653a7
+.. meta::422b1f7a01b3f7886ae821668b76415892d8d57bf14a7604401b4b345d16a2cdd6a8984583c5a63284add50c3488ff1c156169c8fba64bb10f253143cd0410ce
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/update_node_state.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/update_node_state.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/update\_node\_state.hpp File Reference
-==========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/update\_node\_state.hpp File Reference
+===============================================================================================
 
 .. container:: doxygen-content
 

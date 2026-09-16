@@ -1,11 +1,11 @@
-.. meta::1029e54f2b5a6e6b8b80ed0c64fa82ed5aa361f4e0165e85c9d9a8258e9a97a9195f21293ab4965a6979af4b2b59e0eec6d164928bbbc8376218409f831fd2e3
+.. meta::23816429a87ab1b0b80926b7a2d93269bf8181460861039f2c0239ab376045e7106175aaa5d7c68ce62c71e049d8464ae483ebf254106dcb1a7eb8e8f34bdcf3
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_gyroscopic_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate_gyroscopic_matrix.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_gyroscopic\_matrix.hpp Source File
-==================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate\_gyroscopic\_matrix.hpp Source File
+=======================================================================================================
 
 .. container:: doxygen-content
 

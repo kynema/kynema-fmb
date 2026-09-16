@@ -1,11 +1,11 @@
-.. meta::32606d50ac2a95e13ef9545103c5258141133ac0036aff2f592446a31a2e0a773c3bae1c7f07112424d2161402a2c89cc508dd6ad1c891c89855929e0a814084
+.. meta::4d9b4f21f3562ea402d7d8c6ea25c19a288b37d62d5871cacb0542fe5a6ac9f9a99e70563aa46f47e9d5ce8392b5b08d8f1dd39cd097ec04341f8eb6fb4e3460
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate_stiffness_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/springs/calculate_stiffness_matrix.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate\_stiffness\_matrix.hpp Source File
-==================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/springs/calculate\_stiffness\_matrix.hpp Source File
+=======================================================================================================
 
 .. container:: doxygen-content
 

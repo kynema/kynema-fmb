@@ -1,11 +1,11 @@
-.. meta::9ee7857f132ad63af99fd81f6fa63a3a0fe99bad168ebf1c0fcd76dc6a3c6acaa260e98729cd84fd671d1ff95568aa0237719c2456a01edf7a585e27262cf15d
+.. meta::9802b5eadc59947527c420e25d728f1b0ca186be9eea0a86693e264b99612a1d27552aee652508d383fefa74a2247f1248fbac7f768d3b0b4948ed6fffca5b83
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/least_squares_fit.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/math/least_squares_fit.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/least\_squares\_fit.hpp Source File
-===============================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/math/least\_squares\_fit.hpp Source File
+====================================================================================
 
 .. container:: doxygen-content
 

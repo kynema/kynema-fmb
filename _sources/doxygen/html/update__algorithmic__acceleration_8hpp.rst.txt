@@ -1,11 +1,11 @@
-.. meta::b1981c36503a357d13f51864b23105de417210c195325fce37ccd71c24c34354ad355f96ca17be49e191bf26bdf57041cfb97a1b66d37b936a9e7230b3e84166
+.. meta::9e62d9ec7781b539e7840a8ca312a422b3dd4c7200f0fa167372265b08906d56b3322f5ae7b24e4ae5ced4c47ba58ecac77421a70101f7ae9d2c360c9a828999
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update_algorithmic_acceleration.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/state/update_algorithmic_acceleration.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/state/update\_algorithmic\_acceleration.hpp File Reference
-=================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/state/update\_algorithmic\_acceleration.hpp File Reference
+======================================================================================================
 
 .. container:: doxygen-content
 

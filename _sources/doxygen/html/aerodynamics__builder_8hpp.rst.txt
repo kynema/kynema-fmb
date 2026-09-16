@@ -1,11 +1,11 @@
-.. meta::31d05f31fa49c45515d59df6ab9db63c9578e6495080a058e21ba5cd354df2ea6897fb5633dd59947a4e29fb885bc39aa741a3398131d6cc25a02260f73e03ce
+.. meta::fc922c7a47696c5e8d7e69e0712e559bde33ca9dcb28db21693531bb552420163da5d557b5309924874468bfb53ed73182070a398bb0ca8293266e960a441b03
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics_builder.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics_builder.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics\_builder.hpp File Reference
-=====================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/interfaces/components/aerodynamics\_builder.hpp File Reference
+==========================================================================================================
 
 .. container:: doxygen-content
 

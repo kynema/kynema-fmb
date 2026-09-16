@@ -1,11 +1,11 @@
-.. meta::d336386620e30b6efd29ed30745bd10a20a1c66dcec760519a2df1f125ddc158f9d21b2815e70b9cb4334270754cda5984b58a44c47841ef8cd17dac2ca7057c
+.. meta::e9881f5452b1eed49337218bcb3ace9a3400d8109586b958b7f5a48a466a45a77c9b979db507b356fd06def0384aae653d4213d3ca148fbf99d8e33409991ae0
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate_quadrature_point_values.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/springs/calculate_quadrature_point_values.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/springs/calculate\_quadrature\_point\_values.hpp File Reference
-=============================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/springs/calculate\_quadrature\_point\_values.hpp File Reference
+==================================================================================================================
 
 .. container:: doxygen-content
 

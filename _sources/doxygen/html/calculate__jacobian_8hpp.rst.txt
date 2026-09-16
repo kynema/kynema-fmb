@@ -1,11 +1,11 @@
-.. meta::346335aa84f8251c054c13cfc60d34054152b93a0a6477d212814b58df85a83e570ebee596562fa56f3c79386de6e39224b223a28e7d2f20b9cad26925d57fdc
+.. meta::8dce961ccde90db468b73e38a5c6cb2818e11f1b968d4a2067d20e328c7cd2335bb1df27f0d59b80b055cd7035c2dded1b7ce791ca162c1d7564e63edc1096d3
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/calculate_jacobian.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/calculate_jacobian.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/calculate\_jacobian.hpp File Reference
-============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/calculate\_jacobian.hpp File Reference
+=================================================================================================
 
 .. container:: doxygen-content
 

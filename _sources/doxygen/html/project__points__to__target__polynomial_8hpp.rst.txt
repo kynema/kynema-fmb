@@ -1,11 +1,11 @@
-.. meta::dd392d354760505102a9a4106b801591bfb1fd6c1685ac9ef39def3f456aea4f62d9e933bb28af7d6922492f4b18f4eff02810fff9dd12d73228a21932c18c07
+.. meta::7d97d95a8c7d977f5fb7707d913926e7ba1f0de4ea8ec48ea5d2f5a9d79eaf1660e8f3cc0d149005dfc6bc6401a0fcd7713fe72806ecfb1aabf965afa91073dd
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/project_points_to_target_polynomial.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/math/project_points_to_target_polynomial.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/math/project\_points\_to\_target\_polynomial.hpp File Reference
-======================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/math/project\_points\_to\_target\_polynomial.hpp File Reference
+===========================================================================================================
 
 .. container:: doxygen-content
 

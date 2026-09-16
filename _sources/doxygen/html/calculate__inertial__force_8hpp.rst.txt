@@ -1,11 +1,11 @@
-.. meta::ada4c406e377f8933cad6d7e8758bee489e4e0658d2ea596f448bb342f3a1efb96d5f172bcab9ec6b44eb4756f78c09ebcfbeab4f6616dad40b45729ff2c96fa
+.. meta::15730e79a94aa7209075ed4312594e6abc5a6cb348dfc96ce866138b540ec06cad98577bc415cfedbcee8351fb2c1cb0574b1d08756132e3f449b7a6c90fe911
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_inertial_force.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate_inertial_force.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_inertial\_force.hpp File Reference
-==================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate\_inertial\_force.hpp File Reference
+=======================================================================================================
 
 .. container:: doxygen-content
 

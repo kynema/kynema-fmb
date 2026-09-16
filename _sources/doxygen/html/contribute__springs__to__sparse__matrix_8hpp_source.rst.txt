@@ -1,11 +1,11 @@
-.. meta::499b02cbc15b5fe80612a4ecb74df8d2287e805f168cc9ee96d1108a1be8ef2d2ac19c3c7e368679d03ad3b6392a78888959512c92437f610822f29310923e69
+.. meta::192ea29c9d5407d374552cc835d25f38658be21cae8c626ec907d39faf6ab2d56a35bc707371dd64d3c504d36fce38953dc51b6813e197b991c99fc87ee9cb6e
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute_springs_to_sparse_matrix.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/solver/contribute_springs_to_sparse_matrix.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/contribute\_springs\_to\_sparse\_matrix.hpp Source File
-=====================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/solver/contribute\_springs\_to\_sparse\_matrix.hpp Source File
+==========================================================================================================
 
 .. container:: doxygen-content
 

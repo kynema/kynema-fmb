@@ -1,11 +1,11 @@
-.. meta::abde0740abafd2646d59d992565fca8276f64f1b9cdae19b9dd1ec2a6f9c479af5fcaf6afd2730ede73b7f31069274d68ee09845054829bf8421354888b2ac91
+.. meta::cb83807e98e6f66a25588f8222c68b197f3f46b02a7da614f068ae1cb27ae1a8b7e1e03d7b821877fb5b03b52618f8c8eca397c5c7b698ca092f1ec7a48be953
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/update_lambda_prediction.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/constraints/update_lambda_prediction.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/constraints/update\_lambda\_prediction.hpp Source File
-=============================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/constraints/update\_lambda\_prediction.hpp Source File
+==================================================================================================
 
 .. container:: doxygen-content
 

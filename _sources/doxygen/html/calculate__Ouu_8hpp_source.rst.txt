@@ -1,11 +1,11 @@
-.. meta::21cf60154d9207315149b8cbbf1c255b0c19681eeb987596d8b7211a570b64f04eee2787fb45779309ade2bc323355bb29b3154f07f382b3cf6fc7bf2e91f4c3
+.. meta::a491a9afdcb24fc00bd646301ac8ad4275d3bd58f137f2fe2c5bff5ef271edc910a0787099f33a3513fc94ba02ef37db8ca087dd99d3f8014dcb6d726b9c8b3f
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_Ouu.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate_Ouu.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_Ouu.hpp Source File
-==================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate\_Ouu.hpp Source File
+=======================================================================================
 
 .. container:: doxygen-content
 

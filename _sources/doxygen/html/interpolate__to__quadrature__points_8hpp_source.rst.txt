@@ -1,11 +1,11 @@
-.. meta::cea5c1c9f556315a433d4003345be38bb6693838903be137d88605f1eb79893fa40e12c308426135d9dfea7c70f1675c9bcf2f1c737d451ee9452e820217e5d3
+.. meta::c65f24d2f3e17dc931b46444fe42cd08fddbbdd0a8e4ef61911d831c998da596712c4b855a3da427b05a182f7959305b4a22175f0d286920181b8f7d4d1cc6ec
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolate_to_quadrature_points.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolate_to_quadrature_points.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/elements/beams/interpolate\_to\_quadrature\_points.hpp Source File
-=========================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams/interpolate\_to\_quadrature\_points.hpp Source File
+==============================================================================================================
 
 .. container:: doxygen-content
 

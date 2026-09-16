@@ -1,11 +1,11 @@
-.. meta::a1c4fa1ee326696df883955cab5489a52396192331d7b6721d25c4869593a807aeae5745adad46e033745d64a2afdf4bdd5f8714ad690da89e0fbf974e5ecc65
+.. meta::aa6db388eabe89d2e56e1590f2bce055588b71a4979134cb873acdf99358408bf3ecd5a512544478c2ea20bf001886078632b1191fbd5feb2f69bd984ebcc017
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate_P_D2.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate_P_D2.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/beams/calculate\_P\_D2.hpp Source File
-====================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/beams/calculate\_P\_D2.hpp Source File
+=========================================================================================
 
 .. container:: doxygen-content
 

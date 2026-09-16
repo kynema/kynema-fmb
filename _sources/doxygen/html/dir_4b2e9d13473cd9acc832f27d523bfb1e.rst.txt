@@ -1,0 +1,14 @@
+.. meta::f206d537c891a768a35e6b887712b01ac69bbf25167c9d8bb3f037538eb483dfcc75b0e80abb3bb25de4116e38eff1fa6af0054ff9a1e0ee3e33da795030cc2d
+
+:orphan:
+
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/utilities/aerodynamics Directory Reference
+
+/home/runner/work/kynema-fmb/kynema-fmb/src/utilities/aerodynamics Directory Reference
+======================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_4b2e9d13473cd9acc832f27d523bfb1e.html

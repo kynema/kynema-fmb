@@ -1,11 +1,11 @@
-.. meta::8531bfdb1207f0acb7650831782d254dc124294f26ba581b3cfad4c5272d307fed9d4d3b3bac5f429472757c3c8149b8156a38e8015e9370665788e1a61f2b5c
+.. meta::c47c843c7febdf19f66d3f1a5d0b4272c11881169565e11b0c88ceb16a9e1b98b5e91ea25a4b2a5a83a7e038948f2cb803a1c6200eec8f4ed002611b22000094
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_solve.hpp File Reference
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/solver/linear_solver/dss_solve.hpp File Reference
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/solver/linear\_solver/dss\_solve.hpp File Reference
-==========================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/solver/linear\_solver/dss\_solve.hpp File Reference
+===============================================================================================
 
 .. container:: doxygen-content
 

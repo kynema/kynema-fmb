@@ -1,0 +1,14 @@
+.. meta::84f027a74e8a1666a223860b5e01110c72ac41bb6012638194b08bb6bc7555d142bcec57f3988bef54f3561154a9ab7f824b19d2756a5cdd8f5ea45c8cbb1c3a
+
+:orphan:
+
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams Directory Reference
+
+/home/runner/work/kynema-fmb/kynema-fmb/src/elements/beams Directory Reference
+==============================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_300ca330423239f680f7aeba1db0c068.html

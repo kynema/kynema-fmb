@@ -1,11 +1,11 @@
-.. meta::8d5aa108ffe94a39d60e4dd873655aa71f98f985c127cc4e5b16c3c38634c30748807a5a817cf41d92200d1181d869f2de6b2b2d5c4c55ba2778321b87c639e8
+.. meta::1b996524c5af29b848bb7000ae808e7a23e6eb5a6269cf95c73a7ba59b93fdb58dcf3bccf36990768762013839af3a86779b24098e2d92e6de3c7736e0d53a24
 
 :orphan:
 
-.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate_mass_matrix_components.hpp Source File
+.. title:: Kynema-FMB API: /home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate_mass_matrix_components.hpp Source File
 
-/home/runner/work/kynema-fmb/kynema-fmb/kynema-fmb/src/system/masses/calculate\_mass\_matrix\_components.hpp Source File
-========================================================================================================================
+/home/runner/work/kynema-fmb/kynema-fmb/src/system/masses/calculate\_mass\_matrix\_components.hpp Source File
+=============================================================================================================
 
 .. container:: doxygen-content
 
