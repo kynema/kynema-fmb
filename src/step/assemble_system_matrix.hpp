@@ -46,13 +46,16 @@ inline void AssembleSystemMatrix(
             elements.masses.element_freedom_table, elements.masses.system_matrix_terms, solver.A
         }
     );
-    Kokkos::parallel_for(
-        "ContributeSpringsToSparseMatrix", springs_sparse_matrix_policy,
-        solver::ContributeSpringsToSparseMatrix<typename Solver<DeviceType>::CrsMatrixType>{
-            parameters.conditioner, elements.springs.element_freedom_signature,
-            elements.springs.element_freedom_table, elements.springs.stiffness_matrix_terms, solver.A
-        }
-    );
+    if (parameters.include_stiffness) {
+        Kokkos::parallel_for(
+            "ContributeSpringsToSparseMatrix", springs_sparse_matrix_policy,
+            solver::ContributeSpringsToSparseMatrix<typename Solver<DeviceType>::CrsMatrixType>{
+                parameters.conditioner, elements.springs.element_freedom_signature,
+                elements.springs.element_freedom_table, elements.springs.stiffness_matrix_terms,
+                solver.A
+            }
+        );
+    }
 }
 
 }  // namespace kynema_fmb::step

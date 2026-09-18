@@ -15,6 +15,8 @@ target_sources(
     test_spring_mass_system.cpp
     test_utilities.cpp
     test_netcdf_outputs_writer.cpp
+    test_beam_damping.cpp
+    test_beam_system_matrices.cpp
 )
 
 add_subdirectory(verification)

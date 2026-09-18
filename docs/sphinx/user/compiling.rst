@@ -71,7 +71,8 @@ Next, the tests can be run either through ctest or directly from the unit test o
 
     ctest
     ./tests/unit_tests/kynema_fmb_unit_tests
-    ./tests/regression_tests/kynema_fmb_regression_tests
+    cd ./tests/regression_tests # so files can be found correctly
+    ./kynema_fmb_regression_tests
 
 You can also build Kynema-FMB from this folder using standard make commands.
 

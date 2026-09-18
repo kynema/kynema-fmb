@@ -20,5 +20,6 @@ install(FILES
         update_system_variables_masses.hpp
         update_system_variables_springs.hpp
         update_tangent_operator.hpp
+        extract_system_matrices.hpp
         DESTINATION include/KynemaFMB/step/
 )
