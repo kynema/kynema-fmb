@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['indextype_0',['IndexType',['../structkynema__fmb_1_1Solver.html#a12515cd8b6c2e703707aa4d4f32d8fb2',1,'kynema_fmb::Solver']]],
-  ['indicesvaluetype_1',['indicesvaluetype',['../structkynema__fmb_1_1solver_1_1ComputeConstraintsColInds.html#a26ccecba01f30ffb5d90d0a1e0ab5fcd',1,'kynema_fmb::solver::ComputeConstraintsColInds::IndicesValueType'],['../structkynema__fmb_1_1solver_1_1ComputeSystemColInds.html#a64a4d9d7cf6d1070f7991d7cd426a60c',1,'kynema_fmb::solver::ComputeSystemColInds::IndicesValueType']]]
+  ['handletype_0',['HandleType',['../structkynema__fmb_1_1Solver.html#a437578b3dfd750aedff1a50daf0b46e1',1,'kynema_fmb::Solver']]],
+  ['hostview_1',['hostview',['../structkynema__fmb_1_1interfaces_1_1HostConstraints.html#a6f7d9f7fd95202a8dc27aed25e39b677',1,'kynema_fmb::interfaces::HostConstraints::HostView'],['../structkynema__fmb_1_1interfaces_1_1HostState.html#abe9accf68e31e8b770aa4355ed4c1139',1,'kynema_fmb::interfaces::HostState::HostView']]]
 ];

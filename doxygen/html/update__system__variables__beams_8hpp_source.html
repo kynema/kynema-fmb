@@ -245,13 +245,15 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            beams.<a class="code hl_variable" href="structkynema__fmb_1_1Beams.html#a035448161532a1265bada0e4c97da48e">qp_Cstar</a>,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            beams.<a class="code hl_variable" href="structkynema__fmb_1_1Beams.html#ac123bd727ce4c03c006fbe865c2a57e5">qp_Fe</a>,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            beams.<a class="code hl_variable" href="structkynema__fmb_1_1Beams.html#a75c15f4233d2c08324e789e62c501c26">residual_vector_terms</a>,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            beams.<a class="code hl_variable" href="structkynema__fmb_1_1Beams.html#a80a2fc6a60a5c5df337898d71d8a4f83">system_matrix_terms</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    );</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            beams.<a class="code hl_variable" href="structkynema__fmb_1_1Beams.html#a80a2fc6a60a5c5df337898d71d8a4f83">system_matrix_terms</a>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#ae2fc1c0f8565ae22e2c47c77a660452e">include_stiffness</a>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            parameters.<a class="code hl_variable" href="structkynema__fmb_1_1StepParameters.html#a2c5d02312d2d1af241b1eee2b2bcf3ab">include_tangent</a></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    );</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}  <span class="comment">// namespace kynema_fmb::step</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}  <span class="comment">// namespace kynema_fmb::step</span></div>
 <div class="ttc" id="abeams_2calculate__quadrature__point__values_8hpp_html"><div class="ttname"><a href="beams_2calculate__quadrature__point__values_8hpp.html">calculate_quadrature_point_values.hpp</a></div></div>
 <div class="ttc" id="abeams_8hpp_html"><div class="ttname"><a href="beams_8hpp.html">beams.hpp</a></div></div>
 <div class="ttc" id="anamespacekynema__fmb_1_1step_html"><div class="ttname"><a href="namespacekynema__fmb_1_1step.html">kynema_fmb::step</a></div><div class="ttdef"><b>Definition</b> assemble_constraints_matrix.hpp:11</div></div>
@@ -286,7 +288,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="astructkynema__fmb_1_1State_html_aaf9b312b2206745e1fb2b1516f677e5f"><div class="ttname"><a href="structkynema__fmb_1_1State.html#aaf9b312b2206745e1fb2b1516f677e5f">kynema_fmb::State::vd</a></div><div class="ttdeci">View&lt; double *[6]&gt; vd</div><div class="ttdef"><b>Definition</b> state.hpp:35</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1State_html_adb6ef60b97601d4541a55b105527e690"><div class="ttname"><a href="structkynema__fmb_1_1State.html#adb6ef60b97601d4541a55b105527e690">kynema_fmb::State::q</a></div><div class="ttdeci">View&lt; double *[7]&gt; q</div><div class="ttdef"><b>Definition</b> state.hpp:33</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1StepParameters_html"><div class="ttname"><a href="structkynema__fmb_1_1StepParameters.html">kynema_fmb::StepParameters</a></div><div class="ttdoc">A Struct containing the paramters used to control the time stepping process.</div><div class="ttdef"><b>Definition</b> step_parameters.hpp:12</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1StepParameters_html_a2c5d02312d2d1af241b1eee2b2bcf3ab"><div class="ttname"><a href="structkynema__fmb_1_1StepParameters.html#a2c5d02312d2d1af241b1eee2b2bcf3ab">kynema_fmb::StepParameters::include_tangent</a></div><div class="ttdeci">bool include_tangent</div><div class="ttdef"><b>Definition</b> step_parameters.hpp:27</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1StepParameters_html_acac2f77fbd2dc8094e364b8bc4f31217"><div class="ttname"><a href="structkynema__fmb_1_1StepParameters.html#acac2f77fbd2dc8094e364b8bc4f31217">kynema_fmb::StepParameters::gamma_prime</a></div><div class="ttdeci">double gamma_prime</div><div class="ttdef"><b>Definition</b> step_parameters.hpp:20</div></div>
+<div class="ttc" id="astructkynema__fmb_1_1StepParameters_html_ae2fc1c0f8565ae22e2c47c77a660452e"><div class="ttname"><a href="structkynema__fmb_1_1StepParameters.html#ae2fc1c0f8565ae22e2c47c77a660452e">kynema_fmb::StepParameters::include_stiffness</a></div><div class="ttdeci">bool include_stiffness</div><div class="ttdef"><b>Definition</b> step_parameters.hpp:26</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1StepParameters_html_aede147c701ada027f5b57f928fe12cbd"><div class="ttname"><a href="structkynema__fmb_1_1StepParameters.html#aede147c701ada027f5b57f928fe12cbd">kynema_fmb::StepParameters::beta_prime</a></div><div class="ttdeci">double beta_prime</div><div class="ttdef"><b>Definition</b> step_parameters.hpp:21</div></div>
 <div class="ttc" id="astructkynema__fmb_1_1beams_1_1CalculateQuadraturePointValues_html"><div class="ttname"><a href="structkynema__fmb_1_1beams_1_1CalculateQuadraturePointValues.html">kynema_fmb::beams::CalculateQuadraturePointValues</a></div><div class="ttdef"><b>Definition</b> calculate_quadrature_point_values.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->

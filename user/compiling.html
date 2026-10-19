@@ -170,7 +170,8 @@ spack<span class="w"> </span>install
 <p>Next, the tests can be run either through ctest or directly from the unit test or regression test executables</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ctest
 ./tests/unit_tests/kynema_fmb_unit_tests
-./tests/regression_tests/kynema_fmb_regression_tests
+<span class="nb">cd</span><span class="w"> </span>./tests/regression_tests<span class="w"> </span><span class="c1"># so files can be found correctly</span>
+./kynema_fmb_regression_tests
 </pre></div>
 </div>
 <p>You can also build Kynema-FMB from this folder using standard make commands.</p>

@@ -14,6 +14,7 @@ Typedefs
 
       c <functions_type>
       d <functions_type_d>
+      e <functions_type_e>
       g <functions_type_g>
       h <functions_type_h>
       i <functions_type_i>
