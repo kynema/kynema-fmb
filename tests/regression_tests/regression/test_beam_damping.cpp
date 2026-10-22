@@ -113,12 +113,12 @@ TEST_P(DynamicBeamTest, Damping) {
         Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.stiffness_matrix_values);
 
     // Apply the fixed root constraint by eliminating the first node's DOFs.
-    const auto num_reduced_dofs = 6 * (beam_node_ids.size() - 1);
+    const auto num_reduced_dofs = static_cast<Eigen::Index>(6 * (beam_node_ids.size() - 1));
     Eigen::MatrixXd M = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
     Eigen::MatrixXd K = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
-    for (size_t row = 6; row < num_reduced_dofs + 6; ++row) {
+    for (Eigen::Index row = 6; row < num_reduced_dofs + 6; ++row) {
         for (auto j = row_map(row); j < row_map(row + 1); ++j) {
-            const auto col = static_cast<size_t>(col_ids(j));
+            auto col = col_ids(j);
             if (col >= 6 && col < num_reduced_dofs + 6) {
                 M(row - 6, col - 6) = mass_vals(j);
                 K(row - 6, col - 6) = stiff_vals(j);
@@ -131,7 +131,7 @@ TEST_P(DynamicBeamTest, Damping) {
     const auto raw_eigenvectors = eigensolver.eigenvectors();
 
     // Sort eigenpairs by ascending real part of the eigenvalue.
-    std::vector<Eigen::Index> sort_indices(raw_eigenvalues.size());
+    std::vector<Eigen::Index> sort_indices(static_cast<size_t>(raw_eigenvalues.size()));
     std::iota(sort_indices.begin(), sort_indices.end(), 0);
     std::stable_sort(sort_indices.begin(), sort_indices.end(), [&](Eigen::Index i, Eigen::Index j) {
         return raw_eigenvalues(i).real() < raw_eigenvalues(j).real();
@@ -168,7 +168,7 @@ TEST_P(DynamicBeamTest, Damping) {
     // Set initial velocity from the (scaled) mode shape. The root node stays fixed.
     auto host_v = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, state.v);
     for (size_t i = 1; i < beam_node_ids.size(); ++i) {
-        for (int j = 0; j < 6; ++j) {
+        for (size_t j = 0; j < 6; ++j) {
             host_v(beam_node_ids[i], j) = eigvec(static_cast<Eigen::Index>((i - 1) * 6 + j));
         }
     }
@@ -208,7 +208,7 @@ TEST_P(DynamicBeamTest, Damping) {
         const auto next = tip_dof_history[i + 1];
         if (curr > 0. && curr > prev && curr > next) {
             // Require peaks > 0 to avoid undefined log below.
-            peak_times.push_back(step_size * (i + 1));
+            peak_times.push_back(step_size * static_cast<double>(i + 1));
             peak_vals.push_back(tip_dof_history[i]);
         }
     }
@@ -243,8 +243,8 @@ TEST_P(DynamicBeamTest, Damping) {
 INSTANTIATE_TEST_SUITE_P(
     ModeIndices, DynamicBeamTest,
     ::testing::Values(0U, 1U, 2U, 3U, 4U, 8U),  // 3U is torsion, 8U is axial
-    [](const ::testing::TestParamInfo<DynamicBeamTest::ParamType>& info) {
-        return "mode" + std::to_string(info.param);
+    [](const ::testing::TestParamInfo<DynamicBeamTest::ParamType>& param_info) {
+        return "mode" + std::to_string(param_info.param);
     }
 );
 

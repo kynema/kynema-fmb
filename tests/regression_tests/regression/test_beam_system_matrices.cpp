@@ -147,14 +147,14 @@ TEST(DynamicBeamTest, SystemMatrices) {
         Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace{}, matrices.damping_matrix_values);
 
     // Manually applying the root node constraint by eliminating the first node.
-    const auto num_reduced_dofs = 6 * (node_s.size() - 1);
+    const auto num_reduced_dofs = static_cast<Eigen::Index>(6 * (node_s.size() - 1));
 
     Eigen::MatrixXd C = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
     Eigen::MatrixXd M = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
     Eigen::MatrixXd K = Eigen::MatrixXd::Zero(num_reduced_dofs, num_reduced_dofs);
-    for (size_t row = 6; row < num_reduced_dofs + 6; ++row) {
+    for (Eigen::Index row = 6; row < num_reduced_dofs + 6; ++row) {
         for (auto j = row_map(row); j < row_map(row + 1); ++j) {
-            const auto col = static_cast<size_t>(col_ids(j));
+            const auto col = col_ids(j);
             if (col >= 6 && col < num_reduced_dofs + 6) {
                 M(row - 6, col - 6) = mass_vals(j);
                 K(row - 6, col - 6) = stiff_vals(j);
@@ -169,7 +169,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
 
     // Reorder the eigenvalues and eigenvectors so the real parts are ascending.
     // Afterwards, the eigenvalues should still be in an array and the eigenvectors in a matrix
-    std::vector<Eigen::Index> indices(raw_eigenvalues.size());
+    std::vector<Eigen::Index> indices(static_cast<size_t>(raw_eigenvalues.size()));
     std::iota(indices.begin(), indices.end(), 0);
     std::stable_sort(indices.begin(), indices.end(), [&](Eigen::Index i, Eigen::Index j) {
         return raw_eigenvalues(i).real() < raw_eigenvalues(j).real();
@@ -178,8 +178,8 @@ TEST(DynamicBeamTest, SystemMatrices) {
     Eigen::VectorXcd eigenvalues(raw_eigenvalues.size());
     Eigen::MatrixXcd eigenvectors(raw_eigenvectors.rows(), raw_eigenvectors.cols());
     for (Eigen::Index i = 0; i < raw_eigenvalues.size(); ++i) {
-        eigenvalues(i) = raw_eigenvalues(indices[i]);
-        eigenvectors.col(i) = raw_eigenvectors.col(indices[i]);
+        eigenvalues(i) = raw_eigenvalues(indices[static_cast<size_t>(i)]);
+        eigenvectors.col(i) = raw_eigenvectors.col(indices[static_cast<size_t>(i)]);
     }
 
     // Assertions for natural frequencies (undamped)
@@ -227,7 +227,7 @@ TEST(DynamicBeamTest, SystemMatrices) {
     double modal_damping;
     double zeta_matrix;
 
-    for (size_t i = 0; i < 10; ++i) {
+    for (Eigen::Index i = 0; i < 10; ++i) {
         eigvec = eigenvectors.col(i).real();
 
         // Find which mode direction and then the analytical damping from mu
@@ -419,7 +419,7 @@ TEST(DynamicBeamTest, ExtractSystemMatricesUninitializedQDelta) {
     std::ranges::transform(node_s, std::back_inserter(beam_node_ids), [&](auto s) {
         return model.AddNode()
             .SetElemLocation(s)
-            .SetPosition(10 * s, 0., 0., 1., 0., 0., 0.)
+            .SetPosition(length * s, 0., 0., 1., 0., 0., 0.)
             .Build();
     });
 
