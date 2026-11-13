@@ -1,8 +1,12 @@
 #include "generalized_structure_interface.hpp"
-#include "model/model.hpp"
-#include "step/step.hpp"
+
+#include <iostream>
+#include <stdexcept>
 
 #include <yaml-cpp/yaml.h>
+
+#include "model/model.hpp"
+#include "step/step.hpp"
 
 namespace kynema_fmb::interfaces {
 
@@ -30,6 +34,8 @@ GeneralStructureInterface::GeneralStructureInterface(
     // Copy the forces from initialization
     Kokkos::deep_copy(this->f_nm1, this->state_n.f);
     this->host_state.CopyFromState(this->state);
+    this->module_dt = structural_description["simulation"]["step_size"].as<double>();
+    this->module_forces.resize(this->num_nodes());
 
     // Update atol and rtol if provided.
     if (structural_description["simulation"]["absolute_convergence_tol"]){
@@ -47,11 +53,79 @@ GeneralStructureInterface::GeneralStructureInterface(
 // Generalized API Functions
 //--------------------------------------------------------------------------
 
+GeneralStructureInterface::GeneralStructureInterface(
+    const YAML::Node& structural_description, MPI_Comm comm, int id
+)
+    : GeneralStructureInterface(structural_description) {
+    this->module_comm = comm;
+    this->module_id = id;
+}
+
+void GeneralStructureInterface::init_epilog() {
+    int rank = 0;
+    MPI_Comm_rank(this->module_comm, &rank);
+    if (rank == 0)
+        std::cout << "KynemaFMB initialized successfully\n";
+}
+
+void GeneralStructureInterface::set_forces(const std::vector<std::array<double, 6>>& forces) {
+    if (forces.size() != this->num_nodes()) {
+        throw std::invalid_argument("FMB forces must match the node count");
+    }
+    this->module_forces = forces;
+}
+
+std::array<double, 7> GeneralStructureInterface::node_position(size_t node) const {
+    if (node >= this->num_nodes())
+        throw std::out_of_range("Invalid FMB node");
+    std::array<double, 7> result;
+    for (size_t i = 0; i < result.size(); ++i)
+        result[i] = this->host_state.x(node, i);
+    return result;
+}
+
+void GeneralStructureInterface::set_inputs(size_t iteration) {
+    // The first iteration predicts forces; later iterations use coupled forces.
+    if (iteration == 0)
+        return;
+    HostView<double* [6]> forces("forces", this->num_nodes());
+    for (size_t node = 0; node < this->num_nodes(); ++node) {
+        for (size_t component = 0; component < 6; ++component) {
+            forces(node, component) = this->module_forces[node][component];
+        }
+    }
+    this->receive_inputs(forces);
+}
+
+void GeneralStructureInterface::set_timestep_size(double dt) {
+    if (dt != this->module_dt) {
+        throw std::runtime_error("KynemaFMB requires its configured fixed timestep");
+    }
+}
+
+void GeneralStructureInterface::additional_picard_iterations(int count) {
+    for (int i = 0; i < count; ++i) {
+        this->reset_states();
+        this->advance_states();
+    }
+    this->calculate_outputs();
+}
+
+void GeneralStructureInterface::dump_simulation_time() {
+    int rank = 0;
+    MPI_Comm_rank(this->module_comm, &rank);
+    if (rank == 0) {
+        std::cout << "KynemaFMB final time: " << this->module_time << " seconds\n";
+    }
+}
+
 YAML::Node GeneralStructureInterface::initialize_module(){
     return YAML::Clone(this->model_description);
 }
 
-void GeneralStructureInterface::predict_inputs(){
+void GeneralStructureInterface::predict_inputs(size_t iteration) {
+    if (iteration > 0)
+        return;
     using RangePolicy = Kokkos::RangePolicy<typename DeviceType::execution_space>;
 
     auto f     = this->state.f;
@@ -90,8 +164,7 @@ void GeneralStructureInterface::reset_states(){
     Kokkos::deep_copy(f, fnp1_temp);
 }
 
-void GeneralStructureInterface::advance_states(){
-
+void GeneralStructureInterface::advance_states(size_t) {
     auto converged = Step(this->parameters,
                           this->solver,
                           this->elements,
@@ -101,7 +174,7 @@ void GeneralStructureInterface::advance_states(){
     // TODO : Throw an error if not converged?
 }
 
-void GeneralStructureInterface::calculate_outputs(){
+void GeneralStructureInterface::calculate_outputs(size_t) {
     this->host_state.CopyFromState(this->state);
 }
 
@@ -117,6 +190,8 @@ void GeneralStructureInterface::finalize_time_step(){
     Kokkos::deep_copy(f_nm1, f_n);
 
     this->state_n = CloneState(this->state);
+    this->module_time += this->module_dt;
+    ++this->module_step;
 }
 
 

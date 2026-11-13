@@ -1,6 +1,11 @@
 #pragma once
 
+#include <array>
+#include <vector>
+
 #include <yaml-cpp/yaml.h>
+
+#include "driver/Module.h"
 
 #include "interfaces/host_constraints.hpp"
 #include "interfaces/host_state.hpp"
@@ -18,7 +23,7 @@ namespace kynema_fmb::interfaces {
  * This class represents the generalized interface for structural simulations
  * used coupled to the Kynema suite of codes.
  */
-class GeneralStructureInterface {
+class GeneralStructureInterface : public driver::Module {
 public:
     using DeviceType =
         Kokkos::Device<Kokkos::DefaultExecutionSpace, Kokkos::DefaultExecutionSpace::memory_space>;
@@ -31,6 +36,16 @@ public:
      * @param structural_description Configuration parameters for the structure
      */
     explicit GeneralStructureInterface(const YAML::Node& structural_description);
+
+    GeneralStructureInterface(const YAML::Node& structural_description, MPI_Comm comm, int id = 1);
+    void set_forces(const std::vector<std::array<double, 6>>& forces);
+    std::array<double, 7> node_position(size_t node) const;
+    size_t num_nodes() const { return this->state.x.extent(0); }
+    void set_inputs(size_t iteration) override;
+    bool is_fixed_timestep_size() override { return true; }
+    int time_index() override { return this->module_step; }
+    std::string identifier() override { return "KynemaFMB-" + std::to_string(this->module_id); }
+    MPI_Comm comm() override { return this->module_comm; }
 
     GeneralStructureInterface(GeneralStructureInterface& other) = delete;
 
@@ -50,19 +65,19 @@ public:
     /**
      * @brief Predict the inputs to the model at time n+1 from stored data.
      */
-    void predict_inputs();
+    void predict_inputs(size_t iteration = 0) override;
 
     /**
      * @brief Reset the state to the previous saved time.
      * If there is no substepping, this is just time n
      * If there is substepping, this is to the start of the largest time step.
      */
-    void reset_states();
+    void reset_states() override;
 
     /**
      * @brief Solve for the response at time n+1
      */
-    void advance_states();
+    void advance_states(size_t iteration = 0) override;
 
     /**
      * @brief Get actual values for inputs at time n+1
@@ -78,7 +93,7 @@ public:
      * This exists because this is computationally intensive for the CFD even if
      * it may not do much on the structure side.
      */
-    void calculate_outputs();
+    void calculate_outputs(size_t iteration = 0) override;
 
     /**
      * @brief Returns the entire outputs.
@@ -89,8 +104,7 @@ public:
     /**
      * @brief Finalize the stored data for the time step and shift time step index.
      */
-    void finalize_time_step();
-
+    void finalize_time_step() override;
 
     /*
     1. `initialize_module`
@@ -104,6 +118,26 @@ public:
     */
 
 private:
+    void init_prolog(bool) override {}
+    void init_epilog() override;
+    void prepare_solver_prolog() override {}
+    void prepare_solver_epilog() override {}
+    double get_time() override { return this->module_time; }
+    double get_timestep_size() override { return this->module_dt; }
+    void set_timestep_size(double dt) override;
+    void additional_picard_iterations(int count) override;
+    void pre_overset_conn_work() override {}
+    void post_overset_conn_work() override {}
+    void register_solution() override {}
+    void update_solution() override {}
+    void dump_simulation_time() override;
+
+    MPI_Comm module_comm{MPI_COMM_NULL};
+    int module_id{1};
+    int module_step{0};
+    double module_time{0.};
+    double module_dt{0.};
+    std::vector<std::array<double, 6>> module_forces;
     template <typename ValueType>
     using View = Kokkos::View<ValueType, DeviceType>;
 
@@ -133,4 +167,4 @@ private:
                         YAML::Node& output_description);
 };
 
-}
+}  // namespace kynema_fmb::interfaces

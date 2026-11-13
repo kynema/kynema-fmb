@@ -17,6 +17,15 @@ project(
   LANGUAGES CXX C
 )
 
+set(KYNEMA_FMB_DRIVER_MODULE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../kynema-driver/src" CACHE PATH
+    "kynema-driver/src directory containing the shared module interface")
+foreach(header Module.h Timers.h ParallelPrinter.h)
+  if(NOT EXISTS "${KYNEMA_FMB_DRIVER_MODULE_DIR}/${header}")
+    message(FATAL_ERROR "Missing driver interface header: ${KYNEMA_FMB_DRIVER_MODULE_DIR}/${header}")
+  endif()
+endforeach()
+find_package(MPI REQUIRED COMPONENTS CXX)
+
 # -----------------------------------------------------------------------------
 # Project configuration and options
 # -----------------------------------------------------------------------------
