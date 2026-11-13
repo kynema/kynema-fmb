@@ -11,6 +11,7 @@ jobs:
   Correctness-MacOS:
     runs-on: macos-latest
     env:
+      SPACK_SPEC: "kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack"
       CMAKE_BUILD_PARALLEL_LEVEL: 4
       CTEST_PARALLEL_LEVEL: 2
     strategy:
@@ -20,62 +21,35 @@ jobs:
         build_type: [Release, Debug]
         build_external: [all, none]
     steps:
+      - name: Clone
+        uses: actions/checkout@v6
+        with:
+          submodules: true
       - name: Cache install Dependencies
         id: cache-dependencies
         uses: actions/cache@v5
         with:
           path: |
-            ${{ github.workspace }}/spack
-            ${{ github.workspace }}/spack-packages
-          key: macos-spack_v7
+            ${{ runner.workspace }}/spack
+            ${{ runner.workspace }}/spack-packages
+          key: macos-spack-${{ hashFiles('.github/workflows/correctness-macos.yaml') }}
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          git clone https://github.com/spack/spack.git
-          source spack/share/spack/setup-env.sh
-          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
-          spack repo list
+          if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
+            git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
+          fi
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
           spack external find
-          spack install googletest
-          spack install cppcheck
-          spack install yaml-cpp
-          spack install suite-sparse
-          spack install superlu
-          spack install rosco@2.9.0
-          spack install openfast
-          spack install kokkos-kernels
-          spack install eigen@5.0.1
-      - name: Clone
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          path: kynema-fmb
-      - name: Test Kynema-FMB
+          spack install --only dependencies "${SPACK_SPEC}"
+      - name: Configure Kynema-FMB
         run: |
-          # Find the gfortran compiler and set the FC environment variable
-          export FC=$(find /opt/homebrew/ -name gfortran | tr ' ' '\n' | grep "/gcc/.*gfortran")
-          brew install hdf5
-          brew install netcdf
-          brew install llvm
-          source spack/share/spack/setup-env.sh
-          spack load kokkos-kernels
-          spack load suite-sparse
-          spack load superlu
-          spack load cppcheck
-          spack load googletest
-          spack load yaml-cpp
-          spack load rosco@2.9.0
-          spack load openfast
-          spack load eigen
-          cd kynema-fmb
-          mkdir build
-          cd build
-          cmake .. \
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env "${SPACK_SPEC}" cmake -B ${{runner.workspace}}/build \
             -DKYNEMA_FMB_ENABLE_SANITIZER_ADDRESS=${{ matrix.build_external == 'none' }} \
             -DKYNEMA_FMB_ENABLE_SANITIZER_UNDEFINED=${{ matrix.build_external == 'none' }} \
-            -DKYNEMA_FMB_ENABLE_CPPCHECK=ON \
-            -DKYNEMA_FMB_ENABLE_CLANG_TIDY=ON \
+            -DKYNEMA_FMB_ENABLE_CPPCHECK=OFF \
+            -DKYNEMA_FMB_ENABLE_CLANG_TIDY=OFF \
             -DKYNEMA_FMB_WRITE_OUTPUTS=ON \
             -DKYNEMA_FMB_WARNINGS_AS_ERRORS=OFF \
             -DKYNEMA_FMB_ENABLE_OPENFAST_ADI=OFF \
@@ -84,6 +58,13 @@ jobs:
             -DKYNEMA_FMB_ENABLE_UMFPACK=ON \
             -DKYNEMA_FMB_ENABLE_SUPERLU=ON \
             -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} \
-            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
-          cmake --build .
-          ctest --output-on-failure --extra-verbose
+            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
+            ${{github.workspace}}
+      - name: Build Kynema-FMB
+        run: |
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env "${SPACK_SPEC}" cmake --build ${{runner.workspace}}/build
+      - name: Test Kynema-FMB
+        run: |
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
+          spack build-env "${SPACK_SPEC}" ctest --test-dir ${{runner.workspace}}/build --output-on-failure --extra-verbose

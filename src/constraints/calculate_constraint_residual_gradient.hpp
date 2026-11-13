@@ -56,6 +56,7 @@ struct CalculateConstraintResidualGradient {
     View<double* [6][6]> t_grad_;
     View<double* [6][6]> b_grad_trans_;
     View<double* [6][6]> t_grad_trans_;
+    bool include_tangent_;
 
     KOKKOS_FUNCTION
     void FixedBC(size_t constraint) const {
@@ -94,7 +95,11 @@ struct CalculateConstraintResidualGradient {
         CalculateFixedBCConstraint<DeviceType>::invoke(X0, t_node_u, res, t_grad);
 
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
         CopyVector::invoke(res, subview(res_, constraint, ALL));
@@ -140,7 +145,11 @@ struct CalculateConstraintResidualGradient {
         CalculateFixedBC3DOFConstraint<DeviceType>::invoke(X0, t_node_u, res, t_grad);
 
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
         CopyVector::invoke(res, subview(res_, constraint, ALL));
@@ -189,7 +198,11 @@ struct CalculateConstraintResidualGradient {
         CalculatePrescribedBCConstraint<DeviceType>::invoke(X0, inputs, t_node_u, res, t_grad);
 
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
         CopyVector::invoke(res, subview(res_, constraint, ALL));
@@ -238,7 +251,11 @@ struct CalculateConstraintResidualGradient {
         CalculatePrescribedBC3DOFConstraint<DeviceType>::invoke(X0, inputs, t_node_u, res, t_grad);
 
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
         CopyVector::invoke(res, subview(res_, constraint, ALL));
@@ -302,8 +319,13 @@ struct CalculateConstraintResidualGradient {
 
         TransposeMatrix::invoke(b_grad, b_grad_trans);
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(b_grad, b_grad_tan);
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., b_grad_trans, lambda, 0., b_lambda_res);
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
@@ -371,8 +393,13 @@ struct CalculateConstraintResidualGradient {
 
         TransposeMatrix::invoke(b_grad, b_grad_trans);
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(b_grad, b_grad_tan);
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., b_grad_trans, lambda, 0., b_lambda_res);
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
@@ -449,8 +476,13 @@ struct CalculateConstraintResidualGradient {
 
         TransposeMatrix::invoke(b_grad, b_grad_trans);
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(b_grad, b_grad_tan);
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., b_grad_trans, lambda, 0., b_lambda_res);
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 
@@ -525,8 +557,13 @@ struct CalculateConstraintResidualGradient {
 
         TransposeMatrix::invoke(b_grad, b_grad_trans);
         TransposeMatrix::invoke(t_grad, t_grad_trans);
-        Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
-        Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        if (include_tangent_) {
+            Gemm::invoke(1., b_grad, base_tangent, 0., b_grad_tan);
+            Gemm::invoke(1., t_grad, target_tangent, 0., t_grad_tan);
+        } else {
+            CopyMatrix::invoke(b_grad, b_grad_tan);
+            CopyMatrix::invoke(t_grad, t_grad_tan);
+        }
         serial_gemv('N', 1., b_grad_trans, lambda, 0., b_lambda_res);
         serial_gemv('N', 1., t_grad_trans, lambda, 0., t_lambda_res);
 

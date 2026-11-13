@@ -12,64 +12,51 @@ concurrency:
 
 jobs:
   Deploy-Docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Cache install Dependencies
         id: cache-dependencies
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/spack
+          path: ${{ runner.workspace }}/spack
           key: linux-spack_v7
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          git clone https://github.com/spack/spack.git
-          source spack/share/spack/setup-env.sh
-          spack repo add --name my_pkgs https://github.com/jrood-nrel/spack-packages.git ${{ github.workspace }}/my_pkgs
-          spack repo list
+          if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
+            git clone --depth 1 https://github.com/spack/spack.git ${{runner.workspace}}/spack
+          fi
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
-          spack install googletest
-          spack install cppcheck
-          spack install netcdf-c
-          spack install yaml-cpp
-          spack install suite-sparse
-          spack install superlu
-          spack install rosco@2.9.0
-          spack install openfast
-          spack install kokkos-kernels
-          spack install eigen@5.0.1
+          spack external find
+          spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Clone repository
-        uses: actions/checkout@v4
-        with:
-          path: kynema-fmb
+        uses: actions/checkout@v6
       - name: Install documentation dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends graphviz libenchant-2-dev doxygen
           python3 -m pip install --upgrade pip
-          pip install -r kynema-fmb/docs/requirements.txt
+          pip install -r docs/requirements.txt
       - name: Build Kynema-FMB with documentation
         run: |
-          source spack/share/spack/setup-env.sh
+          source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack load eigen kokkos-kernels yaml-cpp netcdf-c suite-sparse superlu
-          cd kynema-fmb
-          mkdir build
-          cd build
-          cmake .. \
+          cmake -B ${{runner.workspace}}/build \
             -DKYNEMA_FMB_ENABLE_TESTS=OFF \
             -DKYNEMA_FMB_ENABLE_DOCUMENTATION=ON \
             -DKYNEMA_FMB_ENABLE_KLU=ON \
             -DKYNEMA_FMB_ENABLE_UMFPACK=ON \
             -DKYNEMA_FMB_ENABLE_SUPERLU=ON \
-            -DCMAKE_BUILD_TYPE=Release
-          cmake --build .
+            -DCMAKE_BUILD_TYPE=Release \
+            ${{github.workspace}}
+          cmake --build ${{runner.workspace}}/build
       - name: Deploy documentation
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.workspace }}/kynema-fmb/build/docs/sphinx/html
+          publish_dir: ${{ runner.workspace }}/build/docs/sphinx/html

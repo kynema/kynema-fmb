@@ -107,5 +107,19 @@ To build the documentation:
 
        $ export PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.dylib
 
+   Alternatively, macOS users can avoid the CMake ``docs`` target (which runs Doxygen + Doxysphinx) and build only the Sphinx manual directly:
+
+   .. code-block:: bash
+
+        $ conda create -n kynema-env python=3.12
+        $ conda activate kynema-env
+         $ cd /path/to/kynema-fmb
+         $ pip install -r docs/requirements.txt
+         $ cd docs/sphinx
+         $ sphinx-build -b html . html
+         $ open html/index.html
+
+   This does not generate the source code documentation and will produce a warning about a missing ``doxygen/html/index`` file.
+
 The built documentation will be available in the ``docs/sphinx/html`` directory. For other output formats,
 see the `Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/builders/index.html>`_.

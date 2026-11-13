@@ -11,7 +11,7 @@ namespace kynema_fmb::step {
 
 template <typename DeviceType>
 inline void UpdateConstraintVariables(
-    State<DeviceType>& state, Constraints<DeviceType>& constraints
+    State<DeviceType>& state, Constraints<DeviceType>& constraints, bool include_tangent = true
 ) {
     auto region = Kokkos::Profiling::ScopedRegion("Update Constraint Variables");
 
@@ -31,7 +31,8 @@ inline void UpdateConstraintVariables(
             state.q, constraints.residual_terms, constraints.base_lambda_residual_terms,
             constraints.target_lambda_residual_terms, constraints.system_residual_terms,
             constraints.base_gradient_terms, constraints.target_gradient_terms,
-            constraints.base_gradient_transpose_terms, constraints.target_gradient_transpose_terms
+            constraints.base_gradient_transpose_terms, constraints.target_gradient_transpose_terms,
+            include_tangent
         }
     );
 }
