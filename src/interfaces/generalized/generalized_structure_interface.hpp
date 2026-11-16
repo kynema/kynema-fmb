@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <fstream>
 #include <vector>
 
 #include <yaml-cpp/yaml.h>
@@ -120,16 +121,12 @@ public:
 private:
     void init_prolog(bool) override {}
     void init_epilog() override;
-    void prepare_solver_prolog() override {}
-    void prepare_solver_epilog() override {}
+    void prepare_module_prolog() override {}
+    void prepare_module_epilog() override {}
     double get_time() override { return this->module_time; }
     double get_timestep_size() override { return this->module_dt; }
     void set_timestep_size(double dt) override;
     void additional_picard_iterations(int count) override;
-    void pre_overset_conn_work() override {}
-    void post_overset_conn_work() override {}
-    void register_solution() override {}
-    void update_solution() override {}
     void dump_simulation_time() override;
 
     MPI_Comm module_comm{MPI_COMM_NULL};
@@ -138,6 +135,8 @@ private:
     double module_time{0.};
     double module_dt{0.};
     std::vector<std::array<double, 6>> module_forces;
+    std::string output_filename;
+    std::ofstream output_file;
     template <typename ValueType>
     using View = Kokkos::View<ValueType, DeviceType>;
 

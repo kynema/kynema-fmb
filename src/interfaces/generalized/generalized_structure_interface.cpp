@@ -1,6 +1,8 @@
 #include "generalized_structure_interface.hpp"
 
 #include <iostream>
+#include <iomanip>
+#include <limits>
 #include <stdexcept>
 
 #include <yaml-cpp/yaml.h>
@@ -36,6 +38,11 @@ GeneralStructureInterface::GeneralStructureInterface(
     this->host_state.CopyFromState(this->state);
     this->module_dt = structural_description["simulation"]["step_size"].as<double>();
     this->module_forces.resize(this->num_nodes());
+    if (structural_description["simulation"]["output_file"]) {
+        this->output_filename = structural_description["simulation"]["output_file"].as<std::string>();
+        if (this->output_filename.empty())
+            throw std::invalid_argument("FMB output_file must not be empty");
+    }
 
     // Update atol and rtol if provided.
     if (structural_description["simulation"]["absolute_convergence_tol"]){
@@ -64,8 +71,15 @@ GeneralStructureInterface::GeneralStructureInterface(
 void GeneralStructureInterface::init_epilog() {
     int rank = 0;
     MPI_Comm_rank(this->module_comm, &rank);
-    if (rank == 0)
+    if (rank == 0) {
+        if (!this->output_filename.empty()) {
+            this->output_file.exceptions(std::ios::failbit | std::ios::badbit);
+            this->output_file.open(this->output_filename);
+            this->output_file << "step,time,node,x,y,z,qw,qx,qy,qz\n"
+                              << std::setprecision(std::numeric_limits<double>::max_digits10);
+        }
         std::cout << "KynemaFMB initialized successfully\n";
+    }
 }
 
 void GeneralStructureInterface::set_forces(const std::vector<std::array<double, 6>>& forces) {
@@ -192,6 +206,15 @@ void GeneralStructureInterface::finalize_time_step(){
     this->state_n = CloneState(this->state);
     this->module_time += this->module_dt;
     ++this->module_step;
+    if (this->output_file.is_open()) {
+        for (size_t node = 0; node < this->num_nodes(); ++node) {
+            this->output_file << this->module_step << ',' << this->module_time << ',' << node;
+            for (double value : this->node_position(node))
+                this->output_file << ',' << value;
+            this->output_file << '\n';
+        }
+        this->output_file.flush();
+    }
 }
 
 
