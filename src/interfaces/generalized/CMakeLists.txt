@@ -11,6 +11,7 @@ target_include_directories(kynema_fmb_library SYSTEM PUBLIC
   $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/driver-interface>)
 
 install(FILES
+        coupling_data.hpp
         generalized_structure_interface.hpp
         DESTINATION include/KynemaFMB/interfaces/generalized/
 )

@@ -20,6 +20,7 @@ if(NOT TARGET NetCDF::NetCDF)
   endif()
 endif()
 find_dependency(Eigen3 REQUIRED)
+find_dependency(nlohmann_json 3.11 CONFIG REQUIRED)
 
 if(@KYNEMA_FMB_ENABLE_SUPERLU@)
   find_dependency(superlu REQUIRED)

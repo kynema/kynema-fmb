@@ -49,6 +49,7 @@ target_link_system_libraries(kynema_fmb_library PUBLIC
   ${YAML_CPP_TARGET}
   ${FS_LIB}
   NetCDF::NetCDF
+  nlohmann_json::nlohmann_json
 )
 
 if(KYNEMA_FMB_ENABLE_CUDSS)

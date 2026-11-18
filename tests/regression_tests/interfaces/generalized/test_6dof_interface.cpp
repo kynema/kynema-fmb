@@ -47,7 +47,16 @@ TEST(GeneralizedInterface, DOF6) {
     // Right now, I just know that there are 2 nodes because the 6 dof gets a node
     // and then each spring gets an additional node for the fixed end of the spring.
     // This should probably be passed out from the initialization at some point.
-    auto forces = interfaces::GeneralStructureInterface::HostView<double* [6]>("forces", num_nodes);
+    auto inputs = interfaces::StructuralInputs{std::vector<std::array<double, 6>>(num_nodes)};
+    nlohmann::json invalid = inputs;
+    invalid["version"] = interfaces::structural_schema_version + 1;
+    EXPECT_THROW(structure_interface.receive_inputs(invalid), std::invalid_argument);
+    invalid = inputs;
+    invalid["nodal_forces"][0].push_back(0.);
+    EXPECT_THROW(structure_interface.receive_inputs(invalid), std::invalid_argument);
+    invalid = inputs;
+    invalid["nodal_forces"].erase(0);
+    EXPECT_THROW(structure_interface.receive_inputs(invalid), std::invalid_argument);
 
     // TODO : Response looks a bit funny on this, maybe some steps aren't converging?
 
@@ -59,10 +68,11 @@ TEST(GeneralizedInterface, DOF6) {
 
         if (i > 20){
             // Put a vertical force on the mass.
-            forces(mass_node_id, 2) = 50.;
+            inputs.nodal_forces[mass_node_id][2] = 50.;
         }
 
-        structure_interface.receive_inputs(forces);
+        structure_interface.receive_inputs(nlohmann::json(inputs));
+        structure_interface.set_inputs(1);
 
         // calling a second advance states recalculates n+1, but start again from n
         // These two steps mimic what would happen with nonlinear outer iterations.
@@ -70,15 +80,18 @@ TEST(GeneralizedInterface, DOF6) {
         structure_interface.advance_states();
 
         structure_interface.calculate_outputs();
-        auto host_state = structure_interface.get_outputs();
+        const auto output = structure_interface.outputs();
+        const auto poses = output.at("nodal_poses").get<std::vector<std::array<double, 7>>>();
+        ASSERT_EQ(poses.size(), num_nodes);
+        EXPECT_EQ(poses[0], structure_interface.node_position(0));
 
         structure_interface.finalize_time_step();
 
-        // Write out the first row of host_state.x at each time step to a csv.
+        // Write out the first node's pose at each time step to a CSV.
         if (write_output) {
             x_output << i;
-            for (auto component = 0UL; component < host_state.x.extent(1); ++component) {
-                x_output << "," << host_state.x(0, component);
+            for (const auto component : poses[0]) {
+                x_output << "," << component;
             }
             x_output << "\n";
         }

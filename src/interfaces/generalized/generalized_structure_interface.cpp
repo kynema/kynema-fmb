@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <limits>
 #include <stdexcept>
+#include <utility>
 
 #include <yaml-cpp/yaml.h>
 
@@ -40,7 +41,7 @@ GeneralStructureInterface::GeneralStructureInterface(
     Kokkos::deep_copy(this->f_nm1, this->state_n.f);
     this->host_state.CopyFromState(this->state);
     this->module_dt = structural_description["simulation"]["step_size"].as<double>();
-    this->module_forces.resize(this->num_nodes());
+    this->module_inputs.nodal_forces.resize(this->num_nodes());
     if (structural_description["simulation"]["output_file"]) {
         this->output_filename = structural_description["simulation"]["output_file"].as<std::string>();
         if (this->output_filename.empty())
@@ -75,11 +76,21 @@ void GeneralStructureInterface::init_epilog() {
     }
 }
 
-void GeneralStructureInterface::set_forces(const std::vector<std::array<double, 6>>& forces) {
-    if (forces.size() != this->num_nodes()) {
+void GeneralStructureInterface::receive_inputs(const nlohmann::json& inputs) {
+    auto parsed = inputs.get<StructuralInputs>();
+    if (parsed.nodal_forces.size() != this->num_nodes()) {
         throw std::invalid_argument("FMB forces must match the node count");
     }
-    this->module_forces = forces;
+    this->module_inputs = std::move(parsed);
+}
+
+nlohmann::json GeneralStructureInterface::outputs() const {
+    StructuralOutputs result;
+    result.nodal_poses.reserve(this->num_nodes());
+    for (size_t node = 0; node < this->num_nodes(); ++node) {
+        result.nodal_poses.push_back(this->node_position(node));
+    }
+    return result;
 }
 
 std::array<double, 7> GeneralStructureInterface::node_position(size_t node) const {
@@ -98,7 +109,7 @@ void GeneralStructureInterface::set_inputs(size_t iteration) {
     HostView<double* [6]> forces("forces", this->num_nodes());
     for (size_t node = 0; node < this->num_nodes(); ++node) {
         for (size_t component = 0; component < 6; ++component) {
-            forces(node, component) = this->module_forces[node][component];
+            forces(node, component) = this->module_inputs.nodal_forces[node][component];
         }
     }
     this->receive_inputs(forces);

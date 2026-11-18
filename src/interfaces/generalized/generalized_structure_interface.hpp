@@ -7,6 +7,7 @@
 #include <yaml-cpp/yaml.h>
 
 #include "driver/Module.h"
+#include "interfaces/generalized/coupling_data.hpp"
 
 #include "interfaces/host_constraints.hpp"
 #include "interfaces/host_state.hpp"
@@ -42,7 +43,8 @@ public:
         const YAML::Node& structural_description, int id = 1, bool enable_output = true
     );
 
-    void set_forces(const std::vector<std::array<double, 6>>& forces);
+    void receive_inputs(const nlohmann::json& inputs) override;
+    nlohmann::json outputs() const override;
     std::array<double, 7> node_position(size_t node) const;
     size_t num_nodes() const { return this->state.x.extent(0); }
     void set_inputs(size_t iteration) override;
@@ -85,24 +87,17 @@ public:
     void advance_states(size_t iteration = 0) override;
 
     /**
-     * @brief Get actual values for inputs at time n+1
-     *
-     * TODO: this should receive a JSON
-     * TODO: This may also need to get prescribed displacements
+     * @brief Apply a host force view directly for standalone callers.
      */
     void receive_inputs(HostView<double* [6]> forces);
 
     /**
-     * @brief Consolidates outputs from structure.
-     * TODO: This should probably create the JSON in the future.
-     * This exists because this is computationally intensive for the CFD even if
-     * it may not do much on the structure side.
+     * @brief Copy structural state to the host for output.
      */
     void calculate_outputs(size_t iteration = 0) override;
 
     /**
-     * @brief Returns the entire outputs.
-     * TODO: should be updated to JSON in future.
+     * @brief Return the host state for standalone callers.
      */
     HostState<DeviceType>& get_outputs();
 
@@ -119,7 +114,6 @@ public:
     5. `calculate_outputs`
     6. `finalize_time_step`
 
-    TODO: Need a receive_inputs()
     */
 
 private:
@@ -136,7 +130,7 @@ private:
     int module_step{0};
     double module_time{0.};
     double module_dt{0.};
-    std::vector<std::array<double, 6>> module_forces;
+    StructuralInputs module_inputs;
     std::string output_filename;
     std::ofstream output_file;
     template <typename ValueType>
