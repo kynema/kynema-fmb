@@ -16,7 +16,10 @@ using DeviceType =
     Kokkos::Device<Kokkos::DefaultExecutionSpace, Kokkos::DefaultExecutionSpace::memory_space>;
 
 GeneralStructureInterface::GeneralStructureInterface(
-    const YAML::Node& structural_description):
+    const YAML::Node& structural_description, int id, bool enable_output
+):
+    module_id(id),
+    output_enabled(enable_output),
     model(BuildModel(structural_description, model_description)),
     state(model.CreateState<DeviceType>()),
     elements(model.CreateElements<DeviceType>()),
@@ -60,18 +63,8 @@ GeneralStructureInterface::GeneralStructureInterface(
 // Generalized API Functions
 //--------------------------------------------------------------------------
 
-GeneralStructureInterface::GeneralStructureInterface(
-    const YAML::Node& structural_description, MPI_Comm comm, int id
-)
-    : GeneralStructureInterface(structural_description) {
-    this->module_comm = comm;
-    this->module_id = id;
-}
-
 void GeneralStructureInterface::init_epilog() {
-    int rank = 0;
-    MPI_Comm_rank(this->module_comm, &rank);
-    if (rank == 0) {
+    if (this->output_enabled) {
         if (!this->output_filename.empty()) {
             this->output_file.exceptions(std::ios::failbit | std::ios::badbit);
             this->output_file.open(this->output_filename);
@@ -126,9 +119,7 @@ void GeneralStructureInterface::additional_picard_iterations(int count) {
 }
 
 void GeneralStructureInterface::dump_simulation_time() {
-    int rank = 0;
-    MPI_Comm_rank(this->module_comm, &rank);
-    if (rank == 0) {
+    if (this->output_enabled) {
         std::cout << "KynemaFMB final time: " << this->module_time << " seconds\n";
     }
 }

@@ -17,14 +17,12 @@ project(
   LANGUAGES CXX C
 )
 
-set(KYNEMA_FMB_DRIVER_MODULE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../kynema-driver/src" CACHE PATH
+file(REAL_PATH "${CMAKE_CURRENT_SOURCE_DIR}" KYNEMA_FMB_SOURCE_REAL_PATH)
+set(KYNEMA_FMB_DRIVER_MODULE_DIR "${KYNEMA_FMB_SOURCE_REAL_PATH}/../kynema-driver/src" CACHE PATH
     "kynema-driver/src directory containing the shared module interface")
-foreach(header Module.h Timers.h ParallelPrinter.h)
-  if(NOT EXISTS "${KYNEMA_FMB_DRIVER_MODULE_DIR}/${header}")
-    message(FATAL_ERROR "Missing driver interface header: ${KYNEMA_FMB_DRIVER_MODULE_DIR}/${header}")
-  endif()
-endforeach()
-find_package(MPI REQUIRED COMPONENTS CXX)
+if(NOT EXISTS "${KYNEMA_FMB_DRIVER_MODULE_DIR}/Module.h")
+  message(FATAL_ERROR "Missing driver interface header: ${KYNEMA_FMB_DRIVER_MODULE_DIR}/Module.h")
+endif()
 
 # -----------------------------------------------------------------------------
 # Project configuration and options
@@ -86,6 +84,7 @@ write_basic_package_version_file(
 install(FILES
   "${CMAKE_CURRENT_BINARY_DIR}/KynemaFMBConfig.cmake"
   "${CMAKE_CURRENT_BINARY_DIR}/KynemaFMBConfigVersion.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindNetCDF.cmake"
   DESTINATION lib/cmake/KynemaFMB
 )
 

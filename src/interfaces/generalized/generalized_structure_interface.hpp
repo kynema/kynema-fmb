@@ -35,10 +35,13 @@ public:
     /**
      * @brief Constructs a GeneralStructureInterface from a yaml description
      * @param structural_description Configuration parameters for the structure
+     * @param id Module instance identifier
+     * @param enable_output Whether this instance writes diagnostic messages and configured CSV output
      */
-    explicit GeneralStructureInterface(const YAML::Node& structural_description);
+    explicit GeneralStructureInterface(
+        const YAML::Node& structural_description, int id = 1, bool enable_output = true
+    );
 
-    GeneralStructureInterface(const YAML::Node& structural_description, MPI_Comm comm, int id = 1);
     void set_forces(const std::vector<std::array<double, 6>>& forces);
     std::array<double, 7> node_position(size_t node) const;
     size_t num_nodes() const { return this->state.x.extent(0); }
@@ -46,7 +49,8 @@ public:
     bool is_fixed_timestep_size() override { return true; }
     int time_index() override { return this->module_step; }
     std::string identifier() override { return "KynemaFMB-" + std::to_string(this->module_id); }
-    MPI_Comm comm() override { return this->module_comm; }
+    double get_time() override { return this->module_time; }
+    double get_timestep_size() override { return this->module_dt; }
 
     GeneralStructureInterface(GeneralStructureInterface& other) = delete;
 
@@ -123,14 +127,12 @@ private:
     void init_epilog() override;
     void prepare_module_prolog() override {}
     void prepare_module_epilog() override {}
-    double get_time() override { return this->module_time; }
-    double get_timestep_size() override { return this->module_dt; }
     void set_timestep_size(double dt) override;
     void additional_picard_iterations(int count) override;
     void dump_simulation_time() override;
 
-    MPI_Comm module_comm{MPI_COMM_NULL};
-    int module_id{1};
+    int module_id;
+    bool output_enabled;
     int module_step{0};
     double module_time{0.};
     double module_dt{0.};

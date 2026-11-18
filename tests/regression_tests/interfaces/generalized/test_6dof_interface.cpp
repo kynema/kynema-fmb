@@ -84,7 +84,7 @@ TEST(GeneralizedInterface, DOF6) {
         }
 
         EXPECT_EQ(structure_interface.time_index(), i + 1);
-        EXPECT_DOUBLE_EQ(structure_interface.call_get_time(), (i + 1) * time_step);
+        EXPECT_DOUBLE_EQ(structure_interface.get_time(), (i + 1) * time_step);
 
     }
 

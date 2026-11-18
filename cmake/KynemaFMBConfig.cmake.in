@@ -1,14 +1,24 @@
 @PACKAGE_INIT@
 
 include(CMakeFindDependencyMacro)
-find_dependency(MPI REQUIRED COMPONENTS CXX)
 include("${CMAKE_CURRENT_LIST_DIR}/KynemaFMBTargets.cmake")
 
 check_required_components(KynemaFMB)
 
 find_dependency(KokkosKernels REQUIRED)
 find_dependency(yaml-cpp REQUIRED)
-find_dependency(NetCDF REQUIRED)
+if(NOT TARGET NetCDF::NetCDF)
+  function(_kynema_fmb_find_netcdf)
+    list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}")
+    find_package(NetCDF MODULE QUIET)
+  endfunction()
+  _kynema_fmb_find_netcdf()
+  if(NOT TARGET NetCDF::NetCDF)
+    set(KynemaFMB_FOUND FALSE)
+    set(KynemaFMB_NOT_FOUND_MESSAGE "Could not find the NetCDF dependency")
+    return()
+  endif()
+endif()
 find_dependency(Eigen3 REQUIRED)
 
 if(@KYNEMA_FMB_ENABLE_SUPERLU@)
