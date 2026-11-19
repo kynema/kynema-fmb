@@ -14,6 +14,8 @@ jobs:
   Deploy-Docs:
     runs-on: ubuntu-24.04
     steps:
+      - name: Clone repository
+        uses: actions/checkout@v6
       - name: Cache install Dependencies
         id: cache-dependencies
         uses: actions/cache@v3
@@ -29,12 +31,12 @@ jobs:
           spack compiler find
           spack external find
           spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
+          source .github/workflows/setup-json-dependency.sh
+          setup_json_dependency
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Clone repository
-        uses: actions/checkout@v6
       - name: Install documentation dependencies
         run: |
           sudo apt-get update

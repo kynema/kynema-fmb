@@ -17,13 +17,6 @@ project(
   LANGUAGES CXX C
 )
 
-file(REAL_PATH "${CMAKE_CURRENT_SOURCE_DIR}" KYNEMA_FMB_SOURCE_REAL_PATH)
-set(KYNEMA_FMB_DRIVER_MODULE_DIR "${KYNEMA_FMB_SOURCE_REAL_PATH}/../kynema-driver/src" CACHE PATH
-    "kynema-driver/src directory containing the shared module interface")
-if(NOT EXISTS "${KYNEMA_FMB_DRIVER_MODULE_DIR}/Module.h")
-  message(FATAL_ERROR "Missing driver interface header: ${KYNEMA_FMB_DRIVER_MODULE_DIR}/Module.h")
-endif()
-
 # -----------------------------------------------------------------------------
 # Project configuration and options
 # -----------------------------------------------------------------------------

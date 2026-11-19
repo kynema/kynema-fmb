@@ -16,9 +16,7 @@ This is intended to test a single 6 DOF model run through
 the general structural interface
 */
 TEST(GeneralizedInterface, DOF6) {
-
-    const YAML::Node input_yaml =
-        YAML::LoadFile("generalized_test_files/general_6dof_inputs.yaml");
+    const YAML::Node input_yaml = YAML::LoadFile("generalized_test_files/general_6dof_inputs.yaml");
 
     const auto duration =
         input_yaml["simulation"]["duration"].as<double>();  // Simulation duration in seconds
@@ -40,7 +38,6 @@ TEST(GeneralizedInterface, DOF6) {
 
     YAML::Node fmb_model_description = structure_interface.initialize_module();
 
-
     auto num_nodes = fmb_model_description["model"]["num_nodes"].as<size_t>();
     auto mass_node_id = fmb_model_description["components"][0]["mass_node_id"].as<size_t>();
 
@@ -61,12 +58,11 @@ TEST(GeneralizedInterface, DOF6) {
     // TODO : Response looks a bit funny on this, maybe some steps aren't converging?
 
     for (auto i : std::views::iota(0, num_steps)) {
-
         structure_interface.predict_inputs();
 
         structure_interface.advance_states();
 
-        if (i > 20){
+        if (i > 20) {
             // Put a vertical force on the mass.
             inputs.nodal_forces[mass_node_id][2] = 50.;
         }
@@ -98,9 +94,7 @@ TEST(GeneralizedInterface, DOF6) {
 
         EXPECT_EQ(structure_interface.time_index(), i + 1);
         EXPECT_DOUBLE_EQ(structure_interface.get_time(), (i + 1) * time_step);
-
     }
-
 }
 
 }  // namespace kynema_fmb::tests

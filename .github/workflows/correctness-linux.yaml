@@ -47,6 +47,8 @@ jobs:
           spack compiler find
           spack external find
           spack install --only dependencies "${SPACK_SPEC}"
+          source .github/workflows/setup-json-dependency.sh
+          setup_json_dependency
       - name: Configure Kynema-FMB
         run: |
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh

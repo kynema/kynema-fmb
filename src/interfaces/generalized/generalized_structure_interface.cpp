@@ -1,7 +1,7 @@
 #include "generalized_structure_interface.hpp"
 
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 #include <limits>
 #include <stdexcept>
 #include <utility>
@@ -18,54 +18,55 @@ using DeviceType =
 
 GeneralStructureInterface::GeneralStructureInterface(
     const YAML::Node& structural_description, int id, bool enable_output
-):
-    module_id(id),
-    output_enabled(enable_output),
-    model(BuildModel(structural_description, model_description)),
-    state(model.CreateState<DeviceType>()),
-    elements(model.CreateElements<DeviceType>()),
-    constraints(model.CreateConstraints<DeviceType>()),
-    parameters(StepParameters(
-        structural_description["simulation"]["is_dynamic_solve"].as<bool>(),
-        structural_description["simulation"]["max_nonlinear_iterations"].as<size_t>(),
-        structural_description["simulation"]["step_size"].as<double>(),
-        structural_description["simulation"]["rho_inf"].as<double>())
-    ),
-    solver(CreateSolver(state, elements, constraints)),
-    state_n(CloneState(state)),
-    f_nm1(Kokkos::view_alloc("f_nm1", Kokkos::WithoutInitializing), state_n.f.extent(0)),
-    host_state(state),
-    host_constraints(constraints) {
-
+)
+    : module_id(id),
+      output_enabled(enable_output),
+      model(BuildModel(structural_description, model_description)),
+      state(model.CreateState<DeviceType>()),
+      elements(model.CreateElements<DeviceType>()),
+      constraints(model.CreateConstraints<DeviceType>()),
+      parameters(StepParameters(
+          structural_description["simulation"]["is_dynamic_solve"].as<bool>(),
+          structural_description["simulation"]["max_nonlinear_iterations"].as<size_t>(),
+          structural_description["simulation"]["step_size"].as<double>(),
+          structural_description["simulation"]["rho_inf"].as<double>()
+      )),
+      solver(CreateSolver(state, elements, constraints)),
+      state_n(CloneState(state)),
+      f_nm1(Kokkos::view_alloc("f_nm1", Kokkos::WithoutInitializing), state_n.f.extent(0)),
+      host_state(state),
+      host_constraints(constraints) {
     // Copy the forces from initialization
     Kokkos::deep_copy(this->f_nm1, this->state_n.f);
     this->host_state.CopyFromState(this->state);
     this->module_dt = structural_description["simulation"]["step_size"].as<double>();
     this->module_inputs.nodal_forces.resize(this->num_nodes());
     if (structural_description["simulation"]["output_file"]) {
-        this->output_filename = structural_description["simulation"]["output_file"].as<std::string>();
+        this->output_filename =
+            structural_description["simulation"]["output_file"].as<std::string>();
         if (this->output_filename.empty())
             throw std::invalid_argument("FMB output_file must not be empty");
     }
 
     // Update atol and rtol if provided.
-    if (structural_description["simulation"]["absolute_convergence_tol"]){
-        this->parameters.absolute_convergence_tol
-            = structural_description["simulation"]["absolute_convergence_tol"].as<double>();
+    if (structural_description["simulation"]["absolute_convergence_tol"]) {
+        this->parameters.absolute_convergence_tol =
+            structural_description["simulation"]["absolute_convergence_tol"].as<double>();
     }
-    if (structural_description["simulation"]["relative_convergence_tol"]){
-        this->parameters.relative_convergence_tol
-            = structural_description["simulation"]["relative_convergence_tol"].as<double>();
+    if (structural_description["simulation"]["relative_convergence_tol"]) {
+        this->parameters.relative_convergence_tol =
+            structural_description["simulation"]["relative_convergence_tol"].as<double>();
     }
-
 }
 
 //--------------------------------------------------------------------------
 // Generalized API Functions
 //--------------------------------------------------------------------------
 
-driver::PreparationStage GeneralStructureInterface::prepare(const driver::PreparationContext&) {
-    if (this->prepared) return driver::PreparationStage::complete;
+void GeneralStructureInterface::prepare() {
+    if (this->prepared) {
+        return;
+    }
     if (this->output_enabled) {
         if (!this->output_filename.empty()) {
             this->output_file.exceptions(std::ios::failbit | std::ios::badbit);
@@ -76,13 +77,13 @@ driver::PreparationStage GeneralStructureInterface::prepare(const driver::Prepar
         std::cout << "KynemaFMB initialized successfully\n";
     }
     this->prepared = true;
-    return driver::PreparationStage::complete;
 }
 
 nlohmann::json GeneralStructureInterface::initialization_data() const {
-    if (!this->prepared) return nullptr;
+    if (!this->prepared)
+        return nullptr;
     return {
-        {"provider", "KynemaFMB-" + std::to_string(this->module_id)},
+        {"provider", this->identifier()},
         {"time_step", this->module_dt},
         {"time", this->module_time},
         {"step", this->module_step},
@@ -152,7 +153,7 @@ void GeneralStructureInterface::dump_simulation_time() {
     }
 }
 
-YAML::Node GeneralStructureInterface::initialize_module(){
+YAML::Node GeneralStructureInterface::initialize_module() {
     return YAML::Clone(this->model_description);
 }
 
@@ -161,13 +162,12 @@ void GeneralStructureInterface::predict_inputs(size_t iteration) {
         return;
     using RangePolicy = Kokkos::RangePolicy<typename DeviceType::execution_space>;
 
-    auto f     = this->state.f;
-    auto f_n   = this->state_n.f;
+    auto f = this->state.f;
+    auto f_n = this->state_n.f;
     auto f_nm1 = this->f_nm1;
 
     Kokkos::parallel_for(
-        "PredictForce", RangePolicy(0, f.extent(0)),
-        KOKKOS_LAMBDA(size_t node) {
+        "PredictForce", RangePolicy(0, f.extent(0)), KOKKOS_LAMBDA(size_t node) {
             for (auto component = 0U; component < 6U; ++component) {
                 // TODO : This may need to be replaced with a higher order accuracy equation.
                 f(node, component) = 2. * f_n(node, component) - f_nm1(node, component);
@@ -179,30 +179,28 @@ void GeneralStructureInterface::predict_inputs(size_t iteration) {
 template <typename ValueType>
 using HostView = typename Kokkos::View<ValueType, DeviceType>::host_mirror_type;
 
-void GeneralStructureInterface::receive_inputs(HostView<double* [6]> forces){
+void GeneralStructureInterface::receive_inputs(HostView<double* [6]> forces) {
     Kokkos::deep_copy(this->state.f, forces);
 }
 
-void GeneralStructureInterface::reset_states(){
+void GeneralStructureInterface::reset_states() {
     // Back-up the forces at time n+1
     auto fnp1_temp = Kokkos::View<double* [6], DeviceType>(
-    Kokkos::view_alloc("fnp1_temp", Kokkos::WithoutInitializing), this->state.f.extent(0));
+        Kokkos::view_alloc("fnp1_temp", Kokkos::WithoutInitializing), this->state.f.extent(0)
+    );
     Kokkos::deep_copy(fnp1_temp, this->state.f);
 
     // Copy the state at time n -> state
     this->state = CloneState(this->state_n);
 
     // Copy forces back to state
-    auto f     = this->state.f;
+    auto f = this->state.f;
     Kokkos::deep_copy(f, fnp1_temp);
 }
 
 void GeneralStructureInterface::advance_states(size_t) {
-    auto converged = Step(this->parameters,
-                          this->solver,
-                          this->elements,
-                          this->state,
-                          this->constraints);
+    auto converged =
+        Step(this->parameters, this->solver, this->elements, this->state, this->constraints);
 
     // TODO : Throw an error if not converged?
 }
@@ -211,15 +209,15 @@ void GeneralStructureInterface::calculate_outputs(size_t) {
     this->host_state.CopyFromState(this->state);
 }
 
-HostState<DeviceType>& GeneralStructureInterface::get_outputs(){
+HostState<DeviceType>& GeneralStructureInterface::get_outputs() {
     return this->host_state;
 }
 
-void GeneralStructureInterface::finalize_time_step(){
+void GeneralStructureInterface::finalize_time_step() {
     // Data from time n -> n-1
     // Data from time n+1 -> n
     auto f_nm1 = this->f_nm1;
-    auto f_n   = this->state_n.f;
+    auto f_n = this->state_n.f;
     Kokkos::deep_copy(f_nm1, f_n);
 
     this->state_n = CloneState(this->state);
@@ -236,14 +234,12 @@ void GeneralStructureInterface::finalize_time_step(){
     }
 }
 
-
 //--------------------------------------------------------------------------
 // Private Functions for Building Model
 //--------------------------------------------------------------------------
 
 Model GeneralStructureInterface::BuildModel(
-    const YAML::Node& structural_description,
-    YAML::Node& model_description
+    const YAML::Node& structural_description, YAML::Node& model_description
 ) {
     // High level global parameters
     auto gravity = structural_description["simulation"]["gravity"].as<std::array<double, 3>>();
@@ -258,16 +254,15 @@ Model GeneralStructureInterface::BuildModel(
 
     // Append a new empty entry to the components sequence
     YAML::Node components_out = model_description["components"];
-    
+
     // Add individual structural components to the model
-    for (const auto& item : components)
-    {
+    for (const auto& item : components) {
         const auto type = item["type"].as<std::string>();
         if (type == "turbine") {
-            AddTurbine(model, item);
-        }
-        else if (type == "6dof")
-        {
+            throw std::invalid_argument(
+                "Turbine components are not supported by the generalized interface"
+            );
+        } else if (type == "6dof") {
             // Add an entry to the output structure description
             components_out.push_back(YAML::Node());
 
@@ -277,8 +272,7 @@ Model GeneralStructureInterface::BuildModel(
             output_description["type"] = "6dof";
 
             Add6DOF(model, item, output_description);
-        }
-        else {
+        } else {
             throw std::runtime_error("Unknown component type: " + type);
         }
     }
@@ -288,27 +282,24 @@ Model GeneralStructureInterface::BuildModel(
     return model;
 }
 
-void GeneralStructureInterface::AddTurbine(
-    Model& model, const YAML::Node& turbine_description
+void GeneralStructureInterface::Add6DOF(
+    Model& model, const YAML::Node& dof6_description, YAML::Node& output_description
 ) {
-    /* Do the full turbine initialization here */
-}
-
-
-void GeneralStructureInterface::Add6DOF(Model& model,
-            const YAML::Node& dof6_description,
-            YAML::Node& output_description) {
     /* Add a 6DOF mass, this is currently just a rough sketch,
     these values should come from the yaml node */
 
     auto mass = dof6_description["mass"].as<double>();
-    auto inertia = dof6_description["inertia"].as<std::array<double,9>>();    // inertia matrix
-    auto x0 = dof6_description["x0"].as<std::array<double,3>>();          // translation position   
-    auto x_dot0 = dof6_description["x_dot0"].as<std::array<double,3>>();  // translation velocity
-    auto x_ddot0 = dof6_description["x_ddot0"].as<std::array<double,3>>();  // translation acceleration
+    auto inertia = dof6_description["inertia"].as<std::array<double, 9>>();  // inertia matrix
+    auto x0 = dof6_description["x0"].as<std::array<double, 3>>();            // translation position
+    auto x_dot0 = dof6_description["x_dot0"].as<std::array<double, 3>>();    // translation velocity
+    auto x_ddot0 =
+        dof6_description["x_ddot0"].as<std::array<double, 3>>();  // translation acceleration
 
-    auto omega0 = dof6_description["omega0"].as<std::array<double,3>>();  // initial angular velocity  
-    auto omega_dot0 = dof6_description["omega_dot0"].as<std::array<double,3>>();  // initial angular acceleration                                  // initial velocity
+    auto omega0 =
+        dof6_description["omega0"].as<std::array<double, 3>>();  // initial angular velocity
+    auto omega_dot0 =
+        dof6_description["omega_dot0"]
+            .as<std::array<double, 3>>();  // initial angular acceleration // initial velocity
 
     auto mass_node_id =
         model.AddNode()
@@ -324,9 +315,9 @@ void GeneralStructureInterface::Add6DOF(Model& model,
     // Add masses element with m and J as mass matrix
     model.AddMassElement(
         mass_node_id, {{
-                          {mass, 0., 0., 0., 0., 0.},        // mass in x-direction
-                          {0., mass, 0., 0., 0., 0.},        // mass in y-direction
-                          {0., 0., mass, 0., 0., 0.},        // mass in z-direction
+                          {mass, 0., 0., 0., 0., 0.},                        // mass in x-direction
+                          {0., mass, 0., 0., 0., 0.},                        // mass in y-direction
+                          {0., 0., mass, 0., 0., 0.},                        // mass in z-direction
                           {0., 0., 0., inertia[0], inertia[1], inertia[2]},  // inertia xx
                           {0., 0., 0., inertia[3], inertia[4], inertia[5]},  // inertia yy
                           {0., 0., 0., inertia[6], inertia[7], inertia[8]},  // inertia zz
@@ -335,17 +326,16 @@ void GeneralStructureInterface::Add6DOF(Model& model,
 
     const auto& spring_set = dof6_description["springs"];
 
-    if(spring_set){
-        for (const auto& spring : spring_set)
-        {
-            auto fixed_coords = spring["fixed_point"].as<std::array<double,3>>();
+    if (spring_set) {
+        for (const auto& spring : spring_set) {
+            auto fixed_coords = spring["fixed_point"].as<std::array<double, 3>>();
             auto l0 = spring["l0"].as<double>();
             auto k = spring["k"].as<double>();
 
-            auto fixed_node_id = model.AddNode()
-                                    .SetPosition(fixed_coords[0], fixed_coords[1], fixed_coords[2],
-                                                 1., 0., 0., 0.)
-                                    .Build();
+            auto fixed_node_id =
+                model.AddNode()
+                    .SetPosition(fixed_coords[0], fixed_coords[1], fixed_coords[2], 1., 0., 0., 0.)
+                    .Build();
 
             model.AddFixedBC(fixed_node_id);
             model.AddSpringElement(fixed_node_id, mass_node_id, k, l0);
@@ -353,4 +343,4 @@ void GeneralStructureInterface::Add6DOF(Model& model,
     }
 }
 
-}
+}  // namespace kynema_fmb::interfaces
