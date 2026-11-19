@@ -64,7 +64,8 @@ GeneralStructureInterface::GeneralStructureInterface(
 // Generalized API Functions
 //--------------------------------------------------------------------------
 
-void GeneralStructureInterface::init_epilog() {
+driver::PreparationStage GeneralStructureInterface::prepare(const driver::PreparationContext&) {
+    if (this->prepared) return driver::PreparationStage::complete;
     if (this->output_enabled) {
         if (!this->output_filename.empty()) {
             this->output_file.exceptions(std::ios::failbit | std::ios::badbit);
@@ -74,6 +75,22 @@ void GeneralStructureInterface::init_epilog() {
         }
         std::cout << "KynemaFMB initialized successfully\n";
     }
+    this->prepared = true;
+    return driver::PreparationStage::complete;
+}
+
+nlohmann::json GeneralStructureInterface::initialization_data() const {
+    if (!this->prepared) return nullptr;
+    return {
+        {"provider", "KynemaFMB-" + std::to_string(this->module_id)},
+        {"time_step", this->module_dt},
+        {"time", this->module_time},
+        {"step", this->module_step},
+        {"items", this->num_nodes()},
+        {"components", 6},
+        {"field", "nodal_forces"},
+        {"version", structural_schema_version},
+    };
 }
 
 void GeneralStructureInterface::receive_inputs(const nlohmann::json& inputs) {

@@ -117,16 +117,15 @@ public:
     */
 
 private:
-    void init_prolog(bool) override {}
-    void init_epilog() override;
-    void prepare_module_prolog() override {}
-    void prepare_module_epilog() override {}
+    driver::PreparationStage prepare(const driver::PreparationContext&) override;
+    nlohmann::json initialization_data() const override;
     void set_timestep_size(double dt) override;
     void additional_picard_iterations(int count) override;
     void dump_simulation_time() override;
 
     int module_id;
     bool output_enabled;
+    bool prepared{false};
     int module_step{0};
     double module_time{0.};
     double module_dt{0.};
