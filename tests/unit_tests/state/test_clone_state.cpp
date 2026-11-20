@@ -42,6 +42,7 @@ void CompareStates(
     EXPECT_EQ(state_1.num_system_nodes, state_2.num_system_nodes);
     Compare(state_1.ID, state_2.ID);
     Compare(state_1.node_freedom_allocation_table, state_2.node_freedom_allocation_table);
+    Compare(state_1.active_dofs, state_2.active_dofs);
     Compare(state_1.node_freedom_map_table, state_2.node_freedom_map_table);
     Compare(state_1.x0, state_2.x0);
     Compare(state_1.x, state_2.x);
@@ -62,6 +63,7 @@ kynema_fmb::State<DeviceType> CreateTestState() {
     Kokkos::deep_copy(
         state.node_freedom_allocation_table, kynema_fmb::dof::FreedomSignature::AllComponents
     );
+    Kokkos::deep_copy(state.active_dofs, 6UL);
     Kokkos::deep_copy(state.node_freedom_map_table, 3UL);
     Kokkos::deep_copy(state.x0, 4.);
     Kokkos::deep_copy(state.x, 5.);

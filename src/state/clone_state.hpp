@@ -21,6 +21,7 @@ inline State<DeviceType> CloneState(const State<DeviceType>& old) {
     clone.time_step = old.time_step;
     deep_copy(clone.ID, old.ID);
     deep_copy(clone.node_freedom_allocation_table, old.node_freedom_allocation_table);
+    deep_copy(clone.active_dofs, old.active_dofs);
     deep_copy(clone.node_freedom_map_table, old.node_freedom_map_table);
     deep_copy(clone.x0, old.x0);
     deep_copy(clone.x, old.x);
