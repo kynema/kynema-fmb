@@ -83,14 +83,10 @@ nlohmann::json GeneralStructureInterface::initialization_data() const {
     if (!this->prepared)
         return nullptr;
     return {
-        {"provider", this->identifier()},
-        {"time_step", this->module_dt},
-        {"time", this->module_time},
-        {"step", this->module_step},
-        {"items", this->num_nodes()},
-        {"components", 6},
-        {"field", "nodal_forces"},
-        {"version", structural_schema_version},
+        {"provider", this->identifier()}, {"time_step", this->module_dt},
+        {"time", this->module_time},      {"step", this->module_step},
+        {"items", this->num_nodes()},     {"components", 6},
+        {"field", "nodal_forces"},        {"version", structural_schema_version},
     };
 }
 

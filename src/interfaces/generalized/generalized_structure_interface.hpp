@@ -43,6 +43,7 @@ public:
 
     void prepare();
     nlohmann::json initialization_data() const;
+    void receive_initialization_data(const nlohmann::json&) {}
     void receive_inputs(const nlohmann::json& inputs);
     nlohmann::json outputs() const;
     std::array<double, 7> node_position(size_t node) const;
