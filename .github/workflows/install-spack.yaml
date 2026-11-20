@@ -15,24 +15,22 @@ jobs:
       CXX: g++
       CC: gcc
     steps:
+      - uses: actions/checkout@v6
+        with:
+          path: kynema-fmb
+          submodules: recursive
       - name: Install Kynema-FMB
         run: |
           git clone https://github.com/spack/spack.git
           source spack/share/spack/setup-env.sh
           spack compiler find
+          source kynema-fmb/.github/workflows/setup-json-dependency.sh
+          setup_json_dependency
           spack env create -d .
           spack env activate .
-          spack add kynema-fmb ^netcdf-c~mpi ^hdf5~mpi
-          spack develop kynema-fmb@main
+          spack add kynema-fmb ^netcdf-c~mpi ^hdf5~mpi ^openblas@=0.3.33
+          spack develop --no-clone --path kynema-fmb kynema-fmb@main
           spack concretize -f
-          cd kynema-fmb
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            git remote add pr-source ${{ github.event.pull_request.head.repo.clone_url }}
-            git fetch pr-source ${{ github.head_ref }}
-            git checkout -B ${{ github.head_ref }} --track pr-source/${{ github.head_ref }}
-          else
-            git checkout ${{ github.ref_name }}
-          fi
           spack install
       - name: Rigid Body and Springs Test
         run: |

@@ -77,6 +77,7 @@ write_basic_package_version_file(
 install(FILES
   "${CMAKE_CURRENT_BINARY_DIR}/KynemaFMBConfig.cmake"
   "${CMAKE_CURRENT_BINARY_DIR}/KynemaFMBConfigVersion.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/FindNetCDF.cmake"
   DESTINATION lib/cmake/KynemaFMB
 )
 
