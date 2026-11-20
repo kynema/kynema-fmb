@@ -28,7 +28,7 @@ jobs:
           setup_json_dependency
           spack env create -d .
           spack env activate .
-          spack add kynema-fmb ^netcdf-c~mpi ^hdf5~mpi
+          spack add kynema-fmb ^netcdf-c~mpi ^hdf5~mpi ^openblas@=0.3.33
           spack develop --no-clone --path kynema-fmb kynema-fmb@main
           spack concretize -f
           spack install

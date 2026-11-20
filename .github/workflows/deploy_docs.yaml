@@ -21,7 +21,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ runner.workspace }}/spack
-          key: linux-spack_v7
+          key: linux-spack_v7-openblas-0.3.33
+          restore-keys: linux-spack_v7
       - name: Install Dependencies
         run: |
           if [ ! -f "${{runner.workspace}}/spack/share/spack/setup-env.sh" ]; then
@@ -30,7 +31,7 @@ jobs:
           source ${{runner.workspace}}/spack/share/spack/setup-env.sh
           spack compiler find
           spack external find
-          spack install --only dependencies kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack
+          spack install --only dependencies 'kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack ^openblas@=0.3.33'
           source .github/workflows/setup-json-dependency.sh
           setup_json_dependency
       - name: Set up Python

@@ -11,7 +11,7 @@ jobs:
   Correctness-Linux:
     runs-on: ubuntu-24.04
     env:
-      SPACK_SPEC: "kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack"
+      SPACK_SPEC: "kynema-fmb+klu+rosco+superlu~superlu-mt+tests+umfpack ^openblas@=0.3.33"
       CMAKE_BUILD_PARALLEL_LEVEL: 4
       CTEST_PARALLEL_LEVEL: 2
       CXX: ${{matrix.compiler}}
@@ -33,7 +33,7 @@ jobs:
           path: |
             ${{ runner.workspace }}/spack
             ${{ runner.workspace }}/spack-packages
-          key: linux-spack_v8-${{ runner.os }}-${{ matrix.compiler }}-${{ matrix.build_type }}-${{ matrix.build_external }}
+          key: linux-spack_v8-${{ runner.os }}-${{ matrix.compiler }}-${{ matrix.build_type }}-${{ matrix.build_external }}-openblas-0.3.33
           restore-keys: |
             linux-spack_v8-${{ runner.os }}-${{ matrix.compiler }}-
             linux-spack_v8-${{ runner.os }}-
