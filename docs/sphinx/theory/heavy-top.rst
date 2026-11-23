@@ -13,7 +13,7 @@ material coordinates and we include three translational DOFs for the spherical j
 
 .. math::
 
-   \underline{q} = \begin{bmatrix}
+   \underline{q}  = \begin{bmatrix}
     \underline{u}_\mathrm{HT} \\
     \underline{\underline{R}}_\mathrm{HT} \\
     \underline{u}_\mathrm{SJ} 
@@ -52,22 +52,28 @@ Eq. :eq:`rigid-ref`) are given by
    \underline{x}^\mathrm{r}_\mathrm{HT} = ( 0, 1 , 0 )^T\, \mathrm{m}, \quad
    \underline{\underline{R}}^\mathrm{r}_\mathrm{HT} = \underline{\underline{I}} \,, \\
 
-respectively. The only component of external force (see
-Eq. :eq:`rbresid`) is gravity:
+respectively. 
+The spherical joint  reference position  is
+
+.. math::
+
+   \underline{x}^\mathrm{r}_\mathrm{SJ} = ( 0, 0 , 0 )^T
+
+The only component of external force is gravity:
 
 .. math:: \underline{f} = [0,0,-g,0,0,0,0,0,0]^T
 
 where :math:`g=9.81` m/s\ :math:`^2`. 
 
 
-The problem is constrained such that the spherical joint is located at the global origin, the heavy-top center of mass is located 1 m from the
+The problem is constrained such that the spherical joint is fixed, the heavy-top center of mass is located 1 m from the
 origin, and the heavy-top body-attached-coordinate-system y-axis is pointing away from the global origin.  The Kynema-FMB implementation employs the following constraint:
 
-.. math:: \underline{\Phi} = \begin{bmatrix}
-   \underline{u}_\mathrm{HT} - \underline{u}_\mathrm{SJ} 
-   - \left( \underline{\underline{R}}_\mathrm{HT} - \underline{\underline{I}}\right)
-   \underline{x}^r_\mathrm{HT} \\
-   \underline{u}_\mathrm{SJ}
+.. math:: 
+   
+   \underline{\Phi} = \begin{bmatrix}
+   \underline{\Phi}^\mathrm{Rigid63}_{\mathrm{HT-SJ}} \left( \underline{u}_\mathrm{HT}, \underline{\underline{R}}_\mathrm{HT}, \underline{u}_\mathrm{SJ} \right)\\
+   \underline{\Phi}^\mathrm{BC3}_{\mathrm{SJ},\underline{0}} (\underline{u}_\mathrm{SJ})
    \end{bmatrix}
 
 where :math:`\underline{\Phi} \in  \mathbb{R}^6`, and the contraints :math:`\underline{\lambda} \in \mathbb{R}^6` are denoted
@@ -82,35 +88,17 @@ where :math:`\underline{\Phi} \in  \mathbb{R}^6`, and the contraints :math:`\und
 where :math:`\underline{\lambda}_\mathrm{HT},\, \underline{\lambda}_\mathrm{SJ}
 \in \mathbb{R}^3`.
 
-The constraint gradient matrix is
+The constraint gradient matrix is defined as
 
-.. math:: \underline{\underline{B}} = \begin{bmatrix}
-     \underline{\underline{I}} & \widetilde{ \underline{\underline{R}}_\mathrm{HT} \underline{x}^{\mathrm{r}}_\mathrm{HT} } & - \underline{\underline{I}} \\
+.. math::
+
+   \underline{\underline{B}} = \begin{bmatrix}
+     & \underline{\underline{B}}^\mathrm{Rigid63}_\mathrm{HT-SJ} & \\
      \underline{\underline{0}} & 
      \underline{\underline{0}} & 
-     \underline{\underline{I}} 
+     \underline{\underline{B}}^\mathrm{BC3}_\mathrm{SJ} 
    \end{bmatrix}
-
-and the contribution to the iteration matrix in Eq. :eq:`iteration` is
-
-.. math:: \underline{\underline{K}}^\Phi = \begin{bmatrix}
-     \underline{\underline{0}} & 
-     \underline{\underline{0}} & 
-     \underline{\underline{0}} \\
-     \underline{\underline{0}} & 
-     \widetilde{\lambda_\mathrm{HT}} 
-     \widetilde{\underline{\underline{R}}_\mathrm{HT} \underline{x}^{\mathrm{r}}_\mathrm{HT} }  & \underline{\underline{0}}  \\
-     \underline{\underline{0}} & 
-     \underline{\underline{0}} & 
-     \underline{\underline{0}} 
-   \end{bmatrix}
-
-.. note::
-  
-   The term :math:`\underline{\underline{K}}^\Phi` is include here for 
-   completeness, but is not in the current Kynema-FMB implementation, and
-   nonlinear-system convergence has been satisfactory. 
-
+   \quad \in \mathbb{R}^{6 \times 9}
 
 The Kynema-FMB regression test suite includes the spinning, heavy top
 problem with the following initial conditions:
@@ -118,7 +106,7 @@ problem with the following initial conditions:
 .. math::
 
    \begin{aligned}
-   \underline{u}^\mathrm{init}_\mathrm{HT} &= \left[ 0, 0, 0 \right]^T \, 
+   \underline{u}^\mathrm{init}_\mathrm{HT} &= \left[ 0, 1, 0 \right]^T \, 
    \mathrm{m}\\
    \underline{\underline{R}}_\mathrm{HT}^\mathrm{init} &=  \underline{\underline{R}}^\mathrm{r}_\mathrm{HT} \\
    \underline{u}^\mathrm{init}_\mathrm{SJ} &= \left[ 0, 0, 0 \right]^T \, 

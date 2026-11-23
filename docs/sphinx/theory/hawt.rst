@@ -219,8 +219,8 @@ and we introduced the operator
 
 .. math:: \mathrm{AX}\left( \underline{\underline{A}} \right) =  \frac{1}{2} \left(\mathrm{tr} \left( \underline{\underline{A}} \right) \underline{\underline{I}} -  \underline{\underline{A}} \right)
 
-Proceeding in a similar fashion for the remaining contraints, we find
-the following contraint gradient matrices:
+Proceeding in a similar fashion for the remaining constraints, we find
+the following constraint gradient matrices:
 
 .. math::
 
