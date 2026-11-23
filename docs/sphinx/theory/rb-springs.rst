@@ -13,63 +13,64 @@ The generalized model degrees of freedom are
 .. math::
 
    \underline{q} = \begin{bmatrix} 
-     \underline{u} \\
-     \underline{\underline{R}} \\
-     \underline{u}^\mathrm{sp1} \\
-     \underline{u}^\mathrm{sp2} \\
-     \underline{u}^\mathrm{sp3}
+     \underline{u}_\mathrm{RB} \\
+     \underline{\underline{R}}_\mathrm{RB} \\
+     \underline{u}_\mathrm{sp1} \\
+     \underline{u}_\mathrm{sp2} \\
+     \underline{u}_\mathrm{sp3}
     \end{bmatrix} \quad
     \underline{v} = \begin{bmatrix} 
-     \dot{\underline{u}} \\
-     \underline{\omega} \\
-     \dot{\underline{u}}^\mathrm{sp1} \\
-     \dot{\underline{u}}^\mathrm{sp2} \\
-     \dot{\underline{u}}^\mathrm{sp3}
+     \dot{\underline{u}}_\mathrm{RB} \\
+     \underline{\omega}_\mathrm{RB} \\
+     \dot{\underline{u}}_\mathrm{sp1} \\
+     \dot{\underline{u}}_\mathrm{sp2} \\
+     \dot{\underline{u}}_\mathrm{sp3}
     \end{bmatrix}
 
-:math:`\underline{u} \in \mathbb{R}^3` and
-:math:`\underline{\underline{R}} \in \mathbb{R}^{3\times 3}` are rigid
+where :math:`\underline{q} \in \mathbb{R}^3 \times \mathrm{SO}(3) \times \mathbb{R}^{18}` and :math:`\underline{v} \in \mathbb{R}^{24}`,
+:math:`\underline{u}_\mathrm{RB} \in \mathbb{R}^3` and
+:math:`\underline{\underline{R}}_\mathrm{RB} \in \mathrm{SO}(3)` are rigid
 body displacement and orientation, respectively,
-:math:`\underline{u}^{\mathrm{sp}i} \in \mathbb{R}^6` is spring i end
+:math:`\underline{u}_{\mathrm{sp}i} \in \mathbb{R}^6` is spring i end
 displacement (2 nodes with 3 DOF each; see :ref:`sec-spring`) and
 
 .. math::
 
-   \underline{u}^{\mathrm{sp}i} = 
+   \underline{u}_{\mathrm{sp}i} = 
    \begin{bmatrix}
-   \underline{u}^{\mathrm{sp}i}_1 \\ \underline{u}^{\mathrm{sp}i}_2 
+   \underline{u}_{\mathrm{sp}i1} \\ \underline{u}_{\mathrm{sp}i2} 
    \end{bmatrix}
 
 The system input parameters include the following:
 
-- :math:`\underline{\underline{M}}^* \in \mathbb{R}^{6\times 6}`: Rigid
+- :math:`\underline{\underline{M}}^*_\mathrm{RB} \in \mathbb{R}^{6\times 6}`: Rigid
   body mass matrix in material coordinate system
 
-- :math:`\underline{x}^\mathrm{r} \in \mathbb{R}^3`: Rigid body reference
+- :math:`\underline{x}^\mathrm{r}_\mathrm{RB} \in \mathbb{R}^3`: Rigid body reference
   position
 
-- :math:`\underline{\underline{R}}^\mathrm{r} \in \mathbb{R}^{3\times3}`: Rigid
+- :math:`\underline{\underline{R}}^\mathrm{r}_\mathrm{RB} \in \mathrm{SO}(3)`: Rigid
   body reference orientation
 
-- :math:`\underline{u}^\mathrm{init} \in \mathbb{R}^3`: Rigid body
+- :math:`\underline{u}^\mathrm{init}_\mathrm{RB} \in \mathbb{R}^3`: Rigid body
   initial displacement
 
-- :math:`\underline{\underline{R}}^\mathrm{init} \in \mathbb{R}^{3\times3}`:
+- :math:`\underline{\underline{R}}^\mathrm{init}_\mathrm{RB} \in \mathrm{SO}(3)`:
   Rigid body initial orientation
 
-- :math:`\dot{\underline{u}}^\mathrm{init} \in \mathbb{R}^3`: Rigid body
+- :math:`\dot{\underline{u}}^\mathrm{init}_\mathrm{RB} \in \mathbb{R}^3`: Rigid body
   initial velocity
 
-- :math:`\underline{\omega}^\mathrm{init} \in \mathbb{R}^3`: Rigid body
+- :math:`\underline{\omega}^\mathrm{init}_\mathrm{RB} \in \mathbb{R}^3`: Rigid body
   initial angular velocity
 
-- :math:`\underline{x}^{\mathrm{sp,r}i} \in \mathbb{R}^6`: Spring
+- :math:`\underline{x}_{\mathrm{sp,r}i} \in \mathbb{R}^6`: Spring
   :math:`i` reference location
 
-- :math:`k^{\mathrm{sp}i} \in \mathbb{R}`: Spring :math:`i` spring
+- :math:`k_{\mathrm{sp}i} \in \mathbb{R}`: Spring :math:`i` spring
   constant
 
-- :math:`L^{\mathrm{sp,r}i} \in \mathbb{R}`: Spring :math:`i` unstretched
+- :math:`L_{\mathrm{sp,r}i} \in \mathbb{R}`: Spring :math:`i` unstretched
   length
 
 and where
@@ -111,39 +112,41 @@ where :math:`\underline{\lambda} \in \mathbb{R}^{18}`, :math:`\underline{\underl
 
    \underline{\underline{M}} 
    = \begin{bmatrix}
-   \underline{\underline{M}}^\mathrm{rb} & \underline{\underline{0}}_{6\times 18}\\
+   \underline{\underline{M}}_\mathrm{RB} & \underline{\underline{0}}_{6\times 18}\\
    \underline{\underline{0}}_{18\times 6} & \underline{\underline{0}}_{18\times 18}
    \end{bmatrix} \in \mathbb{R}^{24\times 24}
    \,,\quad \underline{g} = \begin{bmatrix} 
-   \underline{g}^\mathrm{rb} \\ 
-   \underline{g}^\mathrm{sp1} \\
-   \underline{g}^\mathrm{sp2} \\
-   \underline{g}^\mathrm{sp3} 
+   \underline{g}_\mathrm{RB} \\ 
+   \underline{g}_\mathrm{sp1} \\
+   \underline{g}_\mathrm{sp2} \\
+   \underline{g}_\mathrm{sp3} 
    \end{bmatrix} \in \mathbb{R}^{24}
    \,,\quad
    \underline{f}
    = 
    \begin{bmatrix}
-   \underline{f}^\mathrm{rb}\\
+   \underline{f}_\mathrm{RB}\\
    \underline{0}_{18}\\
    \end{bmatrix} 
    \in \mathbb{R}^{24}
 
-In the above, :math:`\underline{\underline{M}}^\mathrm{rb} \in \mathbb{R}^{6 \times 6}` and :math:`\underline{g}^\mathrm{rb}\in \mathbb{R}^6` are defined in :ref:`sec-rigid`, :math:`\underline{f}^\mathrm{rb}\in \mathbb{R}^6` is the force applied to the rigid-body center of mass, and :math:`\underline{g}^{\mathrm{sp}i}\in\mathbb{R}^6` is defined in :ref:`sec-spring`. The constraints are given by
+In the above, :math:`\underline{\underline{M}}_\mathrm{RB} \in \mathbb{R}^{6 \times 6}` and :math:`\underline{g}_\mathrm{RB}\in \mathbb{R}^6` 
+are defined in :ref:`sec-rigid`, :math:`\underline{f}_\mathrm{RB}\in \mathbb{R}^6` is the force applied to the rigid-body center of mass, 
+and :math:`\underline{g}_{\mathrm{sp}i}\in\mathbb{R}^6` is defined in :ref:`sec-spring`. The constraints are given by
 
 .. math::
 
    \underline{\Phi} =
    \begin{bmatrix}
-   \underline{u}_1^{\mathrm{sp}1} - \underline{u} 
-   - \left(\underline{\underline{R}}-\underline{\underline{I}} \right) \underline{r}^{\mathrm{sp,r}1} \\
-   \underline{u}_2^{\mathrm{sp}1} \\
-   \underline{u}_1^{\mathrm{sp}2} - \underline{u} 
-   - \left(\underline{\underline{R}}-\underline{\underline{I}} \right) \underline{r}^{\mathrm{sp,r}2} \\
-   \underline{u}_2^{\mathrm{sp}2} \\
-   \underline{u}_1^{\mathrm{sp}3} - \underline{u} 
-   - \left(\underline{\underline{R}}-\underline{\underline{I}} \right) \underline{r}^{\mathrm{sp,r}3} \\
-   \underline{u}_2^{\mathrm{sp}3} \\
+   \underline{\Phi}^\mathrm{Rigid63}_\mathrm{RB-sp1,1}\left(\underline{u}_\mathrm{RB}, 
+   \underline{\underline{R}}_\mathrm{RB}, \underline{u}_\mathrm{sp1,1},\underline{r}^r_\mathrm{RB-sp1,1} \right) \\
+   \underline{\Phi}^\mathrm{BC3}_\mathrm{sp1,2}\left(\underline{u}_\mathrm{sp1,2},\underline{0}\right) \\
+   \underline{\Phi}^\mathrm{Rigid63}_\mathrm{RB-sp2,1}\left(\underline{u}_\mathrm{RB}, 
+   \underline{\underline{R}}_\mathrm{RB}, \underline{u}_\mathrm{sp2,1},\underline{r}^r_\mathrm{RB-sp2,1} \right) \\
+   \underline{\Phi}^\mathrm{BC3}_\mathrm{sp2,2}\left(\underline{u}_\mathrm{sp2,2},\underline{0}\right) \\
+   \underline{\Phi}^\mathrm{Rigid63}_\mathrm{RB-sp3,1}\left(\underline{u}_\mathrm{RB}, 
+   \underline{\underline{R}}_\mathrm{RB}, \underline{u}_\mathrm{sp3,1},\underline{r}^r_\mathrm{RB-sp3,1} \right) \\
+   \underline{\Phi}^\mathrm{BC3}_\mathrm{sp3,2}\left(\underline{u}_\mathrm{sp3,2},\underline{0}\right) 
    \end{bmatrix} \quad
    \in \mathbb{R}^{18}
 
@@ -154,29 +157,29 @@ The specific entries of :math:`\underline{\underline{B}}` are given by
    \begin{aligned}
    \underline{\underline{B}} =
    \begin{bmatrix}
-   -\underline{\underline{I}}_{3 \times 3} & \widetilde{ \underline{\underline{R}} \underline{r}_1^{\mathrm{sp,r}1} } 
-   & \underline{\underline{I}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} 
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} \\
+   & \left[ \underline{\underline{B}}_\mathrm{RB-sp1,1}^\mathrm{Rigid63}  \right]_{(1:3,1:6)}
+   & \left[\underline{\underline{B}}_\mathrm{RB-sp1,1}^\mathrm{Rigid63}\right]_{(1:3,7:9)}  & \underline{\underline{0}} & \underline{\underline{0}} 
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} \\
    %
-   \underline{\underline{0}}_{3 \times 3} &  \underline{\underline{0}}_{3 \times 3}
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{I}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} 
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} \\
+   \underline{\underline{0}} &  \underline{\underline{0}}
+   & \underline{\underline{0}} & \underline{\underline{B}}^\mathrm{BC3}_\mathrm{sp1,2} & \underline{\underline{0}} 
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} \\
    %
-   -\underline{\underline{I}}_{3 \times 3} & \widetilde{ \underline{\underline{R}} \underline{r}_1^{\mathrm{sp,r}2} } 
-   & \underline{\underline{0}}_{3 \times 3}  & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{I}}_{3 \times 3} 
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} \\
+   & \left[ \underline{\underline{B}}_\mathrm{RB-sp2,1}^\mathrm{Rigid63}  \right]_{(1:3,1:6)}
+   & \underline{\underline{0}}  & \underline{\underline{0}} & \left[\underline{\underline{B}}_\mathrm{RB-sp2,1}^\mathrm{Rigid63}\right]_{(1:3,7:9)} 
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} \\
    %
-   \underline{\underline{0}}_{3 \times 3} &  \underline{\underline{0}}_{3 \times 3}
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} 
-   & \underline{\underline{I}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} \\
+   \underline{\underline{0}} &  \underline{\underline{0}}
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} 
+   &  \underline{\underline{B}}^\mathrm{BC3}_\mathrm{sp2,2} & \underline{\underline{0}} & \underline{\underline{0}} \\
    %
-   -\underline{\underline{I}}_{3 \times 3} & \widetilde{ \underline{\underline{R}} \underline{r}_1^{\mathrm{sp,r}3} } 
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3}
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{I}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3}\\
+   & \left[ \underline{\underline{B}}_\mathrm{RB-sp3,1}^\mathrm{Rigid63}  \right]_{(1:3,1:6)}
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}}
+   & \underline{\underline{0}} & \left[\underline{\underline{B}}_\mathrm{RB-sp3,1}^\mathrm{Rigid63}\right]_{(1:3,7:9)}  & \underline{\underline{0}}\\
    %
-   \underline{\underline{0}}_{3 \times 3} &  \underline{\underline{0}}_{3 \times 3}
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} 
-   & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{0}}_{3 \times 3} & \underline{\underline{I}}_{3 \times 3} \\
+   \underline{\underline{0}} &  \underline{\underline{0}}
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} 
+   & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{B}}^\mathrm{BC3}_\mathrm{sp3,2} \\
    \end{bmatrix}
    \end{aligned}
 

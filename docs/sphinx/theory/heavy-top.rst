@@ -19,7 +19,7 @@ material coordinates and we include three translational DOFs for the spherical j
     \underline{u}_\mathrm{SJ} 
    \end{bmatrix}
 
-where :math:`\underline{q} = \mathbb{R}^{9}`.
+where :math:`\underline{q} = \mathbb{R}^{3} \times \mathrm{SO}(3) \times \mathbb{R}^{3}`.
 
 We assume the heavy top is a thin disk with mass
 :math:`m=15` kg. The :math:`6\times6` mass matrix in material coordinates is
