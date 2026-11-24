@@ -52,7 +52,7 @@ state, and the associated additional iteration-matrix term in Eq. :eq:`iteration
 BC6
 ---
 
-Translational and rotational boundary condition with prescribed position and orientation
+Translation and rotation boundary condition with prescribed position :math:`\underline{u}^\mathrm{p}_\alpha \in \mathbb{R}^3` and orientation :math:`\underline{\underline{R}}^\mathrm{p}_\alpha \in SO(3)`   
 for a 6-DOF node :math:`\alpha` with configuration in :math:`\mathbb{R}^3 \times SO(3)`:
 
 .. math::
@@ -203,8 +203,8 @@ Rigid66
 --------
 
 Rigid connection between a 6-DOF node :math:`\alpha` and a 6-DOF node :math:`\beta`
-with a prescribed relative rotation :math:`\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}`
-between the two frames.
+with a prescribed relative rotation :math:`\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\in SO(3)`
+between the two frames:
 
 .. math::
 
@@ -212,12 +212,16 @@ between the two frames.
    \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}, \underline{r}^\mathrm{r}_{\alpha-\beta} \right) = 
    \begin{bmatrix}
      \underline{u}_\beta - \underline{u}_\alpha - \left( \underline{\underline{R}}_\alpha - \underline{\underline{I}} \right) \underline{r}^\mathrm{r}_{\alpha-\beta}
-     \\ \mathrm{axial}\left( \underline{\underline{R}}_\beta \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\alpha^T \right)
+     \\ \mathrm{axial}\left( \underline{\underline{R}}_\alpha \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\beta^T \right)
    \end{bmatrix}
    \quad \in \mathbb{R}^6
 
 where :math:`\underline{r}^\mathrm{r}_{\alpha-\beta} = \underline{x}^\mathrm{r}_\beta - \underline{x}^\mathrm{r}_\alpha`
-is the reference relative position vector from node :math:`\alpha` to node :math:`\beta`.
+is the reference relative position vector from node :math:`\alpha` to node :math:`\beta`. The rotational constraint is derived from the relation:
+
+.. math::
+
+   \underline{\underline{R}}_\alpha^\mathrm{c} =  \underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\alpha^\mathrm{r}
 
 Taking the variation of the rigid connection constraint, the constraint gradient can be expressed as
 
@@ -237,8 +241,8 @@ where
 
    \underline{\underline{B}}^\mathrm{Rigid66}_{\alpha-\beta} = \begin{bmatrix}
      -\underline{\underline{I}} & \widetilde{\underline{\underline{R}}_\alpha \underline{r}^\mathrm{r}_{\alpha-\beta}} & \underline{\underline{I}} & \underline{\underline{0}} \\
-     \underline{\underline{0}} & -\mathrm{AX}\left( \underline{\underline{R}}_\alpha \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\beta^T \right) &
-     \underline{\underline{0}} & \mathrm{AX}\left( \underline{\underline{R}}_\beta \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\alpha^T \right)
+     \underline{\underline{0}} & -\mathrm{AX}\left( \underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\alpha^T \right) &
+     \underline{\underline{0}} & \mathrm{AX}\left( \underline{\underline{R}}_\alpha \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\beta^T \right)
    \end{bmatrix}
    \quad \in \mathbb{R}^{6\times12}
 
@@ -271,12 +275,12 @@ where
    =
    \begin{bmatrix}
     \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}}\\
-    \underline{\underline{0}} & -\mathrm{AX} \left(\underline{\underline{R}}_\alpha \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\beta^T \widetilde{\lambda}_{\alpha-\beta,2}  \right)
-   -\widetilde{\lambda}_{\alpha-\beta,1} \widetilde{ \underline{\underline{R}}_\alpha \underline{r}^\mathrm{r}_{\alpha-\beta} }
-   & \underline{\underline{0}} & -\mathrm{AX2}\left( \underline{\lambda}_{\alpha-\beta,2}, \underline{\underline{R}}_\beta \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\alpha^T \right) \\
+    \underline{\underline{0}} & -\mathrm{AX} \left(\underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\alpha^T \widetilde{\lambda}_{\alpha-\beta,2}  \right)
+   -\widetilde{\lambda}_{\alpha-\beta,1} \widetilde{ \underline{\underline{R}}_\beta \underline{r}^\mathrm{r}_{\alpha-\beta} }
+   & \underline{\underline{0}} & -\mathrm{AX2}\left( \underline{\lambda}_{\alpha-\beta,2}, \underline{\underline{R}}_\alpha \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\beta^T \right) \\
     \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}} & \underline{\underline{0}}\\
-    \underline{\underline{0}} & \mathrm{AX2} \left( \underline{\lambda}_{\alpha-\beta,2}, \underline{\underline{R}}_\alpha \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\beta^T\right)
-   & \underline{\underline{0}} & \mathrm{AX} \left( \underline{\underline{R}}_\beta \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\alpha^T  \widetilde{\lambda}_{\alpha-\beta,2} \right)
+    \underline{\underline{0}} & \mathrm{AX2} \left( \underline{\lambda}_{\alpha-\beta,2}, \underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\alpha^T\right)
+   & \underline{\underline{0}} & \mathrm{AX} \left( \underline{\underline{R}}_\alpha \left(\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\right)^T \underline{\underline{R}}_\beta^T  \widetilde{\lambda}_{\alpha-\beta,2} \right)
    \end{bmatrix}
    \quad \in \mathbb{R}^{12\times12}
    \end{aligned}
