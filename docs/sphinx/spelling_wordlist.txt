@@ -37,7 +37,6 @@ dimensionalize
 discretization
 discretized
 discretizes
-doxygen
 dropdown
 dt
 exawind
