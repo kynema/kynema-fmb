@@ -52,7 +52,7 @@ state, and the associated additional iteration-matrix term in Eq. :eq:`iteration
 BC6
 ---
 
-Translation and rotation boundary condition with prescribed position :math:`\underline{u}^\mathrm{p}_\alpha \in \mathbb{R}^3` and orientation :math:`\underline{\underline{R}}^\mathrm{p}_\alpha \in SO(3)`   
+Translation and rotation boundary condition with prescribed position :math:`\underline{u}^\mathrm{p}_\alpha \in \mathbb{R}^3` and orientation :math:`\underline{\underline{R}}^\mathrm{p}_\alpha \in SO(3)`
 for a 6-DOF node :math:`\alpha` with configuration in :math:`\mathbb{R}^3 \times SO(3)`:
 
 .. math::
