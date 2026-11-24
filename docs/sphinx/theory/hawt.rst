@@ -59,10 +59,10 @@ In this section we define the constraints for our HAWT model. We start
 at the base and move up through the connections. We assume the tower
 base is fixed, for which the constraints can be written
 
-.. math:: 
-   
-   \underline{\Phi}_\mathrm{tb} = 
-   \underline{\Phi}^\mathrm{BC6}\left(\underline{u}_\mathrm{tb}, \underline{\underline{R}}_\mathrm{tb}, \underline{0}, 
+.. math::
+
+   \underline{\Phi}_\mathrm{tb} =
+   \underline{\Phi}^\mathrm{BC6}\left(\underline{u}_\mathrm{tb}, \underline{\underline{R}}_\mathrm{tb}, \underline{0},
    \underline{\underline{I}} \right) \in \mathbb{R}^6
 
 The tower is represented by a flexible beam.
@@ -77,9 +77,9 @@ constraints between the tower-top and yaw baseplate are
 .. math::
 
    \underline{\Phi}_\mathrm{yb-tt} = \underline{\phi}^\mathrm{Rigid66}\left(
-   \underline{u}_\mathrm{yb}, \underline{\underline{R}}_\mathrm{yb}, 
-   \underline{u}_\mathrm{tt}, \underline{\underline{R}}_\mathrm{tt}, \underline{\underline{R}}_\mathrm{yc}, 
-   \underline{r}^\mathrm{r}_{\mathrm{yb-tt}} \right) \in \mathbb{R}^6 
+   \underline{u}_\mathrm{yb}, \underline{\underline{R}}_\mathrm{yb},
+   \underline{u}_\mathrm{tt}, \underline{\underline{R}}_\mathrm{tt}, \underline{\underline{R}}_\mathrm{yc},
+   \underline{r}^\mathrm{r}_{\mathrm{yb-tt}} \right) \in \mathbb{R}^6
 
 
 The shaft base and yaw CS’s are assumed to be rigidly connected. Here,
@@ -87,9 +87,9 @@ shaft-base relative rotation is the same as the yaw relative rotation:
 
 .. math::
 
-   \underline{\Phi}_\mathrm{sb-yb} = 
+   \underline{\Phi}_\mathrm{sb-yb} =
    \underline{\Phi}^\mathrm{Rigid66}\left(
-   \underline{u}_\mathrm{sb}, \underline{\underline{R}}_\mathrm{sb}, 
+   \underline{u}_\mathrm{sb}, \underline{\underline{R}}_\mathrm{sb},
    \underline{u}_\mathrm{yb}, \underline{\underline{R}}_\mathrm{yb}, \underline{\underline{I}},
    \underline{r}^\mathrm{r}_{\mathrm{sb-yb}} \right) \in \mathbb{R}^6
 
@@ -99,12 +99,12 @@ shaft-base CS.
 
 .. math::
 
-   \underline{\Phi}_\mathrm{a-sb} = 
+   \underline{\Phi}_\mathrm{a-sb} =
    \underline{\Phi}^\mathrm{Revolute}\left(\underline{u}_\mathrm{a}, \underline{\underline{R}}_\mathrm{a},
    \underline{\underline{R}}_\mathrm{a}^\mathrm{r},
-   \underline{u}_\mathrm{sb}, \underline{\underline{R}}_\mathrm{sb},  
+   \underline{u}_\mathrm{sb}, \underline{\underline{R}}_\mathrm{sb},
    \underline{\underline{R}}_\mathrm{sb}^\mathrm{r}
-   \right) \in \mathbb{R}^5 
+   \right) \in \mathbb{R}^5
 
 
 The hub coordinate system (for a rigid shaft) has the same relative
@@ -170,5 +170,3 @@ Tangent stiffness matrix
    :align: center
 
    Schematic illustrating the nonzero entries of the constraint-gradient matriix.
-
-
