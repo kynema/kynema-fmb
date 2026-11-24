@@ -63,6 +63,9 @@ for a 6-DOF node :math:`\alpha` with configuration in :math:`\mathbb{R}^3 \times
    \end{bmatrix}
    \quad \in \mathbb{R}^6
 
+where we have used the axial vector to constrain rotation following
+[@Sonneville-Bruls:2012].
+
 Taking the variation of the translational and rotational constraint, the constraint gradient can be expressed as
 
 .. math::
@@ -203,7 +206,7 @@ Rigid66
 --------
 
 Rigid connection between a 6-DOF node :math:`\alpha` and a 6-DOF node :math:`\beta`
-with a prescribed relative rotation :math:`\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\in SO(3)`
+with a prescribed relative rotation applied to node :math:`\alpha` in its referenced configuration, :math:`\underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}\in SO(3)`
 between the two frames:
 
 .. math::
@@ -217,11 +220,13 @@ between the two frames:
    \quad \in \mathbb{R}^6
 
 where :math:`\underline{r}^\mathrm{r}_{\alpha-\beta} = \underline{x}^\mathrm{r}_\beta - \underline{x}^\mathrm{r}_\alpha`
-is the reference relative position vector from node :math:`\alpha` to node :math:`\beta`. The rotational constraint is derived from the relation:
+is the reference relative position vector from node :math:`\alpha` to node :math:`\beta`. 
+The rotational constraint is derived from the relation:
 
 .. math::
 
    \underline{\underline{R}}_\alpha^\mathrm{c} =  \underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta} \underline{\underline{R}}_\alpha^\mathrm{r}
+  \quad \Rightarrow \quad \underline{\underline{R}}_\alpha = \underline{\underline{R}}_\beta \underline{\underline{R}}^\mathrm{p}_{\alpha-\beta}
 
 Taking the variation of the rigid connection constraint, the constraint gradient can be expressed as
 
@@ -316,7 +321,8 @@ prescribed torque, though that functionality is external to the constraint defin
 .. math::
 
    \underline{\Phi}^\mathrm{Revolute}_{\alpha-\beta} \left( \underline{u}_\alpha, \underline{\underline{R}}_\alpha, 
-   \underline{u}_\beta, \underline{\underline{R}}_\beta, \underline{\underline{R}}_\alpha^\mathrm{r}, \underline{\underline{R}}_\beta^\mathrm{r} \right) = 
+   \underline{\underline{R}}_\alpha^\mathrm{r}, \underline{u}_\beta, \underline{\underline{R}}_\beta, 
+   \underline{\underline{R}}_\beta^\mathrm{r} \right) = 
    \begin{bmatrix}
      \underline{u}_\beta - \underline{u}_\alpha
      \\ \widehat{z}_\beta^T \widehat{x}_\alpha \\
@@ -402,4 +408,13 @@ where
    not in the current Kynema-FMB implementation, and nonlinear-system convergence has been
    satisfactory.
 
+.. container:: references csl-bib-body hanging-indent
+   :name: refs
 
+   .. container:: csl-entry
+      :name: ref-Sonneville-Bruls:2012
+
+      Sonneville, V., and O. Brüls. 2012. “Formulation of Kinematic
+      Joints and Rigidity Constraints in Multibody Dynamics Using a Lie
+      Group Approach.” In *Proceedings of the 2nd Joint International
+      Conference on Multibody System Dynamics*. Stuttgart, Germany.
