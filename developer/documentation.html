@@ -24,7 +24,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Kynema-FMB API" href="../doxygen/html/index.html" />
+    <link rel="next" title="Developer Tools" href="tools.html" />
     <link rel="prev" title="Kynema-FMB Development Plan" href="dev_plan.html" /> 
 </head>
 
@@ -73,7 +73,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../doxygen/html/index.html">Kynema-FMB API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tools.html">Developer Tools</a></li>
 </ul>
 </li>
@@ -113,8 +112,7 @@
 <ul class="simple">
 <li><p>The manual, i.e., the document you are reading now, that is
 written using <a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>, and</p></li>
-<li><p>Inline documentation within C++ source code that are written in a format that can be
-processed automatically by <a class="reference external" href="http://www.doxygen.nl/manual/index.html">Doxygen</a></p></li>
+<li><p>Inline documentation within C++ source code.</p></li>
 </ul>
 <div class="section" id="manual">
 <h2>Manual<a class="headerlink" href="#manual" title="Permalink to this heading"></a></h2>
@@ -133,13 +131,6 @@ provides an overview of this format and how to write documentation using this fo
 </div>
 <div class="section" id="source-code-documentation">
 <h2>Source code documentation<a class="headerlink" href="#source-code-documentation" title="Permalink to this heading"></a></h2>
-<p>Source code (C++ files) are commented using a special format that
-allows Doxygen to extract the annotated comments and create source
-code documentation as well as inheritance diagrams. The
-documentation for the latest snapshot of
-the codebase can be browsed in this manual. The <a class="reference external" href="http://www.doxygen.nl/manual/index.html">Doxygen manual</a> provides an overview of
-the syntax that must be used. Please follow the Doxygen style of
-commenting code when commenting Kynema-FMB sources.</p>
 <p>When commenting code, try to use self-documenting code, i.e., descriptive names
 for variables and functions that eliminate the need to describe what is going on
 in comments. In general, comments should address <em>why</em> something is being coded
@@ -153,11 +144,8 @@ to rely on comments to follow the code structure.</p>
 <h3>Documentation Dependencies<a class="headerlink" href="#documentation-dependencies" title="Permalink to this heading"></a></h3>
 <p>To generate the Kynema-FMB documentation locally, several dependencies are required:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">doxygen</span></code> - For generating source code documentation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphviz</span></code> - For creating inheritance diagrams</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx</span></code> - For building the manual</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enchant</span></code> - For spell checking</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">doxysphinx</span></code> - For integrating Doxygen with Sphinx</p></li>
 </ul>
 </div>
 <div class="section" id="installation">
@@ -166,18 +154,18 @@ to rely on comments to follow the code structure.</p>
 <div class="section" id="system-dependencies">
 <h3>System Dependencies<a class="headerlink" href="#system-dependencies" title="Permalink to this heading"></a></h3>
 <p>For Ubuntu/Debian Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>graphviz<span class="w"> </span>libenchant-2-dev
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>--no-install-recommends<span class="w"> </span>libenchant-2-dev
 </pre></div>
 </div>
 <p>For macOS using Homebrew:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>doxygen<span class="w"> </span>graphviz<span class="w"> </span>enchant
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>enchant
 </pre></div>
 </div>
 </div>
 <div class="section" id="python-dependencies">
 <h3>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this heading"></a></h3>
 <p>Install required Python packages using pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>sphinx<span class="w"> </span>sphinx_rtd_theme<span class="w"> </span>sphinx_toolbox<span class="w"> </span>sphinx_copybutton<span class="w"> </span>pyenchant<span class="w"> </span>sphinxcontrib-spelling<span class="w"> </span>sphinxcontrib-bibtex<span class="w"> </span>sphinxcontrib.doxylink<span class="w">  </span>sphinxcontrib.mermaid<span class="w"> </span>sphinxcontrib.youtube<span class="w"> </span>doxysphinx
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
 </pre></div>
 </div>
 </div>
@@ -193,19 +181,8 @@ to rely on comments to follow the code structure.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PYENCHANT_LIBRARY_PATH</span><span class="o">=</span>/opt/homebrew/lib/libenchant-2.dylib
 </pre></div>
 </div>
-<p>Alternatively, macOS users can avoid the CMake <code class="docutils literal notranslate"><span class="pre">docs</span></code> target (which runs Doxygen + Doxysphinx) and build only the Sphinx manual directly:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>kynema-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
-$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>kynema-env
-<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/to/kynema-fmb
-<span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
-<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>docs/sphinx
-<span class="w"> </span>$<span class="w"> </span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>.<span class="w"> </span>html
-<span class="w"> </span>$<span class="w"> </span>open<span class="w"> </span>html/index.html
-</pre></div>
 </div>
-<p>This does not generate the source code documentation and will produce a warning about a missing <code class="docutils literal notranslate"><span class="pre">doxygen/html/index</span></code> file.</p>
-</div>
-<p>The built documentation will be available in the <code class="docutils literal notranslate"><span class="pre">docs/sphinx/html</span></code> directory. For other output formats,
+<p>The built documentation will be available in <code class="docutils literal notranslate"><span class="pre">build/docs/sphinx/html</span></code>. For other output formats,
 see the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">Sphinx documentation</a>.</p>
 </div>
 </div>
@@ -216,7 +193,7 @@ see the <a class="reference external" href="https://www.sphinx-doc.org/en/master
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dev_plan.html" class="btn btn-neutral float-left" title="Kynema-FMB Development Plan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../doxygen/html/index.html" class="btn btn-neutral float-right" title="Kynema-FMB API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tools.html" class="btn btn-neutral float-right" title="Developer Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

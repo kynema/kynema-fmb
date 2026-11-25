@@ -71,7 +71,7 @@ new features should ideally be accompanied by both, when it is reasonable to do 
 Documentation
 -------------
 
-Kynema-FMB has three sources of documentation: this guide, Doxygen documentation, and
+Kynema-FMB has three sources of documentation: this guide, source code comments, and
 documentation tests.
 
 When changing the behavior of Kynema-FMB, it's important to keep this document up to date.
@@ -80,9 +80,8 @@ confidence and reporducibility to users and other developers.  Other changes, su
 chaging compilation options or code restructuring should also be reflected here to ensure
 consistency.
 
-Functions and classes added to Kynema-FMB should be properly annotated to provide Doxygen
-documentation.  When editing existing code, it is easy for the Doxygen documentation to fall
-out of date, so be pay careful attention to keeping everything in sync.
+Functions and classes added to Kynema-FMB should be clearly documented in the source.
+When editing existing code, keep its comments in sync with the implementation.
 
 Kynema-FMB also provides documentation tests - these are stand-alone programs which act as tutorials,
 with extensive comments for users explaining the logic.  When adding a new user-facing feature,
