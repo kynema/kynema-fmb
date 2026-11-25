@@ -13,7 +13,9 @@ This collection of GitHub workflow definitions is designed for Continuous Integr
 - **install-spack.yaml**: Builds and installs Kynema-FMB using the Spack package manager and then builds each of the documentation tests against this installation.  This script not only tests the documentation tests themselves, also ensures that our Spack package and CMake installation scripts are working properly for our end users.
 
 The build workflows install `nlohmann-json` with Spack using
-`setup-json-dependency.sh`.
+`setup-json-dependency.sh`. The helper installs a concrete spec and looks up
+its full hash, avoiding ambiguous matches when caches contain builds for
+different CPU targets.
 
 The Linux correctness, documentation, and Spack installation workflows pin
 OpenBLAS to 0.3.33 because the 0.3.34 x86-64 patches are not reliably available
