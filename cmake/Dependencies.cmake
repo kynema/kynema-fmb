@@ -6,6 +6,7 @@ function(kynema_fmb_setup_dependencies)
     find_package(yaml-cpp REQUIRED)
     find_package(NetCDF REQUIRED)
     find_package(Eigen3 REQUIRED)
+    find_package(nlohmann_json 3.11 CONFIG REQUIRED)
 
     #--------------------------------------------------------------------------
     # Optional packages

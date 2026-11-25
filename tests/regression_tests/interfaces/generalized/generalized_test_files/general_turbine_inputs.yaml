@@ -1,0 +1,51 @@
+simulation:
+  duration: 0.07947019876630465
+  step_size: 0.01
+  n_steps: 7
+  is_dynamic_solve: true
+  gravity:
+  - 0.0
+  - 0.0
+  - -9.81
+  max_nonlinear_iterations: 6
+  absolute_convergence_tol: 1.0e-06
+  relative_convergence_tol: 0.0001
+  rho_inf : 1.0
+components:
+- type: turbine
+  windio_file: interfaces_test_files/IEA-15-240-RWT.yaml
+  n_blades: 3
+  outputs:
+    write_output: false
+    output_file_path: GeneralizedInterface.TurbineStructureController
+  turbine:
+    angular_speed: 0.79063415025
+    azimuth_angle: 0.0
+    rotor_apex_to_hub: 0.0
+  blade:
+    n_blade_nodes: 11
+    element_order: 10
+    prescribed_root_motion: false
+  tower:
+    n_tower_nodes: 11
+    element_order: 10
+    prescribed_root_motion: false
+    base_orientation:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    twist:
+    - grid: 0.0
+      value: 0.0
+    - grid: 1.0
+      value: 0.0
+  controller:
+    enable_controller: true
+    enable_pitch_control: true
+    enable_torque_control: true
+    time_step: 0.01
+    library_path: ./DISCON_ROTOR_TEST_CONTROLLER.dll
+    function_name: PITCH_CONTROLLER
+    input_file_path: test_input_file
+    output_file_path: test_output_file

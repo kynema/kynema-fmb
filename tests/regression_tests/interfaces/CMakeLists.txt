@@ -10,6 +10,8 @@ target_sources(
 
 add_subdirectory(blade)
 
+add_subdirectory(generalized)
+
 add_custom_target(
     copy_interfaces_test_files ALL
     COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different

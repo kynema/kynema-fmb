@@ -40,19 +40,6 @@ else()
     set(YAML_CPP_TARGET yaml-cpp)
 endif()
 
-#----------------------------------------
-# NetCDF
-#----------------------------------------
-if(TARGET netCDF::netcdf)
-    set(NETCDF_TARGET netCDF::netcdf)
-elseif(TARGET NetCDF::NetCDF)
-    set(NETCDF_TARGET NetCDF::NetCDF)
-elseif(TARGET netcdf)
-    set(NETCDF_TARGET netcdf)
-else()
-    message(FATAL_ERROR "NetCDF library not found")
-endif()
-
 #--------------------------------------------------------------------------
 # Include directories for system libraries
 #--------------------------------------------------------------------------
@@ -61,7 +48,8 @@ target_link_system_libraries(kynema_fmb_library PUBLIC
   Eigen3::Eigen
   ${YAML_CPP_TARGET}
   ${FS_LIB}
-  ${NETCDF_TARGET}
+  NetCDF::NetCDF
+  nlohmann_json::nlohmann_json
 )
 
 if(KYNEMA_FMB_ENABLE_CUDSS)
