@@ -9,7 +9,6 @@ extensions = [
     'sphinx_rtd_theme',         # ReadTheDocs theme
     'sphinx_toolbox.collapse',  # Collapse sections in the documentation
     'sphinxcontrib.bibtex',     # BibTeX bibliography
-    'sphinxcontrib.doxylink',   # Doxygen links
     'sphinxcontrib.mermaid',    # Mermaid diagrams
     'sphinxcontrib.spelling',   # Spelling checker
     'sphinxcontrib.youtube',    # YouTube videos
@@ -36,7 +35,6 @@ release = '0.0.1'  # The full version, including alpha/beta/rc tags
 # Spelling configuration
 #--------------------------------------------------------------------------
 spelling_word_list_filename = "spelling_wordlist.txt"
-spelling_exclude_patterns = ["doxygen/html/*"]
 spelling_show_suggestions = False
 spelling_warning = False
 spelling_ignore_contributor_names = False
@@ -45,7 +43,7 @@ spelling_ignore_contributor_names = False
 # Build configuration
 #--------------------------------------------------------------------------
 # Patterns to ignore when looking for source files
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'doxygen', 'Thumbs.db', '.DS_Store']
 
 # Pygments i.e. syntax highlighting style to use
 pygments_style = 'sphinx'

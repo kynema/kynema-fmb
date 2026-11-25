@@ -12,5 +12,4 @@ and extending the ``kynema-fmb`` source code for their own use cases.
    overview
    dev_plan
    documentation
-   ../doxygen/html/index
    tools
