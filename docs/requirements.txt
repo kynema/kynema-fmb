@@ -1,4 +1,3 @@
-breathe>=4.4
 docutils==0.16
 Pygments>=2.2
 pyparsing>=2.1
@@ -10,6 +9,4 @@ sphinx_toolbox
 sphinx_copybutton
 pyenchant
 sphinxcontrib-spelling
-doxysphinx
-sphinxcontrib-doxylink
 sphinxcontrib-youtube

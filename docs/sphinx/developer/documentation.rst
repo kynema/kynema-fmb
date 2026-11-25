@@ -8,8 +8,7 @@ Kynema-FMB comes with two different types of documentation:
 - The manual, i.e., the document you are reading now, that is
   written using `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_, and
 
-- Inline documentation within C++ source code that are written in a format that can be
-  processed automatically by `Doxygen <http://www.doxygen.nl/manual/index.html>`_
+- Inline documentation within C++ source code.
 
 Manual
 ------
@@ -33,15 +32,6 @@ provides an overview of this format and how to write documentation using this fo
 Source code documentation
 -------------------------
 
-Source code (C++ files) are commented using a special format that
-allows Doxygen to extract the annotated comments and create source
-code documentation as well as inheritance diagrams. The
-documentation for the latest snapshot of
-the codebase can be browsed in this manual. The `Doxygen manual
-<http://www.doxygen.nl/manual/index.html>`_ provides an overview of
-the syntax that must be used. Please follow the Doxygen style of
-commenting code when commenting Kynema-FMB sources.
-
 When commenting code, try to use self-documenting code, i.e., descriptive names
 for variables and functions that eliminate the need to describe what is going on
 in comments. In general, comments should address *why* something is being coded
@@ -57,11 +47,8 @@ Documentation Dependencies
 
 To generate the Kynema-FMB documentation locally, several dependencies are required:
 
-* ``doxygen`` - For generating source code documentation
-* ``graphviz`` - For creating inheritance diagrams
 * ``sphinx`` - For building the manual
 * ``enchant`` - For spell checking
-* ``doxysphinx`` - For integrating Doxygen with Sphinx
 
 Installation
 ```````````````````````````
@@ -73,13 +60,13 @@ For Ubuntu/Debian Linux:
 
 .. code-block:: bash
 
-    $ sudo apt-get install -y --no-install-recommends graphviz libenchant-2-dev
+    $ sudo apt-get install -y --no-install-recommends libenchant-2-dev
 
 For macOS using Homebrew:
 
 .. code-block:: bash
 
-    $ brew install doxygen graphviz enchant
+    $ brew install enchant
 
 Python Dependencies
 ```````````````````````````
@@ -88,7 +75,7 @@ Install required Python packages using pip:
 
 .. code-block:: bash
 
-    $ pip install sphinx sphinx_rtd_theme sphinx_toolbox sphinx_copybutton pyenchant sphinxcontrib-spelling sphinxcontrib-bibtex sphinxcontrib.doxylink  sphinxcontrib.mermaid sphinxcontrib.youtube doxysphinx
+    $ pip install -r docs/requirements.txt
 
 Building Documentation
 ```````````````````````````
@@ -107,19 +94,5 @@ To build the documentation:
 
        $ export PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.dylib
 
-   Alternatively, macOS users can avoid the CMake ``docs`` target (which runs Doxygen + Doxysphinx) and build only the Sphinx manual directly:
-
-   .. code-block:: bash
-
-        $ conda create -n kynema-env python=3.12
-        $ conda activate kynema-env
-         $ cd /path/to/kynema-fmb
-         $ pip install -r docs/requirements.txt
-         $ cd docs/sphinx
-         $ sphinx-build -b html . html
-         $ open html/index.html
-
-   This does not generate the source code documentation and will produce a warning about a missing ``doxygen/html/index`` file.
-
-The built documentation will be available in the ``docs/sphinx/html`` directory. For other output formats,
+The built documentation will be available in ``build/docs/sphinx/html``. For other output formats,
 see the `Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/builders/index.html>`_.
