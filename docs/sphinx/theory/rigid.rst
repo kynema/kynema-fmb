@@ -76,8 +76,8 @@ and where
 
    \underline{\underline{\mathcal{RR}^\mathrm{r}}}=
    \begin{bmatrix}
-   \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}& \underline{\underline{\mathrm{r}}} \\
-   \underline{\underline{R}} & \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}
+   \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}& \underline{\underline{0}} \\
+   \underline{\underline{0}} & \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}
    \end{bmatrix}
    \in \mathbb{R}^{6\times6}
 

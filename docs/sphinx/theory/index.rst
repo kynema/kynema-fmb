@@ -11,6 +11,7 @@ elements, constraints, and other relevant topics.
    overview
    gen-alpha
    member-types
+   constraint-types
    configs
    fsi-api
    blade-element

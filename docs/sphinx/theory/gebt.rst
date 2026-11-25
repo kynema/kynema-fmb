@@ -134,7 +134,17 @@ inertial coordinate section matrices can be calculated as
    \end{aligned}
 
 where
-:math:`\underline{\underline{C}}^*(s), \underline{\underline{M}}^*(s) \in \mathbb{R}^{6\times6}`.
+:math:`\underline{\underline{C}}^*(s), \underline{\underline{M}}^*(s) \in \mathbb{R}^{6\times6}` and
+
+.. math::
+
+   \underline{\underline{\mathcal{RR}^\mathrm{r}}}=
+   \begin{bmatrix}
+   \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}& \underline{\underline{0}} \\
+   \underline{\underline{0}} & \underline{\underline{R}}~\underline{\underline{R}}^\mathrm{r}
+   \end{bmatrix}
+   \in \mathbb{R}^{6\times6}
+
 As described below, sectional mass and stiffness matrices in material
 coordinates, and twist about the reference line, are user-defined
 quantities in :math:`s\in[0,L]`.
